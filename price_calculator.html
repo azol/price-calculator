@@ -1,0 +1,602 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html charset=utf-8">
+
+<script type="text/javascript" >
+/*
+todo:
+move Date.prototype.lastday
+fill in form_addons
+ask for German translations
+*/
+
+// <!-- message translations
+var messages = {
+  setup_fee: {
+    English: "Setup fee",
+    Deutsch: "Setup fee",
+    Русский: "Плата за установку"},
+  total: {
+    English: "Total",
+    Deutsch: "Total",
+    Русский: "Итого"},
+  monthly: {
+    English: "Monthly price",
+    Deutsch: "Monthly price",
+    Русский: "Ежемесячная плата"},
+  per_month: {
+    English: "/month",
+    Deutsch: "/Monat",
+    Русский: "/месяц"},
+  flexi_pack: {
+    English: "Flexi-pack",
+    Deutsch: "Flexi-pack",
+    Русский: "Flexi-пакет"},
+  vat_is_included: {
+    English: "All prices includes VAT (19%)",
+    Deutsch: "All prices includes VAT (19%)",
+    Русский: "Все цены указаны с VAT (19%)"},
+  vat_isnt_included: {
+    English: "All prices excludes VAT",
+    Deutsch: "All prices excludes VAT",
+    Русский: "Все цены указаны без VAT"},
+  first_invoice_addition: {
+    English: "Additional payment for product(s) charged for entire month",
+    Deutsch: "Additional payment for product(s) charged for entire month",
+    Русский: "В первый счёт будет дополнительно включена плата за продукт(ы) лицензируемые помесячно"},
+  /*
+  template: {
+    English: "",
+    Deutsch: "",
+    Русский: ""},
+  */
+}
+// -->
+
+// <!-- server prices
+var servers = {
+  X2: {
+    monthly: 29,
+    name: {
+      English: "Server X2",
+      Deutsch: "Server X2",
+      Русский: "Сервер X2"},
+  },
+  X3: {
+    monthly: 39,
+    name: {
+      English: "Server X3",
+      Deutsch: "Server X3",
+      Русский: "Сервер X3"},
+  },
+  X4: {
+    monthly: 49,
+    name: {
+      English: "Server X4",
+      Deutsch: "Server X4",
+      Русский: "Сервер X4"},
+  },
+  X5: {
+    monthly: 59,
+    name: {
+      English: "Server X5",
+      Deutsch: "Server X5",
+      Русский: "Сервер X5"},
+  },
+  EX4: {
+    setup: 149, monthly: 49,
+    name: {
+      English: "Server EX4",
+      Deutsch: "Server EX4",
+      Русский: "Сервер EX4"},
+  },
+  EX5: {
+    setup: 149, monthly: 59,
+    name: {
+      English: "Server EX5",
+      Deutsch: "Server EX5",
+      Русский:"Сервер EX5"},
+  },
+  EX6: {
+    setup: 149, monthly: 69,
+    name: {
+      English: "Server EX6",
+      Deutsch: "Server EX6",
+      Русский: "Сервер EX6"},
+  },
+  EX8: {
+    setup: 149, monthly: 89,
+    name: {
+      English: "Server EX8",
+      Deutsch: "Server EX8",
+      Русский: "Сервер EX8"},
+  },
+  /*
+  template: {
+    setup: 0, monthly: 0,
+    name: {
+      English: "",
+      Deutsch: "",
+      Русский: ""},
+  },
+  */
+}
+// -->
+
+// <!-- addon prices
+var addons = {
+  kvm: {
+    setup: 149, monthly: 19, flexi_required: "yes",
+    name: {
+      English: "KVM-over-IP",
+      Deutsch: "KVM-over-IP",
+      Русский: "KVM-over-IP"},
+  },
+  usb16: {
+    setup: 39,
+    name: {
+      English: "16 GB USB-Stick",
+      Deutsch: "16 GB USB-Stick",
+      Русский: "16 ГБ USB-накопитель"},
+  },
+  usb64: {
+    setup: 139,
+    name: {
+      English: "64 GB USB-Stick",
+      Deutsch: "64 GB USB-Stick",
+      Русский: "64 ГБ USB-накопитель"},
+  },
+  gbit: {
+    monthly: 39,
+    name: {
+      English: "1Gbit port",
+      Deutsch: "1Gbit port",
+      Русский: "1 Гбит порт"},
+  },
+  win_web: {
+    monthly: 15, pay_entire_month: "yes",
+    name: {
+      English: "Windows Server 2008 R2 Web Edition",
+      Deutsch: "Windows Server 2008 R2 Web Edition",
+      Русский: "Windows Server 2008 R2 Web Edition"},
+  },
+  win_std: {
+    monthly: 25, pay_entire_month: "yes",
+    name: {
+      English: "Windows Server 2008 R2 Standard Edition",
+      Deutsch: "Windows Server 2008 R2 Standard Edition",
+      Русский: "Windows Server 2008 R2 Standard Edition"},
+  },
+  plesk_30: {
+    monthly: 7.9, pay_entire_month: "yes",
+    name: {
+      English: "Parallels® Plesk Panel 10 Pack 30",
+      Deutsch: "Parallels® Plesk Panel 10 Pack 30",
+      Русский: "Parallels® Plesk Panel 10 Pack 30"},
+  },
+  plesk_100: {
+    monthly: 13.9, pay_entire_month: "yes",
+    name: {
+      English: "Parallels® Plesk Panel Pack 100",
+      Deutsch: "Parallels® Plesk Panel Pack 100",
+      Русский: "Parallels® Plesk Panel Pack 100"},
+  },
+  plesk_unlim: {
+    monthly: 29.9, pay_entire_month: "yes",
+    name: {
+      English: "Parallels® Plesk Panel Pack Unlimited",
+      Deutsch: "Parallels® Plesk Panel Pack Unlimited",
+      Русский: "Parallels® Plesk Panel Pack Unlimited"},
+  },
+  cpanel: {
+    monthly: 29.9, pay_entire_month: "yes",
+    name: {
+      English: "cPanel 11.30",
+      Deutsch: "cPanel 11.30",
+      Русский: "cPanel 11.30"},
+  },
+  raid2: {
+    monthly: 13, flexi_required: "exception",
+    name: {English: "2-Port Hardware-RAID Controller",
+    Deutsch: "2-Port Hardware-RAID Controller",
+    Русский: "2-Port Hardware-RAID Controller"},
+  },
+  raid4: {
+    monthly: 15, flexi_required: "exception",
+    name: {
+      English: "4-Port Hardware-RAID Controller",
+      Deutsch: "4-Port Hardware-RAID Controller",
+      Русский: "4-Port Hardware-RAID Controller"},
+  },
+  ip: {
+    monthly: 1,
+    name: {
+      English: "Additional single-IP",
+      Deutsch: "Additional single-IP",
+      Русский: "Дополнительный одиночный IP"},
+  },
+  subnet29: {
+    monthly: 5.4, flexi_required: "yes",
+    name: {
+      English: "/29 (6 usable IPs)",
+      Deutsch: "/29 (6 usable IPs)",
+      Русский: "/29 (6 usable IPs)"},
+  },
+  subnet28: {
+    monthly: 11.2, flexi_required: "yes",
+    name: {
+      English: "/28 (14 usable IPs)",
+      Deutsch: "/28 (14 usable IPs)",
+      Русский: "/28 (14 usable IPs)"},
+  },
+  subnet27: {
+    monthly: 22.5, flexi_required: "yes",
+    name: {
+      English: "/27 (30 usable IPs)",
+      Deutsch: "/27 (30 usable IPs)",
+      Русский: "/27 (30 usable IPs)"},
+  },
+  subnet26: {
+    monthly: 43.4, flexi_required: "yes",
+    name: {
+      English: "/26 (62 usable IPs)",
+      Deutsch: "/26 (62 usable IPs)",
+      Русский: "/26 (62 usable IPs)"},
+  },
+  subnet25: {
+    monthly: 81.9, flexi_required: "yes",
+    name: {
+      English: "/25 (126 usable IPs)",
+      Deutsch: "/25 (126 usable IPs)",
+      Русский: "/25 (126 usable IPs)"},
+  },
+  subnet24: {
+    monthly: 152.4, flexi_required: "yes",
+    name: {
+      English: "/24 (254 usable IPs)",
+      Deutsch: "/24 (254 usable IPs)",
+      Русский: "/24 (254 usable IPs)"},
+  },
+  failover_ip: {
+    monthly: 5, flexi_required: "yes",
+    name: {
+      English: "Failover IP",
+      Deutsch: "Failover IP",
+      Русский: "Failover IP"},
+  },
+  ssd120: {
+    monthly: 15, flexi_required: "exception",
+    name: {
+      English: "120 GB SSD Hard Drive",
+      Deutsch: "120 GB SSD Hard Drive",
+      Русский: "120 GB SSD Hard Drive"},
+  },
+  sas300: {
+    monthly: 15, flexi_required: "exception",
+    name: {
+      English: "300 GB SAS Hard Drive",
+      Deutsch: "300 GB SAS Hard Drive",
+      Русский: "300 GB SAS Hard Drive"},
+  },
+  sata750: {
+    monthly: 6, flexi_required: "exception",
+    name: {
+      English: "HDD 750",
+      Deutsch: "HDD 750",
+      Русский: "HDD 750"},
+  },
+  sata1500: {
+    monthly: 9, flexi_required: "exception",
+    name: {
+      English: "HDD 1500",
+      Deutsch: "HDD 1500",
+      Русский: "HDD 1500"},
+  },
+  sata3000: {
+    monthly: 15, flexi_required: "exception",
+    name: {
+      English: "SATA HDD 3TB",
+      Deutsch: "SATA HDD 3TB",
+      Русский: "SATA HDD 3TB"},
+  },
+  sata3000e: {
+    monthly: 25, flexi_required: "exception",
+    name: {
+      English: "SATA HDD 3TB enterprice",
+      Deutsch: "SATA HDD 3TB enterprice",
+      Русский: "SATA HDD 3TB enterprice"},
+  },
+  gbit_nic: {
+    setup: 19, flexi_required: "yes",
+    name: {
+      English: "Additional Gbit NIC",
+      Deutsch: "Additional Gbit NIC",
+      Русский: "Дополнительная 1Гбит сетевая карта"},
+  },
+  /*
+  template: {
+    setup: 0, monthly: 0, flexi_required: "yes|exception", pay_entire_month: "yes",
+    name: {
+      English: "",
+      Deutsch: "",
+      Русский: ""},
+  },
+  */
+}
+// -->
+
+Date.prototype.lastday = function() {
+  var d = new Date(this.getFullYear(), this.getMonth() + 1, 0)
+  return d.getDate()
+}
+
+function update() {
+  flexi_counter=0  // >0 if flexi-pack will be included into invoice
+  form_output.text.value=calc_setup()
+  form_output.text.value+=calc_monthly()
+  form_output.text.value+=calc_first_invoice_addition()
+  form_output.text.value+=show_vat()
+}
+
+function update_language() {
+  for (var p in addons) {
+    form_addons.elements[p].nextSibling.replaceWholeText(addons[p].name[select_languages.value])
+  }
+  update()
+}
+
+function prepare_forms(){
+  /*
+  form_languages.reset()
+  form_addons.reset()
+  form_servers.reset()
+  form_vat.reset()
+  form_ordering_date.reset()
+  */
+
+  d=new Date()
+  date=d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate()
+  form_ordering_date.ordering_date.value=date
+  update_language()
+}
+
+function substitute(str, arr)
+{
+  var i, pattern, re, n = arr.length;
+  for (i = 0; i < n; i++) {
+    pattern = "\\{" + i + "\\}";
+    re = new RegExp(pattern, "g");
+    str = str.replace(re, arr[i]);
+  }
+  return str;
+}
+
+function is_flexi_required(p){
+  if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes" || (
+      select_servers.value != "EX8" && addons[p].flexi_required == "exception")
+     ) {
+    return 1
+  } else {
+    return 0
+  }
+}
+
+function calc_setup(){
+  text=messages.setup_fee[select_languages.value]+"\n"
+  total=0
+
+  price=servers[select_servers.value].setup
+  if (price>0) {
+    price=vat(price)
+    text+=substitute("{0}: {1} €\n",
+                     [servers[select_servers.value].name[select_languages.value],
+                     string_format(price)])
+    total+=number_format(price)
+  }
+
+  for (var p in addons) {
+    addons_count=form_addons.elements[p].value
+    if ((form_addons.elements[p].checked == true || addons_count > 0 ) && addons[p].setup>0) {
+      count_text=""
+      if (addons_count>1) {
+        count_text+=" x"+addons_count
+        addon_price=addons_count*number_format(vat(addons[p].setup))
+      } else {
+        addon_price=vat(addons[p].setup)
+      }
+
+      text+=substitute("{0}{1}: {2} €\n",
+                       [addons[p].name[select_languages.value],
+                       count_text,
+                       string_format(addon_price)])
+      flexi_counter+=is_flexi_required(p)
+      total+=number_format(addon_price)
+    }
+  }
+  if (total>0) {
+    text+=substitute("{0}: {1} €\n\n",
+                     [messages.total[select_languages.value],
+                     string_format(total)])
+    return text
+  } else {
+    return ""
+  }
+}
+
+function calc_monthly(){
+  text=messages.monthly[select_languages.value]+"\n"
+  total=0
+
+  price=servers[select_servers.value].monthly
+  if (price>0) {
+    price=vat(price)
+    text+=substitute("{0}: {1} €{2}\n",
+                     [servers[select_servers.value].name[select_languages.value],
+                     string_format(price),
+                     messages.per_month[select_languages.value]])
+    total+=number_format(price)
+  }
+
+  for (var p in addons) {
+    addons_count=form_addons.elements[p].value
+    if ((form_addons.elements[p].checked == true || addons_count > 0 ) && addons[p].monthly>0) {
+      count_text=""
+      if (addons_count>1) {
+        count_text+=" x"+addons_count
+        addon_price=addons_count*number_format(vat(addons[p].monthly))
+      } else {
+        addon_price=vat(addons[p].monthly)
+      }
+
+      text+=substitute("{0}{1}: {2} €{3}\n",
+                       [addons[p].name[select_languages.value],
+                       count_text,
+                       string_format(addon_price),
+                       messages.per_month[select_languages.value]])
+      flexi_counter+=is_flexi_required(p)
+      total+=number_format(addon_price)
+    }
+  }
+  if (flexi_counter>0) {
+    text+=substitute("{0}: {1} €{2}\n",
+                    [messages.flexi_pack[select_languages.value],
+                    string_format(vat(15)),
+                    messages.per_month[select_languages.value]])
+    total+=number_format(vat(15))
+  }
+  if (total>0) {
+    text+=substitute("{0}: {1} €{2}\n\n",
+                     [messages.total[select_languages.value],
+                     string_format(total),
+                     messages.per_month[select_languages.value]])
+    return text
+  } else {
+    return ""
+  }
+}
+
+function calc_first_invoice_addition() {
+  text=messages.first_invoice_addition[select_languages.value]+"\n"
+  total=0
+
+  for (var p in addons) {
+    if (form_addons.elements[p].checked == true && addons[p].pay_entire_month=="yes") {
+      addon_price=vat(addons[p].monthly)
+      date=new Date(form_ordering_date.ordering_date.value)
+      days=date.lastday()
+      now=date.getDate()
+      addon_price=addon_price/days*(now-1)
+
+      text+=substitute("{0}: {1} €\n",
+                       [addons[p].name[select_languages.value],
+                       string_format(addon_price)])
+      total+=number_format(addon_price)
+    }
+  }
+  if (total>0) {
+    text+=substitute("{0}: {1} €\n\n",
+                     [messages.total[select_languages.value],
+                     string_format(total)])
+    return text
+  } else {
+    return ""
+  }
+}
+
+function show_vat(){
+  if (form_vat.vat_included.checked==true) {
+    return messages.vat_is_included[select_languages.value]+"\n\n"
+  } else {
+    return messages.vat_isnt_included[select_languages.value]+"\n\n"
+  }
+}
+
+function vat(amount){
+  if(form_vat.vat_included.checked==false) {
+    amount=amount/119*100
+  }
+  return amount
+}
+
+function string_format(amount){
+  amount_fixed2=amount.toFixed(2)
+  amount_fixed0=amount.toFixed(0)
+  if(amount_fixed2-amount_fixed0==0){
+    return amount
+  } else {
+    return amount_fixed2
+  }
+}
+
+function number_format(amount){
+  if(amount-amount.toFixed(2)==0){
+    return amount
+  } else {
+    return Number(amount.toFixed(2))
+  }
+}
+
+</script>
+</head>
+<body OnLoad='prepare_forms()'>
+<noscript>JavaScript is not enabled in your browser :(</noscript>
+<form name="form_output">
+  <textarea name="text" cols="120" rows="10"></textarea>
+</form>
+<form name="form_languages">
+Select language:
+<select id="select_languages" onchange="update_language()">
+<option>English</option>
+<option>Deutsch</option>
+<option>Русский</option>
+</select>
+</form>
+<form name="form_servers">
+Select server:
+<select id="select_servers" onchange="update()">
+<option>X2</option>
+<option>X3</option>
+<option>X4</option>
+<option>X5</option>
+<option>EX4</option>
+<option>EX5</option>
+<option>EX6</option>
+<option>EX8</option>
+</select>
+</form>
+<form name="form_vat" OnChange='update()'>
+  <input type="checkbox" name="vat_included" checked>Is VAT included?<br>
+</form>
+<form name="form_ordering_date" OnChange='update()' onsubmit="update(); return false;">
+  Input ordering date: <input type="text" name="ordering_date">
+</form>
+<form name="form_addons" OnChange='update()' onsubmit="update(); return false;">
+  Select options:<br>
+  <input type="checkbox" name="gbit"> <br>
+  <input type="checkbox" name="win_web"> <br>
+  <input type="checkbox" name="win_std"> <br>
+  <input type="checkbox" name="plesk_30"> <br>
+  <input type="checkbox" name="plesk_100"> <br>
+  <input type="checkbox" name="plesk_unlim"> <br>
+  <input type="checkbox" name="cpanel"> <br>
+  <input type="checkbox" name="kvm"> <br>
+  <input type="checkbox" name="raid2"> <br>
+  <input type="checkbox" name="raid4"> <br>
+  <input type="text" name="ip"> <br>
+  <input type="text" name="subnet29"> <br>
+  <input type="text" name="subnet28"> <br>
+  <input type="text" name="subnet27"> <br>
+  <input type="text" name="subnet26"> <br>
+  <input type="text" name="subnet25"> <br>
+  <input type="text" name="subnet24"> <br>
+  <input type="text" name="failover_ip"> <br>
+  <input type="text" name="ssd120"> <br>
+  <input type="text" name="sas300"> <br>
+  <input type="text" name="usb16"> <br>
+  <input type="text" name="usb64"> <br>
+  <input type="text" name="sata750"> <br>
+  <input type="text" name="sata1500"> <br>
+  <input type="text" name="sata3000"> <br>
+  <input type="text" name="sata3000e"> <br>
+  <input type="text" name="gbit_nic"> <br>
+</form>
+<body>
