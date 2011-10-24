@@ -534,11 +534,14 @@ function number_format(amount){
 
 </script>
 </head>
-<body OnLoad='prepare_forms()'>
+
+<body onload='prepare_forms()' style="float: left;">
+
 <form name="form_output">
   <textarea name="text" cols="120" rows="10"></textarea>
 </form>
-<form name="form_languages">
+
+<form name="form_languages" style="float: left;">
 Select language:
 <select id="select_languages" onchange="update_language()">
 <option>English</option>
@@ -546,7 +549,8 @@ Select language:
 <option>Русский</option>
 </select>
 </form>
-<form name="form_servers">
+
+<form name="form_servers" style="float: left; padding-left: 20px">
 Select server:
 <select id="select_servers" onchange="update()">
 <option>X2</option>
@@ -559,40 +563,48 @@ Select server:
 <option>EX8</option>
 </select>
 </form>
-<form name="form_vat" OnChange='update()'>
+
+<form name="form_vat" onchange='update()' style="float: left; padding-left: 20px">
   <input type="checkbox" name="vat_included" checked>Is VAT included?<br>
 </form>
-<form name="form_ordering_date" OnChange='update()' onsubmit="update(); return false;">
+
+<form name="form_ordering_date" onchange='update()' onsubmit="update(); return false;" style="float: left; padding-left: 20px">
   Input ordering date: <input type="text" name="ordering_date">
 </form>
-<form name="form_addons" OnChange='update()' onsubmit="update(); return false;">
+
+<form name="form_addons" onchange='update()' onsubmit="update(); return false;" style="clear: left;">
   Select options:<br>
-  <input type="checkbox" name="gbit"> <br>
-  <input type="checkbox" name="win_web"> <br>
-  <input type="checkbox" name="win_std"> <br>
-  <input type="checkbox" name="plesk_30"> <br>
-  <input type="checkbox" name="plesk_100"> <br>
-  <input type="checkbox" name="plesk_unlim"> <br>
-  <input type="checkbox" name="cpanel"> <br>
-  <input type="checkbox" name="kvm"> <br>
-  <input type="checkbox" name="raid2"> <br>
-  <input type="checkbox" name="raid4"> <br>
-  <input type="text" name="ip"> <br>
-  <input type="text" name="subnet29"> <br>
-  <input type="text" name="subnet28"> <br>
-  <input type="text" name="subnet27"> <br>
-  <input type="text" name="subnet26"> <br>
-  <input type="text" name="subnet25"> <br>
-  <input type="text" name="subnet24"> <br>
-  <input type="text" name="failover_ip"> <br>
-  <input type="text" name="ssd120"> <br>
-  <input type="text" name="sas300"> <br>
-  <input type="text" name="usb16"> <br>
-  <input type="text" name="usb64"> <br>
-  <input type="text" name="sata750"> <br>
-  <input type="text" name="sata1500"> <br>
-  <input type="text" name="sata3000"> <br>
-  <input type="text" name="sata3000e"> <br>
-  <input type="text" name="gbit_nic"> <br>
+  <div style="float: left;">
+    <input type="checkbox" name="gbit"> <br>
+    <input type="checkbox" name="win_web"> <br>
+    <input type="checkbox" name="win_std"> <br>
+    <input type="checkbox" name="plesk_30"> <br>
+    <input type="checkbox" name="plesk_100"> <br>
+    <input type="checkbox" name="plesk_unlim"> <br>
+    <input type="checkbox" name="cpanel"> <br>
+    <input type="checkbox" name="kvm"> <br>
+    <input type="checkbox" name="raid2"> <br>
+    <input type="checkbox" name="raid4"> <br>
+    <input type="text" size="1" name="ip"> <br>
+    <input type="text" size="1" name="subnet29"> <br>
+    <input type="text" size="1" name="subnet28"> <br>
+    <input type="text" size="1" name="subnet27"> <br>
+  </div>
+  <div style="float: left; padding-left: 20px">
+    <input type="text" size="1" name="subnet26"> <br>
+    <input type="text" size="1" name="subnet25"> <br>
+    <input type="text" size="1" name="subnet24"> <br>
+    <input type="text" size="1" name="failover_ip"> <br>
+    <input type="text" size="1" name="ssd120"> <br>
+    <input type="text" size="1" name="sas300"> <br>
+    <input type="text" size="1" name="usb16"> <br>
+    <input type="text" size="1" name="usb64"> <br>
+    <input type="text" size="1" name="sata750"> <br>
+    <input type="text" size="1" name="sata1500"> <br>
+    <input type="text" size="1" name="sata3000"> <br>
+    <input type="text" size="1" name="sata3000e"> <br>
+    <input type="text" size="1" name="gbit_nic"> <br>
+  </div>
 </form>
+
 <body>
