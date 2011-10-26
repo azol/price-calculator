@@ -1,6 +1,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html charset=utf-8">
-
+<title>Price Calculator</title>
 <script type="text/javascript" >
 /*
 todo:
@@ -23,21 +23,25 @@ var messages = {
     English: "Monthly price",
     Deutsch: "Monthly price",
     Русский: "Ежемесячная плата"},
-  per_month: {
-    English: "/month",
-    Deutsch: "/Monat",
-    Русский: "/месяц"},
+  euro_per_month: {
+    English: "€/month",
+    Deutsch: "€/Monat",
+    Русский: "€/месяц"},
+  euro: {
+    English: "€",
+    Deutsch: "€",
+    Русский: "€"},
   flexi_pack: {
     English: "Flexi-pack",
     Deutsch: "Flexi-pack",
     Русский: "Flexi-пакет"},
   vat_is_included: {
-    English: "All prices includes VAT (19%)",
-    Deutsch: "All prices includes VAT (19%)",
+    English: "All prices include VAT (19%)",
+    Deutsch: "All prices include VAT (19%)",
     Русский: "Все цены указаны с VAT (19%)"},
   vat_isnt_included: {
-    English: "All prices excludes VAT",
-    Deutsch: "All prices excludes VAT",
+    English: "All prices exclude VAT",
+    Deutsch: "All prices exclude VAT",
     Русский: "Все цены указаны без VAT"},
   first_invoice_addition: {
     English: "Additional payment for product(s) charged for entire month",
@@ -312,6 +316,48 @@ var addons = {
       Deutsch: "Additional Gbit NIC",
       Русский: "Дополнительная 1Гбит сетевая карта"},
   },
+  install_via_lara: {
+    setup: 25,
+    name: {
+      English: "Instllation via LARA",
+      Deutsch: "Betriebssysteminstallation via LARA",
+      Русский: "Установка ОС через LARA"},
+  },
+  switch_5port: {
+    setup: 29,
+    name: {
+      English: "Switch Gbit 5-Port",
+      Deutsch: "Switch Gbit 5-Port",
+      Русский: "Коммутатор Гбит 5 портов"},
+  },
+  switch_8port: {
+    setup: 39,
+    name: {
+      English: "Switch Gbit 8-Port",
+      Deutsch: "Switch Gbit 8-Port",
+      Русский: "Коммутатор Гбит 8 портов"},
+  },
+  switch_24port: {
+    setup: 269,
+    name: {
+      English: "Switch Gbit 24-Port",
+      Deutsch: "Switch Gbit 24-Port",
+      Русский: "Коммутатор Гбит 24 портов"},
+  },
+  drp_license: {
+    monthly: 5.40,
+    name: {
+      English: "Additional RDP licence for Windows Server 2008 R2 Standard Edition",
+      Deutsch: "Zusätzliche RDP-Lizenz für Windows Server 2008 R2 Standard Edition",
+      Русский: "Дополнительная RDP-лицензия для Windows Server 2008 R2 Standard Edition"},
+  },
+  place_reservation: {
+    monthly: 9.90,
+    name: {
+      English: "Reservation of rack space",
+      Deutsch: "Platz Reservierung: Mietserver Stellfläche",
+      Русский: "Резервирование места в стойке"},
+  },
   /*
   template: {
     setup: 0, monthly: 0, flexi_required: "yes|exception", pay_entire_month: "yes",
@@ -329,6 +375,25 @@ Date.prototype.lastday = function() {
   return d.getDate()
 }
 
+function get_spaces(t, max_len) {
+  t=String(t)
+  len=t.length
+  spaces=""
+  if (len < max_len) {
+    for (i=0; i < (max_len - len); i++){
+      spaces+=" "
+    }
+  }
+  return spaces
+}
+
+function format_line(name, price, monthly) {
+  spaces=""
+  spaces+=get_spaces(name,max_len)
+  spaces+=get_spaces(price,7)
+  return name+": "+spaces+price+" "+monthly+"\n"
+ }
+
 function update() {
   flexi_counter=0  // >0 if flexi-pack will be included into invoice
   max_len=0        // store maximum text length for price alignment
@@ -337,6 +402,14 @@ function update() {
   form_output.text.value+=calc_monthly()
   form_output.text.value+=calc_first_invoice_addition()
   form_output.text.value+=show_vat()
+  setRows()
+}
+
+function setRows() {
+  form_output.text.rows = 3;
+  do {
+    if (form_output.text.clientHeight != form_output.text.scrollHeight) form_output.text.rows += 1;
+  } while (form_output.text.clientHeight < form_output.text.scrollHeight);
 }
 
 function find_max_len(){
@@ -378,27 +451,16 @@ function update_language() {
 }
 
 function prepare_forms(){
-  form_languages.reset()
+  //form_languages.reset()
   form_addons.reset()
-  form_servers.reset()
-  form_vat.reset()
-  form_ordering_date.reset()
+  //form_servers.reset()
+  //form_vat.reset()
+  //form_ordering_date.reset()
 
   d=new Date()
   date=d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate()
   form_ordering_date.ordering_date.value=date
   update_language()
-}
-
-function substitute(str, arr)
-{
-  var i, pattern, re, n = arr.length;
-  for (i = 0; i < n; i++) {
-    pattern = "\\{" + i + "\\}";
-    re = new RegExp(pattern, "g");
-    str = str.replace(re, arr[i]);
-  }
-  return str;
 }
 
 function is_flexi_required(p){
@@ -417,11 +479,9 @@ function calc_setup(){
   price=servers[form_servers.select_servers.value].setup
   if (price>0) {
     price=vat(price)
-    spaces=get_spaces(servers[form_servers.select_servers.value].name[form_languages.select_languages.value])
-    text+=substitute("{0}: {1}{2} €\n",
-                     [servers[form_servers.select_servers.value].name[form_languages.select_languages.value],
-                     spaces,
-                     string_format(price)])
+    text+=format_line(servers[form_servers.select_servers.value].name[form_languages.select_languages.value],
+                      string_format(price),
+					  messages.euro[form_languages.select_languages.value])
     total+=number_format(price)
   }
 
@@ -435,37 +495,21 @@ function calc_setup(){
       } else {
         addon_price=vat(addons[p].setup)
       }
-      spaces=get_spaces(addons[p].name[form_languages.select_languages.value]+count_text)
-      text+=substitute("{0}{1}: {2}{3} €\n",
-                       [addons[p].name[form_languages.select_languages.value],
-                       count_text,
-                       spaces,
-                       string_format(addon_price)])
+      text+=format_line(addons[p].name[form_languages.select_languages.value]+count_text,
+                       string_format(addon_price),
+					   messages.euro[form_languages.select_languages.value])
       flexi_counter+=is_flexi_required(p)
       total+=number_format(addon_price)
     }
   }
   if (total>0) {
-    spaces=get_spaces(messages.total[form_languages.select_languages.value])
-    text+=substitute("{0}: {1}{2} €\n\n",
-                     [messages.total[form_languages.select_languages.value],
-                     spaces,
-                     string_format(total)])
+    text+=format_line(messages.total[form_languages.select_languages.value],
+                     string_format(total),
+					 messages.euro[form_languages.select_languages.value]+"\n")
     return text
   } else {
     return ""
   }
-}
-
-function get_spaces(t) {
-  len=t.length
-  spaces=""
-  if (len < max_len) {
-    for (i=0; i < (max_len - len); i++){
-      spaces+=" "
-    }
-  }
-  return spaces
 }
 
 function calc_monthly(){
@@ -475,12 +519,9 @@ function calc_monthly(){
   price=servers[form_servers.select_servers.value].monthly
   if (price>0) {
     price=vat(price)
-    spaces=get_spaces(servers[form_servers.select_servers.value].name[form_languages.select_languages.value])
-    text+=substitute("{0}: {1}{2} €{3}\n",
-                     [servers[form_servers.select_servers.value].name[form_languages.select_languages.value],
-                     spaces,
-                     string_format(price),
-                     messages.per_month[form_languages.select_languages.value]])
+    text+=format_line(servers[form_servers.select_servers.value].name[form_languages.select_languages.value],
+                      string_format(price),
+                      messages.euro_per_month[form_languages.select_languages.value])
     total+=number_format(price)
   }
 
@@ -494,33 +535,24 @@ function calc_monthly(){
       } else {
         addon_price=vat(addons[p].monthly)
       }
-      spaces=get_spaces(addons[p].name[form_languages.select_languages.value]+count_text)
-      text+=substitute("{0}{1}: {2}{3} €{4}\n",
-                       [addons[p].name[form_languages.select_languages.value],
-                       count_text,
-                       spaces,
-                       string_format(addon_price),
-                       messages.per_month[form_languages.select_languages.value]])
+
+      text+=format_line(addons[p].name[form_languages.select_languages.value]+count_text,
+                        string_format(addon_price),
+                        messages.euro_per_month[form_languages.select_languages.value])
       flexi_counter+=is_flexi_required(p)
       total+=number_format(addon_price)
     }
   }
   if (flexi_counter>0) {
-    spaces=get_spaces(messages.flexi_pack[form_languages.select_languages.value])
-    text+=substitute("{0}: {1}{2} €{3}\n",
-                    [messages.flexi_pack[form_languages.select_languages.value],
-                    spaces,
-                    string_format(vat(15)),
-                    messages.per_month[form_languages.select_languages.value]])
+    text+=format_line(messages.flexi_pack[form_languages.select_languages.value],
+                      string_format(vat(15)),
+                      messages.euro_per_month[form_languages.select_languages.value])
     total+=number_format(vat(15))
   }
   if (total>0) {
-    spaces=get_spaces(messages.total[form_languages.select_languages.value])
-    text+=substitute("{0}: {1}{2} €{3}\n\n",
-                     [messages.total[form_languages.select_languages.value],
-                     spaces,
-                     string_format(total),
-                     messages.per_month[form_languages.select_languages.value]])
+    text+=format_line(messages.total[form_languages.select_languages.value],
+                      string_format(total),
+                      messages.euro_per_month[form_languages.select_languages.value]+"\n")
     return text
   } else {
     return ""
@@ -538,20 +570,16 @@ function calc_first_invoice_addition() {
       days=date.lastday()
       now=date.getDate()
       addon_price=addon_price/days*(now-1)
-      spaces=get_spaces(addons[p].name[form_languages.select_languages.value])
-      text+=substitute("{0}: {1}{2} €\n",
-                       [addons[p].name[form_languages.select_languages.value],
-                       spaces,
-                       string_format(addon_price)])
+      text+=format_line(addons[p].name[form_languages.select_languages.value],
+                        string_format(addon_price),
+				        messages.euro[form_languages.select_languages.value])
       total+=number_format(addon_price)
     }
   }
   if (total>0) {
-    spaces=get_spaces(messages.total[form_languages.select_languages.value])
-    text+=substitute("{0}: {1}{2} €\n\n",
-                     [messages.total[form_languages.select_languages.value],
-                     spaces,
-                     string_format(total)])
+    text+=format_line(messages.total[form_languages.select_languages.value],
+                      string_format(total),
+					  messages.euro[form_languages.select_languages.value]+"\n")
     return text
   } else {
     return ""
@@ -595,10 +623,6 @@ function number_format(amount){
 </head>
 
 <body onload='prepare_forms()' style="float: left;">
-
-<form name="form_output">
-  <textarea name="text" cols="120" rows="10"></textarea>
-</form>
 
 <form name="form_languages" style="float: left;">
 Select language:
@@ -644,26 +668,36 @@ Select server:
     <input type="checkbox" name="kvm"> <br>
     <input type="checkbox" name="raid2"> <br>
     <input type="checkbox" name="raid4"> <br>
-    <input type="text" value="0" size="1" name="ip"> <br>
-    <input type="text" value="0" size="1" name="subnet29"> <br>
-    <input type="text" value="0" size="1" name="subnet28"> <br>
-    <input type="text" value="0" size="1" name="subnet27"> <br>
+	<input type="checkbox" name="install_via_lara"> <br>
+    <input type="text" placeholder="0" size="1" name="ip"> <br>
+    <input type="text" placeholder="0" size="1" name="subnet29"> <br>
+    <input type="text" placeholder="0" size="1" name="subnet28"> <br>
+    <input type="text" placeholder="0" size="1" name="subnet27"> <br>
+    <input type="text" placeholder="0" size="1" name="subnet26"> <br>
+    <input type="text" placeholder="0" size="1" name="subnet25"> <br>
+    <input type="text" placeholder="0" size="1" name="subnet24"> <br>
+    <input type="text" placeholder="0" size="1" name="failover_ip"> <br>
   </div>
   <div style="float: left; padding-left: 20px">
-    <input type="text" value="0" size="1" name="subnet26"> <br>
-    <input type="text" value="0" size="1" name="subnet25"> <br>
-    <input type="text" value="0" size="1" name="subnet24"> <br>
-    <input type="text" value="0" size="1" name="failover_ip"> <br>
-    <input type="text" value="0" size="1" name="ssd120"> <br>
-    <input type="text" value="0" size="1" name="sas300"> <br>
-    <input type="text" value="0" size="1" name="usb16"> <br>
-    <input type="text" value="0" size="1" name="usb64"> <br>
-    <input type="text" value="0" size="1" name="sata750"> <br>
-    <input type="text" value="0" size="1" name="sata1500"> <br>
-    <input type="text" value="0" size="1" name="sata3000"> <br>
-    <input type="text" value="0" size="1" name="sata3000e"> <br>
-    <input type="text" value="0" size="1" name="gbit_nic"> <br>
+    <input type="text" placeholder="0" size="1" name="ssd120"> <br>
+    <input type="text" placeholder="0" size="1" name="sas300"> <br>
+    <input type="text" placeholder="0" size="1" name="usb16"> <br>
+    <input type="text" placeholder="0" size="1" name="usb64"> <br>
+    <input type="text" placeholder="0" size="1" name="sata750"> <br>
+    <input type="text" placeholder="0" size="1" name="sata1500"> <br>
+    <input type="text" placeholder="0" size="1" name="sata3000"> <br>
+    <input type="text" placeholder="0" size="1" name="sata3000e"> <br>
+    <input type="text" placeholder="0" size="1" name="gbit_nic"> <br>
+    <input type="text" placeholder="0" size="1" name="switch_5port"> <br>
+    <input type="text" placeholder="0" size="1" name="switch_8port"> <br>
+    <input type="text" placeholder="0" size="1" name="switch_24port"> <br>
+    <input type="text" placeholder="0" size="1" name="place_reservation"> <br>
+    <input type="text" placeholder="0" size="1" name="drp_license"> <br>
   </div>
+</form>
+<br>
+<form name="form_output">
+  <textarea name="text" readonly style="width: 100%"></textarea>
 </form>
 
 <body>
