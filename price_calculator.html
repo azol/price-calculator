@@ -2,14 +2,7 @@
 <meta http-equiv="Content-Type" content="text/html charset=utf-8">
 <title>Price Calculator</title>
 <script type="text/javascript" >
-/*
-todo:
-move Date.prototype.lastday
-fill in form_addons
-ask for German translations
-*/
 
-// <!-- message translations
 var messages = {
   setup_fee: {
     English: "Setup fee",
@@ -54,9 +47,7 @@ var messages = {
     Русский: ""},
   */
 }
-// -->
 
-// <!-- server prices
 var servers = {
   X2: {
     monthly: 29,
@@ -98,7 +89,7 @@ var servers = {
     name: {
       English: "Server EX5",
       Deutsch: "Server EX5",
-      Русский:"Сервер EX5"},
+      Русский: "Сервер EX5"},
   },
   EX6: {
     setup: 149, monthly: 69,
@@ -124,16 +115,14 @@ var servers = {
   },
   */
 }
-// -->
 
-// <!-- addon prices
 var addons = {
   kvm: {
     setup: 149, monthly: 19, flexi_required: "yes",
     name: {
-      English: "KVM-over-IP",
-      Deutsch: "KVM-over-IP",
-      Русский: "KVM-over-IP"},
+      English: "KVM-over-IP Remote Management",
+      Deutsch: "KVM-over-IP Remote Management",
+      Русский: "KVM-over-IP удалённое управление"},
   },
   usb16: {
     setup: 39,
@@ -200,65 +189,66 @@ var addons = {
   },
   raid2: {
     monthly: 13, flexi_required: "exception",
-    name: {English: "2-Port Hardware-RAID Controller",
-    Deutsch: "2-Port Hardware-RAID Controller",
-    Русский: "2-Port Hardware-RAID Controller"},
+    name: {
+      English: "2-Port Hardware RAID-Controller",
+      Deutsch: "2-Port Hardware RAID-Controller",
+      Русский: "2-портовый RAID-контроллер"},
   },
   raid4: {
     monthly: 15, flexi_required: "exception",
     name: {
-      English: "4-Port Hardware-RAID Controller",
-      Deutsch: "4-Port Hardware-RAID Controller",
-      Русский: "4-Port Hardware-RAID Controller"},
+      English: "4-Port Hardware RAID-Controller",
+      Deutsch: "4-Port Hardware RAID-Controller",
+      Русский: "4-портовый RAID-контроллер"},
   },
   ip: {
     monthly: 1,
     name: {
-      English: "Additional single-IP",
-      Deutsch: "Additional single-IP",
-      Русский: "Дополнительный одиночный IP"},
+      English: "Additional IP address",
+      Deutsch: "Additional IP address",
+      Русский: "Дополнительный IP-адрес"},
   },
   subnet29: {
     monthly: 5.4, flexi_required: "yes",
     name: {
-      English: "/29 (6 usable IPs)",
-      Deutsch: "/29 (6 usable IPs)",
-      Русский: "/29 (6 usable IPs)"},
+      English: "Subnet /29",
+      Deutsch: "Subnet /29",
+      Русский: "Подсеть /29"},
   },
   subnet28: {
     monthly: 11.2, flexi_required: "yes",
     name: {
-      English: "/28 (14 usable IPs)",
-      Deutsch: "/28 (14 usable IPs)",
-      Русский: "/28 (14 usable IPs)"},
+      English: "Subnet /28",
+      Deutsch: "Subnet /28",
+      Русский: "Подсеть /28"},
   },
   subnet27: {
     monthly: 22.5, flexi_required: "yes",
     name: {
-      English: "/27 (30 usable IPs)",
-      Deutsch: "/27 (30 usable IPs)",
-      Русский: "/27 (30 usable IPs)"},
+      English: "Subnet /27",
+      Deutsch: "Subnet /27",
+      Русский: "Подсеть /27"},
   },
   subnet26: {
     monthly: 43.4, flexi_required: "yes",
     name: {
-      English: "/26 (62 usable IPs)",
-      Deutsch: "/26 (62 usable IPs)",
-      Русский: "/26 (62 usable IPs)"},
+      English: "Subnet /26",
+      Deutsch: "Subnet /26",
+      Русский: "Подсеть /26"},
   },
   subnet25: {
     monthly: 81.9, flexi_required: "yes",
     name: {
-      English: "/25 (126 usable IPs)",
-      Deutsch: "/25 (126 usable IPs)",
-      Русский: "/25 (126 usable IPs)"},
+      English: "Subnet /25",
+      Deutsch: "Subnet /25",
+      Русский: "Подсеть /25"},
   },
   subnet24: {
     monthly: 152.4, flexi_required: "yes",
     name: {
-      English: "/24 (254 usable IPs)",
-      Deutsch: "/24 (254 usable IPs)",
-      Русский: "/24 (254 usable IPs)"},
+      English: "Subnet /24",
+      Deutsch: "Subnet /24",
+      Русский: "Подсеть /24"},
   },
   failover_ip: {
     monthly: 5, flexi_required: "yes",
@@ -367,12 +357,6 @@ var addons = {
       Русский: ""},
   },
   */
-}
-// -->
-
-Date.prototype.lastday = function() {
-  var d = new Date(this.getFullYear(), this.getMonth() + 1, 0)
-  return d.getDate()
 }
 
 function get_spaces(t, max_len) {
@@ -567,7 +551,8 @@ function calc_first_invoice_addition() {
     if (form_addons.elements[p].checked == true && addons[p].pay_entire_month=="yes") {
       addon_price=vat(addons[p].monthly)
       date=new Date(form_ordering_date.ordering_date.value)
-      days=date.lastday()
+      d = new Date(date.getFullYear(), date.getMonth() + 1, 0)
+      days=d.getDate()
       now=date.getDate()
       addon_price=addon_price/days*(now-1)
       text+=format_line(addons[p].name[form_languages.select_languages.value],
@@ -624,7 +609,7 @@ function number_format(amount){
 
 <body onload='prepare_forms()' style="float: left;">
 
-<form name="form_languages" style="float: left;">
+<form name="form_languages" style="float: left; padding-right: 20px ">
 Select language:
 <select id="select_languages" onchange="update_language()">
 <option>English</option>
@@ -633,7 +618,7 @@ Select language:
 </select>
 </form>
 
-<form name="form_servers" style="float: left; padding-left: 20px">
+<form name="form_servers" style="float: left; padding-right: 20px">
 Select server:
 <select id="select_servers" onchange="update()">
 <option>X2</option>
@@ -647,11 +632,11 @@ Select server:
 </select>
 </form>
 
-<form name="form_vat" onchange='update()' style="float: left; padding-left: 20px">
-  <input type="checkbox" name="vat_included" checked>Is VAT included?<br>
+<form name="form_vat" onchange='update()' style="float: left; padding-right: 20px">
+  Is VAT included?<input type="checkbox" name="vat_included" checked>
 </form>
 
-<form name="form_ordering_date" onchange='update()' onsubmit="update(); return false;" style="float: left; padding-left: 20px">
+<form name="form_ordering_date" onchange='update()' onsubmit="update(); return false;" style="float: left;">
   Input ordering date: <input type="text" name="ordering_date">
 </form>
 
@@ -680,14 +665,14 @@ Select server:
     <input type="text" placeholder="0" size="1" name="usb16"> <br>
     <input type="text" placeholder="0" size="1" name="usb64"> <br>
   </div>
-  <div style="float: left; padding-right: 20px;">
+  <div style="float: left;">
     <input type="text" placeholder="0" size="1" name="ip"> <br>
-    <input type="text" placeholder="0" size="1" name="subnet29"> <br>
-    <input type="text" placeholder="0" size="1" name="subnet28"> <br>
-    <input type="text" placeholder="0" size="1" name="subnet27"> <br>
-    <input type="text" placeholder="0" size="1" name="subnet26"> <br>
-    <input type="text" placeholder="0" size="1" name="subnet25"> <br>
-    <input type="text" placeholder="0" size="1" name="subnet24"> <br>
+    <input type="text" placeholder="0" size="1" name="subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
+    <input type="text" placeholder="0" size="1" name="subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
+    <input type="text" placeholder="0" size="1" name="subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
+    <input type="text" placeholder="0" size="1" name="subnet26"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 62 IPs</mark><br>
+    <input type="text" placeholder="0" size="1" name="subnet25"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 126 IPs</mark><br>
+    <input type="text" placeholder="0" size="1" name="subnet24"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 254 IPs</mark><br>
     <input type="text" placeholder="0" size="1" name="failover_ip"> <br>
     <input type="text" placeholder="0" size="1" name="gbit_nic"> <br>
     <input type="text" placeholder="0" size="1" name="switch_5port"> <br>
