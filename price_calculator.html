@@ -284,16 +284,16 @@ var addons = {
   sata750: {
     monthly: 6, flexi_required: "exception",
     name: {
-      English: "HDD 750",
-      Deutsch: "HDD 750",
-      Русский: "HDD 750"},
+      English: "SATA HDD 750GB",
+      Deutsch: "SATA HDD 750GB",
+      Русский: "SATA HDD 750GB"},
   },
   sata1500: {
     monthly: 9, flexi_required: "exception",
     name: {
-      English: "HDD 1500",
-      Deutsch: "HDD 1500",
-      Русский: "HDD 1500"},
+      English: "SATA HDD 1500GB",
+      Deutsch: "SATA HDD 1500GB",
+      Русский: "SATA HDD 1500GB"},
   },
   sata3000: {
     monthly: 15, flexi_required: "exception",
@@ -657,18 +657,30 @@ Select server:
 
 <form name="form_addons" onchange='update()' onsubmit="update(); return false;" style="clear: left;">
   Select options:<br>
-  <div style="float: left;">
-    <input type="checkbox" name="gbit"> <br>
+  <div style="float: left; padding-right: 20px;">
     <input type="checkbox" name="win_web"> <br>
     <input type="checkbox" name="win_std"> <br>
     <input type="checkbox" name="plesk_30"> <br>
     <input type="checkbox" name="plesk_100"> <br>
     <input type="checkbox" name="plesk_unlim"> <br>
     <input type="checkbox" name="cpanel"> <br>
+    <input type="checkbox" name="gbit"> <br>
     <input type="checkbox" name="kvm"> <br>
+	<input type="checkbox" name="install_via_lara"> <br>
+  </div>
+  <div style="float: left; padding-right: 20px;">
     <input type="checkbox" name="raid2"> <br>
     <input type="checkbox" name="raid4"> <br>
-	<input type="checkbox" name="install_via_lara"> <br>
+    <input type="text" placeholder="0" size="1" name="ssd120"> <br>
+    <input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-port RAID is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4port RAID</mark><br>
+    <input type="text" placeholder="0" size="1" name="sata750"> <br>
+    <input type="text" placeholder="0" size="1" name="sata1500"> <br>
+    <input type="text" placeholder="0" size="1" name="sata3000"> <br>
+    <input type="text" placeholder="0" size="1" name="sata3000e"> <br>
+    <input type="text" placeholder="0" size="1" name="usb16"> <br>
+    <input type="text" placeholder="0" size="1" name="usb64"> <br>
+  </div>
+  <div style="float: left; padding-right: 20px;">
     <input type="text" placeholder="0" size="1" name="ip"> <br>
     <input type="text" placeholder="0" size="1" name="subnet29"> <br>
     <input type="text" placeholder="0" size="1" name="subnet28"> <br>
@@ -677,21 +689,13 @@ Select server:
     <input type="text" placeholder="0" size="1" name="subnet25"> <br>
     <input type="text" placeholder="0" size="1" name="subnet24"> <br>
     <input type="text" placeholder="0" size="1" name="failover_ip"> <br>
-  </div>
-  <div style="float: left; padding-left: 20px">
-    <input type="text" placeholder="0" size="1" name="ssd120"> <br>
-    <input type="text" placeholder="0" size="1" name="sas300"> <br>
-    <input type="text" placeholder="0" size="1" name="usb16"> <br>
-    <input type="text" placeholder="0" size="1" name="usb64"> <br>
-    <input type="text" placeholder="0" size="1" name="sata750"> <br>
-    <input type="text" placeholder="0" size="1" name="sata1500"> <br>
-    <input type="text" placeholder="0" size="1" name="sata3000"> <br>
-    <input type="text" placeholder="0" size="1" name="sata3000e"> <br>
     <input type="text" placeholder="0" size="1" name="gbit_nic"> <br>
     <input type="text" placeholder="0" size="1" name="switch_5port"> <br>
     <input type="text" placeholder="0" size="1" name="switch_8port"> <br>
     <input type="text" placeholder="0" size="1" name="switch_24port"> <br>
     <input type="text" placeholder="0" size="1" name="place_reservation"> <br>
+  </div>
+  <div style="clear: left;">
     <input type="text" placeholder="0" size="1" name="drp_license"> <br>
   </div>
 </form>
