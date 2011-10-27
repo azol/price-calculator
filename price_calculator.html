@@ -444,6 +444,7 @@ function prepare_forms(){
   d=new Date()
   date=d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate()
   form_ordering_date.ordering_date.value=date
+
   update_language()
 }
 
@@ -641,7 +642,7 @@ Select server:
 </form>
 
 <form name="form_addons" onchange='update()' onsubmit="update(); return false;" style="clear: left;">
-  Select options:<br>
+  Select addons:<br>
   <div style="float: left; padding-right: 20px;">
     <input type="checkbox" name="win_web"> <br>
     <input type="checkbox" name="win_std"> <br>
@@ -656,8 +657,8 @@ Select server:
   <div style="float: left; padding-right: 20px;">
     <input type="checkbox" name="raid2"> <br>
     <input type="checkbox" name="raid4"> <br>
-    <input type="text" placeholder="0" size="1" name="ssd120"> <br>
     <input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-port RAID is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4port RAID</mark><br>
+    <input type="text" placeholder="0" size="1" name="ssd120"> <br>
     <input type="text" placeholder="0" size="1" name="sata750"> <br>
     <input type="text" placeholder="0" size="1" name="sata1500"> <br>
     <input type="text" placeholder="0" size="1" name="sata3000"> <br>
