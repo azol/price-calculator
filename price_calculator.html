@@ -348,6 +348,13 @@ var addons = {
       Deutsch: "Platz Reservierung: Mietserver Stellfläche",
       Русский: "Резервирование места в стойке"},
   },
+  bbu: {
+    setup: 119,
+    name: {
+      English: "BBU for RAID-Controller",
+      Deutsch: "BBU für RAID-Controller",
+      Русский: "BBU для RAID-контроллера"},
+  },
   /*
   template: {
     setup: 0, monthly: 0, flexi_required: "yes|exception", pay_entire_month: "yes",
@@ -657,6 +664,7 @@ Select server:
   <div style="float: left; padding-right: 20px;">
     <input type="checkbox" name="raid2"> <br>
     <input type="checkbox" name="raid4"> <br>
+    <input type="checkbox" name="bbu"> <br>
     <input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-port RAID is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4port RAID</mark><br>
     <input type="text" placeholder="0" size="1" name="ssd120"> <br>
     <input type="text" placeholder="0" size="1" name="sata750"> <br>
