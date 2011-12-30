@@ -633,7 +633,7 @@ function string_format(amount){
   amount_fixed2=amount.toFixed(2)
   amount_fixed0=amount.toFixed(0)
   if(amount_fixed2-amount_fixed0==0){
-    return amount
+    return amount_fixed0
   } else {
     return amount_fixed2
   }
