@@ -489,7 +489,7 @@ function find_max_len(){
 
 function update_language() {
   for (var p in addons) {
-    form_addons.elements[p].nextSibling.replaceWholeText(addons[p].name[form_languages.select_languages.value])
+    form_addons.elements[p].nextSibling.nodeValue=addons[p].name[form_languages.select_languages.value]
   }
   update()
 }
