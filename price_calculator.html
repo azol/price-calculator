@@ -60,13 +60,6 @@ var messages = {
 }
 
 var servers = {
-  X2: {
-    monthly: 29,
-    name: {
-      English: "Server X2",
-      Deutsch: "Server X2",
-      Русский: "Сервер X2"},
-  },
   X3: {
     monthly: 39,
     name: {
@@ -81,47 +74,47 @@ var servers = {
       Deutsch: "Server X4",
       Русский: "Сервер X4"},
   },
-  X5: {
-    monthly: 59,
-    name: {
-      English: "Server X5",
-      Deutsch: "Server X5",
-      Русский: "Сервер X5"},
-  },
   EX4: {
-    setup: 149, monthly: 49,
+    setup: 49, monthly: 49,
     name: {
       English: "Server EX 4",
       Deutsch: "Server EX 4",
       Русский: "Сервер EX 4"},
   },
   EX4S: {
-    setup: 149, monthly: 59,
+    setup: 59, monthly: 59,
     name: {
       English: "Server EX 4S",
       Deutsch: "Server EX 4S",
       Русский: "Сервер EX 4S"},
   },
   EX5: {
-    setup: 49, monthly: 59,
+    setup: 0, monthly: 59,
     name: {
       English: "Server EX 5",
       Deutsch: "Server EX 5",
       Русский: "Сервер EX 5"},
   },
   EX6: {
-    setup: 149, monthly: 69,
+    setup: 69, monthly: 69,
     name: {
       English: "Server EX 6",
       Deutsch: "Server EX 6",
       Русский: "Сервер EX 6"},
   },
-  EX8: {
-    setup: 149, monthly: 89,
+  EX6S: {
+    setup: 149, monthly: 79,
     name: {
-      English: "Server EX 8",
-      Deutsch: "Server EX 8",
-      Русский: "Сервер EX 8"},
+      English: "Server EX 6S",
+      Deutsch: "Server EX 6S",
+      Русский: "Сервер EX 6S"},
+  },
+  EX8S: {
+    setup: 149, monthly: 99,
+    name: {
+      English: "Server EX 8S",
+      Deutsch: "Server EX 8S",
+      Русский: "Сервер EX 8S"},
   },
   EX10: {
     setup: 149, monthly: 109,
@@ -562,7 +555,7 @@ function prepare_forms(){
 
 function is_flexi_required(p){
   if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes" || (
-      form_servers.select_servers.value != "EX8" && addons[p].flexi_required == "exception")
+      form_servers.select_servers.value != "EX8S" && addons[p].flexi_required == "exception")
      ) {
     return 1
   } else {
@@ -754,15 +747,14 @@ Select language:
 <form name="form_servers" style="float: left; padding-right: 20px">
 Select server:
 <select id="select_servers" onchange="update()">
-<option>X2</option>
 <option>X3</option>
 <option>X4</option>
-<option>X5</option>
 <option>EX4</option>
 <option>EX4S</option>
 <option>EX5</option>
 <option>EX6</option>
-<option>EX8</option>
+<option>EX6S</option>
+<option>EX8S</option>
 <option>EX10</option>
 <option>XS13</option>
 <option>XS29</option>
