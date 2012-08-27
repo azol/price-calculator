@@ -479,7 +479,7 @@ function get_spaces(t, max_len) {
 function format_line(name, price, monthly) {
   spaces=""
   spaces+=get_spaces(name,max_len)
-  spaces+=get_spaces(price,7)
+  spaces+=get_spaces(Math.floor(price),7)
   return name+" "+spaces+price+" "+monthly+"\n"
  }
 
