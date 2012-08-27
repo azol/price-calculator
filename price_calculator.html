@@ -571,7 +571,7 @@ function is_flexi_required(p){
 }
 
 function calc_setup(){
-  text=messages.setup_fee[form_languages.select_languages.value]+"\n"
+  text=messages.setup_fee[form_languages.select_languages.value]+":\n"
   total=0
   price=servers[form_servers.select_servers.value].setup
   if (price>0) {
@@ -620,7 +620,7 @@ function calc_setup(){
 }
 
 function calc_monthly(){
-  text=messages.monthly[form_languages.select_languages.value]+"\n"
+  text=messages.monthly[form_languages.select_languages.value]+":\n"
   total=0
 
   price=servers[form_servers.select_servers.value].monthly
