@@ -27,10 +27,6 @@ var messages = {
     English: "Total monthly costs:",
     Deutsch: "Gesamte monatliche Kosten:",
     Русский: "Итого ежемесячная плата:"},
-  total_ext_products: {
-    English: "Total costs for external licensed products:",
-    Deutsch: "Gesamt Kosten für externe lizenzierte Produkte:",
-    Русский: "Итого за внешне-лицензируемые продукты:"},
   monthly: {
     English: "Monthly costs:",
     Deutsch: "Monatliche Kosten:",
@@ -723,10 +719,7 @@ function calc_first_invoice_addition() {
     }
   }
   if (total>0) {
-    text+=format_line(messages.total_ext_products[form_languages.select_languages.value],
-                      string_format(total),
-                      messages.euro[form_languages.select_languages.value]+"\n")
-    return text
+    return text+"\n"
   } else {
     return ""
   }
