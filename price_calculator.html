@@ -16,13 +16,21 @@ Please, activate javascript in your browser or use other browser
 
 var messages = {
   setup_fee: {
-    English: "Setup costs",
-    Deutsch: "Einmalige Kosten",
-    Русский: "Плата за установку"},
-  total: {
-    English: "Total",
-    Deutsch: "Total",
-    Русский: "Итого"},
+    English: "Setup costs:",
+    Deutsch: "Einmalige Kosten:",
+    Русский: "Плата за установку:"},
+  total_setup: {
+    English: "Total setup costs:",
+    Deutsch: "Gesamte einmalige Kosten:",
+    Русский: "Итого плата за установку:"},
+  total_monthly: {
+    English: "Total monthly costs:",
+    Deutsch: "Gesamte monatliche Kosten:",
+    Русский: "Итого ежемесячная плата:"},
+  total_ext_products: {
+    English: "Total costs for external licensed products:",
+    Deutsch: "Gesamt Kosten für externe lizenzierte Produkte:",
+    Русский: "Итого за внешне-лицензируемые продукты:"},
   monthly: {
     English: "Monthly costs",
     Deutsch: "Monatliche Kosten",
@@ -535,6 +543,27 @@ function find_max_len(){
         max_len=len
     }
   }
+
+  // check len of two types of total (setup and total)
+  len=messages.total_setup[form_languages.select_languages.value].length
+  if ( len > max_len) {
+      max_len=len
+  }
+  len=messages.total_monthly[form_languages.select_languages.value].length
+  if ( len > max_len) {
+      max_len=len
+  }
+
+  // check len of total for external licensed products (if needed)
+  len=messages.total_setup[form_languages.select_languages.value].length
+  if ( len > max_len) {
+      max_len=len
+  }
+  len=messages.total_monthly[form_languages.select_languages.value].length
+  if ( len > max_len) {
+      max_len=len
+  }
+
   return max_len
 }
 
@@ -610,7 +639,7 @@ function calc_setup(){
     }
   }
   if (total>0) {
-    text+=format_line(messages.total[form_languages.select_languages.value],
+    text+=format_line(messages.total_setup[form_languages.select_languages.value],
                      string_format(total),
                      messages.euro[form_languages.select_languages.value]+"\n")
     return text
@@ -666,7 +695,7 @@ function calc_monthly(){
     total+=number_format(vat(15))
   }
   if (total>0) {
-    text+=format_line(messages.total[form_languages.select_languages.value],
+    text+=format_line(messages.total_monthly[form_languages.select_languages.value],
                       string_format(total),
                       messages.euro_per_month[form_languages.select_languages.value]+"\n")
     return text
@@ -694,7 +723,7 @@ function calc_first_invoice_addition() {
     }
   }
   if (total>0) {
-    text+=format_line(messages.total[form_languages.select_languages.value],
+    text+=format_line(messages.total_ext_products[form_languages.select_languages.value],
                       string_format(total),
                       messages.euro[form_languages.select_languages.value]+"\n")
     return text
