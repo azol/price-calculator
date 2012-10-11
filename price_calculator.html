@@ -52,9 +52,9 @@ var messages = {
     Deutsch: "Alle Preise sind exklusive Mehrwehrtsteuer",
     Русский: "Все цены указаны без VAT"},
   first_invoice_addition: {
-    English: "Additional payment for product(s) charged for entire month",
-    Deutsch: "Zusätzliche kosten fuer Produkt(e) die fuer den gesamente Monat berechnet werden",
-    Русский: "В первый счёт будет дополнительно включена плата за продукт(ы) лицензируемые помесячно"},
+    English: "Additional payment for product(s) charged for entire month:",
+    Deutsch: "Zusätzliche kosten fuer Produkt(e) die fuer den gesamente Monat berechnet werden:",
+    Русский: "В первый счёт будет дополнительно включена плата за продукт(ы) лицензируемые помесячно:"},
   /*
   template: {
     English: "",
@@ -112,6 +112,7 @@ var servers = {
       English: "Server EX 10",
       Deutsch: "Server EX 10",
       Русский: "Сервер EX 10"},
+    comment: "EX10: installation of ESXi free editions is not possible\nEX10: Our Windwos is able to use only 32 GB RAM",
   },
   XS13: {
     setup: 199, monthly: 139,
@@ -119,6 +120,7 @@ var servers = {
       English: "Server XS 13",
       Deutsch: "Server XS 13",
       Русский: "Сервер XS 13"},
+    comment: "XS13: windows installation is not possible",
   },
   XS29: {
     setup: 499, monthly: 299,
@@ -126,6 +128,7 @@ var servers = {
       English: "Server XS 29",
       Deutsch: "Server XS 29",
       Русский: "Сервер XS 29"},
+    comment: "XS29: additional signle IP is not possible",
   },
   /*
   template: {
@@ -211,6 +214,7 @@ var addons = {
       English: "1Gbit port",
       Deutsch: "1Gbit port",
       Русский: "1 Гбит порт"},
+    comment: "1Gbit port: included traffic increased by 5TB",
   },
   win_web: {
     monthly: 15, pay_entire_month: "yes",
@@ -302,6 +306,7 @@ var addons = {
       English: "Failover IP",
       Deutsch: "Failover-IP",
       Русский: "Failover IP"},
+    comment: "Failiver-IP: can`t be used with ESXi",
   },
   failover_subnet29: {
     monthly: 15, flexi_required: "yes",
@@ -309,6 +314,7 @@ var addons = {
       English: "Failover subnet /29",
       Deutsch: "Failover Subnet /29",
       Русский: "Failover подсеть /29"},
+    comment: "Failover subnet /29: can`t be used with ESXi",
   },
   failover_subnet28: {
     monthly: 25, flexi_required: "yes",
@@ -316,6 +322,7 @@ var addons = {
       English: "Failover subnet /28",
       Deutsch: "Failover Subnet /28",
       Русский: "Failover подсеть /28"},
+    comment: "Failover subnet /28: can`t be used with ESXi",
   },
   ssd120: {
     monthly: 15, flexi_required: "exception",
@@ -414,6 +421,7 @@ var addons = {
       English: "Reservation of rack space",
       Deutsch: "Platz Reservierung: Mietserver Stellfläche",
       Русский: "Резервирование места в стойке"},
+    comment: "Reservation of rack space: no more then 50% of number of servers",
   },
   bbu: {
     setup: 119,
@@ -455,7 +463,7 @@ function get_spaces(t, max_len) {
 function format_line(name, price, monthly) {
   spaces=""
   spaces+=get_spaces(name,max_len)
-  spaces+=get_spaces(Math.floor(price),7)
+  spaces+=get_spaces(Math.floor(price),5)
   return name+" "+spaces+price+" "+monthly+"\n"
  }
 
@@ -465,8 +473,8 @@ function update() {
   max_len=find_max_len();
   form_output.text.value=calc_setup()
   form_output.text.value+=calc_monthly()
-  form_output.text.value+=calc_first_invoice_addition()
   form_output.text.value+=show_vat()
+  form_output.text.value+=show_comments()
   setRows()
 }
 
@@ -512,26 +520,16 @@ function find_max_len(){
     }
   }
 
-  // check len of two types of total (setup and total)
+  // check len of two types of total (setup and monthly)
   len=messages.total_setup[form_languages.select_languages.value].length
   if ( len > max_len) {
       max_len=len
   }
+
   len=messages.total_monthly[form_languages.select_languages.value].length
   if ( len > max_len) {
       max_len=len
   }
-
-  // check len of total for external licensed products (if needed)
-  len=messages.total_setup[form_languages.select_languages.value].length
-  if ( len > max_len) {
-      max_len=len
-  }
-  len=messages.total_monthly[form_languages.select_languages.value].length
-  if ( len > max_len) {
-      max_len=len
-  }
-
   return max_len
 }
 
@@ -684,9 +682,11 @@ function calc_first_invoice_addition() {
       days=d.getDate()
       now=date.getDate()
       addon_price=addon_price/days*(now-1)
-      text+=format_line(addons[p].name[form_languages.select_languages.value],
-                        string_format(addon_price),
-                        messages.euro[form_languages.select_languages.value])
+
+      text+=addons[p].name[form_languages.select_languages.value]+" "
+      text+=string_format(addon_price)+" "
+      text+=messages.euro[form_languages.select_languages.value]+"\n"
+
       total+=number_format(addon_price)
     }
   }
@@ -729,6 +729,29 @@ function number_format(amount){
     return Number(amount.toFixed(2))
   }
 }
+
+function show_comments(){
+  //collect comments from selected server and addons
+  comments=""
+  comments+=(servers[form_servers.select_servers.value].comment === undefined) ? "" : servers[form_servers.select_servers.value].comment+"\n"
+
+  for (var p in addons) {
+    if ( form_addons.elements[p].checked == true || form_addons.elements[p].value > 0  ){
+      comments+=(addons[p].comment === undefined) ? "" : addons[p].comment+"\n"
+    }
+  }
+
+  //show also additional costs for externally licensed products
+  comments+=calc_first_invoice_addition()
+
+  //add header if comments exists
+  if (comments != "") {
+    comments="COMMENTS:\n"+comments
+  }
+
+  return comments
+}
+
 
 </script>
 </head>
