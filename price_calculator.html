@@ -31,10 +31,6 @@ var messages = {
     English: "Monthly costs:",
     Deutsch: "Monatliche Kosten:",
     Русский: "Ежемесячная плата:"},
-  euro_per_month: {
-    English: "€/month",
-    Deutsch: "€/Monat",
-    Русский: "€/месяц"},
   euro: {
     English: "€",
     Deutsch: "€",
@@ -626,7 +622,7 @@ function calc_monthly(){
     price=vat(price)
     text+=format_line(servers[form_servers.select_servers.value].name[form_languages.select_languages.value],
                       string_format(price),
-                      messages.euro_per_month[form_languages.select_languages.value])
+                      messages.euro[form_languages.select_languages.value])
     total+=number_format(price)
   }
 
@@ -635,7 +631,7 @@ function calc_monthly(){
     price=vat(price)
     text+=format_line(backups[form_backups.select_backups.value].name[form_languages.select_languages.value],
                       string_format(price),
-                      messages.euro_per_month[form_languages.select_languages.value])
+                      messages.euro[form_languages.select_languages.value])
     total+=number_format(price)
   }
 
@@ -652,7 +648,7 @@ function calc_monthly(){
       }
       text+=format_line(count_text+addons[p].name[form_languages.select_languages.value],
                         string_format(addon_price),
-                        messages.euro_per_month[form_languages.select_languages.value])
+                        messages.euro[form_languages.select_languages.value])
       flexi_counter+=is_flexi_required(p)
       total+=number_format(addon_price)
     }
@@ -660,13 +656,13 @@ function calc_monthly(){
   if (flexi_counter>0) {
     text+=format_line(messages.flexi_pack[form_languages.select_languages.value],
                       string_format(vat(15)),
-                      messages.euro_per_month[form_languages.select_languages.value])
+                      messages.euro[form_languages.select_languages.value])
     total+=number_format(vat(15))
   }
   if (total>0) {
     text+=format_line(messages.total_monthly[form_languages.select_languages.value],
                       string_format(total),
-                      messages.euro_per_month[form_languages.select_languages.value]+"\n")
+                      messages.euro[form_languages.select_languages.value]+"\n")
     return text
   } else {
     return ""
