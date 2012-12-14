@@ -604,7 +604,7 @@ function calc_setup(){
     }
   }
   if (total>0) {
-    text+=format_line(messages.total_setup[form_languages.select_languages.value],
+    text+="---\n"+format_line(messages.total_setup[form_languages.select_languages.value],
                      string_format(total),
                      messages.euro[form_languages.select_languages.value]+"\n")
     return text
@@ -660,7 +660,7 @@ function calc_monthly(){
     total+=number_format(vat(15))
   }
   if (total>0) {
-    text+=format_line(messages.total_monthly[form_languages.select_languages.value],
+    text+="---\n"+format_line(messages.total_monthly[form_languages.select_languages.value],
                       string_format(total),
                       messages.euro[form_languages.select_languages.value]+"\n")
     return text
