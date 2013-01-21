@@ -298,6 +298,14 @@ var addons = {
       Deutsch: "Subnet /28",
       Русский: "Подсеть /28"},
   },
+  subnet27: {
+    monthly: 32, flexi_required: "yes",
+    name: {
+      English: "Subnet /27",
+      Deutsch: "Subnet /27",
+      Русский: "Подсеть /27"},
+  },
+
   failover_ip: {
     monthly: 5, flexi_required: "yes",
     name: {
@@ -321,6 +329,14 @@ var addons = {
       Deutsch: "Failover Subnet /28",
       Русский: "Failover подсеть /28"},
     comment: "Failover subnet /28: can`t be used with ESXi",
+  },
+  failover_subnet27: {
+    monthly: 42, flexi_required: "yes",
+    name: {
+      English: "Failover subnet /27",
+      Deutsch: "Failover Subnet /27",
+      Русский: "Failover подсеть /27"},
+    comment: "Failover subnet /27: can`t be used with ESXi",
   },
   ssd120: {
     monthly: 15, flexi_required: "exception",
@@ -821,9 +837,11 @@ Select server:
     <input type="text" placeholder="0" size="1" name="ip"> <br>
     <input type="text" placeholder="0" size="1" name="subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
     <input type="text" placeholder="0" size="1" name="subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
+    <input type="text" placeholder="0" size="1" name="subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
     <input type="text" placeholder="0" size="1" name="failover_ip"> <br>
     <input type="text" placeholder="0" size="1" name="failover_subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
     <input type="text" placeholder="0" size="1" name="failover_subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
+    <input type="text" placeholder="0" size="1" name="failover_subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
     <input type="text" placeholder="0" size="1" name="gbit_nic"> <br>
     <input type="text" placeholder="0" size="1" name="switch_5port"> <br>
     <input type="text" placeholder="0" size="1" name="switch_8port"> <br>
