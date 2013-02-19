@@ -359,6 +359,13 @@ var addons = {
       Deutsch: "300 GB SAS",
       Русский: "300 ГБ SAS"},
   },
+  sas600: {
+    monthly: 25, flexi_required: "exception",
+    name: {
+      English: "600 GB SAS",
+      Deutsch: "600 GB SAS",
+      Русский: "600 ГБ SAS"},
+  },
   sata750: {
     monthly: 6, flexi_required: "exception",
     name: {
@@ -824,6 +831,7 @@ Select server:
     <input type="checkbox" name="raid4"> <br>
     <input type="checkbox" name="bbu"> <br>
     <input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-port RAID is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4port RAID</mark><br>
+    <input type="text" placeholder="0" size="1" name="sas600"> <mark title="4-port RAID is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4port RAID</mark><br>
     <input type="text" placeholder="0" size="1" name="ssd120"> <br>
     <input type="text" placeholder="0" size="1" name="ssd240"> <br>
     <input type="text" placeholder="0" size="1" name="sata750"> <br>
