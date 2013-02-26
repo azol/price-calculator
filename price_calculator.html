@@ -128,6 +128,14 @@ EX10: Our Windows is able to use only 32 GB RAM",
       Русский: "Сервер XS 29"},
     comment: "XS29: additional signle IP is not possible",
   },
+  Dell_R720: {
+    setup: 199, monthly: 349,
+    name: {
+      English: "DELL PowerEdge™ R720",
+      Deutsch: "DELL PowerEdge™ R720",
+      Русский: "DELL PowerEdge™ R720"},
+    comment: "R720: have an iDRAC (IP-KVM)",
+  },
   /*
   template: {
     setup: 0, monthly: 0,
@@ -579,8 +587,9 @@ function prepare_forms(){
 
 function is_flexi_required(p){
   if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes" || (
-      form_servers.select_servers.value != "EX8S" && addons[p].flexi_required == "exception")
-     ) {
+      ( form_servers.select_servers.value != "EX8S" &&
+        form_servers.select_servers.value != "Dell_R720" ) && addons[p].flexi_required == "exception"
+     )) {
     return 1
   } else {
     return 0
@@ -801,6 +810,7 @@ Select server:
 <option>EX10</option>
 <option>XS13</option>
 <option>XS29</option>
+<option>Dell_R720</option>
 </select>
 </form>
 
