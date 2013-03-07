@@ -129,12 +129,15 @@ EX10: Our Windows is able to use only 32 GB RAM",
     comment: "XS29: additional signle IP is not possible",
   },
   Dell_R720: {
-    setup: 199, monthly: 349,
+    setup: 199, monthly: 299,
+    flexi_included: "yes",
     name: {
       English: "DELL PowerEdge™ R720",
       Deutsch: "DELL PowerEdge™ R720",
       Русский: "DELL PowerEdge™ R720"},
     comment: "R720: have an iDRAC (IP-KVM)",
+    comment: "R720: disks are optional SATA 3 TB Enten and SAS 600 GB",
+    comment: "R720: flexi-pack is included",
   },
   /*
   template: {
@@ -587,9 +590,8 @@ function prepare_forms(){
 
 function is_flexi_required(p){
   if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes" || (
-      ( form_servers.select_servers.value != "EX8S" &&
-        form_servers.select_servers.value != "Dell_R720" ) && addons[p].flexi_required == "exception"
-     )) {
+      form_servers.select_servers.value != "EX8S" && addons[p].flexi_required == "exception")
+     ) {
     return 1
   } else {
     return 0
