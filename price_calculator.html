@@ -135,13 +135,14 @@ EX10: Our Windows is able to use only 32 GB RAM",
       English: "DELL PowerEdge™ R720",
       Deutsch: "DELL PowerEdge™ R720",
       Русский: "DELL PowerEdge™ R720"},
-    comment: "R720: have an iDRAC (IP-KVM)",
-    comment: "R720: disks are optional SATA 3 TB Enten and SAS 600 GB",
-    comment: "R720: flexi-pack is included",
+    comment: "R720: have an iDRAC (IP-KVM)\n\
+R720: disks are optional SATA 3 TB Enten and SAS 600 GB\n\
+R720: flexi-pack is included",
   },
   /*
   template: {
     setup: 0, monthly: 0,
+    flexi_included: "yes|",
     name: {
       English: "",
       Deutsch: "",
@@ -589,7 +590,9 @@ function prepare_forms(){
 }
 
 function is_flexi_required(p){
-  if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes" || (
+  if (servers[form_servers.select_servers.value].flexi_included == "yes") {
+    return 0
+  } else if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes" || (
       form_servers.select_servers.value != "EX8S" && addons[p].flexi_required == "exception")
      ) {
     return 1
