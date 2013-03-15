@@ -126,7 +126,7 @@ EX10: Our Windows is able to use only 32 GB RAM",
       English: "Server XS 29",
       Deutsch: "Server XS 29",
       Русский: "Сервер XS 29"},
-    comment: "XS29: additional signle IP is not possible",
+    comment: "XS29: additional single IP is not possible",
   },
   Dell_R720: {
     setup: 199, monthly: 299,
@@ -136,8 +136,8 @@ EX10: Our Windows is able to use only 32 GB RAM",
       Deutsch: "DELL PowerEdge™ R720",
       Русский: "DELL PowerEdge™ R720"},
     comment: "R720: have an iDRAC (IP-KVM)\n\
-R720: disks are optional SATA 3 TB Enten and SAS 600 GB\n\
-R720: flexi-pack is included",
+R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 300GB/600GB SSD)\n\
+R720: Flexi-Pack is included",
   },
   /*
   template: {
@@ -176,21 +176,21 @@ var backups = {
   2000: {
     setup: 19.90, monthly: 19.90,
     name: {
-      English: "2.000 GB Backup Space",
+      English: "2,000 GB Backup Space",
       Deutsch: "2.000 GB Backup Space",
       Русский: "2.000 ГБ места для резервных копий"},
   },
   5000: {
     setup: 44.90, monthly: 44.90,
     name: {
-      English: "5.000 GB Backup Space",
+      English: "5,000 GB Backup Space",
       Deutsch: "5.000 GB Backup Space",
       Русский: "5.000 ГБ места для резервных копий"},
   },
   10000: {
     setup: 79.90, monthly: 79.90,
     name: {
-      English: "10.000 GB Backup Space",
+      English: "10,000 GB Backup Space",
       Deutsch: "10.000 GB Backup Space",
       Русский: "10.000 ГБ места для резервных копий"},
   },
@@ -221,8 +221,8 @@ var addons = {
   gbit: {
     monthly: 39,
     name: {
-      English: "1Gbit port",
-      Deutsch: "1Gbit port",
+      English: "1 Gbit port",
+      Deutsch: "1 Gbit port",
       Русский: "1 Гбит порт"},
     comment: "1Gbit port: included traffic increased by 5TB",
   },
@@ -324,7 +324,7 @@ var addons = {
       English: "Failover IP",
       Deutsch: "Failover-IP",
       Русский: "Failover IP"},
-    comment: "Failiver-IP: can`t be used with ESXi",
+    comment: "Failover IP: can`t be used with VMware ESXi",
   },
   failover_subnet29: {
     monthly: 18, flexi_required: "yes",
@@ -332,7 +332,7 @@ var addons = {
       English: "Failover subnet /29",
       Deutsch: "Failover Subnet /29",
       Русский: "Failover подсеть /29"},
-    comment: "Failover subnet /29: can`t be used with ESXi",
+    comment: "Failover subnet /29: can`t be used with VMware ESXi",
   },
   failover_subnet28: {
     monthly: 26, flexi_required: "yes",
@@ -340,7 +340,7 @@ var addons = {
       English: "Failover subnet /28",
       Deutsch: "Failover Subnet /28",
       Русский: "Failover подсеть /28"},
-    comment: "Failover subnet /28: can`t be used with ESXi",
+    comment: "Failover subnet /28: can`t be used with VMware ESXi",
   },
   failover_subnet27: {
     monthly: 42, flexi_required: "yes",
@@ -348,7 +348,7 @@ var addons = {
       English: "Failover subnet /27",
       Deutsch: "Failover Subnet /27",
       Русский: "Failover подсеть /27"},
-    comment: "Failover subnet /27: can`t be used with ESXi",
+    comment: "Failover subnet /27: can`t be used with VMware ESXi",
   },
   ssd120: {
     monthly: 15, flexi_required: "exception",
@@ -388,9 +388,9 @@ var addons = {
   sata1500: {
     monthly: 9, flexi_required: "exception",
     name: {
-      English: "1500 GB SATA HDD",
-      Deutsch: "1500 GB SATA HDD",
-      Русский: "1500 ГБ SATA HDD"},
+      English: "1,500 GB SATA HDD",
+      Deutsch: "1.500 GB SATA HDD",
+      Русский: "1.500 ГБ SATA HDD"},
   },
   sata3000: {
     monthly: 15, flexi_required: "exception",
@@ -403,7 +403,7 @@ var addons = {
     monthly: 25, flexi_required: "exception",
     name: {
       English: "3 TB enterprise SATA HDD",
-      Deutsch: "3 TB enterprise SATA HDD",
+      Deutsch: "3 TB Enterprise SATA HDD",
       Русский: "3 ТБ enterprise SATA HDD"},
   },
   gbit_nic: {
@@ -459,12 +459,11 @@ var addons = {
   bbu: {
     setup: 149,
     name: {
-      English: "BBU for RAID-Controller",
+      English: "BBU for RAID controller",
       Deutsch: "BBU für RAID-Controller",
       Русский: "BBU для RAID-контроллера"},
-    comment: "BBU: is not available for XS29"
   },
-  traffic_overuage: {
+  traffic_overusage: {
     monthly: 6.9,
     name: {
       English: "Traffic overusage (TB)",
@@ -845,8 +844,8 @@ Select server:
     <input type="checkbox" name="raid2"> <br>
     <input type="checkbox" name="raid4"> <br>
     <input type="checkbox" name="bbu"> <br>
-    <input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-port RAID is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4port RAID</mark><br>
-    <input type="text" placeholder="0" size="1" name="sas600"> <mark title="4-port RAID is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4port RAID</mark><br>
+    <input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
+    <input type="text" placeholder="0" size="1" name="sas600"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
     <input type="text" placeholder="0" size="1" name="ssd120"> <br>
     <input type="text" placeholder="0" size="1" name="ssd240"> <br>
     <input type="text" placeholder="0" size="1" name="sata750"> <br>
@@ -870,7 +869,7 @@ Select server:
     <input type="text" placeholder="0" size="1" name="switch_8port"> <br>
     <input type="text" placeholder="0" size="1" name="switch_24port"> <br>
     <input type="text" placeholder="0" size="1" name="place_reservation"> <br>
-    <input type="text" placeholder="0" size="1" name="traffic_overuage"> <br>
+    <input type="text" placeholder="0" size="1" name="traffic_overusage"> <br>
   </div>
   <div style="clear: left;">
     <input type="text" placeholder="0" size="1" name="rdp_license"> <br>
