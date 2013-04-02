@@ -1,18 +1,129 @@
-<head>
-<meta http-equiv="Content-Type" content="text/html charset=utf-8">
-<title>Price Calculator</title>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Price Calculator</title>
+		<style type="text/css">
+			body {float: left;}
+			#noscript {color: red;}
+			#form {display: none;}
+		</style>
+	</head>
+	<body onload='prepare_forms()'>
+		<noscript>
+			<div id="noscript">
+				<h1>This page uses JavaScript</h1>
+				<p>Please, activate javascript in your browser or use other browser</p>
+			</div>
+		</noscript>
 
-<NOSCRIPT>
-<font color="red">
-<B>This page uses JavaScript</B>
-<BR>
-Please, activate javascript in your browser or use other browser
-<BR>
-<BR>
-</font>
-</NOSCRIPT>
+		<div id="form">
+			<form name="form_languages" style="float: left; padding-right: 20px ">
+				Select language:
+				<select id="select_languages" onchange="update_language()">
+					<option>English</option>
+					<option>Deutsch</option>
+					<option>Русский</option>
+				</select>
+			</form>
 
-<script type="text/javascript" >
+			<form name="form_servers" style="float: left; padding-right: 20px">
+				Select server:
+				<select id="select_servers" onchange="update()">
+					<option>EX4</option>
+					<option>EX4S</option>
+					<option>EX5</option>
+					<option>EX6</option>
+					<option>EX6S</option>
+					<option>EX8S</option>
+					<option>EX10</option>
+					<option>XS13</option>
+					<option>XS29</option>
+					<option>Dell_R720</option>
+				</select>
+			</form>
+
+			<form name="form_vat" onchange='update()' style="float: left; padding-right: 20px">
+				Is VAT included?<input type="checkbox" name="vat_included" checked>
+			</form>
+
+			<form name="form_ordering_date" onchange='update()' onsubmit="update(); return false;" style="float: left;">
+				Input ordering date: <input type="text" name="ordering_date">
+			</form>
+
+			<form name="form_addons" onchange='update()' onsubmit="update(); return false;" style="clear: left;">
+				Select addons:<br>
+				<div style="float: left; padding-right: 20px;">
+					<input type="checkbox" name="win_web"> <br>
+					<input type="checkbox" name="win_std"> <br>
+					<input type="checkbox" name="plesk_30"> <br>
+					<input type="checkbox" name="plesk_100"> <br>
+					<input type="checkbox" name="plesk_unlim"> <br>
+					<input type="checkbox" name="plesk_power_pack"> <br>
+					<input type="checkbox" name="cpanel"> <br>
+					<input type="checkbox" name="gbit"> <br>
+					<input type="checkbox" name="kvm"> <br>
+					<input type="checkbox" name="install_via_lara"> <br>
+				</div>
+				<div style="float: left; padding-right: 20px;">
+					<input type="checkbox" name="raid2"> <br>
+					<input type="checkbox" name="raid4"> <br>
+					<input type="checkbox" name="bbu"> <br>
+					<input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
+					<input type="text" placeholder="0" size="1" name="sas600"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
+					<input type="text" placeholder="0" size="1" name="ssd120"> <br>
+					<input type="text" placeholder="0" size="1" name="ssd240"> <br>
+					<input type="text" placeholder="0" size="1" name="ssd300"> <br>
+					<input type="text" placeholder="0" size="1" name="ssd600"> <br>
+					<input type="text" placeholder="0" size="1" name="sata750"> <br>
+					<input type="text" placeholder="0" size="1" name="sata1500"> <br>
+					<input type="text" placeholder="0" size="1" name="sata3000"> <br>
+					<input type="text" placeholder="0" size="1" name="sata3000e"> <br>
+					<input type="text" placeholder="0" size="1" name="usb16"> <br>
+					<input type="text" placeholder="0" size="1" name="usb64"> <br>
+					<input type="text" placeholder="0" size="1" name="ramecc32gb"> <br>
+				</div>
+				<div style="float: left;">
+					<input type="text" placeholder="0" size="1" name="ip"> <br>
+					<input type="text" placeholder="0" size="1" name="subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
+					<input type="text" placeholder="0" size="1" name="subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
+					<input type="text" placeholder="0" size="1" name="subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
+					<input type="text" placeholder="0" size="1" name="failover_ip"> <br>
+					<input type="text" placeholder="0" size="1" name="failover_subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
+					<input type="text" placeholder="0" size="1" name="failover_subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
+					<input type="text" placeholder="0" size="1" name="failover_subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
+					<input type="text" placeholder="0" size="1" name="gbit_nic"> <br>
+					<input type="text" placeholder="0" size="1" name="switch_5port"> <br>
+					<input type="text" placeholder="0" size="1" name="switch_8port"> <br>
+					<input type="text" placeholder="0" size="1" name="switch_24port"> <br>
+					<input type="text" placeholder="0" size="1" name="place_reservation"> <br>
+					<input type="text" placeholder="0" size="1" name="traffic_overusage"> <br>
+				</div>
+				<div style="clear: left;">
+					<input type="text" placeholder="0" size="1" name="rdp_license"> <br>
+				</div>
+			</form>
+
+			<form name="form_backups">
+				Backup Space:<br>
+				<select id="select_backups" onchange="update()">
+					<option>no</option>
+					<option>100</option>
+					<option>500</option>
+					<option>2000</option>
+					<option>5000</option>
+					<option>10000</option>
+				</select>
+			</form>
+
+			<br>
+			<form name="form_output">
+				<textarea name="text" readonly style="width: 100%"></textarea>
+			</form>
+		</div>
+
+<script>document.getElementById('form').style.display='block';</script>
+<script type="text/javascript">
 
 var messages = {
   setup_fee: {
@@ -813,113 +924,7 @@ function show_comments(){
   return comments
 }
 
-
 </script>
-</head>
 
-<body onload='prepare_forms()' style="float: left;">
-
-<form name="form_languages" style="float: left; padding-right: 20px ">
-Select language:
-<select id="select_languages" onchange="update_language()">
-<option>English</option>
-<option>Deutsch</option>
-<option>Русский</option>
-</select>
-</form>
-
-<form name="form_servers" style="float: left; padding-right: 20px">
-Select server:
-<select id="select_servers" onchange="update()">
-<option>EX4</option>
-<option>EX4S</option>
-<option>EX5</option>
-<option>EX6</option>
-<option>EX6S</option>
-<option>EX8S</option>
-<option>EX10</option>
-<option>XS13</option>
-<option>XS29</option>
-<option>Dell_R720</option>
-</select>
-</form>
-
-<form name="form_vat" onchange='update()' style="float: left; padding-right: 20px">
-  Is VAT included?<input type="checkbox" name="vat_included" checked>
-</form>
-
-<form name="form_ordering_date" onchange='update()' onsubmit="update(); return false;" style="float: left;">
-  Input ordering date: <input type="text" name="ordering_date">
-</form>
-
-<form name="form_addons" onchange='update()' onsubmit="update(); return false;" style="clear: left;">
-  Select addons:<br>
-  <div style="float: left; padding-right: 20px;">
-    <input type="checkbox" name="win_web"> <br>
-    <input type="checkbox" name="win_std"> <br>
-    <input type="checkbox" name="plesk_30"> <br>
-    <input type="checkbox" name="plesk_100"> <br>
-    <input type="checkbox" name="plesk_unlim"> <br>
-    <input type="checkbox" name="plesk_power_pack"> <br>
-    <input type="checkbox" name="cpanel"> <br>
-    <input type="checkbox" name="gbit"> <br>
-    <input type="checkbox" name="kvm"> <br>
-    <input type="checkbox" name="install_via_lara"> <br>
-  </div>
-  <div style="float: left; padding-right: 20px;">
-    <input type="checkbox" name="raid2"> <br>
-    <input type="checkbox" name="raid4"> <br>
-    <input type="checkbox" name="bbu"> <br>
-    <input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
-    <input type="text" placeholder="0" size="1" name="sas600"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
-    <input type="text" placeholder="0" size="1" name="ssd120"> <br>
-    <input type="text" placeholder="0" size="1" name="ssd240"> <br>
-    <input type="text" placeholder="0" size="1" name="ssd300"> <br>
-    <input type="text" placeholder="0" size="1" name="ssd600"> <br>
-    <input type="text" placeholder="0" size="1" name="sata750"> <br>
-    <input type="text" placeholder="0" size="1" name="sata1500"> <br>
-    <input type="text" placeholder="0" size="1" name="sata3000"> <br>
-    <input type="text" placeholder="0" size="1" name="sata3000e"> <br>
-    <input type="text" placeholder="0" size="1" name="usb16"> <br>
-    <input type="text" placeholder="0" size="1" name="usb64"> <br>
-    <input type="text" placeholder="0" size="1" name="ramecc32gb"> <br>
-  </div>
-  <div style="float: left;">
-    <input type="text" placeholder="0" size="1" name="ip"> <br>
-    <input type="text" placeholder="0" size="1" name="subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
-    <input type="text" placeholder="0" size="1" name="subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
-    <input type="text" placeholder="0" size="1" name="subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
-    <input type="text" placeholder="0" size="1" name="failover_ip"> <br>
-    <input type="text" placeholder="0" size="1" name="failover_subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
-    <input type="text" placeholder="0" size="1" name="failover_subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
-    <input type="text" placeholder="0" size="1" name="failover_subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
-    <input type="text" placeholder="0" size="1" name="gbit_nic"> <br>
-    <input type="text" placeholder="0" size="1" name="switch_5port"> <br>
-    <input type="text" placeholder="0" size="1" name="switch_8port"> <br>
-    <input type="text" placeholder="0" size="1" name="switch_24port"> <br>
-    <input type="text" placeholder="0" size="1" name="place_reservation"> <br>
-    <input type="text" placeholder="0" size="1" name="traffic_overusage"> <br>
-  </div>
-  <div style="clear: left;">
-    <input type="text" placeholder="0" size="1" name="rdp_license"> <br>
-  </div>
-</form>
-
-<form name="form_backups">
-  Backup Space:<br>
-  <select id="select_backups" onchange="update()">
-    <option>no</option>
-    <option>100</option>
-    <option>500</option>
-    <option>2000</option>
-    <option>5000</option>
-    <option>10000</option>
-  </select>
-</form>
-
-<br>
-<form name="form_output">
-  <textarea name="text" readonly style="width: 100%"></textarea>
-</form>
-
-<body>
+	</body>
+</html>
