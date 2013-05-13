@@ -74,9 +74,7 @@
 					<input type="checkbox" name="bbu"> <br>
 					<input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
 					<input type="text" placeholder="0" size="1" name="sas600"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
-					<input type="text" placeholder="0" size="1" name="ssd120"> <br>
 					<input type="text" placeholder="0" size="1" name="ssd240"> <br>
-					<input type="text" placeholder="0" size="1" name="ssd300"> <br>
 					<input type="text" placeholder="0" size="1" name="ssd600"> <br>
 					<input type="text" placeholder="0" size="1" name="sata750"> <br>
 					<input type="text" placeholder="0" size="1" name="sata1500"> <br>
@@ -495,27 +493,12 @@ var addons = {
       Русский: "Failover подсеть /27"},
     comment: "Failover subnet /27: can`t be used with VMware ESXi",
   },
-  ssd120: {
-    monthly: 15, flexi_required: "exception",
-    name: {
-      English: "120 GB SSD",
-      Deutsch: "120 GB SSD",
-      Русский: "120 ГБ SSD"},
-  },
   ssd240: {
     monthly: 19, flexi_required: "exception",
     name: {
       English: "240 GB SSD",
       Deutsch: "240 GB SSD",
       Русский: "240 ГБ SSD"},
-  },
-  ssd300: {
-    monthly: 25,
-    name: {
-      English: "300 GB SSD",
-      Deutsch: "300 GB SSD",
-      Русский: "300 ГБ SSD"},
-    comment: "300 GB SSD: is available only for DELL R720",
   },
   ssd600: {
     monthly: 50,
