@@ -174,58 +174,58 @@ var messages = {
 
 var servers = {
   EX40: {
-    setup: 99, monthly: 49,
+    monthly: 49, setup: 99,
     name: {
       English: "Server EX40",
       Deutsch: "Server EX40",
       Русский: "Сервер EX40"},
-      comment: "EX40: 1Gbit/s connected, 200 MBit/s quaranteed\n\
+    comment: "EX40: 1Gbit/s connected, 200 MBit/s quaranteed\n\
 EX40: 20 TB included",
   },
   EX40SSD: {
-    setup: 99, monthly: 59,
+    monthly: 59, setup: 99,
     name: {
       English: "Server EX40-SSD",
       Deutsch: "Server EX40-SSD",
       Русский: "Сервер EX40-SSD"},
-      comment: "EX40-SSD: 1Gbit/s connected, 200 MBit/s quaranteed\n\
+    comment: "EX40-SSD: 1Gbit/s connected, 200 MBit/s quaranteed\n\
 EX40-SSD: 20 TB included",
   },
   EX60: {
-    setup: 69, monthly: 69,
+    monthly: 69, setup: 69,
     name: {
       English: "Server EX60",
       Deutsch: "Server EX60",
       Русский: "Сервер EX60"},
-      comment: "EX60: 1Gbit/s connected, 200 MBit/s quaranteed\n\
+    comment: "EX60: 1Gbit/s connected, 200 MBit/s quaranteed\n\
 EX60: 20 TB included",
   },
   EX6: {
-    setup: 69, monthly: 69,
+    monthly: 69, setup: 69,
     name: {
       English: "Server EX6",
       Deutsch: "Server EX6",
       Русский: "Сервер EX6"},
-      comment: "EX6: 20 TB included",
+    comment: "EX6: 20 TB included",
   },
   EX6S: {
-    setup: 149, monthly: 79,
+    monthly: 79, setup: 149,
     name: {
       English: "Server EX6S",
       Deutsch: "Server EX6S",
       Русский: "Сервер EX6S"},
-      comment: "EX6S: 20 TB included",
+    comment: "EX6S: 20 TB included",
   },
   EX8S: {
-    setup: 149, monthly: 99,
+    monthly: 99, setup: 149,
     name: {
       English: "Server EX8S",
       Deutsch: "Server EX8S",
       Русский: "Сервер EX8S"},
-      comment: "EX8S: 30 TB included",
+    comment: "EX8S: 30 TB included",
   },
   EX10: {
-    setup: 149, monthly: 109,
+    monthly: 109, setup: 149,
     name: {
       English: "Server EX10",
       Deutsch: "Server EX10",
@@ -236,7 +236,7 @@ EX10: for licenced ESXi additional NIC is required\n\
 EX10: Our Windows is able to use only 32 GB RAM",
   },
   XS13: {
-    setup: 199, monthly: 139,
+    monthly: 139, setup: 199,
     name: {
       English: "Server XS13",
       Deutsch: "Server XS13",
@@ -245,7 +245,7 @@ EX10: Our Windows is able to use only 32 GB RAM",
 XS13: windows installation is not possible",
   },
   XS29: {
-    setup: 499, monthly: 299,
+    monthly: 299, setup: 499,
     name: {
       English: "Server XS29",
       Deutsch: "Server XS29",
@@ -254,7 +254,7 @@ XS13: windows installation is not possible",
 XS29: additional single IP is not possible",
   },
   DX150: {
-    setup: 199, monthly: 159,
+    monthly: 159, setup: 199,
     flexi_included: "yes",
     name: {
       English: "DELL PowerEdge™ R720 DX150",
@@ -267,7 +267,7 @@ R720: Flexi-Pack is included\n\
 R720 DX150: max 192 GB RAM (4x 32GB)",
   },
   DX290: {
-    setup: 199, monthly: 299,
+    monthly: 299, setup: 199,
     flexi_included: "yes",
     name: {
       English: "DELL PowerEdge™ R720 DX290",
@@ -281,21 +281,21 @@ R720 DX290: max 384 GB RAM (8x 32GB)",
   },
 
   VQ7: {
-    setup: 0, monthly: 7.90,
+    monthly: 7.90, setup: 0,
     name: {
       English: "Server VQ7",
       Deutsch: "Server VQ7",
       Русский: "Сервер VQ7"},
   },
   VQ12: {
-    setup: 0, monthly: 12.90,
+    monthly: 12.90, setup: 0,
     name: {
       English: "Server VQ12",
       Deutsch: "Server VQ12",
       Русский: "Сервер VQ12"},
   },
   VQ19: {
-    setup: 0, monthly: 19.90,
+    monthly: 19.90, setup: 0,
     name: {
       English: "Server VQ19",
       Deutsch: "Server VQ19",
@@ -303,54 +303,56 @@ R720 DX290: max 384 GB RAM (8x 32GB)",
   },
   /*
   template: {
-    setup: 0, monthly: 0,
+    monthly: 0, setup: 0,
     flexi_included: "yes|",
     name: {
       English: "",
       Deutsch: "",
       Русский: ""},
+    comment: "line1\n\
+line2",
   },
   */
 }
 
 var backups = {
   no: {
-    setup: 0, monthly: 0,
+    monthly: 0, setup: 0,
     name: {
       English: "",
       Deutsch: "",
       Русский: ""},
   },
   100: {
-    setup: 4.90, monthly: 4.90,
+    monthly: 4.90, setup: 4.90,
     name: {
       English: "100 GB Backup Space",
       Deutsch: "100 GB Backup Space",
       Русский: "100 ГБ места для резервных копий"},
   },
   500: {
-    setup: 9.90, monthly: 9.90,
+    monthly: 9.90, setup: 9.90,
     name: {
       English: "500 GB Backup Space",
       Deutsch: "500 GB Backup Space",
       Русский: "500 ГБ места для резервных копий"},
   },
   2000: {
-    setup: 19.90, monthly: 19.90,
+    monthly: 19.90, setup: 19.90,
     name: {
       English: "2,000 GB Backup Space",
       Deutsch: "2.000 GB Backup Space",
       Русский: "2.000 ГБ места для резервных копий"},
   },
   5000: {
-    setup: 44.90, monthly: 44.90,
+    monthly: 44.90, setup: 44.90,
     name: {
       English: "5,000 GB Backup Space",
       Deutsch: "5.000 GB Backup Space",
       Русский: "5.000 ГБ места для резервных копий"},
   },
   10000: {
-    setup: 79.90, monthly: 79.90,
+    monthly: 79.90, setup: 79.90,
     name: {
       English: "10,000 GB Backup Space",
       Deutsch: "10.000 GB Backup Space",
@@ -360,7 +362,7 @@ var backups = {
 
 var addons = {
   kvm: {
-    setup: 149, monthly: 19, flexi_required: "yes",
+    monthly: 19, setup: 149, flexi_required: "yes",
     name: {
       English: "KVM-over-IP Remote Management",
       Deutsch: "KVM-over-IP Remote Management",
@@ -645,11 +647,13 @@ var addons = {
   },
   /*
   template: {
-    setup: 0, monthly: 0, flexi_required: "yes|exception", pay_entire_month: "yes",
+    monthly: 0, setup: 0, flexi_required: "yes|exception", pay_entire_month: "yes",
     name: {
       English: "",
       Deutsch: "",
       Русский: ""},
+    comment: "line1\n\
+line2",
   },
   */
 }
