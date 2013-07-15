@@ -30,9 +30,9 @@
 			<form name="form_servers" style="float: left; padding-right: 20px">
 				Select server:
 				<select id="select_servers" onchange="update()">
-					<option>EX4</option>
-					<option>EX4S</option>
-					<option>EX5</option>
+					<option>EX40</option>
+					<option>EX40SSD</option>
+					<option>EX60</option>
 					<option>EX6</option>
 					<option>EX6S</option>
 					<option>EX8S</option>
@@ -173,26 +173,32 @@ var messages = {
 }
 
 var servers = {
-  EX4: {
-    setup: 49, monthly: 49,
+  EX40: {
+    setup: 49, monthly: 99,
     name: {
-      English: "Server EX 4",
-      Deutsch: "Server EX 4",
-      Русский: "Сервер EX 4"},
+      English: "Server EX 40",
+      Deutsch: "Server EX 40",
+      Русский: "Сервер EX 40"},
+      comment: "EX40: 1Gbit/s connected, 200 MBit/s quaranteed\n\
+EX40: 20 TB included",
   },
-  EX4S: {
-    setup: 59, monthly: 59,
+  EX40SSD: {
+    setup: 59, monthly: 99,
     name: {
-      English: "Server EX 4S",
-      Deutsch: "Server EX 4S",
-      Русский: "Сервер EX 4S"},
+      English: "Server EX 40-SSD",
+      Deutsch: "Server EX 40-SSD",
+      Русский: "Сервер EX 40-SSD"},
+      comment: "EX40-SSD: 1Gbit/s connected, 200 MBit/s quaranteed\n\
+EX40-SSD: 20 TB included",
   },
-  EX5: {
-    setup: 0, monthly: 59,
+  EX60: {
+    setup: 69, monthly: 69,
     name: {
-      English: "Server EX 5",
-      Deutsch: "Server EX 5",
-      Русский: "Сервер EX 5"},
+      English: "Server EX 60",
+      Deutsch: "Server EX 60",
+      Русский: "Сервер EX 60"},
+      comment: "EX60: 1Gbit/s connected, 200 MBit/s quaranteed\n\
+EX60: 20 TB included",
   },
   EX6: {
     setup: 69, monthly: 69,
