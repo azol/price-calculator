@@ -59,8 +59,8 @@
 			<form name="form_addons" onchange='update()' onsubmit="update(); return false;" style="clear: left;">
 				Select addons:<br>
 				<div style="float: left; padding-right: 20px;">
-					<input type="checkbox" name="win_web"> <br>
 					<input type="checkbox" name="win_std"> <br>
+					<input type="checkbox" name="win_dc"> <br>
 					<input type="checkbox" name="plesk_30"> <br>
 					<input type="checkbox" name="plesk_100"> <br>
 					<input type="checkbox" name="plesk_unlim"> <br>
@@ -416,19 +416,19 @@ var addons = {
       Русский: "1 Гбит порт"},
     comment: "1Gbit port: included traffic increased by 5TB",
   },
-  win_web: {
-    monthly: 15, pay_entire_month: "yes",
-    name: {
-      English: "Windows Server 2008 R2 Web Edition",
-      Deutsch: "Windows Server 2008 R2 Web Edition",
-      Русский: "Windows Server 2008 R2 Web Edition"},
-  },
   win_std: {
     monthly: 25, pay_entire_month: "yes",
     name: {
-      English: "Windows Server 2008 R2 Standard Edition",
-      Deutsch: "Windows Server 2008 R2 Standard Edition",
-      Русский: "Windows Server 2008 R2 Standard Edition"},
+      English: "Windows Server 2012 Standard Edition",
+      Deutsch: "Windows Server 2012 Standard Edition",
+      Русский: "Windows Server 2012 Standard Edition"},
+  },
+  win_dc: {
+    monthly: 99, pay_entire_month: "yes",
+    name: {
+      English: "Windows Server 2012 Datacenter Edition",
+      Deutsch: "Windows Server 2012 Datacenter Edition",
+      Русский: "Windows Server 2012 Datacenter Edition"},
   },
   plesk_30: {
     monthly: 7.9, pay_entire_month: "yes",
