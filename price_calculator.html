@@ -510,7 +510,7 @@ var addons = {
       Русский: "cPanel"},
   },
   raid4: {
-    monthly: 15, flexi_required: "exception",
+    monthly: 15, flexi_required: "yes",
     name: {
       English: "4-Port Hardware RAID controller",
       Deutsch: "4-Port Hardware RAID-Controller",
@@ -578,21 +578,21 @@ var addons = {
     comment: "Failover subnet /27: can`t be used with VMware ESXi",
   },
   ssd240: {
-    monthly: 19, flexi_required: "exception",
+    monthly: 19, flexi_required: "yes",
     name: {
       English: "240 GB SSD",
       Deutsch: "240 GB SSD",
       Русский: "240 ГБ SSD"},
   },
   ssd240de: {
-    monthly: 25, flexi_required: "exception",
+    monthly: 25, flexi_required: "yes",
     name: {
       English: "240 GB 6 Gb/s SSD Datacenter Edition",
       Deutsch: "240 GB 6 Gb/s SSD Datacenter Edition",
       Русский: "240 ГБ 6 Гбит/с SSD Datacenter Edition"},
   },
   ssd480de: {
-    monthly: 39, flexi_required: "exception",
+    monthly: 39, flexi_required: "yes",
     name: {
       English: "480 GB 6 Gb/s SSD Datacenter Edition",
       Deutsch: "480 GB 6 Gb/s SSD Datacenter Edition",
@@ -607,56 +607,56 @@ var addons = {
     comment: "600 GB SSD: is available only for DELL R720",
   },
   sas300: {
-    monthly: 15, flexi_required: "exception",
+    monthly: 15, flexi_required: "yes",
     name: {
       English: "300 GB SAS",
       Deutsch: "300 GB SAS",
       Русский: "300 ГБ SAS"},
   },
   sas600: {
-    monthly: 25, flexi_required: "exception",
+    monthly: 25, flexi_required: "yes",
     name: {
       English: "600 GB SAS",
       Deutsch: "600 GB SAS",
       Русский: "600 ГБ SAS"},
   },
   sata750: {
-    monthly: 6, flexi_required: "exception",
+    monthly: 6, flexi_required: "yes",
     name: {
       English: "750 GB SATA HDD",
       Deutsch: "750 GB SATA HDD",
       Русский: "750 ГБ SATA HDD"},
   },
   sata1500: {
-    monthly: 9, flexi_required: "exception",
+    monthly: 9, flexi_required: "yes",
     name: {
       English: "1,500 GB SATA HDD",
       Deutsch: "1.500 GB SATA HDD",
       Русский: "1.500 ГБ SATA HDD"},
   },
   sata2000e: {
-    monthly: 15, flexi_required: "exception",
+    monthly: 15, flexi_required: "yes",
     name: {
       English: "2 TB enterprise SATA HDD",
       Deutsch: "2 TB Enterprise SATA HDD",
       Русский: "2 ТБ enterprise SATA HDD"},
   },
   sata3000: {
-    monthly: 15, flexi_required: "exception",
+    monthly: 15, flexi_required: "yes",
     name: {
       English: "3 TB SATA HDD",
       Deutsch: "3 TB SATA HDD",
       Русский: "3 ТБ SATA HDD"},
   },
   sata3000e: {
-    monthly: 25, flexi_required: "exception",
+    monthly: 25, flexi_required: "yes",
     name: {
       English: "3 TB enterprise SATA HDD",
       Deutsch: "3 TB Enterprise SATA HDD",
       Русский: "3 ТБ enterprise SATA HDD"},
   },
   sata4000e: {
-    monthly: 30, flexi_required: "exception",
+    monthly: 30, flexi_required: "yes",
     name: {
       English: "4 TB enterprise SATA HDD",
       Deutsch: "4 TB Enterprise SATA HDD",
@@ -728,7 +728,7 @@ var addons = {
   },
   /*
   template: {
-    monthly: 0, setup: 0, flexi_required: "yes|exception", pay_entire_month: "yes",
+    monthly: 0, setup: 0, flexi_required: "yes", pay_entire_month: "yes",
     name: {
       English: "",
       Deutsch: "",
@@ -849,9 +849,7 @@ function prepare_forms(){
 function is_flexi_required(p){
   if (servers[form_servers.select_servers.value].flexi_included == "yes") {
     return 0
-  } else if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes" || (
-      form_servers.select_servers.value != "EX8S" && addons[p].flexi_required == "exception")
-     ) {
+  } else if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes") {
     return 1
   } else {
     return 0
