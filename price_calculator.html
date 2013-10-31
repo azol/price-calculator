@@ -30,6 +30,14 @@
 			<form name="form_servers" style="float: left; padding-right: 20px">
 				Select server:
 				<select id="select_servers" onchange="update()">
+          <option>PX60</option>
+          <option>PX60SSD</option>
+          <option>PX70</option>
+          <option>PX70SSD</option>
+          <option>PX90</option>
+          <option>PX90SSD</option>
+          <option>PX120</option>
+          <option>PX120SSD</option>
 					<option>EX40</option>
 					<option>EX40SSD</option>
 					<option>EX60</option>
@@ -177,6 +185,70 @@ var messages = {
 }
 
 var servers = {
+  PX60: {
+    monthly: 69, setup: 99,
+    name: {
+      English: "Server PX60",
+      Deutsch: "Server PX60",
+      Русский: "Сервер PX60"},
+    comment: "PX60: 20 TB included",
+  },
+  PX60SSD: {
+    monthly: 79, setup: 99,
+    name: {
+      English: "Server PX60-SSD",
+      Deutsch: "Server PX60-SSD",
+      Русский: "Сервер PX60-SSD"},
+    comment: "PX60-SSD: 20 TB included",
+  },
+  PX70: {
+    monthly: 79, setup: 99,
+    name: {
+      English: "Server PX70",
+      Deutsch: "Server PX70",
+      Русский: "Сервер PX70"},
+    comment: "PX70: 20 TB included",
+  },
+  PX70SSD: {
+    monthly: 99, setup: 99,
+    name: {
+      English: "Server PX70-SSD",
+      Deutsch: "Server PX70-SSD",
+      Русский: "Сервер PX70-SSD"},
+    comment: "PX70-SSD: 30 TB included",
+  },
+  PX90: {
+    monthly: 99, setup: 99,
+    name: {
+      English: "Server PX90",
+      Deutsch: "Server PX90",
+      Русский: "Сервер PX90"},
+    comment: "PX90: 30 TB included",
+  },
+  PX90SSD: {
+    monthly: 109, setup: 109,
+    name: {
+      English: "Server PX90-SSD",
+      Deutsch: "Server PX90-SSD",
+      Русский: "Сервер PX90-SSD"},
+    comment: "PX90-SSD: 30 TB included",
+  },
+  PX120: {
+    monthly: 129, setup: 129,
+    name: {
+      English: "Server PX120",
+      Deutsch: "Server PX120",
+      Русский: "Сервер PX120"},
+    comment: "PX120: 30 TB included",
+  },
+  PX120SSD: {
+    monthly: 139, setup: 139,
+    name: {
+      English: "Server PX120-SSD",
+      Deutsch: "Server PX120-SSD",
+      Русский: "Сервер PX120-SSD"},
+    comment: "PX120-SSD: 30 TB included",
+  },
   EX40: {
     monthly: 49, setup: 49,
     name: {
