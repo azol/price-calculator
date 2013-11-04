@@ -30,6 +30,9 @@
 			<form name="form_servers" style="float: left; padding-right: 20px">
 				Select server:
 				<select id="select_servers" onchange="update()">
+          <option>EX40</option>
+          <option>EX40SSD</option>
+          <option>EX60</option>
           <option>PX60</option>
           <option>PX60SSD</option>
           <option>PX70</option>
@@ -38,10 +41,6 @@
           <option>PX90SSD</option>
           <option>PX120</option>
           <option>PX120SSD</option>
-					<option>EX40</option>
-					<option>EX40SSD</option>
-					<option>EX60</option>
-					<option>EX10</option>
 					<option>XS13</option>
 					<option>XS29</option>
 					<option>DX150</option>
@@ -181,6 +180,30 @@ var messages = {
 }
 
 var servers = {
+  EX40: {
+    monthly: 49, setup: 49,
+    name: {
+      English: "Server EX40",
+      Deutsch: "Server EX40",
+      Русский: "Сервер EX40"},
+    comment: "EX40: 20 TB included",
+  },
+  EX40SSD: {
+    monthly: 59, setup: 59,
+    name: {
+      English: "Server EX40-SSD",
+      Deutsch: "Server EX40-SSD",
+      Русский: "Сервер EX40-SSD"},
+    comment: "EX40-SSD: 20 TB included",
+  },
+  EX60: {
+    monthly: 59, setup: 0,
+    name: {
+      English: "Server EX60",
+      Deutsch: "Server EX60",
+      Русский: "Сервер EX60"},
+    comment: "EX60: 20 TB included",
+  },
   PX60: {
     monthly: 69, setup: 99,
     name: {
@@ -244,41 +267,6 @@ var servers = {
       Deutsch: "Server PX120-SSD",
       Русский: "Сервер PX120-SSD"},
     comment: "PX120-SSD: 30 TB included",
-  },
-  EX40: {
-    monthly: 49, setup: 49,
-    name: {
-      English: "Server EX40",
-      Deutsch: "Server EX40",
-      Русский: "Сервер EX40"},
-    comment: "EX40: 20 TB included",
-  },
-  EX40SSD: {
-    monthly: 59, setup: 59,
-    name: {
-      English: "Server EX40-SSD",
-      Deutsch: "Server EX40-SSD",
-      Русский: "Сервер EX40-SSD"},
-    comment: "EX40-SSD: 20 TB included",
-  },
-  EX60: {
-    monthly: 59, setup: 0,
-    name: {
-      English: "Server EX60",
-      Deutsch: "Server EX60",
-      Русский: "Сервер EX60"},
-    comment: "EX60: 20 TB included",
-  },
-  EX10: {
-    monthly: 109, setup: 109,
-    name: {
-      English: "Server EX10",
-      Deutsch: "Server EX10",
-      Русский: "Сервер EX10"},
-    comment: "EX10: 30 TB included\n\
-EX10: installation of ESXi free editions is not possible (32GB RAM limit)\n\
-EX10: for licenced ESXi additional NIC is required\n\
-EX10: Our Windows is able to use only 32 GB RAM",
   },
   XS13: {
     monthly: 139, setup: 199,
