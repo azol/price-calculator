@@ -76,6 +76,7 @@
 				<div style="float: left; padding-right: 20px;">
 					<input type="checkbox" name="raid4"> <br>
 					<input type="checkbox" name="bbu"> <br>
+          <input type="checkbox" name="kvm_module"> <br>
 					<input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
 					<input type="text" placeholder="0" size="1" name="sas600"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
 					<input type="text" placeholder="0" size="1" name="ssd240"> <br>
@@ -714,6 +715,15 @@ var addons = {
       Deutsch: "Traffic overusage (TB)",
       Русский: "Превышение трафика (ТБ)",},
   },
+  kvm_module: {
+    monthly: 3.90, setup: 19,
+    name: {
+      English: "KVM-module",
+      Deutsch: "KVM-modul",
+      Русский: "KVM-модуль"},
+    comment: "KVM-module: only for PX60(-SSD) and PX70(-SSD)",
+  },
+
   /*
   template: {
     monthly: 0, setup: 0, flexi_required: "yes", pay_entire_month: "yes",
