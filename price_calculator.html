@@ -81,6 +81,7 @@
 					<input type="text" placeholder="0" size="1" name="ssd240"> <br>
           <input type="text" placeholder="0" size="1" name="ssd240de"> <br>
           <input type="text" placeholder="0" size="1" name="ssd480de"> <br>
+          <input type="text" placeholder="0" size="1" name="ssd300"> <br>
 					<input type="text" placeholder="0" size="1" name="ssd600"> <br>
 					<input type="text" placeholder="0" size="1" name="sata750"> <br>
 					<input type="text" placeholder="0" size="1" name="sata1500"> <br>
@@ -295,7 +296,7 @@ XS29: additional single IP is not possible",
       Русский: "DELL PowerEdge™ R720 DX150"},
     comment: "DX150: 30 TB included\n\
 R720: have an iDRAC (IP-KVM)\n\
-R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 600GB SSD)\n\
+R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 300/600GB SSD)\n\
 R720: Flexi-Pack is included\n\
 R720 DX150: max 192 GB RAM (4x 32GB)",
   },
@@ -308,7 +309,7 @@ R720 DX150: max 192 GB RAM (4x 32GB)",
       Русский: "DELL PowerEdge™ R720 DX290"},
     comment: "DX290: 50 TB included\n\
 R720: have an iDRAC (IP-KVM)\n\
-R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 600GB SSD)\n\
+R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 300/600GB SSD)\n\
 R720: Flexi-Pack is included\n\
 R720 DX290: max 384 GB RAM (8x 32GB)",
   },
@@ -576,6 +577,14 @@ var addons = {
       English: "480 GB 6 Gb/s SSD Datacenter Edition",
       Deutsch: "480 GB 6 Gb/s SSD Datacenter Edition",
       Русский: "480 ГБ 6 Гбит/с SSD Datacenter Edition"},
+  },
+  ssd300: {
+    monthly: 29, flexi_required: "yes",
+    name: {
+      English: "300 GB SSD",
+      Deutsch: "300 GB SSD",
+      Русский: "300 ГБ SSD"},
+    comment: "300 GB SSD: is available only for DELL R720",
   },
   ssd600: {
     monthly: 50, flexi_required: "yes",
