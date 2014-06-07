@@ -1,155 +1,398 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Price Calculator</title>
-		<style type="text/css">
-			body {float: left;}
-			#noscript {color: red;}
-			#form {display: none;}
-		</style>
-	</head>
-	<body onload='prepare_forms()'>
-		<noscript>
-			<div id="noscript">
-				<h1>This page uses JavaScript</h1>
-				<p>Please, activate javascript in your browser or use other browser</p>
-			</div>
-		</noscript>
+<head>
+    <meta charset="utf-8" />
+    <title>Price Calculator</title>
+</head>
+<body onload='prepare_forms()'>
+    <noscript>
+        <div id="noscript">
+            <h1>This page uses JavaScript</h1>
+            <p>Please, activate javascript in your browser or use other browser</p>
+        </div>
+    </noscript>
 
-		<div id="form">
-			<form name="form_languages" style="float: left; padding-right: 20px ">
-				Select language:
-				<select id="select_languages" onchange="update_language()">
-					<option>English</option>
-					<option>Deutsch</option>
-					<option>Русский</option>
-				</select>
-			</form>
+    <form class="row" name="form_main" onchange='update()' onsubmit="update(); return false;">
+        <div class="large-4 column">
+            <div class="row collapse">
+                <div class="medium-3 column">
+                    <div class="row collapse">
+                        <div class="small-9 column">
+                            <label class="prefix">VAT?</label>
+                        </div>
+                        <div class="small-3 column">
+                            <input type="checkbox" name="vat_included" checked onchange='update()'>
+                        </div>
+                    </div>
+                </div>
+                <div class="medium-9 column">
+                    <div class="row collapse">
+                        <div class="small-8 column">
+                            <label class="prefix">Server:</label>
+                        </div>
+                        <div class="small-4 column">
+                            <select id="select_servers" onchange="update()">
+                                <option>EX40</option>
+                                <option>EX40SSD</option>
+                                <option>EX60</option>
+                                <option>PX60</option>
+                                <option>PX60SSD</option>
+                                <option>PX70</option>
+                                <option>PX70SSD</option>
+                                <option>PX90</option>
+                                <option>PX90SSD</option>
+                                <option>PX120</option>
+                                <option>PX120SSD</option>
+                                <option>SX60</option>
+                                <option>SX130</option>
+                                <option>SX290</option>
+                                <option>DX150</option>
+                                <option>DX290</option>
+                                <option>RACK20</option>
+                                <option>VQ7</option>
+                                <option>VQ12</option>
+                                <option>VQ19</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row collapse">
+                    <div class="medium-5 column">
+                        <div class="row collapse">
+                            <div class="small-6 column">
+                                <label class="prefix">Date:</label>
+                            </div>
+                            <div class="small-6 column">
+                                <input type="text" name="ordering_date" onchange='update()' onsubmit="update(); return false;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medium-1 column">
+                    </div>
+                    <div class="medium-6 column">
+                        <div class="row collapse">
+                            <div class="small-6 column">
+                                <label class="prefix">Language:</label>
+                            </div>
+                            <div class="small-6 column">
+                                <select id="select_languages" onchange="update_language()">
+                                    <option>English</option>
+                                    <option>Deutsch</option>
+                                    <option>Русский</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <fieldset>
+                    <legend>Addons</legend>
+                    <input type="checkbox" name="win_std" id="win_std"><label for="win_std">win_std</label><br/>
+                    <input type="checkbox" name="win_dc" id="win_dc"><label for="win_dc">win_dc</label><br/>
+                    <div class="row collapse">
+                        <div class="small-1 columns">
+                            <input type="text" placeholder="0" name="rdp_license" id="rdp_license" />
+                        </div>
+                        <div class="small-11 columns">
+                            <label class="postfix" for="rdp_license">rdp_license</label>
+                        </div>
+                    </div>
+                    <input type="checkbox" name="plesk_30" id="plesk_30"><label for="plesk_30">plesk_30</label><br/>
+                    <input type="checkbox" name="plesk_100" id="plesk_100"><label for="plesk_100">plesk_100</label><br/>
+                    <input type="checkbox" name="plesk_unlim" id="plesk_unlim"><label for="plesk_unlim">plesk_unlim</label><br/>
+                    <input type="checkbox" name="plesk_power_pack" id="plesk_power_pack"><label for="plesk_power_pack">plesk_power_pack</label><br/>
+                    <input type="checkbox" name="cpanel" id="cpanel"><label for="cpanel">cpanel</label><br/>
+                    <input type="checkbox" name="kvm" id="kvm"><label for="kvm">kvm</label><br/>
+                    <input type="checkbox" name="install_via_lara" id="install_via_lara"><label for="install_via_lara">install_via_lara</label><br/>
+                    <input type="checkbox" name="raid4" id="raid4"><label for="raid4">raid4</label><br/>
+                    <input type="checkbox" name="bbu" id="bbu"><label for="bbu">bbu</label><br/>
+                    <input type="checkbox" name="kvm_module" id="kvm_module"><label for="kvm_module">kvm_module</label>
+                </fieldset>
+            </div>
+        </div>
+        <div class="large-4 column">
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="sas300" id="sas300" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="sas300" addtext="4-Port RAID">
+                        sas300 + 4-Port RAID
+                    </label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="sas600" id="sas600" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="sas600" addtext="4-Port RAID">sas600</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="ssd240" id="ssd240" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="ssd240">ssd240</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="ssd240de" id="ssd240de" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="ssd240de">ssd240de</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="ssd480de" id="ssd480de" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="ssd480de">ssd480de</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="ssd300" id="ssd300" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="ssd300">ssd300</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="ssd600" id="ssd600" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="ssd600">ssd600</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="sata750" id="sata750" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="sata750">sata750</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="sata1500" id="sata1500" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="sata1500">sata1500</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="sata2000e" id="sata2000e" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="sata2000e">sata2000e</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="sata3000" id="sata3000" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="sata3000">sata3000</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="sata3000e" id="sata3000e" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="sata3000e">sata3000e</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="sata4000e" id="sata4000e" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="sata4000e">sata4000e</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="usb16" id="usb16" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="usb16">usb16</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="usb64" id="usb64" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="usb64">usb64</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="ramecc32gb" id="ramecc32gb" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="ramecc32gb">ramecc32gb</label>
+                </div>
+            </div>
+        </div>
+        <div class="large-4 column">
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="ip" id="ip" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="ip">ip</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="subnet29" id="subnet29" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="subnet29">subnet29</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="subnet28" id="subnet28" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="subnet28">subnet28</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="subnet27" id="subnet27" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="subnet27">subnet27</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="failover_ip" id="failover_ip" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="failover_ip">failover_ip</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="failover_subnet29" id="failover_subnet29" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="failover_subnet29">failover_subnet29</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="failover_subnet28" id="failover_subnet28" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="failover_subnet28">failover_subnet28</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="failover_subnet27" id="failover_subnet27" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="failover_subnet27">failover_subnet27</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="gbit_nic" id="gbit_nic" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="gbit_nic">gbit_nic</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="switch_5port" id="switch_5port" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="switch_5port">switch_5port</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="switch_8port" id="switch_8port" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="switch_8port">switch_8port</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="switch_24port" id="switch_24port" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="switch_24port">switch_24port</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="place_reservation" id="place_reservation" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="place_reservation">place_reservation</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-1 columns">
+                    <input type="text" placeholder="0" name="traffic_overusage" id="traffic_overusage" />
+                </div>
+                <div class="small-11 columns">
+                    <label class="postfix" for="traffic_overusage">traffic_overusage</label>
+                </div>
+            </div>
+            <div class="row collapse">
+            <div class="small-2 columns">
+                    <select id="select_backups" onchange="update()">
+                        <option>no</option>
+                        <option>100</option>
+                        <option>500</option>
+                        <option>2000</option>
+                        <option>5000</option>
+                        <option>10000</option>
+                    </select>
+                </div>
+                <div class="small-10 columns">
+                    <label class="postfix">Backup Space</label>
+                </div>
+            </div>
+        </div>
+        <div class="large-12 column">
+            <textarea name="text" readonly>text</textarea>
+        </div>
+    </form>
 
-			<form name="form_servers" style="float: left; padding-right: 20px">
-				Select server:
-				<select id="select_servers" onchange="update()">
-					<option>EX40</option>
-					<option>EX40SSD</option>
-					<option>EX60</option>
-					<option>PX60</option>
-					<option>PX60SSD</option>
-					<option>PX70</option>
-					<option>PX70SSD</option>
-					<option>PX90</option>
-					<option>PX90SSD</option>
-					<option>PX120</option>
-					<option>PX120SSD</option>
-					<option>SX60</option>
-					<option>SX130</option>
-					<option>SX290</option>
-					<option>DX150</option>
-					<option>DX290</option>
-					<option>RACK20</option>
-					<option>VQ7</option>
-					<option>VQ12</option>
-					<option>VQ19</option>
-				</select>
-			</form>
-
-			<form name="form_vat" onchange='update()' style="float: left; padding-right: 20px">
-				Is VAT included?<input type="checkbox" name="vat_included" checked>
-			</form>
-
-			<form name="form_ordering_date" onchange='update()' onsubmit="update(); return false;" style="float: left;">
-				Input ordering date: <input type="text" name="ordering_date">
-			</form>
-
-			<form name="form_addons" onchange='update()' onsubmit="update(); return false;" style="clear: left;">
-				Select addons:<br>
-				<div style="float: left; padding-right: 20px;">
-					<input type="checkbox" name="win_std"> <br>
-					<input type="checkbox" name="win_dc"> <br>
-					<input type="checkbox" name="plesk_30"> <br>
-					<input type="checkbox" name="plesk_100"> <br>
-					<input type="checkbox" name="plesk_unlim"> <br>
-					<input type="checkbox" name="plesk_power_pack"> <br>
-					<input type="checkbox" name="cpanel"> <br>
-					<input type="checkbox" name="kvm"> <br>
-					<input type="checkbox" name="install_via_lara"> <br>
-				</div>
-				<div style="float: left; padding-right: 20px;">
-					<input type="checkbox" name="raid4"> <br>
-					<input type="checkbox" name="bbu"> <br>
-					<input type="checkbox" name="kvm_module"> <br>
-					<input type="text" placeholder="0" size="1" name="sas300"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
-					<input type="text" placeholder="0" size="1" name="sas600"> <mark title="4-Port RAID Controller is required" style="border-bottom: 1px dashed; background: #ffffff"> + 4-Port RAID</mark><br>
-					<input type="text" placeholder="0" size="1" name="ssd240"> <br>
-					<input type="text" placeholder="0" size="1" name="ssd240de"> <br>
-					<input type="text" placeholder="0" size="1" name="ssd480de"> <br>
-					<input type="text" placeholder="0" size="1" name="ssd300"> <br>
-					<input type="text" placeholder="0" size="1" name="ssd600"> <br>
-					<input type="text" placeholder="0" size="1" name="sata750"> <br>
-					<input type="text" placeholder="0" size="1" name="sata1500"> <br>
-					<input type="text" placeholder="0" size="1" name="sata2000e"> <br>
-					<input type="text" placeholder="0" size="1" name="sata3000"> <br>
-					<input type="text" placeholder="0" size="1" name="sata3000e"> <br>
-					<input type="text" placeholder="0" size="1" name="sata4000e"> <br>
-					<input type="text" placeholder="0" size="1" name="usb16"> <br>
-					<input type="text" placeholder="0" size="1" name="usb64"> <br>
-					<input type="text" placeholder="0" size="1" name="ramecc32gb"> <br>
-				</div>
-				<div style="float: left;">
-					<input type="text" placeholder="0" size="1" name="ip"> <br>
-					<input type="text" placeholder="0" size="1" name="subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
-					<input type="text" placeholder="0" size="1" name="subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
-					<input type="text" placeholder="0" size="1" name="subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
-					<input type="text" placeholder="0" size="1" name="failover_ip"> <br>
-					<input type="text" placeholder="0" size="1" name="failover_subnet29"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 6 IPs</mark><br>
-					<input type="text" placeholder="0" size="1" name="failover_subnet28"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 14 IPs</mark><br>
-					<input type="text" placeholder="0" size="1" name="failover_subnet27"> <mark style="border-bottom: 1px dashed; background: #ffffff"> 30 IPs</mark><br>
-					<input type="text" placeholder="0" size="1" name="gbit_nic"> <br>
-					<input type="text" placeholder="0" size="1" name="switch_5port"> <br>
-					<input type="text" placeholder="0" size="1" name="switch_8port"> <br>
-					<input type="text" placeholder="0" size="1" name="switch_24port"> <br>
-					<input type="text" placeholder="0" size="1" name="place_reservation"> <br>
-					<input type="text" placeholder="0" size="1" name="traffic_overusage"> <br>
-				</div>
-				<div style="clear: left;">
-					<input type="text" placeholder="0" size="1" name="rdp_license"> <br>
-				</div>
-			</form>
-
-			<form name="form_backups">
-				Backup Space:<br>
-				<select id="select_backups" onchange="update()">
-					<option>no</option>
-					<option>100</option>
-					<option>500</option>
-					<option>2000</option>
-					<option>5000</option>
-					<option>10000</option>
-				</select>
-			</form>
-
-			<br>
-			<form name="form_output">
-				<textarea name="text" readonly style="width: 100%"></textarea>
-			</form>
-		</div>
-
-<script>document.getElementById('form').style.display='block';</script>
-<script type="text/javascript">
+    <script type="text/javascript">
 
 var messages = {
   setup_fee: {
     English: "Setup costs:",
     Deutsch: "Einmalige Kosten:",
-    Русский: "Плата за установку:"},
+    Русский: "Плата за установку:"
+  },
   total_setup: {
     English: "Total setup costs:",
     Deutsch: "Gesamte einmalige Kosten:",
-    Русский: "Итого плата за установку:"},
+    Русский: "Итого плата за установку:"
+  },
   total_monthly: {
     English: "Total monthly costs:",
     Deutsch: "Gesamte monatliche Kosten:",
-    Русский: "Итого ежемесячная плата:"},
+    Русский: "Итого ежемесячная плата:"
+  },
   monthly: {
     English: "Monthly costs:",
     Deutsch: "Monatliche Kosten:",
@@ -165,21 +408,24 @@ var messages = {
   vat_is_included: {
     English: "All prices include VAT (19%)",
     Deutsch: "Alle Preise sind inklusive 19% Mehrwertsteuer",
-    Русский: "Все цены указаны с VAT (19%)"},
+    Русский: "Все цены указаны с VAT (19%)"
+  },
   vat_isnt_included: {
     English: "All prices exclude VAT",
     Deutsch: "Alle Preise sind exklusive Mehrwertsteuer",
-    Русский: "Все цены указаны без VAT"},
+    Русский: "Все цены указаны без VAT"
+  },
   first_invoice_addition: {
     English: "Additional payment for product(s) charged for entire month:",
     Deutsch: "Zusätzliche kosten fuer Produkt(e) die fuer den gesamente Monat berechnet werden:",
-    Русский: "В первый счёт будет дополнительно включена плата за продукт(ы) лицензируемые помесячно:"},
+    Русский: "В первый счёт будет дополнительно включена плата за продукт(ы) лицензируемые помесячно:"
+  },
   /*
   template: {
     English: "",
     Deutsch: "",
     Русский: ""},
-  */
+    */
 }
 
 var servers = {
@@ -189,7 +435,7 @@ var servers = {
       English: "Server EX40",
       Deutsch: "Server EX40",
       Русский: "Сервер EX40"},
-    comment: "EX40: 20 TB included",
+      comment: "EX40: 20 TB included",
   },
   EX40SSD: {
     monthly: 59, setup: 59,
@@ -197,7 +443,7 @@ var servers = {
       English: "Server EX40-SSD",
       Deutsch: "Server EX40-SSD",
       Русский: "Сервер EX40-SSD"},
-    comment: "EX40-SSD: 20 TB included",
+      comment: "EX40-SSD: 20 TB included",
   },
   EX60: {
     monthly: 59, setup: 0,
@@ -205,7 +451,7 @@ var servers = {
       English: "Server EX60",
       Deutsch: "Server EX60",
       Русский: "Сервер EX60"},
-    comment: "EX60: 20 TB included",
+      comment: "EX60: 20 TB included",
   },
   PX60: {
     monthly: 69, setup: 99,
@@ -213,7 +459,7 @@ var servers = {
       English: "Server PX60",
       Deutsch: "Server PX60",
       Русский: "Сервер PX60"},
-    comment: "PX60: 20 TB included",
+      comment: "PX60: 20 TB included",
   },
   PX60SSD: {
     monthly: 79, setup: 99,
@@ -221,7 +467,7 @@ var servers = {
       English: "Server PX60-SSD",
       Deutsch: "Server PX60-SSD",
       Русский: "Сервер PX60-SSD"},
-    comment: "PX60-SSD: 20 TB included",
+      comment: "PX60-SSD: 20 TB included",
   },
   PX70: {
     monthly: 79, setup: 99,
@@ -229,7 +475,7 @@ var servers = {
       English: "Server PX70",
       Deutsch: "Server PX70",
       Русский: "Сервер PX70"},
-    comment: "PX70: 20 TB included",
+      comment: "PX70: 20 TB included",
   },
   PX70SSD: {
     monthly: 99, setup: 99,
@@ -237,7 +483,7 @@ var servers = {
       English: "Server PX70-SSD",
       Deutsch: "Server PX70-SSD",
       Русский: "Сервер PX70-SSD"},
-    comment: "PX70-SSD: 30 TB included",
+      comment: "PX70-SSD: 30 TB included",
   },
   PX90: {
     monthly: 99, setup: 99,
@@ -245,7 +491,7 @@ var servers = {
       English: "Server PX90",
       Deutsch: "Server PX90",
       Русский: "Сервер PX90"},
-    comment: "PX90: 30 TB included",
+      comment: "PX90: 30 TB included",
   },
   PX90SSD: {
     monthly: 109, setup: 109,
@@ -253,7 +499,7 @@ var servers = {
       English: "Server PX90-SSD",
       Deutsch: "Server PX90-SSD",
       Русский: "Сервер PX90-SSD"},
-    comment: "PX90-SSD: 30 TB included",
+      comment: "PX90-SSD: 30 TB included",
   },
   PX120: {
     monthly: 129, setup: 129,
@@ -261,7 +507,7 @@ var servers = {
       English: "Server PX120",
       Deutsch: "Server PX120",
       Русский: "Сервер PX120"},
-    comment: "PX120: 30 TB included",
+      comment: "PX120: 30 TB included",
   },
   PX120SSD: {
     monthly: 139, setup: 139,
@@ -269,7 +515,7 @@ var servers = {
       English: "Server PX120-SSD",
       Deutsch: "Server PX120-SSD",
       Русский: "Сервер PX120-SSD"},
-    comment: "PX120-SSD: 30 TB included",
+      comment: "PX120-SSD: 30 TB included",
   },
   SX60: {
     monthly: 69, setup: 69,
@@ -277,8 +523,8 @@ var servers = {
       English: "Server SX60",
       Deutsch: "Server SX60",
       Русский: "Сервер SX60"},
-    comment: "SX60: 20 TB included\n\
-SX60: HW-RAID addon is available",
+      comment: "SX60: 20 TB included\n\
+      SX60: HW-RAID addon is available",
   },
   SX130: {
     monthly: 139, setup: 139,
@@ -286,7 +532,7 @@ SX60: HW-RAID addon is available",
       English: "Server SX130",
       Deutsch: "Server SX130",
       Русский: "Сервер SX130"},
-    comment: "SX130: 30 TB included",
+      comment: "SX130: 30 TB included",
   },
   SX290: {
     monthly: 299, setup: 299,
@@ -294,8 +540,8 @@ SX60: HW-RAID addon is available",
       English: "Server SX290",
       Deutsch: "Server SX290",
       Русский: "Сервер SX290"},
-    comment: "SX290: 50 TB included\n\
-SX290: additional single IP is not possible",
+      comment: "SX290: 50 TB included\n\
+      SX290: additional single IP is not possible",
   },
   DX150: {
     monthly: 159, setup: 199,
@@ -304,11 +550,11 @@ SX290: additional single IP is not possible",
       English: "DELL PowerEdge™ R720 DX150",
       Deutsch: "DELL PowerEdge™ R720 DX150",
       Русский: "DELL PowerEdge™ R720 DX150"},
-    comment: "DX150: 30 TB included\n\
-R720: have an iDRAC (IP-KVM)\n\
-R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 300/600GB SSD)\n\
-R720: Flexi-Pack is included\n\
-R720 DX150: max 192 GB RAM (4x 32GB)",
+      comment: "DX150: 30 TB included\n\
+      R720: have an iDRAC (IP-KVM)\n\
+      R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 300/600GB SSD)\n\
+      R720: Flexi-Pack is included\n\
+      R720 DX150: max 192 GB RAM (4x 32GB)",
   },
   DX290: {
     monthly: 299, setup: 199,
@@ -317,11 +563,11 @@ R720 DX150: max 192 GB RAM (4x 32GB)",
       English: "DELL PowerEdge™ R720 DX290",
       Deutsch: "DELL PowerEdge™ R720 DX290",
       Русский: "DELL PowerEdge™ R720 DX290"},
-    comment: "DX290: 50 TB included\n\
-R720: have an iDRAC (IP-KVM)\n\
-R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 300/600GB SSD)\n\
-R720: Flexi-Pack is included\n\
-R720 DX290: max 384 GB RAM (8x 32GB)",
+      comment: "DX290: 50 TB included\n\
+      R720: have an iDRAC (IP-KVM)\n\
+      R720: Drives are optional (3TB Enterprise HDD, 600GB SAS and 300/600GB SSD)\n\
+      R720: Flexi-Pack is included\n\
+      R720 DX290: max 384 GB RAM (8x 32GB)",
   },
 
   RACK20: {
@@ -330,9 +576,9 @@ R720 DX290: max 384 GB RAM (8x 32GB)",
       English: "Dedicated Rack for up to 20 dedicated servers",
       Deutsch: "Miet-Rack für bis zu 20 Root-Server",
       Русский: "Выделенная стойка для 20 root-серверов"},
-    comment: "RACK20: 24 port Gbit switch included\n\
-RACK20: customer need at least 7 servers to order this rack\n\
-RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_for_up_to_20_dedicated_servers",
+      comment: "RACK20: 24 port Gbit switch included\n\
+      RACK20: customer need at least 7 servers to order this rack\n\
+      RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_for_up_to_20_dedicated_servers",
   },
 
   VQ7: {
@@ -341,7 +587,7 @@ RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_fo
       English: "Server VQ7",
       Deutsch: "Server VQ7",
       Русский: "Сервер VQ7"},
-    comment: "VQ7: 1 TB included",
+      comment: "VQ7: 1 TB included",
   },
   VQ12: {
     monthly: 12.90, setup: 0,
@@ -349,7 +595,7 @@ RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_fo
       English: "Server VQ12",
       Deutsch: "Server VQ12",
       Русский: "Сервер VQ12"},
-    comment: "VQ7: 2 TB included",
+      comment: "VQ7: 2 TB included",
   },
   VQ19: {
     monthly: 19.90, setup: 0,
@@ -357,7 +603,7 @@ RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_fo
       English: "Server VQ19",
       Deutsch: "Server VQ19",
       Русский: "Сервер VQ19"},
-    comment: "VQ7: 4 TB included",
+      comment: "VQ7: 4 TB included",
   },
   /*
   template: {
@@ -446,8 +692,8 @@ var addons = {
       English: "32 GB DDR3 ECC RAM",
       Deutsch: "32 GB DDR3 ECC RAM",
       Русский: "32 ГБ DDR3 оперативной памяти ECC"},
-   comment: "32 GB DDR3 ECC RAM: is available only for DELL R720\n\
-32 GB DDR3 ECC RAM: maximum 8",
+      comment: "32 GB DDR3 ECC RAM: is available only for DELL R720\n\
+      32 GB DDR3 ECC RAM: maximum 8",
   },
 
   win_std: {
@@ -541,7 +787,7 @@ var addons = {
       English: "Failover IP",
       Deutsch: "Failover-IP",
       Русский: "Failover IP"},
-    comment: "Failover IP: can`t be used with VMware ESXi",
+      comment: "Failover IP: can`t be used with VMware ESXi",
   },
   failover_subnet29: {
     monthly: 18, flexi_required: "yes",
@@ -549,7 +795,7 @@ var addons = {
       English: "Failover subnet /29",
       Deutsch: "Failover Subnet /29",
       Русский: "Failover подсеть /29"},
-    comment: "Failover subnet /29: can`t be used with VMware ESXi",
+      comment: "Failover subnet /29: can`t be used with VMware ESXi",
   },
   failover_subnet28: {
     monthly: 26, flexi_required: "yes",
@@ -557,7 +803,7 @@ var addons = {
       English: "Failover subnet /28",
       Deutsch: "Failover Subnet /28",
       Русский: "Failover подсеть /28"},
-    comment: "Failover subnet /28: can`t be used with VMware ESXi",
+      comment: "Failover subnet /28: can`t be used with VMware ESXi",
   },
   failover_subnet27: {
     monthly: 42, flexi_required: "yes",
@@ -565,7 +811,7 @@ var addons = {
       English: "Failover subnet /27",
       Deutsch: "Failover Subnet /27",
       Русский: "Failover подсеть /27"},
-    comment: "Failover subnet /27: can`t be used with VMware ESXi",
+      comment: "Failover subnet /27: can`t be used with VMware ESXi",
   },
   ssd240: {
     monthly: 19, flexi_required: "yes",
@@ -594,7 +840,7 @@ var addons = {
       English: "300 GB SSD",
       Deutsch: "300 GB SSD",
       Русский: "300 ГБ SSD"},
-    comment: "300 GB SSD: is available only for DELL R720",
+      comment: "300 GB SSD: is available only for DELL R720",
   },
   ssd600: {
     monthly: 50, flexi_required: "yes",
@@ -602,7 +848,7 @@ var addons = {
       English: "600 GB SSD",
       Deutsch: "600 GB SSD",
       Русский: "600 ГБ SSD"},
-    comment: "600 GB SSD: is available only for DELL R720",
+      comment: "600 GB SSD: is available only for DELL R720",
   },
   sas300: {
     monthly: 15, flexi_required: "yes",
@@ -708,7 +954,7 @@ var addons = {
       English: "Reservation of rack space",
       Deutsch: "Platz Reservierung: Mietserver Stellfläche",
       Русский: "Резервирование места в стойке"},
-    comment: "Reservation of rack space: no more then 50% of number of servers",
+      comment: "Reservation of rack space: no more then 50% of number of servers",
   },
   bbu: {
     setup: 149,
@@ -730,7 +976,7 @@ var addons = {
       English: "KVM-module",
       Deutsch: "KVM-modul",
       Русский: "KVM-модуль"},
-    comment: "KVM-module: only for PX60(-SSD) and PX70(-SSD)",
+      comment: "KVM-module: only for PX60(-SSD) and PX70(-SSD)",
   },
 
   /*
@@ -753,9 +999,9 @@ function get_spaces(t, max_len) {
   if (len < max_len) {
     for (i=0; i < (max_len - len); i++){
       spaces+=" "
-    }
   }
-  return spaces
+}
+return spaces
 }
 
 function format_line(name, price, monthly) {
@@ -763,68 +1009,68 @@ function format_line(name, price, monthly) {
   spaces+=get_spaces(name,max_len)
   spaces+=get_spaces(Math.floor(price),5)
   return name+" "+spaces+price+" "+monthly+"\n"
- }
+}
 
 function update() {
   flexi_counter=0  // >0 if flexi-pack will be included into invoice
   max_len=0        // store maximum text length for price alignment
   max_len=find_max_len();
-  form_output.text.value=calc_setup()
-  form_output.text.value+=calc_monthly()
-  form_output.text.value+=show_vat()
-  form_output.text.value+=show_comments()
+  form_main.text.value=calc_setup()
+  form_main.text.value+=calc_monthly()
+  form_main.text.value+=show_vat()
+  form_main.text.value+=show_comments()
   setRows()
 }
 
 function setRows() {
-  form_output.text.rows = 3;
+  form_main.text.rows = 3;
   do {
-    if (form_output.text.clientHeight != form_output.text.scrollHeight) form_output.text.rows += 1;
-  } while (form_output.text.clientHeight < form_output.text.scrollHeight);
+    if (form_main.text.clientHeight != form_main.text.scrollHeight) form_main.text.rows += 1;
+} while (form_main.text.clientHeight < form_main.text.scrollHeight);
 }
 
 function find_max_len(){
   // len of server name
-  max_len=servers[form_servers.select_servers.value].name[form_languages.select_languages.value].length
+  max_len=servers[form_main.select_servers.value].name[form_main.select_languages.value].length
 
   // find max len in addons
   flexi_counter=0
   for (var p in addons) {
-    if ( form_addons.elements[p].checked == true || form_addons.elements[p].value > 0  ){
-      len=addons[p].name[form_languages.select_languages.value].length
-      count=form_addons.elements[p].value
+    if ( form_main.elements[p].checked == true || form_main.elements[p].value > 0  ){
+      len=addons[p].name[form_main.select_languages.value].length
+      count=form_main.elements[p].value
       if (count>1) {
         text=count+"x "
         len=len+text.length
-      }
-      if ( len > max_len) {
-        max_len=len
-      }
-      flexi_counter+=is_flexi_required(p)
     }
-  }
-
-  // and backup space
-  len=backups[form_backups.select_backups.value].name[form_languages.select_languages.value].length
-  if ( len > max_len) {
-    max_len=len
-  }
-
-  // check len of flexi-pack if required
-  if (flexi_counter>0){
-    len=messages.flexi_pack[form_languages.select_languages.value].length
     if ( len > max_len) {
         max_len=len
     }
-  }
+    flexi_counter+=is_flexi_required(p)
+}
+}
+
+  // and backup space
+  len=backups[form_main.select_backups.value].name[form_main.select_languages.value].length
+  if ( len > max_len) {
+    max_len=len
+}
+
+  // check len of flexi-pack if required
+  if (flexi_counter>0){
+    len=messages.flexi_pack[form_main.select_languages.value].length
+    if ( len > max_len) {
+        max_len=len
+    }
+}
 
   // check len of two types of total (setup and monthly)
-  len=messages.total_setup[form_languages.select_languages.value].length
+  len=messages.total_setup[form_main.select_languages.value].length
   if ( len > max_len) {
       max_len=len
   }
 
-  len=messages.total_monthly[form_languages.select_languages.value].length
+  len=messages.total_monthly[form_main.select_languages.value].length
   if ( len > max_len) {
       max_len=len
   }
@@ -833,181 +1079,186 @@ function find_max_len(){
 
 function update_language() {
   for (var p in addons) {
-    form_addons.elements[p].nextSibling.nodeValue=addons[p].name[form_languages.select_languages.value]
-  }
-  update()
+    var label = form_main.querySelector("label[for='" + p + "']");
+    if (label) {
+        var addtext = label.getAttribute('addtext');
+        var labelValueToSet = addons[p].name[form_main.select_languages.value];
+        label.innerHTML = (addtext) ? labelValueToSet+' '+'<mark>'+addtext+'</mark>' : labelValueToSet;
+    }
+}
+update()
 }
 
 function prepare_forms(){
-  //form_languages.reset()
-  form_addons.reset()
-  form_backups.reset()
-  //form_servers.reset()
-  //form_vat.reset()
-  //form_ordering_date.reset()
+  //form_main.reset()
+  form_main.reset()
+  form_main.reset()
+  //form_main.reset()
+  //form_main.reset()
+  //form_main.reset()
 
   d=new Date()
   date=d.getFullYear()+"/"+(d.getMonth()+1)+"/"+d.getDate()
-  form_ordering_date.ordering_date.value=date
+  form_main.ordering_date.value=date
 
   update_language()
 }
 
 function is_flexi_required(p){
-  if (servers[form_servers.select_servers.value].flexi_included == "yes") {
+  if (servers[form_main.select_servers.value].flexi_included == "yes") {
     return 0
-  } else if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes") {
+} else if (typeof(addons[p].flexi_required) != "undefined" && addons[p].flexi_required == "yes") {
     return 1
-  } else {
+} else {
     return 0
-  }
+}
 }
 
 function calc_setup(){
-  text=messages.setup_fee[form_languages.select_languages.value]+"\n"
+  text=messages.setup_fee[form_main.select_languages.value]+"\n"
   total=0
-  price=servers[form_servers.select_servers.value].setup
+  price=servers[form_main.select_servers.value].setup
   if (price>0) {
     price=vat(price)
-    text+=format_line(servers[form_servers.select_servers.value].name[form_languages.select_languages.value],
-                      string_format(price),
-                      messages.euro[form_languages.select_languages.value])
+    text+=format_line(servers[form_main.select_servers.value].name[form_main.select_languages.value],
+      string_format(price),
+      messages.euro[form_main.select_languages.value])
     total+=number_format(price)
-  }
+}
 
-  price=backups[form_backups.select_backups.value].setup
-  if (price>0) {
+price=backups[form_main.select_backups.value].setup
+if (price>0) {
     price=vat(price)
-    text+=format_line(backups[form_backups.select_backups.value].name[form_languages.select_languages.value],
-                      string_format(price),
-                      messages.euro[form_languages.select_languages.value])
+    text+=format_line(backups[form_main.select_backups.value].name[form_main.select_languages.value],
+      string_format(price),
+      messages.euro[form_main.select_languages.value])
     total+=number_format(price)
-  }
+}
 
 
-  for (var p in addons) {
-    addons_count=form_addons.elements[p].value
-    if ((form_addons.elements[p].checked == true || addons_count > 0 ) && addons[p].setup>0) {
+for (var p in addons) {
+    addons_count=form_main.elements[p].value
+    if ((form_main.elements[p].checked == true || addons_count > 0 ) && addons[p].setup>0) {
       count_text=""
       if (addons_count>1) {
         count_text+=addons_count+"x "
         addon_price=addons_count*number_format(vat(addons[p].setup))
-      } else {
+    } else {
         addon_price=vat(addons[p].setup)
-      }
-      text+=format_line(count_text+addons[p].name[form_languages.select_languages.value],
-                       string_format(addon_price),
-                       messages.euro[form_languages.select_languages.value])
-      flexi_counter+=is_flexi_required(p)
-      total+=number_format(addon_price)
     }
-  }
-  if (total>0) {
-    text+="---\n"+format_line(messages.total_setup[form_languages.select_languages.value],
-                     string_format(total),
-                     messages.euro[form_languages.select_languages.value]+"\n")
+    text+=format_line(count_text+addons[p].name[form_main.select_languages.value],
+       string_format(addon_price),
+       messages.euro[form_main.select_languages.value])
+    flexi_counter+=is_flexi_required(p)
+    total+=number_format(addon_price)
+}
+}
+if (total>0) {
+    text+="---\n"+format_line(messages.total_setup[form_main.select_languages.value],
+     string_format(total),
+     messages.euro[form_main.select_languages.value]+"\n")
     return text
-  } else {
+} else {
     return ""
-  }
+}
 }
 
 function calc_monthly(){
-  text=messages.monthly[form_languages.select_languages.value]+"\n"
+  text=messages.monthly[form_main.select_languages.value]+"\n"
   total=0
 
-  price=servers[form_servers.select_servers.value].monthly
+  price=servers[form_main.select_servers.value].monthly
   if (price>0) {
     price=vat(price)
-    text+=format_line(servers[form_servers.select_servers.value].name[form_languages.select_languages.value],
-                      string_format(price),
-                      messages.euro[form_languages.select_languages.value])
+    text+=format_line(servers[form_main.select_servers.value].name[form_main.select_languages.value],
+      string_format(price),
+      messages.euro[form_main.select_languages.value])
     total+=number_format(price)
-  }
+}
 
-  price=backups[form_backups.select_backups.value].monthly
-  if (price>0) {
+price=backups[form_main.select_backups.value].monthly
+if (price>0) {
     price=vat(price)
-    text+=format_line(backups[form_backups.select_backups.value].name[form_languages.select_languages.value],
-                      string_format(price),
-                      messages.euro[form_languages.select_languages.value])
+    text+=format_line(backups[form_main.select_backups.value].name[form_main.select_languages.value],
+      string_format(price),
+      messages.euro[form_main.select_languages.value])
     total+=number_format(price)
-  }
+}
 
 
-  for (var p in addons) {
-    addons_count=form_addons.elements[p].value
-    if ((form_addons.elements[p].checked == true || addons_count > 0 ) && addons[p].monthly>0) {
+for (var p in addons) {
+    addons_count=form_main.elements[p].value
+    if ((form_main.elements[p].checked == true || addons_count > 0 ) && addons[p].monthly>0) {
       count_text=""
       if (addons_count>1) {
         count_text+=addons_count+"x "
         addon_price=addons_count*number_format(vat(addons[p].monthly))
-      } else {
+    } else {
         addon_price=vat(addons[p].monthly)
-      }
-      text+=format_line(count_text+addons[p].name[form_languages.select_languages.value],
-                        string_format(addon_price),
-                        messages.euro[form_languages.select_languages.value])
-      flexi_counter+=is_flexi_required(p)
-      total+=number_format(addon_price)
     }
-  }
-  if (flexi_counter>0) {
-    text+=format_line(messages.flexi_pack[form_languages.select_languages.value],
-                      string_format(vat(15)),
-                      messages.euro[form_languages.select_languages.value])
+    text+=format_line(count_text+addons[p].name[form_main.select_languages.value],
+        string_format(addon_price),
+        messages.euro[form_main.select_languages.value])
+    flexi_counter+=is_flexi_required(p)
+    total+=number_format(addon_price)
+}
+}
+if (flexi_counter>0) {
+    text+=format_line(messages.flexi_pack[form_main.select_languages.value],
+      string_format(vat(15)),
+      messages.euro[form_main.select_languages.value])
     total+=number_format(vat(15))
-  }
-  if (total>0) {
-    text+="---\n"+format_line(messages.total_monthly[form_languages.select_languages.value],
-                      string_format(total),
-                      messages.euro[form_languages.select_languages.value]+"\n")
+}
+if (total>0) {
+    text+="---\n"+format_line(messages.total_monthly[form_main.select_languages.value],
+      string_format(total),
+      messages.euro[form_main.select_languages.value]+"\n")
     return text
-  } else {
+} else {
     return ""
-  }
+}
 }
 
 function calc_first_invoice_addition() {
-  text=messages.first_invoice_addition[form_languages.select_languages.value]+"\n"
+  text=messages.first_invoice_addition[form_main.select_languages.value]+"\n"
   total=0
 
   for (var p in addons) {
-    if (form_addons.elements[p].checked == true && addons[p].pay_entire_month=="yes") {
+    if (form_main.elements[p].checked == true && addons[p].pay_entire_month=="yes") {
       addon_price=vat(addons[p].monthly)
-      date=new Date(form_ordering_date.ordering_date.value)
+      date=new Date(form_main.ordering_date.value)
       d = new Date(date.getFullYear(), date.getMonth() + 1, 0)
       days=d.getDate()
       now=date.getDate()
       addon_price=addon_price/days*(now-1)
 
-      text+=addons[p].name[form_languages.select_languages.value]+" "
+      text+=addons[p].name[form_main.select_languages.value]+" "
       text+=string_format(addon_price)+" "
-      text+=messages.euro[form_languages.select_languages.value]+"\n"
+      text+=messages.euro[form_main.select_languages.value]+"\n"
 
       total+=number_format(addon_price)
-    }
   }
-  if (total>0) {
+}
+if (total>0) {
     return text+"\n"
-  } else {
+} else {
     return ""
-  }
+}
 }
 
 function show_vat(){
-  if (form_vat.vat_included.checked==true) {
-    return messages.vat_is_included[form_languages.select_languages.value]+"\n\n"
-  } else {
-    return messages.vat_isnt_included[form_languages.select_languages.value]+"\n\n"
-  }
+  if (form_main.vat_included.checked==true) {
+    return messages.vat_is_included[form_main.select_languages.value]+"\n\n"
+} else {
+    return messages.vat_isnt_included[form_main.select_languages.value]+"\n\n"
+}
 }
 
 function vat(amount){
-  if(form_vat.vat_included.checked==false) {
+  if(form_main.vat_included.checked==false) {
     amount=amount/119*100
-  }
-  return amount
+}
+return amount
 }
 
 function string_format(amount){
@@ -1015,29 +1266,29 @@ function string_format(amount){
   amount_fixed0=amount.toFixed(0)
   if(amount_fixed2-amount_fixed0==0){
     return amount_fixed0
-  } else {
+} else {
     return amount_fixed2
-  }
+}
 }
 
 function number_format(amount){
   if(amount-amount.toFixed(2)==0){
     return amount
-  } else {
+} else {
     return Number(amount.toFixed(2))
-  }
+}
 }
 
 function show_comments(){
   //collect comments from selected server and addons
   comments=""
-  comments+=(servers[form_servers.select_servers.value].comment === undefined) ? "" : servers[form_servers.select_servers.value].comment+"\n"
+  comments+=(servers[form_main.select_servers.value].comment === undefined) ? "" : servers[form_main.select_servers.value].comment+"\n"
 
   for (var p in addons) {
-    if ( form_addons.elements[p].checked == true || form_addons.elements[p].value > 0  ){
+    if ( form_main.elements[p].checked == true || form_main.elements[p].value > 0  ){
       comments+=(addons[p].comment === undefined) ? "" : addons[p].comment+"\n"
-    }
   }
+}
 
   //show also additional costs for externally licensed products
   comments+=calc_first_invoice_addition()
@@ -1045,12 +1296,12 @@ function show_comments(){
   //add header if comments exists
   if (comments != "") {
     comments="COMMENTS:\n"+comments
-  }
+}
 
-  return comments
+return comments
 }
 
 </script>
 
-	</body>
+</body>
 </html>
