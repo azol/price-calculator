@@ -1,5 +1,6 @@
 @import "settings";
-@import "foundation";
+@import "foundation/components/grid";
+@import "foundation/components/forms";
 
 // Or selectively include components
 // @import
@@ -38,3 +39,11 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+body {
+    margin: 1rem 0 0 0;
+}
+
+legend {
+    font-size: 0.85rem;
+}
