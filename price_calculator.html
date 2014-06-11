@@ -164,34 +164,10 @@ meta.foundation-version{font-family:"/5.2.3/"}meta.foundation-mq-small{font-fami
             </div>
             <div class="row collapse">
                 <div class="small-1 columns">
-                    <input type="text" placeholder="0" name="sata750" id="sata750" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="sata750">sata750</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" name="sata1500" id="sata1500" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="sata1500">sata1500</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
                     <input type="text" placeholder="0" name="sata2000e" id="sata2000e" />
                 </div>
                 <div class="small-11 columns">
                     <label class="postfix" for="sata2000e">sata2000e</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" name="sata3000" id="sata3000" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="sata3000">sata3000</label>
                 </div>
             </div>
             <div class="row collapse">
@@ -232,6 +208,21 @@ meta.foundation-version{font-family:"/5.2.3/"}meta.foundation-mq-small{font-fami
                 </div>
                 <div class="small-11 columns">
                     <label class="postfix" for="ramecc32gb">ramecc32gb</label>
+                </div>
+            </div>
+            <div class="row collapse">
+                <div class="small-2 columns">
+                    <select id="select_backups" onchange="update()">
+                        <option>no</option>
+                        <option>100</option>
+                        <option>500</option>
+                        <option>2000</option>
+                        <option>5000</option>
+                        <option>10000</option>
+                    </select>
+                </div>
+                <div class="small-10 columns">
+                    <label class="postfix">Backup Space</label>
                 </div>
             </div>
         </div>
@@ -346,21 +337,6 @@ meta.foundation-version{font-family:"/5.2.3/"}meta.foundation-mq-small{font-fami
                 </div>
                 <div class="small-11 columns">
                     <label class="postfix" for="traffic_overusage">traffic_overusage</label>
-                </div>
-            </div>
-            <div class="row collapse">
-            <div class="small-2 columns">
-                    <select id="select_backups" onchange="update()">
-                        <option>no</option>
-                        <option>100</option>
-                        <option>500</option>
-                        <option>2000</option>
-                        <option>5000</option>
-                        <option>10000</option>
-                    </select>
-                </div>
-                <div class="small-10 columns">
-                    <label class="postfix">Backup Space</label>
                 </div>
             </div>
         </div>
@@ -852,33 +828,12 @@ var addons = {
       Русский: "600 ГБ SAS"},
       comment: "600 GB SAS: is available only for DELL R720",
   },
-  sata750: {
-    monthly: 6, flexi_required: "yes",
-    name: {
-      English: "750 GB SATA HDD",
-      Deutsch: "750 GB SATA HDD",
-      Русский: "750 ГБ SATA HDD"},
-  },
-  sata1500: {
-    monthly: 9, flexi_required: "yes",
-    name: {
-      English: "1,500 GB SATA HDD",
-      Deutsch: "1.500 GB SATA HDD",
-      Русский: "1.500 ГБ SATA HDD"},
-  },
   sata2000e: {
     monthly: 15, flexi_required: "yes",
     name: {
       English: "2 TB enterprise SATA HDD",
       Deutsch: "2 TB Enterprise SATA HDD",
       Русский: "2 ТБ enterprise SATA HDD"},
-  },
-  sata3000: {
-    monthly: 15, flexi_required: "yes",
-    name: {
-      English: "3 TB SATA HDD",
-      Deutsch: "3 TB SATA HDD",
-      Русский: "3 ТБ SATA HDD"},
   },
   sata3000e: {
     monthly: 25, flexi_required: "yes",
