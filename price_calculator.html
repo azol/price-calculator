@@ -116,20 +116,10 @@ meta.foundation-version{font-family:"/5.2.3/"}meta.foundation-mq-small{font-fami
         <div class="large-4 column">
             <div class="row collapse">
                 <div class="small-1 columns">
-                    <input type="text" placeholder="0" name="sas300" id="sas300" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="sas300" addtext="4-Port RAID">
-                        sas300 + 4-Port RAID
-                    </label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
                     <input type="text" placeholder="0" name="sas600" id="sas600" />
                 </div>
                 <div class="small-11 columns">
-                    <label class="postfix" for="sas600" addtext="4-Port RAID">sas600</label>
+                    <label class="postfix" for="sas600">sas600</label>
                 </div>
             </div>
             <div class="row collapse">
@@ -854,19 +844,13 @@ var addons = {
       Русский: "600 ГБ SSD"},
       comment: "600 GB SSD: is available only for DELL R720",
   },
-  sas300: {
-    monthly: 15, flexi_required: "yes",
-    name: {
-      English: "300 GB SAS",
-      Deutsch: "300 GB SAS",
-      Русский: "300 ГБ SAS"},
-  },
   sas600: {
     monthly: 25, flexi_required: "yes",
     name: {
       English: "600 GB SAS",
       Deutsch: "600 GB SAS",
       Русский: "600 ГБ SAS"},
+      comment: "600 GB SAS: is available only for DELL R720",
   },
   sata750: {
     monthly: 6, flexi_required: "yes",
