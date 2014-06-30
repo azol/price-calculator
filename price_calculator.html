@@ -19,23 +19,27 @@ meta.foundation-version{font-family:"/5.2.3/"}meta.foundation-mq-small{font-fami
     <form class="row" name="form_main" onchange='update()' onsubmit="update(); return false;">
         <div class="large-4 column">
             <div class="row collapse">
-                <div class="medium-3 column">
+                <div class="medium-2 column">
                     <div class="row collapse">
                         <div class="small-9 column">
-                            <label class="prefix">VAT?</label>
+                            <label class="prefix">VAT</label>
                         </div>
                         <div class="small-3 column">
                             <input type="checkbox" name="vat_included" checked onchange='update()'>
                         </div>
                     </div>
                 </div>
-                <div class="medium-9 column">
+                <div class="medium-1 column">
+                    &nbsp;
+                </div>
+                <div class="medium-6 column">
                     <div class="row collapse">
-                        <div class="small-8 column">
+                        <div class="small-6 column">
                             <label class="prefix">Server:</label>
                         </div>
-                        <div class="small-4 column">
+                        <div class="small-6 column">
                             <select id="select_servers" onchange="update()">
+                                <option>SB</option>
                                 <option>EX40</option>
                                 <option>EX40SSD</option>
                                 <option>EX60</option>
@@ -60,6 +64,20 @@ meta.foundation-version{font-family:"/5.2.3/"}meta.foundation-mq-small{font-fami
                         </div>
                     </div>
                 </div>
+                <div class="medium-1 column">
+                    &nbsp;
+                </div>
+                <div class="medium-2 column">
+                    <div class="row collapse">
+                          <div class="small-6 column">
+                              <label class="prefix">SB:</label>
+                          </div>
+                          <div class="small-6 column">
+                              <input type="text" placeholder="0" name="sb_number" id="sb_number" onchange='update()' onsubmit="update(); return false;">
+                        </div>
+                    </div>
+                </div>
+
                 <div class="row collapse">
                     <div class="medium-5 column">
                         <div class="row collapse">
@@ -88,6 +106,7 @@ meta.foundation-version{font-family:"/5.2.3/"}meta.foundation-mq-small{font-fami
                         </div>
                     </div>
                 </div>
+
                 <fieldset>
                     <legend>Addons</legend>
                     <input type="checkbox" name="win_std" id="win_std"><label for="win_std">win_std</label><br/>
@@ -399,6 +418,14 @@ var messages = {
 }
 
 var servers = {
+  SB: {
+    monthly: 1, setup: 0,
+    name: {
+      English: "Server SB",
+      Deutsch: "Server SB",
+      Русский: "Сервер SB"},
+      comment: "SB servers: no additional hardware",
+  },
   EX40: {
     monthly: 49, setup: 49,
     name: {
@@ -1110,14 +1137,26 @@ function calc_monthly(){
   text=messages.monthly[form_main.select_languages.value]+"\n"
   total=0
 
-  price=servers[form_main.select_servers.value].monthly
-  if (price>0) {
-    price=vat(price)
-    text+=format_line(servers[form_main.select_servers.value].name[form_main.select_languages.value],
-      string_format(price),
-      messages.euro[form_main.select_languages.value])
-    total+=number_format(price)
-}
+  if (form_main.select_servers.value == "SB") {
+    price=form_main.sb_number.value
+    if (price>0) {
+      server_name=servers[form_main.select_servers.value].name[form_main.select_languages.value] + price
+      price=vat(price)
+      text+=format_line(server_name,
+                        string_format(price),
+                        messages.euro[form_main.select_languages.value])
+      total+=number_format(price)
+    }
+  } else {
+    price=servers[form_main.select_servers.value].monthly
+    if (price>0) {
+      price=vat(price)
+      text+=format_line(servers[form_main.select_servers.value].name[form_main.select_languages.value],
+                        string_format(price),
+                        messages.euro[form_main.select_languages.value])
+      total+=number_format(price)
+    }
+  }
 
 price=backups[form_main.select_backups.value].monthly
 if (price>0) {
@@ -1201,7 +1240,7 @@ function vat(amount){
   if(form_main.vat_included.checked==false) {
     amount=amount/119*100
 }
-return amount
+return amount*1
 }
 
 function string_format(amount){
