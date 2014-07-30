@@ -369,7 +369,16 @@
                 </div>
             </div>
         </div>
-        <div class="large-12 column">
+        <div class="large-1 column">
+            <div class="switch tiny">
+                <input id="new_format_output" type="checkbox">
+                <label for="new_format_output"></label>
+            </div>
+            <div>
+                <label>Style</label>
+            </div>
+        </div>
+        <div class="large-11 column">
             <textarea id="output" readonly>calculation output</textarea>
         </div>
     </form>
@@ -1094,11 +1103,11 @@ function updateCalculationResult() {
     var selectedServerModel = document.getElementById('select_servers').value;
     var serverToCalculate = new Server(selectedServerModel);
 
-    var calculationTextBeautified = serverToCalculate.getCalculationStringBeautified();
+    var calculationTextBeautified = serverToCalculate.getCalculationStringBeautifiedWrapper();
     document.getElementById('output').innerHTML = '';
     document.getElementById('output').innerHTML += calculationTextBeautified;
 
-    var numberOfLinesInCalculationText = calculationTextBeautified.split(/\n|\r|\n\r/).length + 1;
+    var numberOfLinesInCalculationText = calculationTextBeautified.split(/\n|\r|\n\r/).length;
     document.getElementById('output').rows = numberOfLinesInCalculationText;
 }
 
@@ -1116,6 +1125,7 @@ function Server(theModel) {
     }
     this.serverAddons = [];
     this.flexiRequiredForAddons = false;
+    this.newOutputFormat = (document.getElementById('new_format_output').checked);
     this.isVatChecked = (document.getElementById('vat_included').checked);
     this.findAndAddAddons();
 }
@@ -1203,7 +1213,7 @@ Server.prototype = {
         for (var i = 0; i < this.serverAddons.length; i++) {
             var addonObj = this.serverAddons[i];
             if ('setup' in addonObj) {
-                setupPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? this.vatPrice(addonObj.amount * addonObj.setup) : this.vatPrice(addonObj.setup);
+                setupPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? this.vatPrice(+addonObj.amount * addonObj.setup) : this.vatPrice(addonObj.setup);
             }
         }
         return setupPriceTotal;
@@ -1374,6 +1384,18 @@ Server.prototype = {
         str += '\n' + messages.total_additional[uiLanguage] + ' ' + this.getAdditionalPaymentTotalVatted().toFixed(2) + ' €';
         return (hasPayEntireMonthAddons) ? str : '';
     },
+    formatAdditionalPaymentStringNewOldFormat: function() {
+        var hasPayEntireMonthAddons = false;
+        var str = messages.first_invoice_addition[uiLanguage];
+        for (var i = 0; i < this.serverAddons.length; i++) {
+            var addonObj = this.serverAddons[i];
+            if (addonObj.pay_entire_month) {
+                hasPayEntireMonthAddons = true;
+                str += '\n' + addonObj.name[uiLanguage] + ' ' + this.getAddonAdditionalPaymentVatted(addonObj.monthly).toFixed(2) + ' €';
+            }
+        }
+        return (hasPayEntireMonthAddons) ? str : '';
+    },
     formatFirstInvoiceString: function() {
         var str = '';
         if (this.getSetupPriceTotalVatted() !== 0 || this.getAdditionalPaymentTotalVatted() !== 0) {
@@ -1407,6 +1429,19 @@ Server.prototype = {
                 ((this.formatAdditionalPaymentStringNew() === '' || !this.getAdditionalPaymentTotalVatted()) ? '' : this.formatAdditionalPaymentStringNew() + '\n\n' ) +
                 ((this.formatFirstInvoiceString()         === '' ) ? '' : this.formatFirstInvoiceString() + '\n\n' ) +
                 this.formatCommentStringNew();
+    },
+    getCalculationStringOldFormat: function() {
+        return  ((this.formatSetupPriceStringNew()        === '' || !this.getSetupPriceTotalVatted())        ? '' : this.formatSetupPriceStringNew()        + '\n\n' ) +
+                ((this.formatMonthlyPriceStringNew()      === '' || !this.getMonthlyPriceTotalVatted())      ? '' : this.formatMonthlyPriceStringNew()      + '\n\n' ) +
+                this.formatCommentStringNew() +
+                ((this.formatAdditionalPaymentStringNewOldFormat() === '' || !this.getAdditionalPaymentTotalVatted()) ? '' : '\n' + this.formatAdditionalPaymentStringNewOldFormat());
+    },
+    getCalculationStringBeautifiedWrapper: function() {
+        if (this.newOutputFormat) {
+            return this.getCalculationStringBeautified();
+        } else {
+            return this.getCalculationStringBeautifiedOldFormat();
+        }
     },
     getCalculationStringBeautified: function() {
         var INDENT = '    ';
@@ -1458,6 +1493,63 @@ Server.prototype = {
                 var price = temp[2];
 
                 output += INDENT + text;
+                for (var k = 0; k < maxTextLength - text.length + maxPriceLength - price.length; k++) {
+                    output += ' ';
+                }
+                output += price + '\n';
+
+            }
+        }
+        return output;
+    },
+    getCalculationStringBeautifiedOldFormat: function() {
+        var output = '';
+        var maxTextLength = 0;
+        var maxPriceLength = 0;
+        var expr = /^(.*) ([0-9\.]+ €)$/;
+
+        var lines = this.getCalculationStringOldFormat().split('\n');
+        var line = '';
+        var temp = '';
+
+        for(var n = 0; n < lines.length; n++) {
+            line = lines[n];
+
+            temp = line.match(expr);
+
+            if (temp !== null) {
+                var textLen = temp[1].length + 1;
+                var priceLen = temp[2].length;
+                if (textLen > maxTextLength) {
+                    maxTextLength = textLen;
+                }
+
+                if (priceLen > maxPriceLength) {
+                    maxPriceLength = priceLen;
+                }
+            }
+        }
+
+        for(var i = 0; i < lines.length; i++) {
+            line = lines[i];
+
+            temp = line.match(expr);
+
+            if (line === '-') {
+                for (var j = 0; j < 3; j++) {
+                    output += '-';
+                }
+                output += '\n';
+
+            } else if (temp === null) {
+
+                output += line + '\n';
+
+            } else {
+                var text  = temp[1];
+                var price = temp[2];
+
+                output += text;
                 for (var k = 0; k < maxTextLength - text.length + maxPriceLength - price.length; k++) {
                     output += ' ';
                 }
