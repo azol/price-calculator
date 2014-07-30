@@ -17,371 +17,375 @@ meta.foundation-version{font-family:"/5.3.1/"}meta.foundation-mq-small{font-fami
         </div>
     </noscript>
 
-    <form class="row" onchange="onChange()" autocomplete="off">
-        <div class="large-4 column">
-            <div class="row collapse">
-                <div class="medium-2 column">
-                    <div class="row collapse">
-                        <div class="small-9 column">
-                            <label class="prefix">VAT</label>
-                        </div>
-                        <div class="small-3 column">
-                            <input type="checkbox" id="vat_included" checked>
-                        </div>
-                    </div>
-                </div>
-                <div class="medium-1 column">
-                    &nbsp;
-                </div>
-                <div class="medium-6 column">
-                    <div class="row collapse">
-                        <div class="small-6 column">
-                            <label class="prefix">Server:</label>
-                        </div>
-                        <div class="small-6 column">
-                            <select id="select_servers">
-                                <option>SB</option>
-                                <option>EX40</option>
-                                <option>EX40SSD</option>
-                                <option>EX60</option>
-                                <option>PX60</option>
-                                <option>PX60SSD</option>
-                                <option>PX70</option>
-                                <option>PX70SSD</option>
-                                <option>PX90</option>
-                                <option>PX90SSD</option>
-                                <option>PX120</option>
-                                <option>PX120SSD</option>
-                                <option>SX60</option>
-                                <option>SX130</option>
-                                <option>SX290</option>
-                                <option>DX150</option>
-                                <option>DX290</option>
-                                <option>RACK20</option>
-                                <option>VQ7</option>
-                                <option>VQ12</option>
-                                <option>VQ19</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="medium-1 column">
-                    &nbsp;
-                </div>
-                <div class="medium-2 column">
-                    <div class="row collapse">
-                          <div class="small-6 column">
-                              <label class="prefix">SB:</label>
-                          </div>
-                          <div class="small-6 column">
-                              <input type="text" placeholder="0" id="sb_number">
-                        </div>
-                    </div>
-                </div>
-
+    <form onchange="onChange()" autocomplete="off">
+        <div class="row">
+            <div class="large-4 column">
                 <div class="row collapse">
-                    <div class="medium-5 column">
+                    <div class="medium-2 column">
                         <div class="row collapse">
-                            <div class="small-6 column">
-                                <label class="prefix">Date:</label>
+                            <div class="small-9 column">
+                                <label class="prefix">VAT</label>
                             </div>
-                            <div class="small-6 column">
-                                <input type="text" id="ordering_date" value="today">
+                            <div class="small-3 column">
+                                <input type="checkbox" id="vat_included" checked>
                             </div>
                         </div>
                     </div>
                     <div class="medium-1 column">
+                        &nbsp;
                     </div>
                     <div class="medium-6 column">
                         <div class="row collapse">
                             <div class="small-6 column">
-                                <label class="prefix">Language:</label>
+                                <label class="prefix">Server:</label>
                             </div>
                             <div class="small-6 column">
-                                <select id="select_languages" onChange="setAndUpdateUILanguage()">
-                                    <option>English</option>
-                                    <option>Deutsch</option>
-                                    <option>Русский</option>
+                                <select id="select_servers">
+                                    <option>SB</option>
+                                    <option>EX40</option>
+                                    <option>EX40SSD</option>
+                                    <option>EX60</option>
+                                    <option>PX60</option>
+                                    <option>PX60SSD</option>
+                                    <option>PX70</option>
+                                    <option>PX70SSD</option>
+                                    <option>PX90</option>
+                                    <option>PX90SSD</option>
+                                    <option>PX120</option>
+                                    <option>PX120SSD</option>
+                                    <option>SX60</option>
+                                    <option>SX130</option>
+                                    <option>SX290</option>
+                                    <option>DX150</option>
+                                    <option>DX290</option>
+                                    <option>RACK20</option>
+                                    <option>VQ7</option>
+                                    <option>VQ12</option>
+                                    <option>VQ19</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div class="medium-1 column">
+                        &nbsp;
+                    </div>
+                    <div class="medium-2 column">
+                        <div class="row collapse">
+                              <div class="small-6 column">
+                                  <label class="prefix">SB:</label>
+                              </div>
+                              <div class="small-6 column">
+                                  <input type="text" placeholder="0" id="sb_number">
+                            </div>
+                        </div>
+                    </div>
 
-                <fieldset>
-                    <legend>Addons</legend>
-                    <input type="checkbox" id="win_std"><label for="win_std">win_std</label><br/>
-                    <input type="checkbox" id="win_dc"><label for="win_dc">win_dc</label><br/>
                     <div class="row collapse">
-                        <div class="small-1 columns">
-                            <input type="text" placeholder="0" id="rdp_license" />
+                        <div class="medium-5 column">
+                            <div class="row collapse">
+                                <div class="small-6 column">
+                                    <label class="prefix">Date:</label>
+                                </div>
+                                <div class="small-6 column">
+                                    <input type="text" id="ordering_date" value="today">
+                                </div>
+                            </div>
                         </div>
-                        <div class="small-11 columns">
-                            <label class="postfix" for="rdp_license">rdp_license</label>
+                        <div class="medium-1 column">
+                        </div>
+                        <div class="medium-6 column">
+                            <div class="row collapse">
+                                <div class="small-6 column">
+                                    <label class="prefix">Language:</label>
+                                </div>
+                                <div class="small-6 column">
+                                    <select id="select_languages" onChange="setAndUpdateUILanguage()">
+                                        <option>English</option>
+                                        <option>Deutsch</option>
+                                        <option>Русский</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="row collapse">
-                        <div class="small-4 columns">
-                            <select id="select_plesk" onchange="update()">
-                                <option>no</option>
-                                <option>web_admin</option>
-                                <option>web_app</option>
-                                <option>web_pro</option>
-                                <option>web_host</option>
-                            </select>
+
+                    <fieldset>
+                        <legend>Addons</legend>
+                        <input type="checkbox" id="win_std"><label for="win_std">win_std</label><br/>
+                        <input type="checkbox" id="win_dc"><label for="win_dc">win_dc</label><br/>
+                        <div class="row collapse">
+                            <div class="small-1 columns">
+                                <input type="text" placeholder="0" id="rdp_license" />
+                            </div>
+                            <div class="small-11 columns">
+                                <label class="postfix" for="rdp_license">rdp_license</label>
+                            </div>
                         </div>
-                        <div class="small-8 columns">
-                            <label class="postfix">Plesk Panel 12</label>
+                        <div class="row collapse">
+                            <div class="small-4 columns">
+                                <select id="select_plesk" onchange="update()">
+                                    <option>no</option>
+                                    <option>web_admin</option>
+                                    <option>web_app</option>
+                                    <option>web_pro</option>
+                                    <option>web_host</option>
+                                </select>
+                            </div>
+                            <div class="small-8 columns">
+                                <label class="postfix">Plesk Panel 12</label>
+                            </div>
                         </div>
+                        <input type="checkbox" id="plesk_power_pack"><label for="plesk_power_pack">plesk_power_pack</label><br/>
+                        <input type="checkbox" id="cpanel"><label for="cpanel">cpanel</label><br/>
+                        <input type="checkbox" id="kvm"><label for="kvm">kvm</label><br/>
+                        <input type="checkbox" id="install_via_lara"><label for="install_via_lara">install_via_lara</label><br/>
+                        <input type="checkbox" id="raid4"><label for="raid4">raid4</label><br/>
+                        <input type="checkbox" id="bbu"><label for="bbu">bbu</label><br/>
+                        <input type="checkbox" id="kvm_module"><label for="kvm_module">kvm_module</label>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="large-4 column">
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="sas600" />
                     </div>
-                    <input type="checkbox" id="plesk_power_pack"><label for="plesk_power_pack">plesk_power_pack</label><br/>
-                    <input type="checkbox" id="cpanel"><label for="cpanel">cpanel</label><br/>
-                    <input type="checkbox" id="kvm"><label for="kvm">kvm</label><br/>
-                    <input type="checkbox" id="install_via_lara"><label for="install_via_lara">install_via_lara</label><br/>
-                    <input type="checkbox" id="raid4"><label for="raid4">raid4</label><br/>
-                    <input type="checkbox" id="bbu"><label for="bbu">bbu</label><br/>
-                    <input type="checkbox" id="kvm_module"><label for="kvm_module">kvm_module</label>
-                </fieldset>
-            </div>
-        </div>
-        <div class="large-4 column">
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="sas600" />
+                    <div class="small-11 columns">
+                        <label class="postfix" for="sas600">sas600</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="sas600">sas600</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ssd240" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ssd240">ssd240</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="ssd240" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ssd240de" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ssd240de">ssd240de</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="ssd240">ssd240</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ssd480de" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ssd480de">ssd480de</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="ssd240de" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ssd300" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ssd300">ssd300</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="ssd240de">ssd240de</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ssd600" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ssd600">ssd600</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="ssd480de" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="sata2000e" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="sata2000e">sata2000e</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="ssd480de">ssd480de</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="sata3000e" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="sata3000e">sata3000e</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="ssd300" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="sata4000e" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="sata4000e">sata4000e</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="ssd300">ssd300</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="usb16" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="usb16">usb16</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="ssd600" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="usb64" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="usb64">usb64</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="ssd600">ssd600</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ramecc32gb" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ramecc32gb">ramecc32gb</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="sata2000e" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="sata2000e">sata2000e</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="sata3000e" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="sata3000e">sata3000e</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="sata4000e" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="sata4000e">sata4000e</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="usb16" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="usb16">usb16</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="usb64" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="usb64">usb64</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="ramecc32gb" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="ramecc32gb">ramecc32gb</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-2 columns">
-                    <select id="select_backups">
-                        <option>no</option>
-                        <option>100</option>
-                        <option>500</option>
-                        <option>2000</option>
-                        <option>5000</option>
-                        <option>10000</option>
-                    </select>
-                </div>
-                <div class="small-10 columns">
-                    <label class="postfix">Backup Space</label>
+                <div class="row collapse">
+                    <div class="small-2 columns">
+                        <select id="select_backups">
+                            <option>no</option>
+                            <option>100</option>
+                            <option>500</option>
+                            <option>2000</option>
+                            <option>5000</option>
+                            <option>10000</option>
+                        </select>
+                    </div>
+                    <div class="small-10 columns">
+                        <label class="postfix">Backup Space</label>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="large-4 column">
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="ip" />
+            <div class="large-4 column">
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ip" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ip">ip</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="ip">ip</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="subnet29" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="subnet29" data-addtext="6 IPs">subnet29</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="subnet29" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="subnet28" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="subnet28" data-addtext="14 IPs">subnet28</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="subnet29" data-addtext="6 IPs">subnet29</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="subnet27" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="subnet27" data-addtext="30 IPs">subnet27</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="subnet28" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="failover_ip" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="failover_ip">failover_ip</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="subnet28" data-addtext="14 IPs">subnet28</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="failover_subnet29" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="failover_subnet29" data-addtext="6 IPs">failover_subnet29</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="subnet27" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="failover_subnet28" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="failover_subnet28" data-addtext="14 IPs">failover_subnet28</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="subnet27" data-addtext="30 IPs">subnet27</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="failover_subnet27" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="failover_subnet27" data-addtext="30 IPs">failover_subnet27</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="failover_ip" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="gbit_nic" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="gbit_nic">gbit_nic</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="failover_ip">failover_ip</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="switch_5port" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="switch_5port">switch_5port</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="failover_subnet29" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="switch_8port" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="switch_8port">switch_8port</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="failover_subnet29" data-addtext="6 IPs">failover_subnet29</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="switch_24port" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="switch_24port">switch_24port</label>
+                    </div>
                 </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="failover_subnet28" />
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="place_reservation" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="place_reservation">place_reservation</label>
+                    </div>
                 </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="failover_subnet28" data-addtext="14 IPs">failover_subnet28</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="failover_subnet27" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="failover_subnet27" data-addtext="30 IPs">failover_subnet27</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="gbit_nic" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="gbit_nic">gbit_nic</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="switch_5port" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="switch_5port">switch_5port</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="switch_8port" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="switch_8port">switch_8port</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="switch_24port" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="switch_24port">switch_24port</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="place_reservation" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="place_reservation">place_reservation</label>
-                </div>
-            </div>
-            <div class="row collapse">
-                <div class="small-1 columns">
-                    <input type="text" placeholder="0" id="traffic_overusage" />
-                </div>
-                <div class="small-11 columns">
-                    <label class="postfix" for="traffic_overusage">traffic_overusage</label>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="traffic_overusage" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="traffic_overusage">traffic_overusage</label>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="large-1 column">
-            <div class="switch tiny">
-                <input id="new_format_output" type="checkbox">
-                <label for="new_format_output"></label>
+        <div class="row">
+            <div class="large-1 column">
+                <div class="switch tiny">
+                    <input id="new_format_output" type="checkbox">
+                    <label for="new_format_output"></label>
+                </div>
+                <div>
+                    <label>Style</label>
+                </div>
             </div>
-            <div>
-                <label>Style</label>
+            <div class="large-11 column">
+                <textarea id="output" readonly>calculation output</textarea>
             </div>
-        </div>
-        <div class="large-11 column">
-            <textarea id="output" readonly>calculation output</textarea>
         </div>
     </form>
 
