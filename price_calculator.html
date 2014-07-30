@@ -1109,7 +1109,7 @@ function updateCalculationResult() {
     document.getElementById('output').innerHTML = '';
     document.getElementById('output').innerHTML += calculationTextBeautified;
 
-    var numberOfLinesInCalculationText = calculationTextBeautified.split(/\n|\r|\n\r/).length + 1;
+    var numberOfLinesInCalculationText = calculationTextBeautified.split(/\n|\r|\n\r/).length;
     document.getElementById('output').rows = numberOfLinesInCalculationText;
 }
 
