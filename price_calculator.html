@@ -1270,70 +1270,13 @@ Server.prototype = {
         }
         return additionalPaymentTotal;
     },
-    formatSetupPriceString: function() {
-        var str = '\n' + this.getName() + ' ' + this.getSetupPriceVatted() + ' €';
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if ('setup' in addonObj) {
-                if ('amount' in addonObj && addonObj.amount > 1) {
-                    str += '\n' + addonObj.amount + 'x ' + addonObj.name[uiLanguage] + ' ' + this.vatPrice(addonObj.amount * addonObj.setup) + ' €';
-                } else {
-                    str += '\n' + addonObj.name[uiLanguage] + ' ' + this.vatPrice(addonObj.setup) + ' €';
-                }
-            }
-        }
-        return str;
-    },
-    formatMonthlyPriceString: function() {
-        var str = '\n' + this.getName() + ' ' + this.getMonthlyPriceVatted() + ' €';
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if ('monthly' in addonObj) {
-                if ('amount' in addonObj && addonObj.amount > 1) {
-                    str += '\n' + addonObj.amount + 'x ' + addonObj.name[uiLanguage] + ' ' + this.vatPrice(addonObj.amount * addonObj.monthly).toFixed(2) + ' €';
-                } else {
-                    str += '\n' + addonObj.name[uiLanguage] + ' ' + this.vatPrice(addonObj.monthly) + ' €';
-                }
-            }
-        }
-        if ( this.isFlexiToCalculate() ) {
-            str += '\n' + messages.flexi_pack[uiLanguage] + ' ' + this.vatPrice(this.FLEXI_PACK_PRICE) + ' €';
-        }
-        return str;
-    },
-    formatCommentString: function() {
-        var str = '\n' + 'COMMENTS:';
-        if ('comment' in this.model) {
-            str += '\n' + this.model.comment;
-        }
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if ('comment' in addonObj) {
-                str += '\n' + addonObj.comment;
-            }
-        }
-        return str;
-    },
-    formatAdditionalPaymentString: function() {
-        var hasPayEntireMonthAddons = false;
-        var str = '\n' + messages.first_invoice_addition[uiLanguage];
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if (addonObj.pay_entire_month) {
-                hasPayEntireMonthAddons = true;
-                str += '\n' + addonObj.name[uiLanguage] + ' ' + this.getAddonAdditionalPaymentVatted(addonObj.monthly) + ' €';
-            }
-        }
-        str += '\n' + 'Total additional payment: ' + this.getAdditionalPaymentTotalVatted() + ' €';
-        return (hasPayEntireMonthAddons) ? str : '';
-    },
     getMonthlyInvoiceAmountVatted: function() {
         return this.getMonthlyPriceTotalVatted();
     },
     getFirstInvoiceAmountVatted: function() {
         return this.getMonthlyPriceTotalVatted() + this.getAdditionalPaymentTotalVatted() + this.getSetupPriceTotalVatted();
     },
-    formatMonthlyPriceStringNew: function() {
+    formatMonthlyPriceString: function() {
         if (this.getMonthlyPriceTotalVatted() === 0)
             return '';
 
@@ -1356,7 +1299,7 @@ Server.prototype = {
         str += '\n' + messages.total_monthly[uiLanguage] + ' ' + this.getMonthlyPriceTotalVatted().toFixed(2) + ' €';
         return str;
     },
-    formatSetupPriceStringNew: function() {
+    formatSetupPriceString: function() {
         if (this.getSetupPriceTotalVatted() === 0)
             return '';
 
@@ -1376,7 +1319,7 @@ Server.prototype = {
         str += '\n' + messages.total_setup[uiLanguage] + ' ' + this.getSetupPriceTotalVatted().toFixed(2) + ' €';
         return str;
     },
-    formatAdditionalPaymentStringNew: function() {
+    formatAdditionalPaymentString: function() {
         var hasPayEntireMonthAddons = false;
         var str = messages.first_invoice_addition[uiLanguage];
         for (var i = 0; i < this.serverAddons.length; i++) {
@@ -1390,7 +1333,7 @@ Server.prototype = {
         str += '\n' + messages.total_additional[uiLanguage] + ' ' + this.getAdditionalPaymentTotalVatted().toFixed(2) + ' €';
         return (hasPayEntireMonthAddons) ? str : '';
     },
-    formatAdditionalPaymentStringNewOldFormat: function() {
+    formatAdditionalPaymentStringOldFormat: function() {
         var hasPayEntireMonthAddons = false;
         var str = messages.first_invoice_addition[uiLanguage];
         for (var i = 0; i < this.serverAddons.length; i++) {
@@ -1410,7 +1353,7 @@ Server.prototype = {
         }
         return str;
     },
-    formatCommentStringNew: function() {
+    formatCommentString: function() {
         var str = '';
         if (this.isVatChecked) {
             str += messages.vat_is_included[uiLanguage];
@@ -1430,17 +1373,17 @@ Server.prototype = {
         return str;
     },
     getCalculationString: function() {
-        return  ((this.formatMonthlyPriceStringNew()      === '' || !this.getMonthlyPriceTotalVatted())      ? '' : this.formatMonthlyPriceStringNew()      + '\n\n' ) +
-                ((this.formatSetupPriceStringNew()        === '' || !this.getSetupPriceTotalVatted())        ? '' : this.formatSetupPriceStringNew()        + '\n\n' ) +
-                ((this.formatAdditionalPaymentStringNew() === '' || !this.getAdditionalPaymentTotalVatted()) ? '' : this.formatAdditionalPaymentStringNew() + '\n\n' ) +
+        return  ((this.formatMonthlyPriceString()      === '' || !this.getMonthlyPriceTotalVatted())      ? '' : this.formatMonthlyPriceString()      + '\n\n' ) +
+                ((this.formatSetupPriceString()        === '' || !this.getSetupPriceTotalVatted())        ? '' : this.formatSetupPriceString()        + '\n\n' ) +
+                ((this.formatAdditionalPaymentString() === '' || !this.getAdditionalPaymentTotalVatted()) ? '' : this.formatAdditionalPaymentString() + '\n\n' ) +
                 ((this.formatFirstInvoiceString()         === '' ) ? '' : this.formatFirstInvoiceString() + '\n\n' ) +
-                this.formatCommentStringNew();
+                this.formatCommentString();
     },
     getCalculationStringOldFormat: function() {
-        return  ((this.formatSetupPriceStringNew()        === '' || !this.getSetupPriceTotalVatted())        ? '' : this.formatSetupPriceStringNew()        + '\n\n' ) +
-                ((this.formatMonthlyPriceStringNew()      === '' || !this.getMonthlyPriceTotalVatted())      ? '' : this.formatMonthlyPriceStringNew()      + '\n\n' ) +
-                this.formatCommentStringNew() +
-                ((this.formatAdditionalPaymentStringNewOldFormat() === '' || !this.getAdditionalPaymentTotalVatted()) ? '' : '\n' + this.formatAdditionalPaymentStringNewOldFormat());
+        return  ((this.formatSetupPriceString()        === '' || !this.getSetupPriceTotalVatted())        ? '' : this.formatSetupPriceString()        + '\n\n' ) +
+                ((this.formatMonthlyPriceString()      === '' || !this.getMonthlyPriceTotalVatted())      ? '' : this.formatMonthlyPriceString()      + '\n\n' ) +
+                this.formatCommentString() +
+                ((this.formatAdditionalPaymentStringOldFormat() === '' || !this.getAdditionalPaymentTotalVatted()) ? '' : '\n' + this.formatAdditionalPaymentStringOldFormat());
     },
     getCalculationStringBeautifiedWrapper: function() {
         if (this.newOutputFormat) {
