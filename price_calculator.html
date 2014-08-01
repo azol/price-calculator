@@ -1208,6 +1208,9 @@ Server.prototype = {
         for (var i = 0; i < this.serverAddons.length; i++) {
             var addonObj = this.serverAddons[i];
             if ('setup' in addonObj) {
+                if (!this.flexiRequiredForAddons && 'flexi_required' in addonObj) {
+                    this.flexiRequiredForAddons = addonObj.flexi_required;
+                }
                 setupPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? this.vatPrice(+addonObj.amount * addonObj.setup) : this.vatPrice(addonObj.setup);
             }
         }
