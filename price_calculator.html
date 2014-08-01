@@ -1203,18 +1203,7 @@ Server.prototype = {
         }
         return modelName;
     },
-    getSetupPriceTotal: function() {
-        var setupPriceTotal = this.getSetupPrice();
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if ('setup' in addonObj) {
-                setupPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? (addonObj.amount * addonObj.setup) : addonObj.setup;
-            }
-        }
-        return setupPriceTotal;
-    },
     getSetupPriceTotalVatted: function() {
-        // return this.vatPrice( this.getSetupPriceTotal() );
         var setupPriceTotal = this.getSetupPriceVatted();
         for (var i = 0; i < this.serverAddons.length; i++) {
             var addonObj = this.serverAddons[i];
@@ -1224,22 +1213,7 @@ Server.prototype = {
         }
         return setupPriceTotal;
     },
-    getMonthlyPriceTotal: function() {
-        var monthlyPriceTotal = this.getMonthlyPrice();
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if ('monthly' in addonObj) {
-                if (!this.flexiRequiredForAddons && 'flexi_required' in addonObj) {
-                    this.flexiRequiredForAddons = addonObj.flexi_required;
-                }
-                monthlyPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? addonObj.amount * addonObj.monthly : addonObj.monthly;
-            }
-        }
-        monthlyPriceTotal += ( this.isFlexiToCalculate() ) ? this.FLEXI_PACK_PRICE : 0;
-        return monthlyPriceTotal;
-    },
     getMonthlyPriceTotalVatted: function() {
-        // return this.vatPrice( this.getMonthlyPriceTotal() );
         var monthlyPriceTotal = this.getMonthlyPriceVatted();
         for (var i = 0; i < this.serverAddons.length; i++) {
             var addonObj = this.serverAddons[i];
