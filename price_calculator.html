@@ -1176,12 +1176,10 @@ Server.prototype = {
             }
         }
         if (document.getElementById('select_backups').value !== 'no') {
-            var backupAddon = 'backup' + document.getElementById('select_backups').value;
-            this.addAddon(backupAddon);
+            this.addAddon('backup' + document.getElementById('select_backups').value);
         }
         if (document.getElementById('select_plesk').value !== 'no') {
-            var backupAddon = 'plesk_' + document.getElementById('select_plesk').value;
-            this.addAddon(backupAddon);
+            this.addAddon('plesk_' + document.getElementById('select_plesk').value);
         }
     },
     getSetupPrice: function() {
