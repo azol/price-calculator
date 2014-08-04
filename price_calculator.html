@@ -1481,7 +1481,14 @@ Server.prototype = {
 
             }
         }
-        return output;
+
+        // German numbers format 1000.00 -> 1000,00
+        var uiLanguage = document.getElementById('select_languages').value;
+        if (uiLanguage === 'Deutsch' || uiLanguage === 'Русский') {
+            return output.replace(/([0-9])\.([0-9])/g, "$1,$2");
+        } else {
+            return output;
+        }
     },
     /**
      * Checks if VAT is checked and returns price with or without VAT.
