@@ -141,7 +141,8 @@ meta.foundation-version{font-family:"/5.3.1/"}meta.foundation-mq-small{font-fami
                         <input type="checkbox" id="install_via_lara"><label for="install_via_lara">install_via_lara</label><br/>
                         <input type="checkbox" id="raid4"><label for="raid4">raid4</label><br/>
                         <input type="checkbox" id="bbu"><label for="bbu">bbu</label><br/>
-                        <input type="checkbox" id="kvm_module"><label for="kvm_module">kvm_module</label>
+                        <input type="checkbox" id="kvm_module"><label for="kvm_module">kvm_module</label><br>
+                        <input type="checkbox" id="activate_second_onboard_nic"><label for="activate_second_onboard_nic">activate_second_onboard_nic</label>
                     </fieldset>
                 </div>
             </div>
@@ -931,6 +932,15 @@ var addons = {
             Русский: 'Дополнительная 1Гбит сетевая карта'
         }
     },
+    activate_second_onboard_nic: {
+        flexi_required: true,
+        name: {
+            English: 'Activate 2nd onboard Gbit NIC',
+            Deutsch: '2. Onboard Gbit NIC aktivieren',
+            Русский: 'Включение 2ой встроенной 1Гбит карты'
+        },
+        comment: 'Activate 2nd onboard Gbit NIC: available only for PX servers'
+    },
     install_via_lara: {
         setup: 25,
         name: {
@@ -1205,10 +1215,10 @@ Server.prototype = {
         var setupPriceTotal = this.getSetupPriceVatted();
         for (var i = 0; i < this.serverAddons.length; i++) {
             var addonObj = this.serverAddons[i];
+            if (!this.flexiRequiredForAddons && 'flexi_required' in addonObj) {
+                this.flexiRequiredForAddons = addonObj.flexi_required;
+            }
             if ('setup' in addonObj) {
-                if (!this.flexiRequiredForAddons && 'flexi_required' in addonObj) {
-                    this.flexiRequiredForAddons = addonObj.flexi_required;
-                }
                 setupPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? this.vatPrice(+addonObj.amount * addonObj.setup) : this.vatPrice(addonObj.setup);
             }
         }
@@ -1218,10 +1228,10 @@ Server.prototype = {
         var monthlyPriceTotal = this.getMonthlyPriceVatted();
         for (var i = 0; i < this.serverAddons.length; i++) {
             var addonObj = this.serverAddons[i];
+            if (!this.flexiRequiredForAddons && 'flexi_required' in addonObj) {
+                this.flexiRequiredForAddons = addonObj.flexi_required;
+            }
             if ('monthly' in addonObj) {
-                if (!this.flexiRequiredForAddons && 'flexi_required' in addonObj) {
-                    this.flexiRequiredForAddons = addonObj.flexi_required;
-                }
                 monthlyPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? this.vatPrice(addonObj.amount * addonObj.monthly) : this.vatPrice(addonObj.monthly);
             }
         }
