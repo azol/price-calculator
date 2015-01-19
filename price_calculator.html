@@ -1554,7 +1554,8 @@ Server.prototype = {
         if (uiLanguage === 'Deutsch' || uiLanguage === 'Русский') {
             return output.replace(/([0-9])\.([0-9])/g, "$1,$2");
         } else {
-            return output;
+            // English currency format 1000.00 € -> € 1000.00
+            return output.replace(/([0-9]+\.[0-9]+) (.)/g, "$2 $1");
         }
     },
     getCalculationStringBeautifiedOldFormat: function() {
@@ -1618,7 +1619,8 @@ Server.prototype = {
         if (uiLanguage === 'Deutsch' || uiLanguage === 'Русский') {
             return output.replace(/([0-9])\.([0-9])/g, "$1,$2");
         } else {
-            return output;
+            // English currency format 1000.00 € -> € 1000.00
+            return output.replace(/([0-9]+\.[0-9]+) (.)/g, "$2 $1");
         }
     },
     /**
