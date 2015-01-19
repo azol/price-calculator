@@ -28,25 +28,12 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
         <div class="row">
             <div class="large-4 column">
                 <div class="row collapse">
-                    <div class="medium-2 column">
-                        <div class="row collapse">
-                            <div class="small-9 column">
-                                <label class="prefix">VAT</label>
-                            </div>
-                            <div class="small-3 column">
-                                <input type="checkbox" id="vat_included" checked>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="medium-1 column">
-                        &nbsp;
-                    </div>
                     <div class="medium-6 column">
                         <div class="row collapse">
-                            <div class="small-6 column">
+                            <div class="small-4 column">
                                 <label class="prefix">Server:</label>
                             </div>
-                            <div class="small-6 column">
+                            <div class="small-8 column">
                                 <select id="select_servers">
                                     <option>SB</option>
                                     <option>EX40</option>
@@ -87,72 +74,131 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
                             </div>
                         </div>
                     </div>
-
-                    <div class="row collapse">
-                        <div class="medium-5 column">
-                            <div class="row collapse">
-                                <div class="small-6 column">
-                                    <label class="prefix">Date:</label>
-                                </div>
-                                <div class="small-6 column">
-                                    <input type="text" id="ordering_date" value="today">
-                                </div>
+                    <div class="medium-3 column">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="row collapse">
+                    <div class="medium-6 column">
+                        <div class="row collapse">
+                            <div class="small-6 column">
+                                <label class="prefix">Language:</label>
                             </div>
-                        </div>
-                        <div class="medium-1 column">
-                        </div>
-                        <div class="medium-6 column">
-                            <div class="row collapse">
-                                <div class="small-6 column">
-                                    <label class="prefix">Language:</label>
-                                </div>
-                                <div class="small-6 column">
-                                    <select id="select_languages" onChange="setAndUpdateUILanguage()">
-                                        <option>English</option>
-                                        <option>Deutsch</option>
-                                        <option>Русский</option>
-                                    </select>
-                                </div>
+                            <div class="small-6 column">
+                                <select id="select_languages" onChange="setAndUpdateUILanguage()">
+                                    <option>English</option>
+                                    <option>Deutsch</option>
+                                    <option>Русский</option>
+                                </select>
                             </div>
                         </div>
                     </div>
-
-                    <fieldset>
-                        <legend>Addons</legend>
-                        <input type="checkbox" id="win_std"><label for="win_std">win_std</label><br/>
-                        <input type="checkbox" id="win_dc"><label for="win_dc">win_dc</label><br/>
+                    <div class="medium-1 column">
+                        &nbsp;
+                    </div>
+                    <div class="medium-2 column">
                         <div class="row collapse">
-                            <div class="small-1 columns">
-                                <input type="text" placeholder="0" id="rdp_license" />
+                            <div class="small-9 column">
+                                <label class="prefix">VAT</label>
                             </div>
-                            <div class="small-11 columns">
-                                <label class="postfix" for="rdp_license">rdp_license</label>
+                            <div class="small-3 column">
+                                <input type="checkbox" id="vat_included" checked>
                             </div>
                         </div>
+                    </div>
+                    <div class="medium-3 column">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="row collapse">
+                    <div class="medium-6 column">
                         <div class="row collapse">
-                            <div class="small-4 columns">
-                                <select id="select_plesk" onchange="update()">
-                                    <option>no</option>
-                                    <option>web_admin</option>
-                                    <option>web_app</option>
-                                    <option>web_pro</option>
-                                    <option>web_host</option>
+                            <div class="small-4 column">
+                                <label class="prefix">Country:</label>
+                            </div>
+                            <div class="small-8 column">
+                                <select id="select_country">
+                                    <option>Austria</option>
+                                    <option>Belgium</option>
+                                    <option>Bulgaria</option>
+                                    <option>Cyprus</option>
+                                    <option>Croatia</option>
+                                    <option>Czech Republic</option>
+                                    <option>Denmark</option>
+                                    <option>Estonia</option>
+                                    <option>Finland</option>
+                                    <option>France</option>
+                                    <option>Germany</option>
+                                    <option>Greece</option>
+                                    <option>Hungary</option>
+                                    <option>Ireland</option>
+                                    <option>Italy</option>
+                                    <option>Latvia</option>
+                                    <option>Lithuania</option>
+                                    <option>Luxembourg</option>
+                                    <option>Malta</option>
+                                    <option>The Netherlands</option>
+                                    <option>Poland</option>
+                                    <option>Portugal</option>
+                                    <option>Rumania</option>
+                                    <option>Slovakia</option>
+                                    <option>Slovenia</option>
+                                    <option>Spain</option>
+                                    <option>Sweden</option>
+                                    <option>UK</option>
                                 </select>
                             </div>
-                            <div class="small-8 columns">
-                                <label class="postfix">Plesk Panel 12</label>
+                        </div>
+                    </div>
+                    <div class="medium-1 column">
+                        &nbsp;
+                    </div>
+                    <div class="medium-5 column">
+                        <div class="row collapse">
+                            <div class="small-4 column">
+                                <label class="prefix">Date:</label>
+                            </div>
+                            <div class="small-8 column">
+                                <input type="text" id="ordering_date" value="today">
                             </div>
                         </div>
-                        <input type="checkbox" id="plesk_power_pack"><label for="plesk_power_pack">plesk_power_pack</label><br/>
-                        <input type="checkbox" id="cpanel"><label for="cpanel">cpanel</label><br/>
-                        <input type="checkbox" id="kvm"><label for="kvm">kvm</label><br/>
-                        <input type="checkbox" id="install_via_lara"><label for="install_via_lara">install_via_lara</label><br/>
-                        <input type="checkbox" id="raid4"><label for="raid4">raid4</label><br/>
-                        <input type="checkbox" id="bbu"><label for="bbu">bbu</label><br/>
-                        <input type="checkbox" id="kvm_module"><label for="kvm_module">kvm_module</label><br>
-                        <input type="checkbox" id="activate_second_onboard_nic"><label for="activate_second_onboard_nic">activate_second_onboard_nic</label>
-                    </fieldset>
+                    </div>
                 </div>
+                <fieldset>
+                    <legend>Addons</legend>
+                    <input type="checkbox" id="win_std"><label for="win_std">win_std</label><br/>
+                    <input type="checkbox" id="win_dc"><label for="win_dc">win_dc</label><br/>
+                    <div class="row collapse">
+                        <div class="small-1 columns">
+                            <input type="text" placeholder="0" id="rdp_license" />
+                        </div>
+                        <div class="small-11 columns">
+                            <label class="postfix" for="rdp_license">rdp_license</label>
+                        </div>
+                    </div>
+                    <div class="row collapse">
+                        <div class="small-4 columns">
+                            <select id="select_plesk" onchange="update()">
+                                <option>no</option>
+                                <option>web_admin</option>
+                                <option>web_app</option>
+                                <option>web_pro</option>
+                                <option>web_host</option>
+                            </select>
+                        </div>
+                        <div class="small-8 columns">
+                            <label class="postfix">Plesk Panel 12</label>
+                        </div>
+                    </div>
+                    <input type="checkbox" id="plesk_power_pack"><label for="plesk_power_pack">plesk_power_pack</label><br/>
+                    <input type="checkbox" id="cpanel"><label for="cpanel">cpanel</label><br/>
+                    <input type="checkbox" id="kvm"><label for="kvm">kvm</label><br/>
+                    <input type="checkbox" id="install_via_lara"><label for="install_via_lara">install_via_lara</label><br/>
+                    <input type="checkbox" id="raid4"><label for="raid4">raid4</label><br/>
+                    <input type="checkbox" id="bbu"><label for="bbu">bbu</label><br/>
+                    <input type="checkbox" id="kvm_module"><label for="kvm_module">kvm_module</label><br>
+                    <input type="checkbox" id="activate_second_onboard_nic"><label for="activate_second_onboard_nic">activate_second_onboard_nic</label>
+                </fieldset>
             </div>
             <div class="large-4 column">
                 <div class="row collapse">
@@ -409,6 +455,37 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
     <script>
 'use strict';
 
+var countryVATrate = {
+    "Austria": 20,
+    "Belgium": 21,
+    "Bulgaria": 20,
+    "Cyprus": 19,
+    "Croatia": 25,
+    "Czech Republic": 21,
+    "Denmark": 25,
+    "Estonia": 20,
+    "Finland": 24,
+    "France": 20,
+    "Greece": 23,
+    "Germany": 19,
+    "Hungary": 27,
+    "Ireland": 23,
+    "Italy": 22,
+    "Latvia": 21,
+    "Lithuania": 21,
+    "Luxembourg": 17,
+    "Malta": 18,
+    "The Netherlands": 21,
+    "Poland": 23,
+    "Portugal": 23,
+    "Rumania": 24,
+    "Slovakia": 20,
+    "Slovenia": 22,
+    "Spain": 21,
+    "Sweden": 25,
+    "UK": 20,
+};
+
 var messages = {
     setup_fee: {
         English: 'Setup costs:',
@@ -440,9 +517,9 @@ var messages = {
         Русский: 'Flexi-пакет'
     },
     vat_is_included: {
-        English: '(incl. VAT)',
-        Deutsch: '(inkl. 19 % USt)',
-        Русский: '(цены указаны с VAT 19%)'
+        English: '(incl. VAT __VATRATE__%)',
+        Deutsch: '(inkl. __VATRATE__ % USt)',
+        Русский: '(цены указаны с VAT __VATRATE__%)'
     },
     vat_isnt_included: {
         English: '(excl. VAT)',
@@ -1157,9 +1234,8 @@ function setAndUpdateUILanguage() {
         document.getElementById('vat_included').checked = true;
         document.getElementById('vat_included').disabled = false;
     }
-
-
 }
+
 
 /**
  * Updates textarea containing caluculation result.
@@ -1167,6 +1243,7 @@ function setAndUpdateUILanguage() {
 function updateCalculationResult() {
     var selectedServerModel = document.getElementById('select_servers').value;
     var serverToCalculate = new Server(selectedServerModel);
+    serverToCalculate.setVATForCountry(document.getElementById('select_country').value);
 
     var calculationTextBeautified = serverToCalculate.getCalculationStringBeautifiedWrapper();
     document.getElementById('output').innerHTML = '';
@@ -1178,7 +1255,7 @@ function updateCalculationResult() {
 
 function Server(theModel) {
     this.FLEXI_PACK_PRICE = 15;
-    this.VAT_PERCENTAGE = 19;
+    this.VAT_percentage = 0; // use setVATForCountry() to change this variable
     this.model = servers[theModel];
     if (theModel === 'SB') {
         var sbServerMonthlyPrice = parseInt(document.getElementById('sb_number').value);
@@ -1240,6 +1317,9 @@ Server.prototype = {
         if (document.getElementById('select_plesk').value !== 'no') {
             this.addAddon('plesk_' + document.getElementById('select_plesk').value);
         }
+    },
+    setVATForCountry: function(selectedCountry) {
+        this.VAT_percentage = countryVATrate[selectedCountry];
     },
     getSetupPrice: function() {
         return ('setup' in this.model) ? this.model.setup : 0;
@@ -1390,7 +1470,7 @@ Server.prototype = {
     formatCommentString: function() {
         var str = '';
         if (this.isVatChecked) {
-            str += messages.vat_is_included[uiLanguage];
+            str += messages.vat_is_included[uiLanguage].replace(/__VATRATE__/, this.VAT_percentage);
         } else {
             str += messages.vat_isnt_included[uiLanguage];
         }
@@ -1557,12 +1637,18 @@ Server.prototype = {
     },
     /**
      * Checks if VAT is checked and returns price with or without VAT.
+     * NOTE: prices are stored with German VAT, so it has to be removed
      *
      * @param {Number} price Price to process.
      * @returns {Number} Price or price without VAT.
      */
     vatPrice: function(price) {
-        return (this.isVatChecked) ? this.round(price, 2) : this.round(price / (100 + this.VAT_PERCENTAGE) * 100, 2);
+        if (this.isVatChecked) {
+            var cleanPrice = this.round(price / (100 + countryVATrate.Germany) * 100, 4);
+            return this.round(cleanPrice * (100 + this.VAT_percentage) / 100, 2);
+        } else {
+            return this.round(price / (100 + countryVATrate.Germany) * 100, 2);
+        }
     },
     /**
      * Returns rounded value to a decimal place.
