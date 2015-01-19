@@ -1212,8 +1212,6 @@ function onChange() {
  */
 function setAndUpdateUILanguage() {
     uiLanguage = document.getElementById('select_languages').value;
-
-    // UI Language
     for (var addon in addons) {
         var labelElement = document.querySelector("label[for='" + addon + "']");
         if (labelElement) {
@@ -1221,18 +1219,6 @@ function setAndUpdateUILanguage() {
             var labelValueToSet = addons[addon].name[uiLanguage];
             labelElement.innerHTML = (additionalText) ? labelValueToSet + ' ' + '<mark>' + additionalText + '</mark>' : labelValueToSet;
         }
-    }
-
-    // Update VAT checkbox:
-    // German -> prices includes VAT
-    // English -> prices without VAT
-    // Russian -> prices without VAT
-    if (uiLanguage === 'English' || uiLanguage === 'Русский') {
-        document.getElementById('vat_included').checked = false;
-        document.getElementById('vat_included').disabled = true;
-    } else {
-        document.getElementById('vat_included').checked = true;
-        document.getElementById('vat_included').disabled = false;
     }
 }
 
