@@ -96,28 +96,26 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
                     <div class="medium-1 column">
                         &nbsp;
                     </div>
-                    <div class="medium-2 column">
+                    <div class="medium-5 column">
                         <div class="row collapse">
-                            <div class="small-9 column">
-                                <label class="prefix">VAT</label>
+                            <div class="small-4 column">
+                                <label class="prefix">Date:</label>
                             </div>
-                            <div class="small-3 column">
-                                <input type="checkbox" id="vat_included">
+                            <div class="small-8 column">
+                                <input type="text" id="ordering_date" value="today">
                             </div>
                         </div>
-                    </div>
-                    <div class="medium-3 column">
-                        &nbsp;
                     </div>
                 </div>
                 <div class="row collapse">
                     <div class="medium-6 column">
                         <div class="row collapse">
-                            <div class="small-4 column">
-                                <label class="prefix">Country:</label>
+                            <div class="small-3 column">
+                                <label class="prefix">VAT:</label>
                             </div>
-                            <div class="small-8 column">
+                            <div class="small-9 column">
                                 <select id="select_country">
+                                    <option>All others (no VAT)</option>
                                     <option>Austria</option>
                                     <option>Belgium</option>
                                     <option>Bulgaria</option>
@@ -150,18 +148,8 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
                             </div>
                         </div>
                     </div>
-                    <div class="medium-1 column">
+                    <div class="medium-6 column">
                         &nbsp;
-                    </div>
-                    <div class="medium-5 column">
-                        <div class="row collapse">
-                            <div class="small-4 column">
-                                <label class="prefix">Date:</label>
-                            </div>
-                            <div class="small-8 column">
-                                <input type="text" id="ordering_date" value="today">
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <fieldset>
@@ -440,6 +428,7 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
 'use strict';
 
 var countryVATrate = {
+    "All others (no VAT)": 0,
     "Austria": 20,
     "Belgium": 21,
     "Bulgaria": 20,
@@ -1220,7 +1209,6 @@ function Server(theModel) {
     this.serverAddons = [];
     this.flexiRequiredForAddons = false;
     this.newOutputFormat = (document.getElementById('new_format_output').checked);
-    this.isVatChecked = (document.getElementById('vat_included').checked);
     this.findAndAddAddons();
 }
 
@@ -1421,7 +1409,7 @@ Server.prototype = {
     },
     formatCommentString: function() {
         var str = '';
-        if (this.isVatChecked) {
+        if (this.VAT_percentage !== 0) {
             str += messages.vat_is_included[uiLanguage].replace(/__VATRATE__/, this.VAT_percentage);
         } else {
             str += messages.vat_isnt_included[uiLanguage];
@@ -1597,7 +1585,7 @@ Server.prototype = {
      * @returns {Number} Price or price without VAT.
      */
     vatPrice: function(price) {
-        if (this.isVatChecked) {
+        if (this.VAT_percentage !== 0) {
             var cleanPrice = this.round(price / (100 + countryVATrate.Germany) * 100, 4);
             return this.round(cleanPrice * (100 + this.VAT_percentage) / 100, 2);
         } else {
