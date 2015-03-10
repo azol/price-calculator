@@ -51,6 +51,7 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
                                     <option>SX60</option>
                                     <option>SX130</option>
                                     <option>SX290</option>
+                                    <option>DX150</option>
                                     <option>DX151</option>
                                     <option>DX291</option>
                                     <option>RACK20</option>
@@ -216,10 +217,26 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
                 </div>
                 <div class="row collapse">
                     <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ssd300de" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ssd300de">ssd300de</label>
+                    </div>
+                </div>
+                <div class="row collapse">
+                    <div class="small-1 columns">
                         <input type="text" placeholder="0" id="ssd480de" />
                     </div>
                     <div class="small-11 columns">
                         <label class="postfix" for="ssd480de">ssd480de</label>
+                    </div>
+                </div>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ssd600" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ssd600">ssd600</label>
                     </div>
                 </div>
                 <div class="row collapse">
@@ -272,10 +289,18 @@ background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.la
                 </div>
                 <div class="row collapse">
                     <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ramecc32gb" />
+                        <input type="text" placeholder="0" id="ddr3ecc32gb" />
                     </div>
                     <div class="small-11 columns">
-                        <label class="postfix" for="ramecc32gb">ramecc32gb</label>
+                        <label class="postfix" for="ddr3ecc32gb">ddr3ecc32gb</label>
+                    </div>
+                </div>
+                <div class="row collapse">
+                    <div class="small-1 columns">
+                        <input type="text" placeholder="0" id="ddr4ecc32gb" />
+                    </div>
+                    <div class="small-11 columns">
+                        <label class="postfix" for="ddr4ecc32gb">ddr4ecc32gb</label>
                     </div>
                 </div>
                 <div class="row collapse">
@@ -674,6 +699,20 @@ var servers = {
         },
         comment: 'SX290: 100 TB included'
     },
+    DX150: {
+        monthly: 159, setup: 99,
+        flexi_included: true,
+        name: {
+            English: 'DELL PowerEdge™ R720 DX150',
+            Deutsch: 'DELL PowerEdge™ R720 DX150',
+            Русский: 'DELL PowerEdge™ R720 DX150'
+        },
+        comment: "DX151: 50 TB included\n\
+R720: have an iDRAC (IP-KVM)\n\
+R720: Drives are optional (2/3/4TB SATA, 600GB SAS, 240/300/480/960GB SSD DC and 600GB SSD)\n\
+R720: Flexi-Pack is included\n\
+R720 DX150: max 192 GB RAM3 (4x 32GB)"
+    },
     DX151: {
         monthly: 189, setup: 199,
         flexi_included: true,
@@ -686,7 +725,7 @@ var servers = {
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
 R730: Flexi-Pack is included\n\
-R730 DX151: max 192 GB RAM (4x 32GB)"
+R730 DX151: max 192 GB RAM4 (4x 32GB)"
     },
     DX291: {
         monthly: 299, setup: 199,
@@ -700,7 +739,7 @@ R730 DX151: max 192 GB RAM (4x 32GB)"
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
 R730: Flexi-Pack is included\n\
-R730 DX291: max 384 GB RAM (8x 32GB)"
+R730 DX291: max 384 GB RAM4 (8x 32GB)"
     },
     RACK20: {
         monthly: 199, setup: 0,
@@ -779,7 +818,17 @@ var addons = {
             Русский: '64 ГБ USB-накопитель'
         }
     },
-    ramecc32gb: {
+    ddr3ecc32gb: {
+        monthly: 29,
+        name: {
+            English: '32 GB DDR3 ECC RAM',
+            Deutsch: '32 GB DDR3 ECC RAM',
+            Русский: '32 ГБ DDR3 оперативной памяти ECC'
+        },
+        comment: "32 GB DDR3 ECC RAM: is available only for DELL R720\n\
+32 GB DDR4 ECC RAM: maximum 8"
+    },
+    ddr4ecc32gb: {
         monthly: 39,
         name: {
             English: '32 GB DDR4 ECC RAM',
@@ -941,6 +990,15 @@ var addons = {
             Русский: '240 ГБ 6 Гбит/с SSD Datacenter Edition'
         }
     },
+    ssd300de: {
+        monthly: 29, flexi_required: true,
+        name: {
+            English: '300 GB 6 Gb/s SSD Datacenter Edition',
+            Deutsch: '300 GB 6 Gb/s SSD Datacenter Edition',
+            Русский: '300 ГБ 6 Гбит/с SSD Datacenter Edition'
+        },
+        comment: '300 GB SSD DC: only for Dell DX150'
+    },
     ssd480de: {
         monthly: 39, flexi_required: true,
         name: {
@@ -948,6 +1006,15 @@ var addons = {
             Deutsch: '480 GB 6 Gb/s SSD Datacenter Edition',
             Русский: '480 ГБ 6 Гбит/с SSD Datacenter Edition'
         }
+    },
+    ssd600: {
+        monthly: 45, flexi_required: true,
+        name: {
+            English: '600 GB SSD',
+            Deutsch: '600 GB SSD',
+            Русский: '600 ГБ SSD'
+        },
+        comment: '600 GB SSD: only for Dell DX150'
     },
     ssd960: {
         monthly: 49, flexi_required: true,
