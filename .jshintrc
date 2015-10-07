@@ -1,0 +1,8 @@
+{
+  "browser": true,
+  "multistr": true,
+  "globalstrict": true,
+  "globals": {
+    "$": false
+  }
+}

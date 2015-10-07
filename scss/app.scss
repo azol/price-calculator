@@ -1,0 +1,109 @@
+@import "settings";
+@import "foundation";
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+.no-js {
+  form {
+    display: none;
+  }
+}
+
+body {
+    margin: 1rem 0 0 0;
+}
+
+legend {
+    font-size: 0.85rem;
+}
+
+textarea {
+    font-family: monospace;
+}
+
+
+.button-bar {
+  display: inline-block;
+}
+
+@mixin hetzner-border() {
+  border: {
+    color: $input-prefix-border-color;
+    width: $input-prefix-border-size;
+    style: $input-prefix-border-type;
+  }
+}
+
+form > .row:nth-child(2) {
+  margin-top: 1rem;
+}
+
+ul.tabs {
+  border-bottom: {
+    color: $input-prefix-border-color;
+    width: $input-prefix-border-size;
+    style: $input-prefix-border-type;
+  }
+}
+
+li.tab-title {
+  @include hetzner-border;
+  border-bottom: none;
+  margin-left: 2px;
+}
+
+li.active {
+  position: relative;
+  top: $input-prefix-border-size;
+}
+
+form > .row:nth-child(3),
+form > .row:nth-child(4) {
+  @include hetzner-border;
+  padding-top: 1rem;
+}
+
+form > .row:nth-child(3) {
+  border-top: none;
+  border-bottom: none;
+}
+
+form > .row:nth-child(4) {
+  border-top: none;
+}

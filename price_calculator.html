@@ -1,1776 +1,484 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAALAAAADwAAAAwAAAAOAAAADgAAAAwAAAAQAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAABEAAAAVwAAAFYAAABWAAAAVgAAAFYAAABWAAAAUAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAuAAAALoAAADQAAAAvQAAAMcAAADHAAAAvQAAAMoAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALkAAACOAAAAvAAAAJcAAACsAAAArAAAAJcAAADAAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC5AAAAigAAALkAAACTAAAAqAAAAKgAAACSAAAAvgAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvAAAAKEAAADHAAAApwAAALkAAAC5AAAApwAAAMcAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALoAAACQAAAAvQAAAJgAAACtAAAArQAAAJgAAADBAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC4AAAAhwAAALgAAACQAAAApgAAAKcAAACQAAAAvQAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAxgAAANoAAADoAAAA2wAAAN4AAADTAAAAzAAAANkAAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAM0AAAD/AAAA/wAAAP8AAADqAAAAsgAAALQAAADRAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAADKAAAA2gAAAM0AAADNAAAAzQAAAMsAAADPAAAA5QAAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvgAAAEEAAAAMAAAADwAAAA8AAAAOAAAAHwAAAMAAAAA1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAMcAAAC1AAAAngAAAJ8AAACfAAAAngAAAKYAAADcAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAACSAAAAugAAALkAAAC5AAAAuQAAALkAAAC5AAAAqgAAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAABAAAAAAAAAAAAAAAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAA==" />
-    <title>Price Calculator</title>
-    <style type="text/css">
-meta.foundation-version{font-family:"/5.3.1/"}meta.foundation-mq-small{font-family:"/only screen/";width:0em}meta.foundation-mq-medium{font-family:"/only screen and (min-width:40.063em)/";width:40.063em}meta.foundation-mq-large{font-family:"/only screen and (min-width:64.063em)/";width:64.063em}meta.foundation-mq-xlarge{font-family:"/only screen and (min-width:90.063em)/";width:90.063em}meta.foundation-mq-xxlarge{font-family:"/only screen and (min-width:120.063em)/";width:120.063em}meta.foundation-data-attribute-namespace{font-family:false}html,body{height:100%}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html,body{font-size:100%}body{background:#fff;color:#222;padding:0;margin:0;font-family:"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;font-weight:normal;font-style:normal;line-height:150%;position:relative;cursor:default}a:hover{cursor:pointer}img{max-width:100%;height:auto}img{-ms-interpolation-mode:bicubic}#map_canvas img,#map_canvas embed,#map_canvas object,.map_canvas img,.map_canvas embed,.map_canvas object{max-width:none !important}.left{float:left !important}.right{float:right !important}.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.hide{display:none}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}img{display:inline-block;vertical-align:middle}textarea{height:auto;min-height:50px}select{width:100%}.row{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5rem}.row:before,.row:after{content:" ";display:table}.row:after{clear:both}.row.collapse>.column,.row.collapse>.columns{padding-left:0;padding-right:0}.row.collapse .row{margin-left:0;margin-right:0}.row .row{width:auto;margin-left:-0.9375rem;margin-right:-0.9375rem;margin-top:0;margin-bottom:0;max-width:none}.row .row:before,.row .row:after{content:" ";display:table}.row .row:after{clear:both}.row .row.collapse{width:auto;margin:0;max-width:none}.row .row.collapse:before,.row .row.collapse:after{content:" ";display:table}.row .row.collapse:after{clear:both}.column,.columns{padding-left:0.9375rem;padding-right:0.9375rem;width:100%;float:left}[class*="column"]+[class*="column"]:last-child{float:right}[class*="column"]+[class*="column"].end{float:left}@media only screen{.small-push-0{position:relative;left:0%;right:auto}.small-pull-0{position:relative;right:0%;left:auto}.small-push-1{position:relative;left:8.33333%;right:auto}.small-pull-1{position:relative;right:8.33333%;left:auto}.small-push-2{position:relative;left:16.66667%;right:auto}.small-pull-2{position:relative;right:16.66667%;left:auto}.small-push-3{position:relative;left:25%;right:auto}.small-pull-3{position:relative;right:25%;left:auto}.small-push-4{position:relative;left:33.33333%;right:auto}.small-pull-4{position:relative;right:33.33333%;left:auto}.small-push-5{position:relative;left:41.66667%;right:auto}.small-pull-5{position:relative;right:41.66667%;left:auto}.small-push-6{position:relative;left:50%;right:auto}.small-pull-6{position:relative;right:50%;left:auto}.small-push-7{position:relative;left:58.33333%;right:auto}.small-pull-7{position:relative;right:58.33333%;left:auto}.small-push-8{position:relative;left:66.66667%;right:auto}.small-pull-8{position:relative;right:66.66667%;left:auto}.small-push-9{position:relative;left:75%;right:auto}.small-pull-9{position:relative;right:75%;left:auto}.small-push-10{position:relative;left:83.33333%;right:auto}.small-pull-10{position:relative;right:83.33333%;left:auto}.small-push-11{position:relative;left:91.66667%;right:auto}.small-pull-11{position:relative;right:91.66667%;left:auto}.column,.columns{position:relative;padding-left:0.9375rem;padding-right:0.9375rem;float:left}.small-1{width:8.33333%}.small-2{width:16.66667%}.small-3{width:25%}.small-4{width:33.33333%}.small-5{width:41.66667%}.small-6{width:50%}.small-7{width:58.33333%}.small-8{width:66.66667%}.small-9{width:75%}.small-10{width:83.33333%}.small-11{width:91.66667%}.small-12{width:100%}.small-offset-0{margin-left:0% !important}
-.small-offset-1{margin-left:8.33333% !important}.small-offset-2{margin-left:16.66667% !important}.small-offset-3{margin-left:25% !important}.small-offset-4{margin-left:33.33333% !important}.small-offset-5{margin-left:41.66667% !important}.small-offset-6{margin-left:50% !important}.small-offset-7{margin-left:58.33333% !important}.small-offset-8{margin-left:66.66667% !important}.small-offset-9{margin-left:75% !important}.small-offset-10{margin-left:83.33333% !important}.small-offset-11{margin-left:91.66667% !important}.small-reset-order{margin-left:0;margin-right:0;left:auto;right:auto;float:left}.column.small-centered,.columns.small-centered{margin-left:auto;margin-right:auto;float:none}.column.small-uncentered,.columns.small-uncentered{margin-left:0;margin-right:0;float:left}.column.small-centered:last-child,.columns.small-centered:last-child{float:none}.column.small-uncentered:last-child,.columns.small-uncentered:last-child{float:left}.column.small-uncentered.opposite,.columns.small-uncentered.opposite{float:right}}@media only screen and (min-width: 40.063em){.medium-push-0{position:relative;left:0%;right:auto}.medium-pull-0{position:relative;right:0%;left:auto}.medium-push-1{position:relative;left:8.33333%;right:auto}.medium-pull-1{position:relative;right:8.33333%;left:auto}.medium-push-2{position:relative;left:16.66667%;right:auto}.medium-pull-2{position:relative;right:16.66667%;left:auto}.medium-push-3{position:relative;left:25%;right:auto}.medium-pull-3{position:relative;right:25%;left:auto}.medium-push-4{position:relative;left:33.33333%;right:auto}.medium-pull-4{position:relative;right:33.33333%;left:auto}.medium-push-5{position:relative;left:41.66667%;right:auto}.medium-pull-5{position:relative;right:41.66667%;left:auto}.medium-push-6{position:relative;left:50%;right:auto}.medium-pull-6{position:relative;right:50%;left:auto}.medium-push-7{position:relative;left:58.33333%;right:auto}.medium-pull-7{position:relative;right:58.33333%;left:auto}.medium-push-8{position:relative;left:66.66667%;right:auto}.medium-pull-8{position:relative;right:66.66667%;left:auto}.medium-push-9{position:relative;left:75%;right:auto}.medium-pull-9{position:relative;right:75%;left:auto}.medium-push-10{position:relative;left:83.33333%;right:auto}.medium-pull-10{position:relative;right:83.33333%;left:auto}.medium-push-11{position:relative;left:91.66667%;right:auto}.medium-pull-11{position:relative;right:91.66667%;left:auto}.column,.columns{position:relative;padding-left:0.9375rem;padding-right:0.9375rem;float:left}.medium-1{width:8.33333%}.medium-2{width:16.66667%}.medium-3{width:25%}.medium-4{width:33.33333%}.medium-5{width:41.66667%}.medium-6{width:50%}.medium-7{width:58.33333%}.medium-8{width:66.66667%}.medium-9{width:75%}.medium-10{width:83.33333%}.medium-11{width:91.66667%}.medium-12{width:100%}.medium-offset-0{margin-left:0% !important}.medium-offset-1{margin-left:8.33333% !important}.medium-offset-2{margin-left:16.66667% !important}.medium-offset-3{margin-left:25% !important}.medium-offset-4{margin-left:33.33333% !important}.medium-offset-5{margin-left:41.66667% !important}.medium-offset-6{margin-left:50% !important}.medium-offset-7{margin-left:58.33333% !important}.medium-offset-8{margin-left:66.66667% !important}.medium-offset-9{margin-left:75% !important}.medium-offset-10{margin-left:83.33333% !important}.medium-offset-11{margin-left:91.66667% !important}.medium-reset-order{margin-left:0;margin-right:0;left:auto;right:auto;float:left}.column.medium-centered,.columns.medium-centered{margin-left:auto;margin-right:auto;float:none}.column.medium-uncentered,.columns.medium-uncentered{margin-left:0;margin-right:0;float:left}.column.medium-centered:last-child,.columns.medium-centered:last-child{float:none}.column.medium-uncentered:last-child,.columns.medium-uncentered:last-child{float:left}.column.medium-uncentered.opposite,.columns.medium-uncentered.opposite{float:right}.push-0{position:relative;left:0%;right:auto}.pull-0{position:relative;right:0%;left:auto}.push-1{position:relative;left:8.33333%;right:auto}.pull-1{position:relative;
-right:8.33333%;left:auto}.push-2{position:relative;left:16.66667%;right:auto}.pull-2{position:relative;right:16.66667%;left:auto}.push-3{position:relative;left:25%;right:auto}.pull-3{position:relative;right:25%;left:auto}.push-4{position:relative;left:33.33333%;right:auto}.pull-4{position:relative;right:33.33333%;left:auto}.push-5{position:relative;left:41.66667%;right:auto}.pull-5{position:relative;right:41.66667%;left:auto}.push-6{position:relative;left:50%;right:auto}.pull-6{position:relative;right:50%;left:auto}.push-7{position:relative;left:58.33333%;right:auto}.pull-7{position:relative;right:58.33333%;left:auto}.push-8{position:relative;left:66.66667%;right:auto}.pull-8{position:relative;right:66.66667%;left:auto}.push-9{position:relative;left:75%;right:auto}.pull-9{position:relative;right:75%;left:auto}.push-10{position:relative;left:83.33333%;right:auto}.pull-10{position:relative;right:83.33333%;left:auto}.push-11{position:relative;left:91.66667%;right:auto}.pull-11{position:relative;right:91.66667%;left:auto}}@media only screen and (min-width: 64.063em){.large-push-0{position:relative;left:0%;right:auto}.large-pull-0{position:relative;right:0%;left:auto}.large-push-1{position:relative;left:8.33333%;right:auto}.large-pull-1{position:relative;right:8.33333%;left:auto}.large-push-2{position:relative;left:16.66667%;right:auto}.large-pull-2{position:relative;right:16.66667%;left:auto}.large-push-3{position:relative;left:25%;right:auto}.large-pull-3{position:relative;right:25%;left:auto}.large-push-4{position:relative;left:33.33333%;right:auto}.large-pull-4{position:relative;right:33.33333%;left:auto}.large-push-5{position:relative;left:41.66667%;right:auto}.large-pull-5{position:relative;right:41.66667%;left:auto}.large-push-6{position:relative;left:50%;right:auto}.large-pull-6{position:relative;right:50%;left:auto}.large-push-7{position:relative;left:58.33333%;right:auto}.large-pull-7{position:relative;right:58.33333%;left:auto}.large-push-8{position:relative;left:66.66667%;right:auto}.large-pull-8{position:relative;right:66.66667%;left:auto}.large-push-9{position:relative;left:75%;right:auto}.large-pull-9{position:relative;right:75%;left:auto}.large-push-10{position:relative;left:83.33333%;right:auto}.large-pull-10{position:relative;right:83.33333%;left:auto}.large-push-11{position:relative;left:91.66667%;right:auto}.large-pull-11{position:relative;right:91.66667%;left:auto}.column,.columns{position:relative;padding-left:0.9375rem;padding-right:0.9375rem;float:left}.large-1{width:8.33333%}.large-2{width:16.66667%}.large-3{width:25%}.large-4{width:33.33333%}.large-5{width:41.66667%}.large-6{width:50%}.large-7{width:58.33333%}.large-8{width:66.66667%}.large-9{width:75%}.large-10{width:83.33333%}.large-11{width:91.66667%}.large-12{width:100%}.large-offset-0{margin-left:0% !important}.large-offset-1{margin-left:8.33333% !important}.large-offset-2{margin-left:16.66667% !important}.large-offset-3{margin-left:25% !important}.large-offset-4{margin-left:33.33333% !important}.large-offset-5{margin-left:41.66667% !important}.large-offset-6{margin-left:50% !important}.large-offset-7{margin-left:58.33333% !important}.large-offset-8{margin-left:66.66667% !important}.large-offset-9{margin-left:75% !important}.large-offset-10{margin-left:83.33333% !important}.large-offset-11{margin-left:91.66667% !important}.large-reset-order{margin-left:0;margin-right:0;left:auto;right:auto;float:left}.column.large-centered,.columns.large-centered{margin-left:auto;margin-right:auto;float:none}.column.large-uncentered,.columns.large-uncentered{margin-left:0;margin-right:0;float:left}.column.large-centered:last-child,.columns.large-centered:last-child{float:none}.column.large-uncentered:last-child,.columns.large-uncentered:last-child{float:left}.column.large-uncentered.opposite,.columns.large-uncentered.opposite{float:right}.push-0{position:relative;left:0%;right:auto}.pull-0{position:relative;right:0%;left:auto}.push-1{position:relative;left:8.33333%;right:auto}.pull-1{position:relative;right:8.33333%;left:auto}.push-2{position:relative;left:16.
-66667%;right:auto}.pull-2{position:relative;right:16.66667%;left:auto}.push-3{position:relative;left:25%;right:auto}.pull-3{position:relative;right:25%;left:auto}.push-4{position:relative;left:33.33333%;right:auto}.pull-4{position:relative;right:33.33333%;left:auto}.push-5{position:relative;left:41.66667%;right:auto}.pull-5{position:relative;right:41.66667%;left:auto}.push-6{position:relative;left:50%;right:auto}.pull-6{position:relative;right:50%;left:auto}.push-7{position:relative;left:58.33333%;right:auto}.pull-7{position:relative;right:58.33333%;left:auto}.push-8{position:relative;left:66.66667%;right:auto}.pull-8{position:relative;right:66.66667%;left:auto}.push-9{position:relative;left:75%;right:auto}.pull-9{position:relative;right:75%;left:auto}.push-10{position:relative;left:83.33333%;right:auto}.pull-10{position:relative;right:83.33333%;left:auto}.push-11{position:relative;left:91.66667%;right:auto}.pull-11{position:relative;right:91.66667%;left:auto}}button,.button{border-style:solid;border-width:0px;cursor:pointer;font-family:"Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;font-weight:normal;line-height:normal;margin:0 0 1.25rem;position:relative;text-decoration:none;text-align:center;-webkit-appearance:none;-webkit-border-radius:0;display:inline-block;padding-top:1rem;padding-right:2rem;padding-bottom:1.0625rem;padding-left:2rem;font-size:1rem;background-color:#008cba;border-color:#007095;color:#fff;transition:background-color 300ms ease-out}button:hover,button:focus,.button:hover,.button:focus{background-color:#007095}button:hover,button:focus,.button:hover,.button:focus{color:#fff}button.secondary,.button.secondary{background-color:#e7e7e7;border-color:#b9b9b9;color:#333}button.secondary:hover,button.secondary:focus,.button.secondary:hover,.button.secondary:focus{background-color:#b9b9b9}button.secondary:hover,button.secondary:focus,.button.secondary:hover,.button.secondary:focus{color:#333}button.success,.button.success{background-color:#43ac6a;border-color:#368a55;color:#fff}button.success:hover,button.success:focus,.button.success:hover,.button.success:focus{background-color:#368a55}button.success:hover,button.success:focus,.button.success:hover,.button.success:focus{color:#fff}button.alert,.button.alert{background-color:#f04124;border-color:#cf2a0e;color:#fff}button.alert:hover,button.alert:focus,.button.alert:hover,.button.alert:focus{background-color:#cf2a0e}button.alert:hover,button.alert:focus,.button.alert:hover,.button.alert:focus{color:#fff}button.large,.button.large{padding-top:1.125rem;padding-right:2.25rem;padding-bottom:1.1875rem;padding-left:2.25rem;font-size:1.25rem}button.small,.button.small{padding-top:0.875rem;padding-right:1.75rem;padding-bottom:0.9375rem;padding-left:1.75rem;font-size:0.8125rem}button.tiny,.button.tiny{padding-top:0.625rem;padding-right:1.25rem;padding-bottom:0.6875rem;padding-left:1.25rem;font-size:0.6875rem}button.expand,.button.expand{padding-right:0;padding-left:0;width:100%}button.left-align,.button.left-align{text-align:left;text-indent:0.75rem}button.right-align,.button.right-align{text-align:right;padding-right:0.75rem}button.radius,.button.radius{border-radius:3px}button.round,.button.round{border-radius:1000px}button.disabled,button[disabled],.button.disabled,.button[disabled]{background-color:#008cba;border-color:#007095;color:#fff;cursor:default;opacity:0.7;box-shadow:none}button.disabled:hover,button.disabled:focus,button[disabled]:hover,button[disabled]:focus,.button.disabled:hover,.button.disabled:focus,.button[disabled]:hover,.button[disabled]:focus{background-color:#007095}button.disabled:hover,button.disabled:focus,button[disabled]:hover,button[disabled]:focus,.button.disabled:hover,.button.disabled:focus,.button[disabled]:hover,.button[disabled]:focus{color:#fff}button.disabled:hover,button.disabled:focus,button[disabled]:hover,button[disabled]:focus,.button.disabled:hover,.button.disabled:focus,.button[disabled]:hover,.button[disabled]:focus{background-color:#008cba}button.disabled.secondary,button[disabled].secondary,.button.disabled.
-secondary,.button[disabled].secondary{background-color:#e7e7e7;border-color:#b9b9b9;color:#333;cursor:default;opacity:0.7;box-shadow:none}button.disabled.secondary:hover,button.disabled.secondary:focus,button[disabled].secondary:hover,button[disabled].secondary:focus,.button.disabled.secondary:hover,.button.disabled.secondary:focus,.button[disabled].secondary:hover,.button[disabled].secondary:focus{background-color:#b9b9b9}button.disabled.secondary:hover,button.disabled.secondary:focus,button[disabled].secondary:hover,button[disabled].secondary:focus,.button.disabled.secondary:hover,.button.disabled.secondary:focus,.button[disabled].secondary:hover,.button[disabled].secondary:focus{color:#333}button.disabled.secondary:hover,button.disabled.secondary:focus,button[disabled].secondary:hover,button[disabled].secondary:focus,.button.disabled.secondary:hover,.button.disabled.secondary:focus,.button[disabled].secondary:hover,.button[disabled].secondary:focus{background-color:#e7e7e7}button.disabled.success,button[disabled].success,.button.disabled.success,.button[disabled].success{background-color:#43ac6a;border-color:#368a55;color:#fff;cursor:default;opacity:0.7;box-shadow:none}button.disabled.success:hover,button.disabled.success:focus,button[disabled].success:hover,button[disabled].success:focus,.button.disabled.success:hover,.button.disabled.success:focus,.button[disabled].success:hover,.button[disabled].success:focus{background-color:#368a55}button.disabled.success:hover,button.disabled.success:focus,button[disabled].success:hover,button[disabled].success:focus,.button.disabled.success:hover,.button.disabled.success:focus,.button[disabled].success:hover,.button[disabled].success:focus{color:#fff}button.disabled.success:hover,button.disabled.success:focus,button[disabled].success:hover,button[disabled].success:focus,.button.disabled.success:hover,.button.disabled.success:focus,.button[disabled].success:hover,.button[disabled].success:focus{background-color:#43ac6a}button.disabled.alert,button[disabled].alert,.button.disabled.alert,.button[disabled].alert{background-color:#f04124;border-color:#cf2a0e;color:#fff;cursor:default;opacity:0.7;box-shadow:none}button.disabled.alert:hover,button.disabled.alert:focus,button[disabled].alert:hover,button[disabled].alert:focus,.button.disabled.alert:hover,.button.disabled.alert:focus,.button[disabled].alert:hover,.button[disabled].alert:focus{background-color:#cf2a0e}button.disabled.alert:hover,button.disabled.alert:focus,button[disabled].alert:hover,button[disabled].alert:focus,.button.disabled.alert:hover,.button.disabled.alert:focus,.button[disabled].alert:hover,.button[disabled].alert:focus{color:#fff}button.disabled.alert:hover,button.disabled.alert:focus,button[disabled].alert:hover,button[disabled].alert:focus,.button.disabled.alert:hover,.button.disabled.alert:focus,.button[disabled].alert:hover,.button[disabled].alert:focus{background-color:#f04124}button::-moz-focus-inner{border:0;padding:0}@media only screen and (min-width: 40.063em){button,.button{display:inline-block}}form{margin:0 0 0.5625rem}form .row .row{margin:0 -0.28125rem}form .row .row .column,form .row .row .columns{padding:0 0.28125rem}form .row .row.collapse{margin:0}form .row .row.collapse .column,form .row .row.collapse .columns{padding:0}form .row .row.collapse input{border-bottom-right-radius:0;border-top-right-radius:0}form .row input.column,form .row input.columns,form .row textarea.column,form .row textarea.columns{padding-left:0.28125rem}label{font-size:0.75rem;color:#4d4d4d;cursor:pointer;display:block;font-weight:normal;line-height:1.5;margin-bottom:0}label.right{float:none !important;text-align:right}label.inline{margin:0 0 0.5625rem 0;padding:0.34375rem 0}label small{text-transform:capitalize;color:#676767}select::-ms-expand{display:none}.prefix,.postfix{display:block;position:relative;z-index:2;text-align:center;width:100%;padding-top:0;padding-bottom:0;border-style:solid;border-width:1px;overflow:hidden;font-size:0.75rem;height:1.53125rem;line-height:1.53125rem}.postfix.button{padding-left:0;
-padding-right:0;padding-top:0;padding-bottom:0;text-align:center;line-height:2.125rem;border:none}.prefix.button{padding-left:0;padding-right:0;padding-top:0;padding-bottom:0;text-align:center;line-height:2.125rem;border:none}.prefix.button.radius{border-radius:0;border-bottom-left-radius:3px;border-top-left-radius:3px}.postfix.button.radius{border-radius:0;border-bottom-right-radius:3px;border-top-right-radius:3px}.prefix.button.round{border-radius:0;border-bottom-left-radius:1000px;border-top-left-radius:1000px}.postfix.button.round{border-radius:0;border-bottom-right-radius:1000px;border-top-right-radius:1000px}span.prefix,label.prefix{background:#f2f2f2;border-right:none;color:#333;border-color:#ccc}span.prefix.radius,label.prefix.radius{border-radius:0;border-bottom-left-radius:3px;border-top-left-radius:3px}span.postfix,label.postfix{background:#f2f2f2;border-left:none;color:#333;border-color:#ccc}span.postfix.radius,label.postfix.radius{border-radius:0;border-bottom-right-radius:3px;border-top-right-radius:3px}input[type="text"],input[type="password"],input[type="date"],input[type="datetime"],input[type="datetime-local"],input[type="month"],input[type="week"],input[type="email"],input[type="number"],input[type="search"],input[type="tel"],input[type="time"],input[type="url"],textarea{-webkit-appearance:none;-webkit-border-radius:0px;background-color:#fff;font-family:inherit;border:1px solid #ccc;box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);color:rgba(0,0,0,0.75);display:block;font-size:0.75rem;margin:0 0 0.5625rem 0;padding:0.28125rem;height:1.53125rem;width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;transition:box-shadow 0.45s,border-color 0.45s ease-in-out}input[type="text"]:focus,input[type="password"]:focus,input[type="date"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="time"]:focus,input[type="url"]:focus,textarea:focus{box-shadow:0 0 5px #999;border-color:#999}input[type="text"]:focus,input[type="password"]:focus,input[type="date"]:focus,input[type="datetime"]:focus,input[type="datetime-local"]:focus,input[type="month"]:focus,input[type="week"]:focus,input[type="email"]:focus,input[type="number"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="time"]:focus,input[type="url"]:focus,textarea:focus{background:#fafafa;border-color:#999;outline:none}input[type="text"]:disabled,input[type="password"]:disabled,input[type="date"]:disabled,input[type="datetime"]:disabled,input[type="datetime-local"]:disabled,input[type="month"]:disabled,input[type="week"]:disabled,input[type="email"]:disabled,input[type="number"]:disabled,input[type="search"]:disabled,input[type="tel"]:disabled,input[type="time"]:disabled,input[type="url"]:disabled,textarea:disabled{background-color:#ddd;cursor:default}input[type="text"][disabled],input[type="text"][readonly],fieldset[disabled] input[type="text"],input[type="password"][disabled],input[type="password"][readonly],fieldset[disabled] input[type="password"],input[type="date"][disabled],input[type="date"][readonly],fieldset[disabled] input[type="date"],input[type="datetime"][disabled],input[type="datetime"][readonly],fieldset[disabled] input[type="datetime"],input[type="datetime-local"][disabled],input[type="datetime-local"][readonly],fieldset[disabled] input[type="datetime-local"],input[type="month"][disabled],input[type="month"][readonly],fieldset[disabled] input[type="month"],input[type="week"][disabled],input[type="week"][readonly],fieldset[disabled] input[type="week"],input[type="email"][disabled],input[type="email"][readonly],fieldset[disabled] input[type="email"],input[type="number"][disabled],input[type="number"][readonly],fieldset[disabled] input[type="number"],input[type="search"][disabled],input[type="search"][readonly],fieldset[disabled] input[type="search"],input[type="tel"][disabled],input[type="tel"][readonly],fieldset[disabled]
-input[type="tel"],input[type="time"][disabled],input[type="time"][readonly],fieldset[disabled] input[type="time"],input[type="url"][disabled],input[type="url"][readonly],fieldset[disabled] input[type="url"],textarea[disabled],textarea[readonly],fieldset[disabled] textarea{background-color:#ddd;cursor:default}input[type="text"].radius,input[type="password"].radius,input[type="date"].radius,input[type="datetime"].radius,input[type="datetime-local"].radius,input[type="month"].radius,input[type="week"].radius,input[type="email"].radius,input[type="number"].radius,input[type="search"].radius,input[type="tel"].radius,input[type="time"].radius,input[type="url"].radius,textarea.radius{border-radius:3px}input[type="submit"]{-webkit-appearance:none;-webkit-border-radius:0px}textarea[rows]{height:auto}select{-webkit-appearance:none !important;-webkit-border-radius:0px;background-color:#fafafa;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);background-position:100% center;background-repeat:no-repeat;border:1px solid #ccc;padding:0.28125rem;font-size:0.75rem;color:rgba(0,0,0,0.75);line-height:normal;border-radius:0;height:1.53125rem}select.radius{border-radius:3px}select:hover{background-color:#f3f3f3;border-color:#999}select:disabled{background-color:#ddd;cursor:default}input[type="file"],input[type="checkbox"],input[type="radio"],select{margin:0 0 0.5625rem 0}input[type="checkbox"]+label,input[type="radio"]+label{display:inline-block;margin-left:0.28125rem;margin-right:0.5625rem;margin-bottom:0;vertical-align:baseline}input[type="file"]{width:100%}fieldset{border:1px solid #ddd;padding:0.8125rem;margin:1.125rem 0}fieldset legend{font-weight:bold;background:#fff;padding:0 0.1875rem;margin:0;margin-left:-0.1875rem}[data-abide] .error small.error,[data-abide] .error span.error,[data-abide] span.error,[data-abide] small.error{display:block;padding:0.375rem 0.5625rem 0.5625rem;margin-top:-1px;margin-bottom:0.5625rem;font-size:0.75rem;font-weight:normal;font-style:italic;background:#f04124;color:#fff}[data-abide] span.error,[data-abide] small.error{display:none}span.error,small.error{display:block;padding:0.375rem 0.5625rem 0.5625rem;margin-top:-1px;margin-bottom:0.5625rem;font-size:0.75rem;font-weight:normal;font-style:italic;background:#f04124;color:#fff}.error input,.error textarea,.error select{margin-bottom:0}.error input[type="checkbox"],.error input[type="radio"]{margin-bottom:0.5625rem}.error label,.error label.error{color:#f04124}.error small.error{display:block;padding:0.375rem 0.5625rem 0.5625rem;margin-top:-1px;margin-bottom:0.5625rem;font-size:0.75rem;font-weight:normal;font-style:italic;background:#f04124;color:#fff}.error>label>small{color:#676767;background:transparent;padding:0;text-transform:capitalize;font-style:normal;font-size:60%;margin:0;display:inline}.error span.error-message{display:block}input.error,textarea.error,select.error{margin-bottom:0}label.error{color:#f04124}div.switch label{display:block;margin-bottom:1rem;position:relative;color:transparent;background:#ddd;text-indent:100%;width:4rem;height:2rem;cursor:pointer;transition:left 0.15s ease-out}div.switch input{display:none}div.switch input+label{margin-left:0;margin-right:0}div.switch label:after{content:"";display:block;background:#fff;position:absolute;top:.25rem;left:.25rem;width:1.5rem;height:1.5rem;-webkit-transition:left 0.15s ease-out;-moz-transition:left 0.15s ease-out;transition:left 0.15s ease-out}div.switch input:checked+label{background:#008cba}div.switch input:checked+label:after{left:2.25rem}div.switch label{width:4rem;height:2rem}div.switch label:after{width:1.5rem;height:1.5rem}div.switch input:checked+label:after{left:2.25rem}div.switch label{color:transparent;background:#ddd}div.switch label:after{background:#fff}div.switch input:checked+label{
-background:#008cba}div.switch.large label{width:5rem;height:2.5rem}div.switch.large label:after{width:2rem;height:2rem}div.switch.large input:checked+label:after{left:2.75rem}div.switch.small label{width:3.5rem;height:1.75rem}div.switch.small label:after{width:1.25rem;height:1.25rem}div.switch.small input:checked+label:after{left:2rem}div.switch.tiny label{width:3rem;height:1.5rem}div.switch.tiny label:after{width:1rem;height:1rem}div.switch.tiny input:checked+label:after{left:1.75rem}div.switch.radius label{border-radius:4px}div.switch.radius label:after{border-radius:3px}div.switch.round{border-radius:1000px}div.switch.round label{border-radius:2rem}div.switch.round label:after{border-radius:2rem}body{margin:1rem 0 0 0}legend{font-size:0.85rem}textarea{font-family:monospace}div.switch>label{margin-bottom:0px}
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAALAAAADwAAAAwAAAAOAAAADgAAAAwAAAAQAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAABEAAAAVwAAAFYAAABWAAAAVgAAAFYAAABWAAAAUAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAuAAAALoAAADQAAAAvQAAAMcAAADHAAAAvQAAAMoAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALkAAACOAAAAvAAAAJcAAACsAAAArAAAAJcAAADAAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC5AAAAigAAALkAAACTAAAAqAAAAKgAAACSAAAAvgAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvAAAAKEAAADHAAAApwAAALkAAAC5AAAApwAAAMcAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALoAAACQAAAAvQAAAJgAAACtAAAArQAAAJgAAADBAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC4AAAAhwAAALgAAACQAAAApgAAAKcAAACQAAAAvQAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAxgAAANoAAADoAAAA2wAAAN4AAADTAAAAzAAAANkAAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAM0AAAD/AAAA/wAAAP8AAADqAAAAsgAAALQAAADRAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAADKAAAA2gAAAM0AAADNAAAAzQAAAMsAAADPAAAA5QAAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvgAAAEEAAAAMAAAADwAAAA8AAAAOAAAAHwAAAMAAAAA1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAMcAAAC1AAAAngAAAJ8AAACfAAAAngAAAKYAAADcAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAACSAAAAugAAALkAAAC5AAAAuQAAALkAAAC5AAAAqgAAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAABAAAAAAAAAAAAAAAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAA==">
+  <title>Price Calculator</title>
+  <link rel="stylesheet" href="bower_components/foundation/css/normalize.min.css" inline>
+  <link rel="stylesheet" href=".tmp/css/app.css" inline>
+  <script src="bower_components/foundation/js/vendor/modernizr.js" inline></script>
 </head>
 <body onload="onLoad()">
-    <noscript>
-        <div id="noscript">
-            <h1>This page uses JavaScript</h1>
-            <p>Please, activate javascript in your browser or use other browser</p>
-        </div>
-    </noscript>
+  <noscript>
+    <div class="panel callout radius text-center">
+      <h1>JavaScript</h1>
+      <p>Your browser does not support JavaScript!</p>
+    </div>
+  </noscript>
+  <form onchange="onChange()" autocomplete="off">
 
-    <form onchange="onChange()" autocomplete="off">
+    <div class="row">
+      <div class="large-4 columns">
+        <div class="row collapse prefix-radius">
+          <div class="medium-6 columns">
+            <label class="prefix">Language:</label>
+          </div>
+          <select class="medium-6 columns" id="select_languages" onChange="workspace.setLanguage(this.value)">
+            <option>English</option>
+            <option>Deutsch</option>
+            <option>Русский</option>
+          </select>
+        </div>
+      </div>
+      <div class="large-4 columns">
+        <div class="row collapse prefix-radius">
+          <div class="medium-3 columns">
+            <label class="medium-3 columns prefix">VAT:</label>
+          </div>
+          <select id="select_country" class="medium-9 columns" onChange="workspace.setVatPercentageByCountry(this.value)">
+            <option>All others (no VAT)</option>
+            <option>Germany</option>
+            <option disabled>-------------------</option>
+            <option>Austria</option>
+            <option>Belgium</option>
+            <option>Bulgaria</option>
+            <option>Cyprus</option>
+            <option>Croatia</option>
+            <option>Czech Republic</option>
+            <option>Denmark</option>
+            <option>Estonia</option>
+            <option>Finland</option>
+            <option>France</option>
+            <option>Greece</option>
+            <option>Hungary</option>
+            <option>Ireland</option>
+            <option>Italy</option>
+            <option>Latvia</option>
+            <option>Lithuania</option>
+            <option>Luxembourg</option>
+            <option>Malta</option>
+            <option>The Netherlands</option>
+            <option>Poland</option>
+            <option>Portugal</option>
+            <option>Rumania</option>
+            <option>Slovakia</option>
+            <option>Slovenia</option>
+            <option>Spain</option>
+            <option>Sweden</option>
+            <option>UK</option>
+          </select>
+        </div>
+      </div>
+      <div class="large-4 columns">
+        <div class="row collapse prefix-radius">
+          <div class="medium-4 columns">
+            <label class="prefix">Date:</label>
+          </div>
+          <div class="medium-8 columns">
+            <input type="text" id="ordering_date" value="today">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="text-center">
+        <div class="button-bar">
+          <ul class="button-group round">
+            <li><a href="#" class="tiny button success" onclick="workspace.createNewTab()" id="new">Add Tab</a></li>
+            <li><a href="#" class="tiny button success" onclick="workspace.copyCurrentServerTab()" id="cp">Copy Tab</a></li>
+            <li><a href="#" class="tiny button success" onclick="workspace.deleteCurrentTab()" id="close">Close Tab</a></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="tabs" data-tab>
+        <li class="tab-title active">
+          <a href="#panel-1" onclick="workspace.loadData(this)" id="panel-1">SB0</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <div class="large-4 columns">
         <div class="row">
-            <div class="large-4 column">
-                <div class="row collapse">
-                    <div class="medium-6 column">
-                        <div class="row collapse">
-                            <div class="small-4 column">
-                                <label class="prefix">Server:</label>
-                            </div>
-                            <div class="small-8 column">
-                                <select id="select_servers">
-                                    <option>SB</option>
-                                    <option>AX10</option>
-                                    <option>AX20</option>
-                                    <option>AX30</option>
-                                    <option>EX40</option>
-                                    <option>EX40SSD</option>
-                                    <option>EX40Hybrid</option>
-                                    <option>EX60</option>
-                                    <option>PX60</option>
-                                    <option>PX60SSD</option>
-                                    <option>PX70</option>
-                                    <option>PX70SSD</option>
-                                    <option>PX91</option>
-                                    <option>PX91SSD</option>
-                                    <option>PX121</option>
-                                    <option>PX121SSD</option>
-                                    <option>SX61</option>
-                                    <option>SX131</option>
-                                    <option>SX291</option>
-                                    <option>DX141</option>
-                                    <option>DX151</option>
-                                    <option>DX291</option>
-                                    <option>RACK20</option>
-                                    <option>CX10</option>
-                                    <option>CX20</option>
-                                    <option>CX30</option>
-                                    <option>CX40</option>
-                                    <option>CX50</option>
-                                    <option>CX60</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="medium-1 column">
-                        &nbsp;
-                    </div>
-                    <div class="medium-3 column">
-                        <div class="row collapse">
-                              <div class="small-6 column">
-                                  <label class="prefix">SB:</label>
-                              </div>
-                              <div class="small-6 column">
-                                  <input type="text" placeholder="0" id="sb_number">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="medium-2 column">
-                        &nbsp;
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="medium-6 column">
-                        <div class="row collapse">
-                            <div class="small-6 column">
-                                <label class="prefix">Language:</label>
-                            </div>
-                            <div class="small-6 column">
-                                <select id="select_languages" onChange="setAndUpdateUILanguage()">
-                                    <option>English</option>
-                                    <option>Deutsch</option>
-                                    <option>Русский</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="medium-1 column">
-                        &nbsp;
-                    </div>
-                    <div class="medium-5 column">
-                        <div class="row collapse">
-                            <div class="small-4 column">
-                                <label class="prefix">Date:</label>
-                            </div>
-                            <div class="small-8 column">
-                                <input type="text" id="ordering_date" value="today">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="medium-6 column">
-                        <div class="row collapse">
-                            <div class="small-3 column">
-                                <label class="prefix">VAT:</label>
-                            </div>
-                            <div class="small-9 column">
-                                <select id="select_country">
-                                    <option>All others (no VAT)</option>
-                                    <option>Germany</option>
-                                    <option disabled>-------------------</option>
-                                    <option>Austria</option>
-                                    <option>Belgium</option>
-                                    <option>Bulgaria</option>
-                                    <option>Cyprus</option>
-                                    <option>Croatia</option>
-                                    <option>Czech Republic</option>
-                                    <option>Denmark</option>
-                                    <option>Estonia</option>
-                                    <option>Finland</option>
-                                    <option>France</option>
-                                    <option>Greece</option>
-                                    <option>Hungary</option>
-                                    <option>Ireland</option>
-                                    <option>Italy</option>
-                                    <option>Latvia</option>
-                                    <option>Lithuania</option>
-                                    <option>Luxembourg</option>
-                                    <option>Malta</option>
-                                    <option>The Netherlands</option>
-                                    <option>Poland</option>
-                                    <option>Portugal</option>
-                                    <option>Rumania</option>
-                                    <option>Slovakia</option>
-                                    <option>Slovenia</option>
-                                    <option>Spain</option>
-                                    <option>Sweden</option>
-                                    <option>UK</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="medium-6 column">
-                        &nbsp;
-                    </div>
-                </div>
-                <fieldset>
-                    <legend>Addons</legend>
-                    <input type="checkbox" id="win_std"><label for="win_std">win_std</label><br/>
-                    <input type="checkbox" id="win_dc"><label for="win_dc">win_dc</label><br/>
-                    <div class="row collapse">
-                        <div class="small-1 columns">
-                            <input type="text" placeholder="0" id="rdp_license" />
-                        </div>
-                        <div class="small-11 columns">
-                            <label class="postfix" for="rdp_license">rdp_license</label>
-                        </div>
-                    </div>
-                    <div class="row collapse">
-                        <div class="small-4 columns">
-                            <select id="select_plesk" onchange="update()">
-                                <option>no</option>
-                                <option>web_admin</option>
-                                <option>web_app</option>
-                                <option>web_pro</option>
-                                <option>web_host</option>
-                            </select>
-                        </div>
-                        <div class="small-8 columns">
-                            <label class="postfix">Plesk Panel 12</label>
-                        </div>
-                    </div>
-                    <input type="checkbox" id="plesk_power_pack"><label for="plesk_power_pack">plesk_power_pack</label><br/>
-                    <input type="checkbox" id="cpanel"><label for="cpanel">cpanel</label><br/>
-                    <input type="checkbox" id="kvm"><label for="kvm">kvm</label><br/>
-                    <input type="checkbox" id="install_via_lara"><label for="install_via_lara">install_via_lara</label><br/>
-                    <input type="checkbox" id="raid4"><label for="raid4">raid4</label><br/>
-                    <input type="checkbox" id="bbu"><label for="bbu">bbu</label><br/>
-                    <input type="checkbox" id="kvm_module"><label for="kvm_module">kvm_module</label><br>
-                    <input type="checkbox" id="activate_second_onboard_nic"><label for="activate_second_onboard_nic">activate_second_onboard_nic</label>
-                </fieldset>
+          <div class="large-8 columns">
+            <div class="row collapse prefix-radius">
+              <div class="small-4 columns">
+                <label class="prefix">Server:</label>
+              </div>
+              <select id="select_servers" class="small-8 columns">
+                <option>SB</option>
+                <option>AX10</option>
+                <option>AX20</option>
+                <option>AX30</option>
+                <option>EX40</option>
+                <option>EX40SSD</option>
+                <option>EX40Hybrid</option>
+                <option>EX60</option>
+                <option>PX60</option>
+                <option>PX60SSD</option>
+                <option>PX70</option>
+                <option>PX70SSD</option>
+                <option>PX91</option>
+                <option>PX91SSD</option>
+                <option>PX121</option>
+                <option>PX121SSD</option>
+                <option>SX61</option>
+                <option>SX131</option>
+                <option>SX291</option>
+                <option>DX141</option>
+                <option>DX151</option>
+                <option>DX291</option>
+                <option>RACK20</option>
+                <option>CX10</option>
+                <option>CX20</option>
+                <option>CX30</option>
+                <option>CX40</option>
+                <option>CX50</option>
+                <option>CX60</option>
+              </select>
             </div>
-            <div class="large-4 column">
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="sas600" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="sas600">sas600</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ssd240" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ssd240">ssd240</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ssd240de" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ssd240de">ssd240de</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ssd300de" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ssd300de">ssd300de</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ssd480de" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ssd480de">ssd480de</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ssd600" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ssd600">ssd600</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ssd960de" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ssd960de">ssd960de</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="sata2000e" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="sata2000e">sata2000e</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="sata3000e" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="sata3000e">sata3000e</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="sata4000e" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="sata4000e">sata4000e</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="usb16" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="usb16">usb16</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="usb64" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="usb64">usb64</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ddr3ecc32gb" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ddr3ecc32gb">ddr3ecc32gb</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ddr4ecc32gb" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ddr4ecc32gb">ddr4ecc32gb</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-2 columns">
-                        <select id="select_backups">
-                            <option>no</option>
-                            <option>100</option>
-                            <option>500</option>
-                            <option>2000</option>
-                            <option>5000</option>
-                            <option>10000</option>
-                        </select>
-                    </div>
-                    <div class="small-10 columns">
-                        <label class="postfix">Backup Space</label>
-                    </div>
-                </div>
+          </div>
+          <div class="large-4 columns">
+            <div class="row collapse prefix-radius">
+              <div class="small-6 columns">
+                <label class="prefix">SB:</label>
+              </div>
+              <div class="small-6 columns">
+                <input type="number" min="0" placeholder="0" id="sb_number">
+              </div>
             </div>
-            <div class="large-4 column">
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ip" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ip">ip</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="subnet29" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="subnet29" data-addtext="6 IPs">subnet29</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="subnet28" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="subnet28" data-addtext="14 IPs">subnet28</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="subnet27" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="subnet27" data-addtext="30 IPs">subnet27</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="failover_ip" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="failover_ip">failover_ip</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="failover_subnet29" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="failover_subnet29" data-addtext="6 IPs">failover_subnet29</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="failover_subnet28" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="failover_subnet28" data-addtext="14 IPs">failover_subnet28</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="failover_subnet27" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="failover_subnet27" data-addtext="30 IPs">failover_subnet27</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="gbit_nic" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="gbit_nic">gbit_nic</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="ten_gbit_nic" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="ten_gbit_nic">ten_gbit_nic</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="switch_5port" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="switch_5port">switch_5port</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="switch_8port" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="switch_8port">switch_8port</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="switch_24port" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="switch_24port">switch_24port</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="switch_12port_10gbit" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="switch_12port_10gbit">switch_12port_10gbit</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="place_reservation" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="place_reservation">place_reservation</label>
-                    </div>
-                </div>
-                <div class="row collapse">
-                    <div class="small-1 columns">
-                        <input type="text" placeholder="0" id="traffic_overusage" />
-                    </div>
-                    <div class="small-11 columns">
-                        <label class="postfix" for="traffic_overusage">traffic_overusage</label>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
         <div class="row">
-            <div class="large-1 column">
-                <div class="switch tiny">
-                    <input id="new_format_output" type="checkbox">
-                    <label for="new_format_output"></label>
-                </div>
-                <div>
-                    <label>Style</label>
-                </div>
+          <div class="large-12 columns">
+            <div class="row collapse prefix-radius">
+              <div class="small-10 columns">
+                <label class="prefix">Number of Servers:</label>
+              </div>
+              <div class="small-2 columns">
+                <input type="number" min="1" placeholder="1" id="number_of_servers">
+              </div>
             </div>
-            <div class="large-11 column">
-                <textarea id="output" readonly>calculation output</textarea>
-            </div>
+          </div>
         </div>
-    </form>
+        <fieldset>
+          <legend>Addons</legend>
+          <input type="checkbox" id="win_std"><label for="win_std">win_std</label><br>
+          <input type="checkbox" id="win_dc"><label for="win_dc">win_dc</label><br>
+          <div class="row collapse postfix-radius">
+            <div class="small-2 columns">
+              <input type="number" min="0" placeholder="0" id="rdp_license" />
+            </div>
+            <div class="small-10 columns">
+              <label class="postfix" for="rdp_license">rdp_license</label>
+            </div>
+          </div>
+          <div class="row collapse postfix-radius">
+            <div class="small-4 columns">
+              <select id="select_plesk" onchange="update()">
+                <option>no</option>
+                <option>web_admin</option>
+                <option>web_app</option>
+                <option>web_pro</option>
+                <option>web_host</option>
+              </select>
+            </div>
+            <div class="small-8 columns">
+              <label class="postfix">Plesk Panel 12</label>
+            </div>
+          </div>
+          <input type="checkbox" id="plesk_power_pack"><label for="plesk_power_pack">plesk_power_pack</label><br>
+          <input type="checkbox" id="cpanel"><label for="cpanel">cpanel</label><br>
+          <input type="checkbox" id="kvm"><label for="kvm">kvm</label><br>
+          <input type="checkbox" id="install_via_lara"><label for="install_via_lara">install_via_lara</label><br>
+          <input type="checkbox" id="raid4"><label for="raid4">raid4</label><br>
+          <input type="checkbox" id="bbu"><label for="bbu">bbu</label><br>
+          <input type="checkbox" id="kvm_module"><label for="kvm_module">kvm_module</label><br>
+          <input type="checkbox" id="activate_second_onboard_nic"><label for="activate_second_onboard_nic">activate_second_onboard_nic</label>
+        </fieldset>
+      </div>
+      <div class="large-4 columns">
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="sas600">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="sas600">sas600</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ssd240">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ssd240">ssd240</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ssd240de">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ssd240de">ssd240de</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ssd300de">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ssd300de">ssd300de</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ssd480de">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ssd480de">ssd480de</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ssd600">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ssd600">ssd600</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ssd960de">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ssd960de">ssd960de</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="sata2000e">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="sata2000e">sata2000e</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="sata3000e">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="sata3000e">sata3000e</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="sata4000e">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="sata4000e">sata4000e</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="usb16">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="usb16">usb16</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="usb64">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="usb64">usb64</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ddr3ecc32gb">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ddr3ecc32gb">ddr3ecc32gb</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ddr4ecc32gb">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ddr4ecc32gb">ddr4ecc32gb</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <select id="select_backup">
+              <option>no</option>
+              <option>100</option>
+              <option>500</option>
+              <option>2000</option>
+              <option>5000</option>
+              <option>10000</option>
+            </select>
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix">Backup Space</label>
+          </div>
+        </div>
+      </div>
+      <div class="large-4 columns">
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ip">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ip">ip</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="subnet29">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="subnet29" data-addtext="6 IPs">subnet29</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="subnet28">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="subnet28" data-addtext="14 IPs">subnet28</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="subnet27">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="subnet27" data-addtext="30 IPs">subnet27</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="failover_ip">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="failover_ip">failover_ip</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="failover_subnet29">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="failover_subnet29" data-addtext="6 IPs">failover_subnet29</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="failover_subnet28">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="failover_subnet28" data-addtext="14 IPs">failover_subnet28</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="failover_subnet27">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="failover_subnet27" data-addtext="30 IPs">failover_subnet27</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="gbit_nic">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="gbit_nic">gbit_nic</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="ten_gbit_nic">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="ten_gbit_nic">ten_gbit_nic</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="switch_5port">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="switch_5port">switch_5port</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="switch_8port">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="switch_8port">switch_8port</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="switch_24port">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="switch_24port">switch_24port</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="switch_12port_10gbit">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="switch_12port_10gbit">switch_12port_10gbit</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="place_reservation">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="place_reservation">place_reservation</label>
+          </div>
+        </div>
+        <div class="row collapse postfix-radius">
+          <div class="small-2 columns">
+            <input type="number" min="0" placeholder="0" id="traffic_overusage">
+          </div>
+          <div class="small-10 columns">
+            <label class="postfix" for="traffic_overusage">traffic_overusage</label>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <script>
-'use strict';
+    <div class="row tabs-content">
+      <div class="large-1 columns">
+        <div class="switch tiny radius">
+          <input id="new_format_output" type="checkbox" onchange="workspace.setNewOutputFormat(this.checked)">
+          <label for="new_format_output">Style</label>
+        </div>
+        <label for="new_format_output">Style</label>
+      </div>
+      <div class="large-11 columns">
+        <textarea id="output" readonly>calculation output</textarea>
+      </div>
+    </div>
 
-var countryVATrate = {
-    "All others (no VAT)": 0,
-    "Austria": 20,
-    "Belgium": 21,
-    "Bulgaria": 20,
-    "Cyprus": 19,
-    "Croatia": 25,
-    "Czech Republic": 21,
-    "Denmark": 25,
-    "Estonia": 20,
-    "Finland": 24,
-    "France": 20,
-    "Greece": 23,
-    "Germany": 19,
-    "Hungary": 27,
-    "Ireland": 23,
-    "Italy": 22,
-    "Latvia": 21,
-    "Lithuania": 21,
-    "Luxembourg": 17,
-    "Malta": 18,
-    "The Netherlands": 21,
-    "Poland": 23,
-    "Portugal": 23,
-    "Rumania": 24,
-    "Slovakia": 20,
-    "Slovenia": 22,
-    "Spain": 21,
-    "Sweden": 25,
-    "UK": 20,
-};
-
-var messages = {
-    setup_fee: {
-        English: 'Setup costs:',
-        Deutsch: 'Einmalige Kosten:',
-        Русский: 'Плата за установку:'
-    },
-    total_setup: {
-        English: 'Total setup costs:',
-        Deutsch: 'Gesamte einmalige Kosten:',
-        Русский: 'Итого плата за установку:'
-    },
-    total_monthly: {
-        English: 'Total monthly costs:',
-        Deutsch: 'Gesamte monatliche Kosten:',
-        Русский: 'Итого ежемесячная плата:'
-    },
-    total_additional: {
-        English: 'Total additional costs:',
-        Deutsch: 'Gesamte zusätzliche Kosten:',
-        Русский: 'Итого дополнительная плата:'
-    },
-    monthly: {
-        English: 'Monthly costs:',
-        Deutsch: 'Monatliche Kosten:',
-        Русский: 'Ежемесячная плата:'},
-    flexi_pack: {
-        English: 'Flexi-Pack',
-        Deutsch: 'Flexi-Pack',
-        Русский: 'Flexi-пакет'
-    },
-    vat_is_included: {
-        English: '(incl. VAT __VATRATE__%)',
-        Deutsch: '(inkl. __VATRATE__ % USt)',
-        Русский: '(цены указаны с VAT __VATRATE__%)'
-    },
-    vat_isnt_included: {
-        English: '(excl. VAT)',
-        Deutsch: '(exkl. USt)',
-        Русский: '(цены указаны без VAT)'
-    },
-    first_invoice_addition: {
-        English: 'Additional payment for product(s) charged for entire month:',
-        Deutsch: 'Zusätzliche kosten fuer Produkt(e) die fuer den gesamente Monat berechnet werden:',
-        Русский: 'В первый счёт будет дополнительно включена плата за продукт(ы) лицензируемые помесячно:'
-    },
-    comment: {
-        English: 'Comment:',
-        Deutsch: 'Kommentar:',
-        Русский: 'Комментарий:'
-    },
-    first_invoice_amount: {
-        English: 'First invoice’s amount:',
-        Deutsch: 'First invoice’s amount:',
-        Русский: 'Сумма первого счёта:'
-    },
-    subsequent_amount: {
-        English: 'Subsequent invoices amount:',
-        Deutsch: 'Subsequent invoices amount:',
-        Русский: 'Сумма в последующих счетах:'
-    },
-    /*
-    template: {
-        English: '',
-        Deutsch: '',
-        Русский: ''
-    },
-    */
-};
-
-var servers = {
-    SB: {
-        monthly: 0, setup: 0,
-        name: {
-            English: 'Server SB',
-            Deutsch: 'Server SB',
-            Русский: 'Сервер SB'
-        },
-        comment: 'SB servers: no additional hardware'
-    },
-    AX10: {
-        monthly: 11.78, setup: 11.78,
-        name: {
-            English: 'Server AX10',
-            Deutsch: 'Server AX10',
-            Русский: 'Сервер AX10'
-        },
-        comment: 'AX10: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/32 GB MicroSD/10 TB'
-    },
-    AX20: {
-        monthly: 17.73, setup: 17.73,
-        name: {
-            English: 'Server AX20',
-            Deutsch: 'Server AX20',
-            Русский: 'Сервер AX20'
-        },
-        comment: 'AX20: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/64 GB eMMC/10 TB'
-    },
-    AX30: {
-        monthly: 23.68, setup: 23.68,
-        name: {
-            English: 'Server AX30',
-            Deutsch: 'Server AX30',
-            Русский: 'Сервер AX30'
-        },
-        comment: 'AX30: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/32 GB MicroSD + 240 GB SSD/10 TB'
-    },
-    EX40: {
-        monthly: 49, setup: 49,
-        name: {
-            English: 'Server EX40',
-            Deutsch: 'Server EX40',
-            Русский: 'Сервер EX40'
-        },
-        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB'
-    },
-    EX40SSD: {
-        monthly: 59, setup: 59,
-        name: {
-            English: 'Server EX40-SSD',
-            Deutsch: 'Server EX40-SSD',
-            Русский: 'Сервер EX40-SSD'
-        },
-        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
-    },
-    EX40Hybrid: {
-        monthly: 69, setup: 69,
-        name: {
-            English: 'Server EX40-Hybrid',
-            Deutsch: 'Server EX40-Hybrid',
-            Русский: 'Сервер EX40-Hybrid'
-        },
-        comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB'
-    },
-    EX60: {
-        monthly: 59, setup: 0,
-        name: {
-            English: 'Server EX60',
-            Deutsch: 'Server EX60',
-            Русский: 'Сервер EX60'
-        },
-        comment: 'EX60: Intel® Core™ i7-920 Quad-Core/48 GB/2 x 2TB SATA Ent/30 TB'
-    },
-    PX60: {
-        monthly: 69, setup: 99,
-        name: {
-            English: 'Server PX60',
-            Deutsch: 'Server PX60',
-            Русский: 'Сервер PX60'
-        },
-        comment: 'PX60: E3-1270 v3 Quad-Core Haswell/32 GB ECC/2 x 2TB SATA Ent/2nd NIC/30 TB'
-    },
-    PX60SSD: {
-        monthly: 79, setup: 99,
-        name: {
-            English: 'Server PX60-SSD',
-            Deutsch: 'Server PX60-SSD',
-            Русский: 'Сервер PX60-SSD'
-        },
-        comment: 'PX60-SSD: E3-1270 v3 Quad-Core Haswell/32 GB ECC/2 x 240GB SSD DC/2nd NIC/30 TB'
-    },
-    PX70: {
-        monthly: 79, setup: 99,
-            name: {
-            English: 'Server PX70',
-            Deutsch: 'Server PX70',
-            Русский: 'Сервер PX70'
-        },
-        comment: 'PX70: E3-1270 v3 Quad-Core Haswell/32 GB ECC/2 x 4TB SATA Ent/2nd NIC/30 TB'
-    },
-    PX70SSD: {
-        monthly: 99, setup: 99,
-        name: {
-            English: 'Server PX70-SSD',
-            Deutsch: 'Server PX70-SSD',
-            Русский: 'Сервер PX70-SSD'
-        },
-        comment: 'PX70-SSD: E3-1270 v3 Quad-Core Haswell/32 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB'
-    },
-    PX91: {
-        monthly: 109, setup: 109,
-        name: {
-            English: 'Server PX91',
-            Deutsch: 'Server PX91',
-            Русский: 'Сервер PX91'
-        },
-        comment: 'PX91: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/64 GB DDR4 ECC/2 x 2TB SATA Ent/2nd NIC/50 TB'
-    },
-    PX91SSD: {
-        monthly: 109, setup: 109,
-        name: {
-            English: 'Server PX91-SSD',
-            Deutsch: 'Server PX91-SSD',
-            Русский: 'Сервер PX91-SSD'
-        },
-        comment: 'PX91-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/64 GB DDR4 ECC/2 x 240GB SSD DC/2nd NIC/50 TB'
-    },
-    PX121: {
-        monthly: 139, setup: 139,
-            name: {
-            English: 'Server PX121',
-            Deutsch: 'Server PX121',
-            Русский: 'Сервер PX121'
-        },
-        comment: 'PX121: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB ECC/2 x 4TB SATA Ent/2nd NIC/50 TB'
-    },
-    PX121SSD: {
-    monthly: 139, setup: 139,
-        name: {
-            English: 'Server PX121-SSD',
-            Deutsch: 'Server PX121-SSD',
-            Русский: 'Сервер PX121-SSD'
-        },
-        comment: 'PX121-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB'
-    },
-    SX61: {
-        monthly: 82.11, setup: 82.11,
-        name: {
-            English: 'Server SX61',
-            Deutsch: 'Server SX61',
-            Русский: 'Сервер SX61'
-        },
-        comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA/30 TB'
-    },
-    SX131: {
-        monthly: 201.11, setup: 201.11,
-        name: {
-            English: 'Server SX131',
-            Deutsch: 'Server SX131',
-            Русский: 'Сервер SX131'
-        },
-        comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA/50 TB'
-    },
-    SX291: {
-        monthly: 296.31, setup: 296.31,
-        name: {
-            English: 'Server SX291',
-            Deutsch: 'Server SX291',
-            Русский: 'Сервер SX291'
-        },
-        comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/15x 6TB SATA/100 TB included'
-    },
-    DX141: {
-        monthly: 149, setup: 199,
-        flexi_included: true,
-        name: {
-            English: 'DELL PowerEdge™ R530 DX141',
-            Deutsch: 'DELL PowerEdge™ R530 DX141',
-            Русский: 'DELL PowerEdge™ R530 DX141'
-        },
-        comment: "DX141: Single Intel® Xeon® E5-1650 v3 @ 3.5GHz Hexa-Core/64GB DDR4 ECC/Dell PERC H330/50 TB\n\
-R530: have an iDRAC (IP-KVM)\n\
-R530: Drives are optional (2/4TB SATA, 600GB SAS, 240/480/960GB SSD DC)\n\
-R530: Flexi-Pack is included\n\
-R530 DX141: max 128 GB RAM DDR4 (2x 32GB)"
-    },
-    DX151: {
-        monthly: 189, setup: 199,
-        flexi_included: true,
-        name: {
-            English: 'DELL PowerEdge™ R730 DX151',
-            Deutsch: 'DELL PowerEdge™ R730 DX151',
-            Русский: 'DELL PowerEdge™ R730 DX151'
-        },
-        comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.40GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/50 TB\n\
-R730: have an iDRAC (IP-KVM)\n\
-R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
-R730: Flexi-Pack is included\n\
-R730 DX151: max 192 GB RAM DDR4 (4x 32GB)"
-    },
-    DX291: {
-        monthly: 299, setup: 199,
-        flexi_included: true,
-        name: {
-            English: 'DELL PowerEdge™ R730 DX291',
-            Deutsch: 'DELL PowerEdge™ R730 DX291',
-            Русский: 'DELL PowerEdge™ R730 DX291'
-        },
-        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.40GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/100 TB\n\
-R730: have an iDRAC (IP-KVM)\n\
-R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
-R730: Flexi-Pack is included\n\
-R730 DX291: max 384 GB RAM DDR4 (8x 32GB)"
-    },
-    RACK20: {
-        monthly: 199, setup: 0,
-        name: {
-            English: 'Dedicated Rack for up to 20 dedicated servers',
-            Deutsch: 'Miet-Rack für bis zu 20 Root-Server',
-            Русский: 'Выделенная стойка для 20 root-серверов'
-        },
-        comment: "RACK20: 24 port Gbit switch included\n\
-RACK20: customer need at least 7 servers to order this rack\n\
-RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_for_up_to_20_dedicated_servers"
-    },
-    CX10: {
-        monthly: 4.64, setup: 0,
-        name: {
-            English: 'Server CX10',
-            Deutsch: 'Server CX10',
-            Русский: 'Сервер CX10'
-        },
-        comment: 'CX10: 1 vCore 2 GHz/1 GB/25 GB SSD/1 snapshot/2 TB'
-    },
-    CX20: {
-        monthly: 8.21, setup: 0,
-        name: {
-            English: 'Server CX20',
-            Deutsch: 'Server CX20',
-            Русский: 'Сервер CX20'
-        },
-        comment: 'CX20: 2 vCores 2 GHz/2 GB/50 GB SSD/2 snapshots/5 TB'
-    },
-    CX30: {
-        monthly: 14.16, setup: 0,
-        name: {
-            English: 'Server CX30',
-            Deutsch: 'Server CX30',
-            Русский: 'Сервер CX30'
-        },
-        comment: 'CX30: 2 vCores 2 GHz/4 GB/100 GB SSD/3 snapshots/8 TB'
-    },
-    CX40: {
-        monthly: 23.68, setup: 0,
-        name: {
-            English: 'Server CX40',
-            Deutsch: 'Server CX40',
-            Русский: 'Сервер CX40'
-        },
-        comment: 'CX40: 2 vCores 2 GHz/8 GB/200 GB SSD/4 snapshots/10 TB'
-    },
-    CX50: {
-        monthly: 35.58, setup: 0,
-        name: {
-            English: 'Server CX50',
-            Deutsch: 'Server CX50',
-            Русский: 'Сервер CX50'
-        },
-        comment: 'CX50: 4 vCores 2 GHz/16 GB/400 GB SSD/5 snapshots/20 TB'
-    },
-    CX60: {
-        monthly: 59.38, setup: 0,
-        name: {
-            English: 'Server CX60',
-            Deutsch: 'Server CX60',
-            Русский: 'Сервер CX60'
-        },
-        comment: 'CX60: 8 vCores 2 GHz/32 GB/600 GB SSD/6 snapshots/30 TB'
-    },
-    /*
-    template: {
-        monthly: 0, setup: 0,
-        flexi_included: true,
-        name: {
-            English: '',
-            Deutsch: '',
-            Русский: ''
-        },
-        comment: 'line1\nline2',
-    },
-    */
-};
-
-var addons = {
-    kvm: {
-        monthly: 19, setup: 149, flexi_required: true,
-        name: {
-            English: 'KVM-over-IP Remote Management',
-            Deutsch: 'KVM-over-IP Remote Management',
-            Русский: 'KVM-over-IP удалённое управление'
-        }
-    },
-    usb16: {
-        setup: 35,
-        name: {
-            English: '16 GB USB stick',
-            Deutsch: '16 GB USB-Stick',
-            Русский: '16 ГБ USB-накопитель'
-        }
-    },
-    usb64: {
-        setup: 79,
-        name: {
-            English: '64 GB USB stick',
-            Deutsch: '64 GB USB-Stick',
-            Русский: '64 ГБ USB-накопитель'
-        }
-    },
-    ddr3ecc32gb: {
-        monthly: 29,
-        name: {
-            English: '32 GB DDR3 ECC RAM',
-            Deutsch: '32 GB DDR3 ECC RAM',
-            Русский: '32 ГБ DDR3 оперативной памяти ECC'
-        },
-        comment: "32 GB DDR3 ECC RAM: is available only for DELL R720\n\
-32 GB DDR4 ECC RAM: maximum 8"
-    },
-    ddr4ecc32gb: {
-        monthly: 39,
-        name: {
-            English: '32 GB DDR4 ECC RAM',
-            Deutsch: '32 GB DDR4 ECC RAM',
-            Русский: '32 ГБ DDR4 оперативной памяти ECC'
-        },
-        comment: "32 GB DDR4 ECC RAM: is available only for DELL R730\n\
-32 GB DDR4 ECC RAM: maximum 8"
-    },
-    win_std: {
-        monthly: 25, pay_entire_month: true,
-        name: {
-            English: 'Windows Server 2012 R2 Standard Edition',
-            Deutsch: 'Windows Server 2012 R2 Standard Edition',
-            Русский: 'Windows Server 2012 R2 Standard Edition'
-        }
-    },
-    win_dc: {
-        monthly: 155, pay_entire_month: true,
-        name: {
-            English: 'Windows Server 2012 R2 Datacenter Edition',
-            Deutsch: 'Windows Server 2012 R2 Datacenter Edition',
-            Русский: 'Windows Server 2012 R2 Datacenter Edition'
-        }
-    },
-    plesk_web_admin: {
-        monthly: 2.49, pay_entire_month: "yes",
-        name: {
-            English: "Plesk 12 Web ADMIN Edition",
-            Deutsch: "Plesk 12 Web ADMIN Edition",
-            Русский: "Plesk 12 издание Web ADMIN"},
-    },
-     plesk_web_app: {
-        monthly: 3.49, pay_entire_month: "yes",
-        name: {
-            English: "Plesk 12 Web APP Edition",
-            Deutsch: "Plesk 12 Web APP Edition",
-            Русский: "Plesk 12 издание Web APP"},
-    },
-     plesk_web_pro: {
-        monthly: 5.49, pay_entire_month: "yes",
-        name: {
-            English: "Plesk 12 Web PRO Edition",
-            Deutsch: "Plesk 12 Web PRO Edition",
-            Русский: "Plesk 12 издание Web PRO"},
-    },
-     plesk_web_host: {
-        monthly: 24.99, pay_entire_month: "yes",
-        name: {
-            English: "Plesk 12 Web HOST Edition",
-            Deutsch: "Plesk 12 Web HOST Edition",
-            Русский: "Plesk 12 издание Web HOST"},
-    },
-    plesk_power_pack: {
-        monthly: 9.9, pay_entire_month: true,
-        name: {
-            English: 'Plesk Power Pack',
-            Deutsch: 'Plesk Power Pack',
-            Русский: 'Plesk Power Pack'
-        }
-    },
-    cpanel: {
-        monthly: 29.9, pay_entire_month: true,
-        name: {
-            English: 'cPanel',
-            Deutsch: 'cPanel',
-            Русский: 'cPanel'
-        }
-    },
-    raid4: {
-        monthly: 15, flexi_required: true,
-        name: {
-            English: '4-Port Hardware RAID controller',
-            Deutsch: '4-Port Hardware RAID-Controller',
-            Русский: '4-портовый RAID-контроллер'
-        }
-    },
-    ip: {
-        monthly: 1,
-        name: {
-            English: 'Additional IP address',
-            Deutsch: 'Zusätzliche IP-Adresse',
-            Русский: 'Дополнительный IP-адрес'
-        }
-    },
-    subnet29: {
-        monthly: 8, flexi_required: false,
-        name: {
-            English: 'Subnet /29',
-            Deutsch: 'Subnet /29',
-            Русский: 'Подсеть /29'
-        }
-    },
-    subnet28: {
-        monthly: 16, flexi_required: false,
-        name: {
-            English: 'Subnet /28',
-            Deutsch: 'Subnet /28',
-            Русский: 'Подсеть /28'
-        }
-    },
-    subnet27: {
-        monthly: 32, flexi_required: false,
-        name: {
-            English: 'Subnet /27',
-            Deutsch: 'Subnet /27',
-            Русский: 'Подсеть /27'
-        }
-    },
-    failover_ip: {
-        monthly: 5, flexi_required: false,
-        name: {
-            English: 'Failover IP',
-            Deutsch: 'Failover-IP',
-            Русский: 'Failover IP'
-        },
-        comment: 'Failover IP: can`t be used with VMware ESXi'
-    },
-    failover_subnet29: {
-        monthly: 18, flexi_required: false,
-        name: {
-            English: 'Failover subnet /29',
-            Deutsch: 'Failover Subnet /29',
-            Русский: 'Failover подсеть /29'
-        },
-        comment: 'Failover subnet /29: can`t be used with VMware ESXi'
-    },
-    failover_subnet28: {
-        monthly: 26, flexi_required: false,
-        name: {
-            English: 'Failover subnet /28',
-            Deutsch: 'Failover Subnet /28',
-            Русский: 'Failover подсеть /28'
-        },
-        comment: 'Failover subnet /28: can`t be used with VMware ESXi'
-    },
-    failover_subnet27: {
-        monthly: 42, flexi_required: false,
-        name: {
-            English: 'Failover subnet /27',
-            Deutsch: 'Failover Subnet /27',
-            Русский: 'Failover подсеть /27'
-        },
-        comment: 'Failover subnet /27: can`t be used with VMware ESXi'
-    },
-    ssd240: {
-        monthly: 19, flexi_required: true,
-        name: {
-            English: '240 GB SSD',
-            Deutsch: '240 GB SSD',
-            Русский: '240 ГБ SSD'
-        }
-    },
-    ssd240de: {
-        monthly: 25, flexi_required: true,
-        name: {
-            English: '240 GB SSD Datacenter Edition',
-            Deutsch: '240 GB SSD Datacenter Edition',
-            Русский: '240 ГБ SSD Datacenter Edition'
-        }
-    },
-    ssd300de: {
-        monthly: 29, flexi_required: true,
-        name: {
-            English: '300 GB SSD Datacenter Edition',
-            Deutsch: '300 GB SSD Datacenter Edition',
-            Русский: '300 ГБ SSD Datacenter Edition'
-        },
-        comment: '300 GB SSD DC: only for Dell DX150'
-    },
-    ssd480de: {
-        monthly: 39, flexi_required: true,
-        name: {
-            English: '480 GB SSD Datacenter Edition',
-            Deutsch: '480 GB SSD Datacenter Edition',
-            Русский: '480 ГБ SSD Datacenter Edition'
-        }
-    },
-    ssd600: {
-        monthly: 45, flexi_required: true,
-        name: {
-            English: '600 GB SSD',
-            Deutsch: '600 GB SSD',
-            Русский: '600 ГБ SSD'
-        },
-        comment: '600 GB SSD: only for Dell DX150'
-    },
-    ssd960de: {
-        monthly: 49, flexi_required: true,
-        name: {
-            English: '960 GB SSD Datacenter Edition',
-            Deutsch: '960 GB SSD Datacenter Edition',
-            Русский: '960 ГБ SSD Datacenter Edition'
-        }
-    },
-    sas600: {
-        monthly: 25, flexi_required: true,
-        name: {
-            English: '600 GB SAS',
-            Deutsch: '600 GB SAS',
-            Русский: '600 ГБ SAS'
-        },
-        comment: '600 GB SAS: is available only for DELL R730'
-    },
-    sata2000e: {
-        monthly: 15, flexi_required: true,
-        name: {
-            English: '2 TB enterprise SATA HDD',
-            Deutsch: '2 TB Enterprise SATA HDD',
-            Русский: '2 ТБ enterprise SATA HDD'
-        },
-    },
-    sata3000e: {
-        monthly: 25, flexi_required: true,
-        name: {
-            English: '3 TB enterprise SATA HDD',
-            Deutsch: '3 TB Enterprise SATA HDD',
-            Русский: '3 ТБ enterprise SATA HDD'
-        }
-    },
-    sata4000e: {
-        monthly: 30, flexi_required: true,
-        name: {
-            English: '4 TB enterprise SATA HDD',
-            Deutsch: '4 TB Enterprise SATA HDD',
-            Русский: '4 ТБ enterprise SATA HDD'
-        }
-    },
-    gbit_nic: {
-        setup: 29, flexi_required: true,
-        name: {
-            English: 'Additional Gbit NIC',
-            Deutsch: 'Zusätzliche Gbit-NIC',
-            Русский: 'Дополнительная 1Гбит сетевая карта'
-        }
-    },
-    ten_gbit_nic: {
-        monthly: 39, flexi_required: true,
-        name: {
-            English: 'Additional 10 Gbit NIC',
-            Deutsch: 'Zusätzliche 10 Gbit-NIC',
-            Русский: 'Дополнительная 10 Гбит сетевая карта'
-        }
-    },
-    activate_second_onboard_nic: {
-        flexi_required: true,
-        name: {
-            English: 'Activate 2nd onboard Gbit NIC',
-            Deutsch: '2. Onboard Gbit NIC aktivieren',
-            Русский: 'Включение 2ой встроенной 1Гбит карты'
-        },
-        comment: 'Activate 2nd onboard Gbit NIC: available only for PX servers'
-    },
-    install_via_lara: {
-        setup: 25,
-        name: {
-            English: 'Installation via LARA',
-            Deutsch: 'Installation via LARA',
-            Русский: 'Установка ОС через LARA'
-        }
-    },
-    switch_5port: {
-        setup: 29, flexi_required: true,
-        name: {
-            English: '5-Port Gbit switch',
-            Deutsch: '5-Port Gbit-Switch',
-            Русский: 'Коммутатор Гбит 5 портов'
-        }
-    },
-    switch_8port: {
-        setup: 39, flexi_required: true,
-        name: {
-            English: '8-Port Gbit switch',
-            Deutsch: '8-Port Gbit-Switch',
-            Русский: 'Коммутатор Гбит 8 портов'
-        }
-    },
-    switch_24port: {
-        setup: 269, flexi_required: true,
-        name: {
-            English: '24-Port Gbit switch',
-            Deutsch: '24-Port Gbit-Switch',
-            Русский: 'Коммутатор Гбит 24 порта'
-        }
-    },
-    switch_12port_10gbit: {
-        setup: 999, flexi_required: true,
-        name: {
-            English: '12-Port 10 Gbit switch',
-            Deutsch: '12-Port 10 Gbit-Switch',
-            Русский: 'Коммутатор 10 Гбит 12 порта'
-        }
-    },
-    rdp_license: {
-        monthly: 7,
-        name: {
-            English: 'Additional RDP licence for Windows',
-            Deutsch: 'Zusätzliche RDP-Lizenz für Windows',
-            Русский: 'Дополнительная RDP-лицензия для Windows'
-        }
-    },
-    place_reservation: {
-        monthly: 9.90,
-        name: {
-            English: 'Reservation of rack space',
-            Deutsch: 'Platz Reservierung: Mietserver Stellfläche',
-            Русский: 'Резервирование места в стойке'
-        },
-        comment: 'Reservation of rack space: no more then 50% of number of servers'
-    },
-    bbu: {
-        setup: 149,
-        name: {
-            English: 'BBU for RAID controller',
-            Deutsch: 'BBU für RAID-Controller',
-            Русский: 'BBU для RAID-контроллера'
-        }
-    },
-    traffic_overusage: {
-        monthly: 1.39,
-        name: {
-            English: 'Traffic overusage (TB)',
-            Deutsch: 'Traffic overusage (TB)',
-            Русский: 'Превышение трафика (ТБ)'
-        }
-    },
-    kvm_module: {
-        monthly: 3.90, setup: 19,
-        name: {
-            English: 'KVM-module',
-            Deutsch: 'KVM-modul',
-            Русский: 'KVM-модуль'
-        },
-        comment: 'KVM-module: only for PX servers'
-    },
-    backup100: {
-        monthly: 4.90, setup: 4.90,
-        name: {
-            English: '100 GB Backup Space',
-            Deutsch: '100 GB Backup Space',
-            Русский: '100 ГБ места для резервных копий'
-        }
-    },
-    backup500: {
-        monthly: 9.90, setup: 9.90,
-        name: {
-            English: '500 GB Backup Space',
-            Deutsch: '500 GB Backup Space',
-            Русский: '500 ГБ места для резервных копий'
-        }
-    },
-    backup2000: {
-        monthly: 19.90, setup: 19.90,
-        name: {
-            English: '2,000 GB Backup Space',
-            Deutsch: '2.000 GB Backup Space',
-            Русский: '2.000 ГБ места для резервных копий'
-        }
-    },
-    backup5000: {
-        monthly: 44.90, setup: 44.90,
-        name: {
-            English: '5,000 GB Backup Space',
-            Deutsch: '5.000 GB Backup Space',
-            Русский: '5.000 ГБ места для резервных копий'
-        }
-    },
-    backup10000: {
-        monthly: 79.90, setup: 79.90,
-        name: {
-            English: '10,000 GB Backup Space',
-            Deutsch: '10.000 GB Backup Space',
-            Русский: '10.000 ГБ места для резервных копий'
-        }
-    }
-    /*
-    template: {
-        monthly: 0, setup: 0, flexi_required: true, pay_entire_month: true,
-        name: {
-            English: '',
-            Deutsch: '',
-            Русский: ''
-        },
-        comment: 'line1\nline2',
-    },
-    */
-};
-
-var uiLanguage = 'English';
-
-/**
- * Init application.
- */
-function onLoad() {
-    setAndUpdateUILanguage();
-    updateDate();
-    updateCalculationResult();
-}
-
-/**
- * Updates Date input field to todays date.
- */
-function updateDate() {
-    var today = new Date();
-    document.getElementById('ordering_date').value =
-        today.getFullYear() + '/' +
-        (today.getMonth() + 1) + '/' +
-        today.getDate();
-}
-
-/**
- * Called each time we change something in the form.
- */
-function onChange() {
-    updateCalculationResult();
-}
-
-/**
- * Updates interfce language.
- */
-function setAndUpdateUILanguage() {
-    uiLanguage = document.getElementById('select_languages').value;
-    for (var addon in addons) {
-        var labelElement = document.querySelector("label[for='" + addon + "']");
-        if (labelElement) {
-            var additionalText = labelElement.getAttribute('data-addtext');
-            var labelValueToSet = addons[addon].name[uiLanguage];
-            labelElement.innerHTML = (additionalText) ? labelValueToSet + ' ' + '<mark>' + additionalText + '</mark>' : labelValueToSet;
-        }
-    }
-}
-
-
-/**
- * Updates textarea containing caluculation result.
- */
-function updateCalculationResult() {
-    var selectedServerModel = document.getElementById('select_servers').value;
-    var serverToCalculate = new Server(selectedServerModel);
-    serverToCalculate.setVATForCountry(document.getElementById('select_country').value);
-
-    var calculationTextBeautified = serverToCalculate.getCalculationStringBeautifiedWrapper();
-    document.getElementById('output').innerHTML = '';
-    document.getElementById('output').innerHTML += calculationTextBeautified;
-
-    var numberOfLinesInCalculationText = calculationTextBeautified.split(/\n|\r|\n\r/).length;
-    document.getElementById('output').rows = numberOfLinesInCalculationText;
-}
-
-function Server(theModel) {
-    this.FLEXI_PACK_PRICE = 15;
-    this.VAT_percentage = 0; // use setVATForCountry() to change this variable
-    this.model = servers[theModel];
-    if (theModel === 'SB') {
-        var sbServerMonthlyPrice = parseInt(document.getElementById('sb_number').value);
-        if (sbServerMonthlyPrice > 0) {
-            this.model.monthly = sbServerMonthlyPrice;
-        } else {
-            this.model.monthly = 0;
-        }
-    }
-    this.serverAddons = [];
-    this.flexiRequiredForAddons = false;
-    this.newOutputFormat = (document.getElementById('new_format_output').checked);
-    this.findAndAddAddons();
-}
-
-function copyObject(object) {
-    var newObject = {};
-    for (var key in object) {
-        newObject[key] = object[key];
-    }
-    return newObject;
-}
-
-Server.prototype = {
-    constructor: Server,
-    addAddon: function(addon, amount) {
-        var addonObj = copyObject(addons[addon]);
-        if (addon === 'backup100' && this.model.monthly >= 49) {
-            addonObj.monthly = 0;
-            addonObj.setup = 0;
-        }
-        if (amount !== undefined) addonObj.amount = amount;
-        this.serverAddons.push( addonObj );
-    },
-    isFlexiToCalculate: function() {
-        if (this.model.flexi_included) return false;
-        if (this.flexiRequiredForAddons) return true;
-    },
-    findAndAddAddons: function () {
-        for (var addon in addons) {
-            if (document.getElementById(addon)) {
-                if (document.getElementById(addon).type === 'checkbox') {
-                    if (document.getElementById(addon).checked) {
-                        this.addAddon(addon);
-                    }
-                }
-                if (document.getElementById(addon).type === 'text') {
-                    var amount = parseInt(document.getElementById(addon).value);
-                    if (amount) {
-                        this.addAddon(addon, amount);
-                    }
-                }
-            }
-        }
-        if (document.getElementById('select_backups').value !== 'no') {
-            this.addAddon('backup' + document.getElementById('select_backups').value);
-        }
-        if (document.getElementById('select_plesk').value !== 'no') {
-            this.addAddon('plesk_' + document.getElementById('select_plesk').value);
-        }
-    },
-    setVATForCountry: function(selectedCountry) {
-        this.VAT_percentage = countryVATrate[selectedCountry];
-    },
-    getSetupPrice: function() {
-        return ('setup' in this.model) ? this.model.setup : 0;
-    },
-    getSetupPriceVatted: function() {
-        return this.vatPrice( this.getSetupPrice() );
-    },
-    getMonthlyPrice: function() {
-        return ('monthly' in this.model) ? this.model.monthly : 0;
-    },
-    getMonthlyPriceVatted: function() {
-        return this.vatPrice( this.getMonthlyPrice() );
-    },
-    getName: function() {
-        var modelName = this.model.name[uiLanguage];
-        if ((modelName.indexOf('SB') !== -1) && (this.model.monthly > 0)) {
-            return modelName + this.model.monthly;
-        }
-        return modelName;
-    },
-    getSetupPriceTotalVatted: function() {
-        var setupPriceTotal = this.getSetupPriceVatted();
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if (!this.flexiRequiredForAddons && 'flexi_required' in addonObj) {
-                this.flexiRequiredForAddons = addonObj.flexi_required;
-            }
-            if ('setup' in addonObj) {
-                setupPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? this.vatPrice(+addonObj.amount * addonObj.setup) : this.vatPrice(addonObj.setup);
-            }
-        }
-        return setupPriceTotal;
-    },
-    getMonthlyPriceTotalVatted: function() {
-        var monthlyPriceTotal = this.getMonthlyPriceVatted();
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if (!this.flexiRequiredForAddons && 'flexi_required' in addonObj) {
-                this.flexiRequiredForAddons = addonObj.flexi_required;
-            }
-            if ('monthly' in addonObj) {
-                monthlyPriceTotal += ('amount' in addonObj && addonObj.amount > 1) ? this.vatPrice(addonObj.amount * addonObj.monthly) : this.vatPrice(addonObj.monthly);
-            }
-        }
-        monthlyPriceTotal += ( this.isFlexiToCalculate() ) ? this.vatPrice(this.FLEXI_PACK_PRICE) : 0;
-        return monthlyPriceTotal;
-    },
-    getAddonAdditionalPaymentVatted: function(price) {
-        var orderingDate = new Date(document.getElementById('ordering_date').value);
-        var daysInMonth = new Date(orderingDate.getFullYear(), orderingDate.getMonth() + 1, 0).getDate();
-        var orderingDay = orderingDate.getDate();
-
-        return this.vatPrice(price / daysInMonth * (orderingDay - 1));
-    },
-    getAdditionalPaymentTotalVatted: function() {
-        var additionalPaymentTotal = 0;
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if (addonObj.pay_entire_month) {
-                additionalPaymentTotal += this.getAddonAdditionalPaymentVatted(addonObj.monthly);
-            }
-        }
-        return additionalPaymentTotal;
-    },
-    getMonthlyInvoiceAmountVatted: function() {
-        return this.getMonthlyPriceTotalVatted();
-    },
-    getFirstInvoiceAmountVatted: function() {
-        return this.getMonthlyPriceTotalVatted() + this.getAdditionalPaymentTotalVatted() + this.getSetupPriceTotalVatted();
-    },
-    formatMonthlyPriceString: function() {
-        if (this.getMonthlyPriceTotalVatted() === 0)
-            return '';
-
-        var str = messages.monthly[uiLanguage] +
-            '\n' + this.getName() + ' ' + this.getMonthlyPriceVatted().toFixed(2) + ' €';
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if ('monthly' in addonObj) {
-                if ('amount' in addonObj && addonObj.amount > 1) {
-                    str += '\n' + addonObj.amount + 'x ' + addonObj.name[uiLanguage] + ' ' + this.vatPrice(addonObj.amount * addonObj.monthly).toFixed(2) + ' €';
-                } else {
-                    str += '\n' + addonObj.name[uiLanguage] + ' ' + this.vatPrice(addonObj.monthly).toFixed(2) + ' €';
-                }
-            }
-        }
-        if ( this.isFlexiToCalculate() ) {
-            str += '\n' + messages.flexi_pack[uiLanguage] + ' ' + this.vatPrice(this.FLEXI_PACK_PRICE).toFixed(2) + ' €';
-        }
-        str += '\n-';
-        str += '\n' + messages.total_monthly[uiLanguage] + ' ' + this.getMonthlyPriceTotalVatted().toFixed(2) + ' €';
-        return str;
-    },
-    formatSetupPriceString: function() {
-        if (this.getSetupPriceTotalVatted() === 0)
-            return '';
-
-        var str = messages.setup_fee[uiLanguage] +
-            '\n' + this.getName() + ' ' + this.getSetupPriceVatted().toFixed(2) + ' €';
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if ('setup' in addonObj) {
-                if ('amount' in addonObj && addonObj.amount > 1) {
-                    str += '\n' + addonObj.amount + 'x ' + addonObj.name[uiLanguage] + ' ' + this.vatPrice(addonObj.amount * addonObj.setup).toFixed(2) + ' €';
-                } else {
-                    str += '\n' + addonObj.name[uiLanguage] + ' ' + this.vatPrice(addonObj.setup).toFixed(2) + ' €';
-                }
-            }
-        }
-        str += '\n-';
-        str += '\n' + messages.total_setup[uiLanguage] + ' ' + this.getSetupPriceTotalVatted().toFixed(2) + ' €';
-        return str;
-    },
-    formatAdditionalPaymentString: function() {
-        var hasPayEntireMonthAddons = false;
-        var str = messages.first_invoice_addition[uiLanguage];
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if (addonObj.pay_entire_month) {
-                hasPayEntireMonthAddons = true;
-                str += '\n' + addonObj.name[uiLanguage] + ' ' + this.getAddonAdditionalPaymentVatted(addonObj.monthly).toFixed(2) + ' €';
-            }
-        }
-        str += '\n-';
-        str += '\n' + messages.total_additional[uiLanguage] + ' ' + this.getAdditionalPaymentTotalVatted().toFixed(2) + ' €';
-        return (hasPayEntireMonthAddons) ? str : '';
-    },
-    formatAdditionalPaymentStringOldFormat: function() {
-        var hasPayEntireMonthAddons = false;
-        var str = messages.first_invoice_addition[uiLanguage];
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if (addonObj.pay_entire_month) {
-                hasPayEntireMonthAddons = true;
-                str += '\n' + addonObj.name[uiLanguage] + ' ' + this.getAddonAdditionalPaymentVatted(addonObj.monthly).toFixed(2) + ' €';
-            }
-        }
-        return (hasPayEntireMonthAddons) ? str : '';
-    },
-    formatFirstInvoiceString: function() {
-        var str = '';
-        if (this.getSetupPriceTotalVatted() !== 0 || this.getAdditionalPaymentTotalVatted() !== 0) {
-            str += messages.first_invoice_amount[uiLanguage] + ' '  + this.getFirstInvoiceAmountVatted().toFixed(2) + ' €' + '.';
-            str += '\n' + messages.subsequent_amount[uiLanguage] + ' ' + this.getMonthlyInvoiceAmountVatted().toFixed(2) + ' €' + '.';
-        }
-        return str;
-    },
-    formatCommentString: function() {
-        var str = '';
-        if (this.VAT_percentage !== 0) {
-            str += messages.vat_is_included[uiLanguage].replace(/__VATRATE__/, this.VAT_percentage);
-        } else {
-            str += messages.vat_isnt_included[uiLanguage];
-        }
-        str += '\n' + '\n' + messages.comment[uiLanguage];
-        if ('comment' in this.model) {
-            str += '\n' + this.model.comment;
-        }
-        for (var i = 0; i < this.serverAddons.length; i++) {
-            var addonObj = this.serverAddons[i];
-            if ('comment' in addonObj) {
-                str += '\n' + addonObj.comment;
-            }
-        }
-        return str;
-    },
-    getCalculationString: function() {
-        return  ((this.formatMonthlyPriceString()      === '' || !this.getMonthlyPriceTotalVatted())      ? '' : this.formatMonthlyPriceString()      + '\n\n' ) +
-                ((this.formatSetupPriceString()        === '' || !this.getSetupPriceTotalVatted())        ? '' : this.formatSetupPriceString()        + '\n\n' ) +
-                ((this.formatAdditionalPaymentString() === '' || !this.getAdditionalPaymentTotalVatted()) ? '' : this.formatAdditionalPaymentString() + '\n\n' ) +
-                ((this.formatFirstInvoiceString()         === '' ) ? '' : this.formatFirstInvoiceString() + '\n\n' ) +
-                this.formatCommentString();
-    },
-    getCalculationStringOldFormat: function() {
-        return  ((this.formatSetupPriceString()        === '' || !this.getSetupPriceTotalVatted())        ? '' : this.formatSetupPriceString()        + '\n\n' ) +
-                ((this.formatMonthlyPriceString()      === '' || !this.getMonthlyPriceTotalVatted())      ? '' : this.formatMonthlyPriceString()      + '\n\n' ) +
-                this.formatCommentString() +
-                ((this.formatAdditionalPaymentStringOldFormat() === '' || !this.getAdditionalPaymentTotalVatted()) ? '' : '\n' + this.formatAdditionalPaymentStringOldFormat());
-    },
-    getCalculationStringBeautifiedWrapper: function() {
-        if (this.newOutputFormat) {
-            return this.getCalculationStringBeautified();
-        } else {
-            return this.getCalculationStringBeautifiedOldFormat();
-        }
-    },
-    getCalculationStringBeautified: function() {
-        var INDENT = '    ';
-        var output = '';
-        var maxTextLength = 0;
-        var maxPriceLength = 0;
-        var expr = /^(.*) ([0-9\.]+ €)$/;
-
-        var lines = this.getCalculationString().split('\n');
-        var line = '';
-        var temp = '';
-
-        for(var n = 0; n < lines.length; n++) {
-            line = lines[n];
-
-            temp = line.match(expr);
-
-            if (temp !== null) {
-                var textLen = temp[1].length + 1;
-                var priceLen = temp[2].length;
-                if (textLen > maxTextLength) {
-                    maxTextLength = textLen;
-                }
-
-                if (priceLen > maxPriceLength) {
-                    maxPriceLength = priceLen;
-                }
-            }
-        }
-
-        for(var i = 0; i < lines.length; i++) {
-            line = lines[i];
-
-            temp = line.match(expr);
-
-            if (line === '-') {
-                output += INDENT;
-                for (var j = 0; j < maxTextLength + maxPriceLength; j++) {
-                    output += '-';
-                }
-                output += '\n';
-
-            } else if (temp === null) {
-
-                output += line + '\n';
-
-            } else {
-                var text  = temp[1];
-                var price = temp[2];
-
-                output += INDENT + text;
-                for (var k = 0; k < maxTextLength - text.length + maxPriceLength - price.length; k++) {
-                    output += ' ';
-                }
-                output += price + '\n';
-
-            }
-        }
-        // German numbers format 1000.00 -> 1000,00
-        var uiLanguage = document.getElementById('select_languages').value;
-        if (uiLanguage === 'Deutsch' || uiLanguage === 'Русский') {
-            return output.replace(/([0-9])\.([0-9])/g, "$1,$2");
-        } else {
-            // English currency format 1000.00 € -> € 1000.00
-            return output.replace(/([0-9]+\.[0-9]+) (.)/g, "$2 $1");
-        }
-    },
-    getCalculationStringBeautifiedOldFormat: function() {
-        var output = '';
-        var maxTextLength = 0;
-        var maxPriceLength = 0;
-        var expr = /^(.*) ([0-9\.]+ €)$/;
-
-        var lines = this.getCalculationStringOldFormat().split('\n');
-        var line = '';
-        var temp = '';
-
-        for(var n = 0; n < lines.length; n++) {
-            line = lines[n];
-
-            temp = line.match(expr);
-
-            if (temp !== null) {
-                var textLen = temp[1].length + 1;
-                var priceLen = temp[2].length;
-                if (textLen > maxTextLength) {
-                    maxTextLength = textLen;
-                }
-
-                if (priceLen > maxPriceLength) {
-                    maxPriceLength = priceLen;
-                }
-            }
-        }
-
-        for(var i = 0; i < lines.length; i++) {
-            line = lines[i];
-
-            temp = line.match(expr);
-
-            if (line === '-') {
-                for (var j = 0; j < 3; j++) {
-                    output += '-';
-                }
-                output += '\n';
-
-            } else if (temp === null) {
-
-                output += line + '\n';
-
-            } else {
-                var text  = temp[1];
-                var price = temp[2];
-
-                output += text;
-                for (var k = 0; k < maxTextLength - text.length + maxPriceLength - price.length; k++) {
-                    output += ' ';
-                }
-                output += price + '\n';
-
-            }
-        }
-
-        // German numbers format 1000.00 -> 1000,00
-        var uiLanguage = document.getElementById('select_languages').value;
-        if (uiLanguage === 'Deutsch' || uiLanguage === 'Русский') {
-            return output.replace(/([0-9])\.([0-9])/g, "$1,$2");
-        } else {
-            // English currency format 1000.00 € -> € 1000.00
-            return output.replace(/([0-9]+\.[0-9]+) (.)/g, "$2 $1");
-        }
-    },
-    /**
-     * Checks if VAT is checked and returns price with or without VAT.
-     * NOTE: prices are stored with German VAT, so it has to be removed
-     *
-     * @param {Number} price Price to process.
-     * @returns {Number} Price or price without VAT.
-     */
-    vatPrice: function(price) {
-        if (this.VAT_percentage !== 0) {
-            var cleanPrice = this.round(price / (100 + countryVATrate.Germany) * 100, 4);
-            return this.round(cleanPrice * (100 + this.VAT_percentage) / 100, 2);
-        } else {
-            return this.round(price / (100 + countryVATrate.Germany) * 100, 2);
-        }
-    },
-    /**
-     * Returns rounded value to a decimal place.
-     *
-     * Using just a Math.round() is a common solution but sometimes a decimal of 5
-     * is rounded down instead of up:
-     * Math.round(1.005*100)/100; // 1 instead of 1.01
-     *
-     * Better solution is using numbers represented in exponential notation.
-     *
-     * @param {Number} value Value to round.
-     * @param {Number} decimals Number of decimal places.
-     * @returns {Number} Rounded value.
-     */
-    round: function(value, decimals) {
-        return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
-    }
-};
-
-</script>
-
+  </form>
+  <script src="bower_components/jquery/dist/jquery.min.js" inline></script>
+  <script src="bower_components/foundation/js/foundation.min.js" inline></script>
+  <script>
+    $(document).foundation();
+  </script>
+  <script src="main.js" inline></script>
 </body>
 </html>
