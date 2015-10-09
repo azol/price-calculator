@@ -107,6 +107,15 @@ var servers = {
         },
         comment: 'SB servers: no additional hardware'
     },
+    SB0: {
+        // dummy server. Used to avoid flexi-pack gets calculated for swithes
+        monthly: 0, setup: 0, flexi_included: true,
+        name: {
+            English: 'Server SB',
+            Deutsch: 'Server SB',
+            Русский: 'Сервер SB'
+        },
+    },
     AX10: {
         monthly: 11.78, setup: 11.78,
         name: {
@@ -1495,8 +1504,8 @@ Workspace.prototype = {
 
 function Server(theModel) {
     var parsedSbNumber = parseInt(document.getElementById('sb_number').value);
-    this.sbServerMonthlyPrice = (isNaN(parsedSbNumber) ? "" : parsedSbNumber);
-    if (theModel === 'SB' && this.sbServerMonthlyPrice > 0) {
+    this.sbServerMonthlyPrice = (isNaN(parsedSbNumber) ? 0 : parsedSbNumber);
+    if (theModel === 'SB' && this.sbServerMonthlyPrice >= 0) {
         theModel = theModel + this.sbServerMonthlyPrice;
         if (!servers.hasOwnProperty(theModel)) {
             var newSbModel = copyObject(servers.SB);
