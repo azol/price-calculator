@@ -386,6 +386,61 @@ RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_fo
         },
         comment: 'CX60: 8 vCores 2 GHz/32 GB/600 GB SSD/6 snapshots/30 TB'
     },
+    BX10: {
+        monthly: 3.45, setup: 0,
+        name: {
+            English: 'Storage Box BX10',
+            Deutsch: 'Storage Box BX10',
+            Русский: 'Storage Box BX10'
+        },
+        comment: 'BX10: 100 GB/1 TB traffic'
+    },
+    BX20: {
+        monthly: 5.83, setup: 0,
+        name: {
+            English: 'Storage Box BX20',
+            Deutsch: 'Storage Box BX20',
+            Русский: 'Storage Box BX20'
+        },
+        comment: 'BX20: 500 GB/2 TB traffic'
+    },
+    BX30: {
+        monthly: 9.40, setup: 0,
+        name: {
+            English: 'Storage Box BX30',
+            Deutsch: 'Storage Box BX30',
+            Русский: 'Storage Box BX30'
+        },
+        comment: 'BX30: 1 TB/5 TB traffic'
+    },
+    BX40: {
+        monthly: 11.78, setup: 0,
+        name: {
+            English: 'Storage Box BX40',
+            Deutsch: 'Storage Box BX40',
+            Русский: 'Storage Box BX40'
+        },
+        comment: 'BX40: 2 TB/10 TB traffic'
+    },
+    BX50: {
+        monthly: 26.06, setup: 0,
+        name: {
+            English: 'Storage Box BX50',
+            Deutsch: 'Storage Box BX50',
+            Русский: 'Storage Box BX50'
+        },
+        comment: 'BX50: 5 TB/15 TB traffic'
+    },
+    BX60: {
+        monthly: 47.48, setup: 0,
+        name: {
+            English: 'Storage Box BX60',
+            Deutsch: 'Storage Box BX60',
+            Русский: 'Storage Box BX60'
+        },
+        comment: 'BX60: 10 TB/20 TB traffic'
+    },
+
     /*
      template: {
      monthly: 0, setup: 0,
