@@ -1770,7 +1770,7 @@ function ServerCommentItems() {
                 itemAlreadyAdded = true;
             }
         }
-        if (!itemAlreadyAdded) {
+        if (!itemAlreadyAdded && newItem.model.comment !== undefined) {
             var theNewItem = {
                 name: newItem.model.comment
             };
