@@ -845,6 +845,14 @@ var addons = {
             Русский: '500 ГБ места для резервных копий'
         }
     },
+    backup1000: {
+        monthly: 9.40,
+        name: {
+            English: '1,000 GB Backup Space',
+            Deutsch: '1.000 GB Backup Space',
+            Русский: '1.000 ГБ места для резервных копий'
+        }
+    },
     backup2000: {
         monthly: 11.78,
         name: {
