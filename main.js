@@ -830,7 +830,7 @@ var addons = {
         comment: 'KVM-module: only for PX servers'
     },
     backup100: {
-        monthly: 4.90, setup: 4.90,
+        monthly: 3.45,
         name: {
             English: '100 GB Backup Space',
             Deutsch: '100 GB Backup Space',
@@ -838,7 +838,7 @@ var addons = {
         }
     },
     backup500: {
-        monthly: 9.90, setup: 9.90,
+        monthly: 5.83,
         name: {
             English: '500 GB Backup Space',
             Deutsch: '500 GB Backup Space',
@@ -846,7 +846,7 @@ var addons = {
         }
     },
     backup2000: {
-        monthly: 19.90, setup: 19.90,
+        monthly: 11.78,
         name: {
             English: '2,000 GB Backup Space',
             Deutsch: '2.000 GB Backup Space',
@@ -854,7 +854,7 @@ var addons = {
         }
     },
     backup5000: {
-        monthly: 44.90, setup: 44.90,
+        monthly: 26.06,
         name: {
             English: '5,000 GB Backup Space',
             Deutsch: '5.000 GB Backup Space',
@@ -862,7 +862,7 @@ var addons = {
         }
     },
     backup10000: {
-        monthly: 79.90, setup: 79.90,
+        monthly: 47.48,
         name: {
             English: '10,000 GB Backup Space',
             Deutsch: '10.000 GB Backup Space',
