@@ -141,7 +141,7 @@ var servers = {
             Deutsch: 'Server AX30',
             Русский: 'Сервер AX30'
         },
-        comment: 'AX30: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/32 GB MicroSD + 240 GB SSD/10 TB'
+        comment: 'AX30: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/32 GB MicroSD + 3TB HDD/ 10 TB'
     },
     EX40: {
         monthly: 49, setup: 49,
