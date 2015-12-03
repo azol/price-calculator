@@ -170,6 +170,24 @@ var servers = {
         },
         comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB'
     },
+    EX41: {
+        monthly: 39, setup: 79,
+        name: {
+            English: 'Server EX41',
+            Deutsch: 'Server EX41',
+            Русский: 'Сервер EX41'
+        },
+        comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB'
+    },
+    EX41SSD: {
+        monthly: 39, setup: 79,
+        name: {
+            English: 'Server EX41-SSD',
+            Deutsch: 'Server EX41-SSD',
+            Русский: 'Сервер EX41-SSD'
+        },
+        comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
+    },
     EX60: {
         monthly: 59, setup: 0,
         name: {
