@@ -171,7 +171,7 @@ var servers = {
         comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB'
     },
     EX41: {
-        monthly: 39, setup: 79,
+        monthly: 46.41, setup: 94.01,
         name: {
             English: 'Server EX41',
             Deutsch: 'Server EX41',
@@ -180,7 +180,7 @@ var servers = {
         comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB'
     },
     EX41SSD: {
-        monthly: 39, setup: 79,
+        monthly: 46.41, setup: 94.01,
         name: {
             English: 'Server EX41-SSD',
             Deutsch: 'Server EX41-SSD',
