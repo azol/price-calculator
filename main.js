@@ -143,24 +143,6 @@ var servers = {
         },
         comment: 'AX30: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/32 GB MicroSD + 3TB HDD/ 10 TB'
     },
-    EX40: {
-        monthly: 49, setup: 49,
-        name: {
-            English: 'Server EX40',
-            Deutsch: 'Server EX40',
-            Русский: 'Сервер EX40'
-        },
-        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB'
-    },
-    EX40SSD: {
-        monthly: 59, setup: 59,
-        name: {
-            English: 'Server EX40-SSD',
-            Deutsch: 'Server EX40-SSD',
-            Русский: 'Сервер EX40-SSD'
-        },
-        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
-    },
     EX40Hybrid: {
         monthly: 69, setup: 69,
         name: {
@@ -188,14 +170,41 @@ var servers = {
         },
         comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
     },
-    EX60: {
-        monthly: 59, setup: 0,
+    EX41S: {
+        monthly: 46.41, setup: 94.01,
         name: {
-            English: 'Server EX60',
-            Deutsch: 'Server EX60',
-            Русский: 'Сервер EX60'
+            English: 'Server EX41S',
+            Deutsch: 'Server EX41S',
+            Русский: 'Сервер EX41S'
         },
-        comment: 'EX60: Intel® Core™ i7-920 Quad-Core/48 GB/2 x 2TB SATA Ent/30 TB'
+        comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB'
+    },
+    EX41SSSD: {
+        monthly: 46.41, setup: 94.01,
+        name: {
+            English: 'Server EX41S-SSD',
+            Deutsch: 'Server EX41S-SSD',
+            Русский: 'Сервер EX41S-SSD'
+        },
+        comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB'
+    },
+    EX51: {
+        monthly: 58.31, setup: 117.81,
+        name: {
+            English: 'Server EX51',
+            Deutsch: 'Server EX51',
+            Русский: 'Сервер EX51'
+        },
+        comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
+    },
+    EX51SSD: {
+        monthly: 58.31, setup: 117.81,
+        name: {
+            English: 'Server EX51-SSD',
+            Deutsch: 'Server EX51-SSD',
+            Русский: 'Сервер EX51-SSD'
+        },
+        comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
     },
     PX60: {
         monthly: 69, setup: 99,
