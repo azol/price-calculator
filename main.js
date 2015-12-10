@@ -669,9 +669,9 @@ var addons = {
     ssd240: {
         monthly: 11.9, flexi_required: true,
         name: {
-            English: '240/256 GB SSD Consumer',
-            Deutsch: '240/256 GB SSD Consumer',
-            Русский: '240/256 ГБ SSD Consumer'
+            English: '240/256 GB SSD',
+            Deutsch: '240/256 GB SSD',
+            Русский: '240/256 ГБ SSD'
         }
     },
     ssd240de: {
@@ -702,9 +702,9 @@ var addons = {
     ssd500: {
         monthly: 17.85, flexi_required: true,
         name: {
-            English: '500 GB SSD Consumer',
-            Deutsch: '500 GB SSD Consumer',
-            Русский: '500 ГБ SSD Consumer'
+            English: '500 GB SSD',
+            Deutsch: '500 GB SSD',
+            Русский: '500 ГБ SSD'
         }
     },
     ssd960de: {
