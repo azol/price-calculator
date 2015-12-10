@@ -667,11 +667,11 @@ var addons = {
         comment: 'Failover subnet /27: can`t be used with VMware ESXi'
     },
     ssd240: {
-        monthly: 19, flexi_required: true,
+        monthly: 11.9, flexi_required: true,
         name: {
-            English: '240 GB SSD',
-            Deutsch: '240 GB SSD',
-            Русский: '240 ГБ SSD'
+            English: '240/256 GB SSD Consumer',
+            Deutsch: '240/256 GB SSD Consumer',
+            Русский: '240/256 ГБ SSD Consumer'
         }
     },
     ssd240de: {
