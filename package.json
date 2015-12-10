@@ -9,7 +9,6 @@
     "gulp-inline-source": "^2.1.0",
     "gulp-jshint": "^1.11.2",
     "gulp-sass": "^2.0.4",
-    "gulp-ssh": "^0.5.3",
     "run-sequence": "^1.1.4"
   }
 }

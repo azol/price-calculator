@@ -6,29 +6,12 @@ var sass = require('gulp-sass');
 var inlinesource = require('gulp-inline-source');
 var jshint = require('gulp-jshint');
 var browserSync = require('browser-sync').create();
-var GulpSSH = require('gulp-ssh');
-var fs = require('fs');
 
 var config = {
   app: './',
   tmp: '.tmp/',
-  dist: 'dist/',
-  host: '192.168.7.2',
-  port: 22,
-  username: 'alex',
-  privateKey: fs.readFileSync('/home/alex/.ssh/id_rsa')
-
+  dist: 'dist/'
 };
-
-var gulpSSH = new GulpSSH({
-  ignoreErrors: false,
-  sshConfig: config
-})
-
-gulp.task('deploy', function () {
-  return gulp.src(config.dist + 'price_calculator.html')
-    .pipe(gulpSSH.sftp('write', '/var/www/html/price_calculator.html'))
-})
 
 gulp.task('build', function(callback) {
   runSequence('build-clean',
