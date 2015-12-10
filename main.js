@@ -675,7 +675,7 @@ var addons = {
         }
     },
     ssd240de: {
-        monthly: 25, flexi_required: true,
+        monthly: 14.28, flexi_required: true,
         name: {
             English: '240 GB SSD Datacenter Edition',
             Deutsch: '240 GB SSD Datacenter Edition',
@@ -692,7 +692,7 @@ var addons = {
         comment: '300 GB SSD DC: only for Dell DX150'
     },
     ssd480de: {
-        monthly: 39, flexi_required: true,
+        monthly: 24.99, flexi_required: true,
         name: {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
@@ -709,7 +709,7 @@ var addons = {
         comment: '600 GB SSD: only for Dell DX150'
     },
     ssd960de: {
-        monthly: 49, flexi_required: true,
+        monthly: 47.6, flexi_required: true,
         name: {
             English: '960 GB SSD Datacenter Edition',
             Deutsch: '960 GB SSD Datacenter Edition',
@@ -726,7 +726,7 @@ var addons = {
         comment: '600 GB SAS: is available only for DELL R730'
     },
     sata2000e: {
-        monthly: 15, flexi_required: true,
+        monthly: 11.9, flexi_required: true,
         name: {
             English: '2 TB enterprise SATA HDD',
             Deutsch: '2 TB Enterprise SATA HDD',
@@ -734,7 +734,7 @@ var addons = {
         },
     },
     sata3000e: {
-        monthly: 25, flexi_required: true,
+        monthly: 17.85, flexi_required: true,
         name: {
             English: '3 TB enterprise SATA HDD',
             Deutsch: '3 TB Enterprise SATA HDD',
@@ -742,7 +742,7 @@ var addons = {
         }
     },
     sata4000e: {
-        monthly: 30, flexi_required: true,
+        monthly: 21.42, flexi_required: true,
         name: {
             English: '4 TB enterprise SATA HDD',
             Deutsch: '4 TB Enterprise SATA HDD',
