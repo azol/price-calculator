@@ -699,14 +699,13 @@ var addons = {
             Русский: '480 ГБ SSD Datacenter Edition'
         }
     },
-    ssd600: {
-        monthly: 45, flexi_required: true,
+    ssd500: {
+        monthly: 17.85, flexi_required: true,
         name: {
-            English: '600 GB SSD',
-            Deutsch: '600 GB SSD',
-            Русский: '600 ГБ SSD'
-        },
-        comment: '600 GB SSD: only for Dell DX150'
+            English: '500 GB SSD Consumer',
+            Deutsch: '500 GB SSD Consumer',
+            Русский: '500 ГБ SSD Consumer'
+        }
     },
     ssd960de: {
         monthly: 47.6, flexi_required: true,
