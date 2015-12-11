@@ -1636,7 +1636,7 @@ GeneralItems.prototype = {
             var item = this.items[i];
             if (item.monthly !== 0) {
                 if (item.amount > 1) {
-                    str += '\n' + item.amount + 'x' +
+                    str += '\n' + item.amount + "x " +
                             item.name +
                             ' (' + vatPrice(item.monthly).toFixed(2) + ' €) ' +
                             vatPrice(item.amount * item.monthly).toFixed(2) + ' €';
@@ -1653,7 +1653,7 @@ GeneralItems.prototype = {
             var item = this.items[i];
             if (item.setup !== 0) {
                 if (item.amount > 1) {
-                    str += '\n' + item.amount + 'x' +
+                    str += '\n' + item.amount + "x " +
                             item.name +
                             ' (' + vatPrice(item.setup).toFixed(2) + ' €) ' +
                             vatPrice(item.amount * item.setup).toFixed(2) + ' €';
@@ -1861,7 +1861,7 @@ Server.prototype = {
         var text = '';
 
         if (this.amount > 1) {
-            text += this.amount + "x";
+            text += this.amount + "x ";
         }
 
         text += this.model_raw;
