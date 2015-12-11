@@ -116,33 +116,6 @@ var servers = {
             Русский: 'Сервер SB'
         },
     },
-    AX10: {
-        monthly: 11.78, setup: 11.78,
-        name: {
-            English: 'Server AX10',
-            Deutsch: 'Server AX10',
-            Русский: 'Сервер AX10'
-        },
-        comment: 'AX10: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/32 GB MicroSD/10 TB'
-    },
-    AX20: {
-        monthly: 17.73, setup: 17.73,
-        name: {
-            English: 'Server AX20',
-            Deutsch: 'Server AX20',
-            Русский: 'Сервер AX20'
-        },
-        comment: 'AX20: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/64 GB eMMC/10 TB'
-    },
-    AX30: {
-        monthly: 23.68, setup: 23.68,
-        name: {
-            English: 'Server AX30',
-            Deutsch: 'Server AX30',
-            Русский: 'Сервер AX30'
-        },
-        comment: 'AX30: Samsung Exynos-5422 Octa-Core/2 GB LPDDR3/32 GB MicroSD + 3TB HDD/ 10 TB'
-    },
     EX40Hybrid: {
         monthly: 69, setup: 69,
         name: {
