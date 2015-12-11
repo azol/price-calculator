@@ -1767,7 +1767,7 @@ function AddonItems() {
         for (var i = 0; i < this.items.length; i++) {
             var item = this.items[i];
             if (item !== undefined) {
-                if (item.name == newItem.name[workspace.language]) {
+                if (item.name_raw == newItem.name_raw) {
                     usedExistingItem = true;
                     item.amount += (newItem.amount !== undefined) ? newItem.amount : 1;
                     this.totalMonthly += item.monthly * ((newItem.amount !== undefined) ? newItem.amount : 1);
@@ -1777,6 +1777,7 @@ function AddonItems() {
         }
         if (!usedExistingItem) {
             var theNewItem = {
+                name_raw: newItem.name_raw,
                 name: newItem.name[workspace.language],
                 setup: (newItem.setup !== undefined) ? newItem.setup : 0,
                 monthly: (newItem.monthly !== undefined) ? newItem.monthly : 0,
