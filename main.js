@@ -682,6 +682,14 @@ var addons = {
             Русский: '240 ГБ SSD Datacenter Edition'
         }
     },
+    ssd240_dell_de: {
+        monthly: 19.04, flexi_required: true,
+        name: {
+            English: '240 GB SSD Datacenter Edition',
+            Deutsch: '240 GB SSD Datacenter Edition',
+            Русский: '240 ГБ SSD Datacenter Edition'
+        }
+    },
     ssd300de: {
         monthly: 29, flexi_required: true,
         name: {
@@ -699,6 +707,14 @@ var addons = {
             Русский: '480 ГБ SSD Datacenter Edition'
         }
     },
+    ssd480_dell_de: {
+        monthly: 29.75, flexi_required: true,
+        name: {
+            English: '480 GB SSD Datacenter Edition',
+            Deutsch: '480 GB SSD Datacenter Edition',
+            Русский: '480 ГБ SSD Datacenter Edition'
+        }
+    },
     ssd500: {
         monthly: 17.85, flexi_required: true,
         name: {
@@ -709,6 +725,14 @@ var addons = {
     },
     ssd960de: {
         monthly: 47.6, flexi_required: true,
+        name: {
+            English: '960 GB SSD Datacenter Edition',
+            Deutsch: '960 GB SSD Datacenter Edition',
+            Русский: '960 ГБ SSD Datacenter Edition'
+        }
+    },
+    ssd960_dell_de: {
+        monthly: 52.36, flexi_required: true,
         name: {
             English: '960 GB SSD Datacenter Edition',
             Deutsch: '960 GB SSD Datacenter Edition',
