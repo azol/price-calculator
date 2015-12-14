@@ -713,7 +713,7 @@ var addons = {
         }
     },
     sas600: {
-        monthly: 25, flexi_required: true,
+        monthly: 24.99, flexi_required: true,
         name: {
             English: '600 GB SAS',
             Deutsch: '600 GB SAS',
