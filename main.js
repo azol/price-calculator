@@ -522,30 +522,30 @@ var addons = {
     plesk_web_admin: {
         monthly: 2.49, pay_entire_month: "yes",
         name: {
-            English: "Plesk 12 Web ADMIN Edition",
-            Deutsch: "Plesk 12 Web ADMIN Edition",
-            Русский: "Plesk 12 издание Web ADMIN"},
+            English: "Plesk 12.5 Web ADMIN Edition",
+            Deutsch: "Plesk 12.5 Web ADMIN Edition",
+            Русский: "Plesk 12.5 издание Web ADMIN"},
     },
     plesk_web_app: {
         monthly: 3.49, pay_entire_month: "yes",
         name: {
-            English: "Plesk 12 Web APP Edition",
-            Deutsch: "Plesk 12 Web APP Edition",
-            Русский: "Plesk 12 издание Web APP"},
+            English: "Plesk 12.5 Web APP Edition",
+            Deutsch: "Plesk 12.5 Web APP Edition",
+            Русский: "Plesk 12.5 издание Web APP"},
     },
     plesk_web_pro: {
         monthly: 5.49, pay_entire_month: "yes",
         name: {
-            English: "Plesk 12 Web PRO Edition",
-            Deutsch: "Plesk 12 Web PRO Edition",
-            Русский: "Plesk 12 издание Web PRO"},
+            English: "Plesk 12.5 Web PRO Edition",
+            Deutsch: "Plesk 12.5 Web PRO Edition",
+            Русский: "Plesk 12.5 издание Web PRO"},
     },
     plesk_web_host: {
         monthly: 24.99, pay_entire_month: "yes",
         name: {
-            English: "Plesk 12 Web HOST Edition",
-            Deutsch: "Plesk 12 Web HOST Edition",
-            Русский: "Plesk 12 издание Web HOST"},
+            English: "Plesk 12.5 Web HOST Edition",
+            Deutsch: "Plesk 12.5 Web HOST Edition",
+            Русский: "Plesk 12.5 издание Web HOST"},
     },
     plesk_power_pack: {
         monthly: 9.9, pay_entire_month: true,
