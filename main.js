@@ -1453,10 +1453,10 @@ Workspace.prototype = {
         }
         // German numbers format 1000.00 -> 1000,00
         if (workspace.language === 'Deutsch' || workspace.language === 'Русский') {
-            return output.replace(/([0-9])\.([0-9])/g, "$1,$2");
+            return output.replace(/([0-9])\.([0-9]+ €)/g, "$1,$2");
         } else {
             // English currency format 1000.00 € -> € 1000.00
-            return output.replace(/([0-9]+\.[0-9]+) (.)/g, "$2 $1");
+            return output.replace(/([0-9]+\.[0-9]+) (€)/g, "$2 $1");
         }
     },
     getCalculationStringBeautifiedOldFormat: function() {
@@ -1517,10 +1517,10 @@ Workspace.prototype = {
 
         // German numbers format 1000.00 -> 1000,00
         if (workspace.language === 'Deutsch' || workspace.language === 'Русский') {
-            return output.replace(/([0-9])\.([0-9])/g, "$1,$2");
+            return output.replace(/([0-9])\.([0-9]+ €)/g, "$1,$2");
         } else {
             // English currency format 1000.00 € -> € 1000.00
-            return output.replace(/([0-9]+\.[0-9]+) (.)/g, "$2 $1");
+            return output.replace(/([0-9]+\.[0-9]+) (€)/g, "$2 $1");
         }
     },
     formatMonthlyPriceString: function() {
