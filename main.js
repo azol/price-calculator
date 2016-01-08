@@ -24,7 +24,7 @@ var countryVATrate = {
     "The Netherlands": 21,
     "Poland": 23,
     "Portugal": 23,
-    "Rumania": 24,
+    "Rumania": 20,
     "Slovakia": 20,
     "Slovenia": 22,
     "Spain": 21,
