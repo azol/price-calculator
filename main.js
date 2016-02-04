@@ -116,6 +116,24 @@ var servers = {
             Русский: 'Сервер SB'
         },
     },
+    EX40: {
+        monthly: 49, setup: 0,
+        name: {
+            English: 'Server EX40',
+            Deutsch: 'Server EX40',
+            Русский: 'Сервер EX40'
+        },
+        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB'
+    },
+    EX40SSD: {
+        monthly: 59, setup: 0,
+        name: {
+            English: 'Server EX40-SSD',
+            Deutsch: 'Server EX40-SSD',
+            Русский: 'Сервер EX40-SSD'
+        },
+        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
+    },
     EX40Hybrid: {
         monthly: 69, setup: 69,
         name: {
