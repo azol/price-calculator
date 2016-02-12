@@ -552,7 +552,7 @@ var addons = {
             Русский: "Plesk 12.5 издание Web APP"},
     },
     plesk_web_pro: {
-        monthly: 5.49, pay_entire_month: "yes",
+        monthly: 6.49, pay_entire_month: "yes",
         name: {
             English: "Plesk 12.5 Web PRO Edition",
             Deutsch: "Plesk 12.5 Web PRO Edition",
