@@ -318,7 +318,7 @@ R530 DX141: max 128 GB RAM DDR4 (2x 32GB)"
             Deutsch: 'DELL PowerEdge™ R730 DX151',
             Русский: 'DELL PowerEdge™ R730 DX151'
         },
-        comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.40GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/50 TB\n\
+        comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/50 TB\n\
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
 R730: Flexi-Pack is included\n\
@@ -333,7 +333,7 @@ R730 DX151: max 192 GB RAM DDR4 (4x 32GB)"
             Deutsch: 'DELL PowerEdge™ R730 DX291',
             Русский: 'DELL PowerEdge™ R730 DX291'
         },
-        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.40GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/100 TB\n\
+        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/100 TB\n\
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
 R730: Flexi-Pack is included\n\
