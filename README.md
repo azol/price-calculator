@@ -10,5 +10,6 @@ Assuming `gulp` and `bower` are installed globally:
     $ bower install
     $ gulp serve
     $ gulp
+    $ gulp deploy
 
 Resulting file is placed in `dist` directory.
