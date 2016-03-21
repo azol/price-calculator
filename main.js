@@ -197,41 +197,32 @@ var servers = {
         },
         comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
     },
-    PX60: {
-        monthly: 69, setup: 99,
+    PX61: {
+        monthly: 70.21, setup: 141.61,
         name: {
-            English: 'Server PX60',
-            Deutsch: 'Server PX60',
-            Русский: 'Сервер PX60'
+            English: 'Server PX61',
+            Deutsch: 'Server PX61',
+            Русский: 'Сервер PX61'
         },
-        comment: 'PX60: E3-1270 v3 Quad-Core Haswell/32 GB ECC/2 x 2TB SATA Ent/2nd NIC/30 TB'
+        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB'
     },
-    PX60SSD: {
-        monthly: 79, setup: 99,
+    PX61SSD: {
+        monthly: 70.21, setup: 141.61,
         name: {
-            English: 'Server PX60-SSD',
-            Deutsch: 'Server PX60-SSD',
-            Русский: 'Сервер PX60-SSD'
+            English: 'Server PX61-SSD',
+            Deutsch: 'Server PX61-SSD',
+            Русский: 'Сервер PX61-SSD'
         },
-        comment: 'PX60-SSD: E3-1270 v3 Quad-Core Haswell/32 GB ECC/2 x 240GB SSD DC/2nd NIC/30 TB'
+        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB'
     },
-    PX70: {
-        monthly: 79, setup: 99,
+    PX61NVMe: {
+        monthly: 70.21, setup: 141.61,
         name: {
-            English: 'Server PX70',
-            Deutsch: 'Server PX70',
-            Русский: 'Сервер PX70'
+            English: 'Server PX61-NVMe',
+            Deutsch: 'Server PX61-NVMe',
+            Русский: 'Сервер PX61-NVMe'
         },
-        comment: 'PX70: E3-1270 v3 Quad-Core Haswell/32 GB ECC/2 x 4TB SATA Ent/2nd NIC/30 TB'
-    },
-    PX70SSD: {
-        monthly: 99, setup: 99,
-        name: {
-            English: 'Server PX70-SSD',
-            Deutsch: 'Server PX70-SSD',
-            Русский: 'Сервер PX70-SSD'
-        },
-        comment: 'PX70-SSD: E3-1270 v3 Quad-Core Haswell/32 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
     },
     PX91: {
         monthly: 109, setup: 109,
