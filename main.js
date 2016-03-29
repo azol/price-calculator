@@ -721,6 +721,15 @@ var addons = {
             Русский: '960 ГБ SSD Datacenter Edition'
         }
     },
+    nvme512: {
+        monthly: 24.99, flexi_required: true,
+        name: {
+            English: '512 GB NVMe',
+            Deutsch: '512 GB NVMe',
+            Русский: '512 ГБ NVMe'
+        },
+        comment: "512 NVMe: only for EX-Skylike and PX (except PX90/120)"
+    },
     sas600: {
         monthly: 24.99, flexi_required: true,
         name: {
