@@ -876,7 +876,7 @@ var addons = {
             Deutsch: 'KVM-modul',
             Русский: 'KVM-модуль'
         },
-        comment: 'KVM-module: only for PX servers'
+        comment: 'KVM-module: only for PX91/121(-SSD) servers'
     },
     backup100: {
         monthly: 3.45,
