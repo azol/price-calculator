@@ -507,8 +507,7 @@ var addons = {
             Deutsch: '32 GB DDR4 ECC RAM',
             Русский: '32 ГБ DDR4 оперативной памяти ECC'
         },
-        comment: "32 GB DDR4 ECC RAM: is available only for DELL R730\n\
-32 GB DDR4 ECC RAM: maximum 8"
+        comment: "32 GB DDR4 ECC RAM: is available only for DELL R730 and R530"
     },
     win_std: {
         monthly: 25, pay_entire_month: true,
