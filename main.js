@@ -490,16 +490,6 @@ var addons = {
             Русский: '64 ГБ USB-накопитель'
         }
     },
-    ddr3ecc32gb: {
-        monthly: 29,
-        name: {
-            English: '32 GB DDR3 ECC RAM',
-            Deutsch: '32 GB DDR3 ECC RAM',
-            Русский: '32 ГБ DDR3 оперативной памяти ECC'
-        },
-        comment: "32 GB DDR3 ECC RAM: is available only for DELL R720\n\
-32 GB DDR4 ECC RAM: maximum 8"
-    },
     ddr4ecc32gb: {
         monthly: 39,
         name: {
