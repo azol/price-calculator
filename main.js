@@ -231,7 +231,7 @@ var servers = {
             Deutsch: 'Server PX91',
             Русский: 'Сервер PX91'
         },
-        comment: 'PX91: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/64 GB DDR4 ECC/2 x 2TB SATA Ent/2nd NIC/50 TB'
+        comment: 'PX91: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 2TB SATA Ent/2nd NIC/50 TB'
     },
     PX91SSD: {
         monthly: 109, setup: 109,
@@ -240,7 +240,7 @@ var servers = {
             Deutsch: 'Server PX91-SSD',
             Русский: 'Сервер PX91-SSD'
         },
-        comment: 'PX91-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/64 GB DDR4 ECC/2 x 240GB SSD DC/2nd NIC/50 TB'
+        comment: 'PX91-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 240GB SSD DC/2nd NIC/50 TB'
     },
     PX121: {
         monthly: 139, setup: 139,
@@ -249,7 +249,7 @@ var servers = {
             Deutsch: 'Server PX121',
             Русский: 'Сервер PX121'
         },
-        comment: 'PX121: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB ECC/2 x 4TB SATA Ent/2nd NIC/50 TB'
+        comment: 'PX121: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 4TB SATA Ent/2nd NIC/50 TB'
     },
     PX121SSD: {
         monthly: 139, setup: 139,
@@ -258,7 +258,7 @@ var servers = {
             Deutsch: 'Server PX121-SSD',
             Русский: 'Сервер PX121-SSD'
         },
-        comment: 'PX121-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB'
+        comment: 'PX121-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB'
     },
     SX61: {
         monthly: 82.11, setup: 82.11,
