@@ -204,7 +204,8 @@ var servers = {
             Deutsch: 'Server PX61',
             Русский: 'Сервер PX61'
         },
-        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB'
+        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB\n\
+PX61: no IP-KVM or IPMI'
     },
     PX61SSD: {
         monthly: 70.21, setup: 141.61,
@@ -213,7 +214,8 @@ var servers = {
             Deutsch: 'Server PX61-SSD',
             Русский: 'Сервер PX61-SSD'
         },
-        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB'
+        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB\n\
+PX61-SSD: no IP-KVM or IPMI'
     },
     PX61NVMe: {
         monthly: 70.21, setup: 141.61,
@@ -222,7 +224,8 @@ var servers = {
             Deutsch: 'Server PX61-NVMe',
             Русский: 'Сервер PX61-NVMe'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
+PX61-NVMe: no IP-KVM or IPMI'
     },
     PX91: {
         monthly: 109, setup: 109,
