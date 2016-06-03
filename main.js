@@ -643,9 +643,9 @@ var addons = {
     ssd240: {
         monthly: 11.9, flexi_required: true,
         name: {
-            English: '240/256 GB SSD',
-            Deutsch: '240/256 GB SSD',
-            Русский: '240/256 ГБ SSD'
+            English: '240/250 GB SSD',
+            Deutsch: '240/250 GB SSD',
+            Русский: '240/250 ГБ SSD'
         }
     },
     ssd240de: {
