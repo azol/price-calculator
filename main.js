@@ -12,7 +12,7 @@ var countryVATrate = {
     "Estonia": 20,
     "Finland": 24,
     "France": 20,
-    "Greece": 23,
+    "Greece": 24,
     "Germany": 19,
     "Hungary": 27,
     "Ireland": 23,
