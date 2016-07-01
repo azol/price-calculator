@@ -291,7 +291,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/15x 6TB SATA/100 TB included'
     },
     DX141: {
-        monthly: 149, setup: 199,
+        monthly: 129.71, setup: 129.71,
         flexi_included: true,
         name: {
             English: 'DELL PowerEdge™ R530 DX141',
@@ -305,7 +305,7 @@ R530: Flexi-Pack is included\n\
 R530 DX141: max 128 GB RAM DDR4 (2x 32GB)"
     },
     DX151: {
-        monthly: 189, setup: 199,
+        monthly: 153.51, setup: 153.51,
         flexi_included: true,
         name: {
             English: 'DELL PowerEdge™ R730 DX151',
