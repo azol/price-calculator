@@ -319,7 +319,7 @@ R730: Flexi-Pack is included\n\
 R730 DX151: max 192 GB RAM DDR4 (4x 32GB)"
     },
     DX291: {
-        monthly: 299, setup: 199,
+        monthly: 224.91, setup: 224.91,
         flexi_included: true,
         number_of_cpus: 2,
         name: {
@@ -327,7 +327,7 @@ R730 DX151: max 192 GB RAM DDR4 (4x 32GB)"
             Deutsch: 'DELL PowerEdge™ R730 DX291',
             Русский: 'DELL PowerEdge™ R730 DX291'
         },
-        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/100 TB\n\
+        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/50 TB\n\
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
 R730: Flexi-Pack is included\n\
