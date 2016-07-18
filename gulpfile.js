@@ -6,12 +6,12 @@ var sass = require('gulp-sass');
 var inlinesource = require('gulp-inline-source');
 var jshint = require('gulp-jshint');
 var browserSync = require('browser-sync').create();
-var rsync  = require('gulp-rsync');
-var config = require('../../price-calculator.config').rsync;
 
-config['app'] = './';
-config['tmp'] ='.tmp/';
-config['dist']= 'dist/';
+var config = {
+  app: './',
+  tmp: '.tmp/',
+  dist: 'dist/'
+};
 
 gulp.task('build', function(callback) {
   runSequence('build-clean',
@@ -56,9 +56,4 @@ gulp.task('serve', ['build-css'], function() {
   });
   gulp.watch(config.app + 'scss/*.scss', ['build-css']);
   gulp.watch(config.app + 'price_calculator.html').on('change', browserSync.reload);
-});
-
-gulp.task('deploy', function() {
-  return gulp.src(config.src)
-    .pipe(rsync(config.options));
 });
