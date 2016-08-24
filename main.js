@@ -107,13 +107,13 @@ var servers = {
         },
     },
     SB0: {
-        // dummy server. Used to avoid flexi-pack gets calculated for swithes
         monthly: 0, setup: 0, flexi_included: true,
         name: {
             English: 'Server SB',
             Deutsch: 'Server SB',
             Русский: 'Сервер SB'
         },
+        comment: 'Dummy: Flexi-Pack included'
     },
     EX40: {
         monthly: 49, setup: 0,
