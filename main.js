@@ -105,7 +105,6 @@ var servers = {
             Deutsch: 'Server SB',
             Русский: 'Сервер SB'
         },
-        comment: 'SB servers: no additional hardware'
     },
     SB0: {
         // dummy server. Used to avoid flexi-pack gets calculated for swithes
