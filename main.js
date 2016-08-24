@@ -1873,7 +1873,7 @@ Server.prototype = {
             text += this.amount + "x ";
         }
 
-        text += this.model_raw;
+        text += (this.model_raw === 'SB0') ? 'Dummy' : this.model_raw;
 
         if (this.serverAddons.length > 0) {
             text += "+" + this.serverAddons.length;
