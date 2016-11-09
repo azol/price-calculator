@@ -787,14 +787,6 @@ var addons = {
         },
         comment: 'Activate 2nd onboard Gbit NIC: available only for PX servers'
     },
-    install_via_lara: {
-        setup: 25,
-        name: {
-            English: 'Installation via LARA',
-            Deutsch: 'Installation via LARA',
-            Русский: 'Установка ОС через LARA'
-        }
-    },
     switch_5port: {
         setup: 29, flexi_required: true,
         name: {
