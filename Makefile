@@ -1,7 +1,7 @@
 all: build deploy
 
 deploy:
-	rsync dist/price_calculator.html 192.168.7.2:/var/www/html/
+	rsync dist/price_calculator.html /home/alex/dockers/price_calculator/
 
 build:
 	gulp
