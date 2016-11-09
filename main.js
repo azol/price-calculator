@@ -451,6 +451,33 @@ RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_fo
         },
         comment: 'BX60: 10 TB/20 TB traffic'
     },
+    COLOCATION_1_3: {
+        monthly: 119, setup: 119,
+        name: {
+            English: 'Colocation 1/3 Rack',
+            Deutsch: 'Colocation 1/3 Rack',
+            Русский: 'Colocation 1/3 Rack'
+        },
+        comment: '1/3 Rack: 14 units'
+    },
+    COLOCATION_BASIC: {
+        monthly: 199, setup: 199,
+        name: {
+            English: 'Colocation Rack Basic',
+            Deutsch: 'Colocation Rack Basic',
+            Русский: 'Colocation Rack Basic'
+        },
+        comment: 'Rack Basic: 42 units'
+    },
+    COLOCATION_ADVANCED: {
+        monthly: 299, setup: 299,
+        name: {
+            English: 'Colocation Rack Advanced',
+            Deutsch: 'Colocation Rack Advanced',
+            Русский: 'Colocation Rack Advanced'
+        },
+        comment: 'Rack Advanced: 47 units'
+    },
 
     /*
      template: {
