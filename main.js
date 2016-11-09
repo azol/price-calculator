@@ -943,6 +943,15 @@ var addons = {
             Deutsch: 'Flexi-Pack',
             Русский: 'Flexi-пакет'
         }
+    },
+    // parameters should be set from GUI
+    custom_addon: {
+        monthly: 0, setup: 0,
+        name: {
+            English: '',
+            Deutsch: '',
+            Русский: ''
+        }
     }
     /*
      template: {
@@ -1124,6 +1133,24 @@ Workspace.prototype = {
     setNumberOfServers: function(arg) {
         document.getElementById('number_of_servers').value = arg;
     },
+    setCustomAddonText: function(arg) {
+        document.getElementById('custom_addon').value = arg;
+    },
+    setCustomAddonSetupPrice: function(arg) {
+        document.getElementById('custom_addon_setup_price').value = arg;
+    },
+    setCustomAddonMonthlyPrice: function(arg) {
+        document.getElementById('custom_addon_monthly_price').value = arg;
+    },
+    getCustomAddonText: function() {
+        return document.getElementById('custom_addon').value;
+    },
+    getCustomAddonSetupPrice: function() {
+        return document.getElementById('custom_addon_setup_price').value;
+    },
+    getCustomAddonMonthlyPrice: function() {
+        return document.getElementById('custom_addon_monthly_price').value;
+    },
     clearAddons: function() {
         for (var addon in addons) {
             if (document.getElementById(addon)) {
@@ -1132,6 +1159,11 @@ Workspace.prototype = {
                 }
                 if (document.getElementById(addon).type === 'number') {
                     document.getElementById(addon).value = '';
+                }
+                if (document.getElementById(addon).type === 'text') {
+                    document.getElementById(addon).value = '';
+                    document.getElementById(addon+'_setup_price').value = '';
+                    document.getElementById(addon+'_monthly_price').value = '';
                 }
             }
         }
@@ -1196,6 +1228,9 @@ Workspace.prototype = {
         this.setServer("SB");
         this.setSbNumber('');
         this.setNumberOfServers("");
+        this.setCustomAddonText("");
+        this.setCustomAddonSetupPrice("");
+        this.setCustomAddonMonthlyPrice("");
 
         var el_num = this.Servers.length;
 
@@ -1283,6 +1318,11 @@ Workspace.prototype = {
                         }
                         if (document.getElementById(currentAddon).type === 'number') {
                             document.getElementById(currentAddon).value = this.Servers[this.currentServer].serverAddons[i].amount;
+                        }
+                        if (document.getElementById(currentAddon).type === 'text') {
+                            document.getElementById(currentAddon).value = this.Servers[this.currentServer].serverAddons[i].name.English;
+                            document.getElementById(currentAddon+"_setup_price").value = this.Servers[this.currentServer].serverAddons[i].setup;
+                            document.getElementById(currentAddon+"_monthly_price").value = this.Servers[this.currentServer].serverAddons[i].monthly;
                         }
                     } else {
                         var backup_expr = /^backup([0-9]+)$/;
@@ -1662,7 +1702,7 @@ GeneralItems.prototype = {
         var str = "";
         for (var i = 0; i < this.items.length; i++) {
             var item = this.items[i];
-            if (item.monthly !== 0) {
+            if (item.monthly > 0) {
                 if (item.amount > 1) {
                     str += '\n' + item.amount + "x " +
                             item.name +
@@ -1679,7 +1719,7 @@ GeneralItems.prototype = {
         var str = "";
         for (var i = 0; i < this.items.length; i++) {
             var item = this.items[i];
-            if (item.setup !== 0) {
+            if (item.setup > 0) {
                 if (item.amount > 1) {
                     str += '\n' + item.amount + "x " +
                             item.name +
@@ -1768,7 +1808,7 @@ function AddonItems() {
         for (var i = 0; i < this.items.length; i++) {
             var item = this.items[i];
             if (item !== undefined) {
-                if (item.name_raw == newItem.name_raw) {
+                if ((item.name_raw == newItem.name_raw) && item.name_raw !== 'custom_addon') {
                     usedExistingItem = true;
                     item.amount += (newItem.amount !== undefined) ? newItem.amount : 1;
                     this.totalMonthly += item.monthly * ((newItem.amount !== undefined) ? newItem.amount : 1);
@@ -1882,6 +1922,14 @@ Server.prototype = {
             addonObj.monthly = 0;
             addonObj.setup = 0;
         }
+        if (addon === 'custom_addon') {
+            var newAddonName = workspace.getCustomAddonText();
+            addonObj.name.English += newAddonName;
+            addonObj.name.Deutsch += newAddonName;
+            addonObj.name.Русский += newAddonName;
+            addonObj.setup = workspace.getCustomAddonSetupPrice();
+            addonObj.monthly = workspace.getCustomAddonMonthlyPrice();
+        }
         if (amount !== undefined) addonObj.amount = amount;
         this.serverAddons.push( addonObj );
     },
@@ -1921,6 +1969,9 @@ Server.prototype = {
         }
         if (document.getElementById('select_plesk').value !== 'no') {
             this.addAddon('plesk_' + document.getElementById('select_plesk').value);
+        }
+        if (document.getElementById('custom_addon').value !== '') {
+            this.addAddon(addon, 1);
         }
     },
 
