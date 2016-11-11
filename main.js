@@ -332,17 +332,6 @@ R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
 R730: Flexi-Pack is included\n\
 R730 DX291: max 384 GB RAM DDR4 (8x 32GB)"
     },
-    RACK20: {
-        monthly: 199, setup: 0,
-        name: {
-            English: 'Dedicated Rack for up to 20 dedicated servers',
-            Deutsch: 'Miet-Rack für bis zu 20 Root-Server',
-            Русский: 'Выделенная стойка для 20 root-серверов'
-        },
-        comment: "RACK20: 24 port Gbit switch included\n\
-RACK20: customer need at least 7 servers to order this rack\n\
-RACK20: http://wiki.hetzner.de/index.php/Spezielle_Angebote/en#Dedicated_Rack_for_up_to_20_dedicated_servers"
-    },
     CX10: {
         monthly: 4.64, setup: 0,
         name: {
