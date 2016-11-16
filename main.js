@@ -301,7 +301,7 @@ PX61-NVMe: no IP-KVM or IPMI'
 R530: have an iDRAC (IP-KVM)\n\
 R530: Drives are optional (2/4TB SATA, 600GB SAS, 240/480/960GB SSD DC)\n\
 R530: Flexi-Pack is included\n\
-R530 DX141: max 128 GB RAM DDR4 (2x 32GB)"
+R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
     },
     DX151: {
         monthly: 153.51, setup: 153.51,
@@ -315,7 +315,7 @@ R530 DX141: max 128 GB RAM DDR4 (2x 32GB)"
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
 R730: Flexi-Pack is included\n\
-R730 DX151: max 192 GB RAM DDR4 (4x 32GB)"
+R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
     },
     DX291: {
         monthly: 224.91, setup: 224.91,
@@ -330,7 +330,7 @@ R730 DX151: max 192 GB RAM DDR4 (4x 32GB)"
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4TB SATA, 600GB SAS and 240/480/960GB SSD)\n\
 R730: Flexi-Pack is included\n\
-R730 DX291: max 384 GB RAM DDR4 (8x 32GB)"
+R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
     },
     CX10: {
         monthly: 4.64, setup: 0,
