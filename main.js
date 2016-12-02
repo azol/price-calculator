@@ -287,7 +287,7 @@ PX61-NVMe: no IP-KVM or IPMI'
             Deutsch: 'Server SX291',
             Русский: 'Сервер SX291'
         },
-        comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/15x 6TB SATA/100 TB included'
+        comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included'
     },
     DX141: {
         monthly: 129.71, setup: 129.71,
