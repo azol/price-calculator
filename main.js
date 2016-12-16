@@ -721,6 +721,14 @@ var addons = {
             Русский: '960 ГБ SSD Datacenter Edition'
         }
     },
+    ssd1920_dell_de: {
+        monthly: 83.30, flexi_required: true,
+        name: {
+            English: '1.92 TB SSD Datacenter Edition',
+            Deutsch: '1,92 TB SSD Datacenter Edition',
+            Русский: '1,92 ТБ SSD Datacenter Edition'
+        }
+    },
     nvme512: {
         monthly: 24.99, flexi_required: true,
         name: {
