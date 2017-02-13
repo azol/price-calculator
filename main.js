@@ -25,6 +25,7 @@ var countryVATrate = {
     "Poland": 23,
     "Portugal": 23,
     "Romania": 20,
+    "Russia": 18,
     "Slovakia": 20,
     "Slovenia": 22,
     "Spain": 21,
@@ -61,12 +62,12 @@ var messages = {
     vat_is_included: {
         English: '(incl. VAT __VATRATE__%)',
         Deutsch: '(inkl. __VATRATE__ % USt)',
-        Русский: '(цены указаны с VAT __VATRATE__%)'
+        Русский: '(цены указаны с НДС __VATRATE__%)'
     },
     vat_isnt_included: {
         English: '(excl. VAT)',
         Deutsch: '(exkl. USt)',
-        Русский: '(цены указаны без VAT)'
+        Русский: '(цены указаны без НДС)'
     },
     first_invoice_addition: {
         English: 'Additional payment for product(s) charged for entire month:',
