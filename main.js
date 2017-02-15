@@ -204,7 +204,8 @@ var servers = {
             Deutsch: 'Server EX51-SSD-GPU',
             Русский: 'Сервер EX51-SSD-GPU'
         },
-        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
+        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
+EX51-SSD-GPU: no hardware addons'
     },
     PX61: {
         monthly: 70.21, setup: 141.61,
