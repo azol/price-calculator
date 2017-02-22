@@ -790,6 +790,14 @@ var addons = {
             Русский: '6 ТБ enterprise SATA HDD'
         }
     },
+    sata10000e: {
+        monthly: 38.08, flexi_required: true,
+        name: {
+            English: '10 TB enterprise SATA HDD',
+            Deutsch: '10 TB Enterprise SATA HDD',
+            Русский: '10 ТБ enterprise SATA HDD'
+        }
+    },
     gbit_nic: {
         setup: 29, flexi_required: true,
         name: {
