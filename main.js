@@ -823,6 +823,17 @@ var addons = {
         },
         comment: 'Activate 2nd onboard Gbit NIC: available only for PX servers'
     },
+    uplink_10_gbit: {
+        monthly: 46.41,
+        flexi_required: true,
+        name: {
+            English: '10G dedicated uplink',
+            Deutsch: '10G dedicated Uplink',
+            Русский: 'Выделенный 10G Uplink'
+        },
+        comment: '10G uplink: includes 10Gbit NIC. Available only for DX and PX91/121(-SSD).'
+    },
+
     switch_5port: {
         setup: 29, flexi_required: true,
         name: {
