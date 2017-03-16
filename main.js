@@ -310,7 +310,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         },
         comment: "DX141: Single Intel® Xeon® E5-1650 v3 @ 3.5GHz Hexa-Core/64GB DDR4 ECC/Dell PERC H330/iDRAC/50 TB\n\
 R530: have an iDRAC (IP-KVM)\n\
-R530: Drives are optional (2/4TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
+R530: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R530: Flexi-Pack is included\n\
 R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
     },
@@ -324,7 +324,7 @@ R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
         },
         comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/iDRAC/50 TB\n\
 R730: have an iDRAC (IP-KVM)\n\
-R730: Drives are optional (2/4TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
+R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R730: Flexi-Pack is included\n\
 R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
     },
@@ -339,7 +339,7 @@ R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
         },
         comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/iDRAC/50 TB\n\
 R730: have an iDRAC (IP-KVM)\n\
-R730: Drives are optional (2/4TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
+R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R730: Flexi-Pack is included\n\
 R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
     },
