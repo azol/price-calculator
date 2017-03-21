@@ -831,7 +831,7 @@ var addons = {
             Deutsch: '10G dedicated Uplink',
             Русский: 'Выделенный 10G Uplink'
         },
-        comment: '10G uplink: includes 10Gbit NIC. Available only for DX and PX91/121(-SSD).'
+        comment: '10G uplink: includes 10Gbit NIC. Available only for DX, PX and EX-Skylake.'
     },
 
     switch_5port: {
