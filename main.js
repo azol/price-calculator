@@ -207,6 +207,24 @@ var servers = {
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
 EX51-SSD-GPU: no hardware addons'
     },
+    AX50SSD: {
+        monthly: 58.31, setup: 117.81,
+        name: {
+            English: 'Server AX50-SSD',
+            Deutsch: 'Server AX50-SSD',
+            Русский: 'Сервер AX50-SSD'
+        },
+        comment: 'AX50-SSD: AMD Ryzen 5 1600X Hexa-Core/32 GB/2 x 500GB SSD/30 TB'
+    },
+    AX60SSD: {
+        monthly: 70.21, setup: 141.61,
+        name: {
+            English: 'Server AX60-SSD',
+            Deutsch: 'Server AX60-SSD',
+            Русский: 'Сервер AX60-SSD'
+        },
+        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
+    },
     PX61: {
         monthly: 70.21, setup: 141.61,
         name: {
