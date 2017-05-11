@@ -765,7 +765,16 @@ var addons = {
             Deutsch: '512 GB NVMe',
             Русский: '512 ГБ NVMe'
         },
-        comment: "512 NVMe: only for EX-Skylike and PX (except PX90/120)"
+        comment: "512 NVMe: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+    },
+    nvme960: {
+        monthly: 83.30, flexi_required: true,
+        name: {
+            English: '960 GB NVMe Datacenter Edition',
+            Deutsch: '960 GB NVMe Datacenter Edition',
+            Русский: '960 ГБ NVMe Datacenter Edition'
+        },
+        comment: "960 NVMe Datacenter Edition: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     sas600: {
         monthly: 24.99, flexi_required: true,
