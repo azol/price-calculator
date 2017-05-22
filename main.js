@@ -550,18 +550,18 @@ var addons = {
         monthly: 25, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2012 R2 Standard Edition',
-            Deutsch: 'Windows Server 2012 R2 Standard Edition',
-            Русский: 'Windows Server 2012 R2 Standard Edition'
+            English: 'Windows Server 2016 R2 Standard Edition',
+            Deutsch: 'Windows Server 2016 R2 Standard Edition',
+            Русский: 'Windows Server 2016 R2 Standard Edition'
         }
     },
     win_dc: {
         monthly: 155, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2012 R2 Datacenter Edition',
-            Deutsch: 'Windows Server 2012 R2 Datacenter Edition',
-            Русский: 'Windows Server 2012 R2 Datacenter Edition'
+            English: 'Windows Server 2016 R2 Datacenter Edition',
+            Deutsch: 'Windows Server 2016 R2 Datacenter Edition',
+            Русский: 'Windows Server 2016 R2 Datacenter Edition'
         }
     },
     plesk_web_admin: {
