@@ -893,6 +893,14 @@ var addons = {
             Русский: 'Коммутатор 10 Гбит 12 порта'
         }
     },
+    hdmi_emulator: {
+        setup: 22.61, flexi_required: false,
+        name: {
+            English: 'HDMI emulator',
+            Deutsch: 'HDMI Emulator',
+            Русский: 'HDMI эмулятор'
+        }
+    },
     rdp_license: {
         monthly: 7,
         name: {
