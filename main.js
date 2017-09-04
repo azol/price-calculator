@@ -135,7 +135,7 @@ var servers = {
         comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
     },
     EX40Hybrid: {
-        monthly: 69, setup: 0,
+        monthly: 69, setup: 69,
         name: {
             English: 'Server EX40-Hybrid',
             Deutsch: 'Server EX40-Hybrid',
@@ -144,7 +144,7 @@ var servers = {
         comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB'
     },
     EX41: {
-        monthly: 46.41, setup: 0,
+        monthly: 46.41, setup: 94.01,
         name: {
             English: 'Server EX41',
             Deutsch: 'Server EX41',
@@ -153,7 +153,7 @@ var servers = {
         comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB'
     },
     EX41SSD: {
-        monthly: 46.41, setup: 0,
+        monthly: 46.41, setup: 94.01,
         name: {
             English: 'Server EX41-SSD',
             Deutsch: 'Server EX41-SSD',
@@ -162,7 +162,7 @@ var servers = {
         comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
     },
     EX41S: {
-        monthly: 46.41, setup: 0,
+        monthly: 46.41, setup: 94.01,
         name: {
             English: 'Server EX41S',
             Deutsch: 'Server EX41S',
@@ -171,7 +171,7 @@ var servers = {
         comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB'
     },
     EX41SSSD: {
-        monthly: 46.41, setup: 0,
+        monthly: 46.41, setup: 94.01,
         name: {
             English: 'Server EX41S-SSD',
             Deutsch: 'Server EX41S-SSD',
@@ -180,7 +180,7 @@ var servers = {
         comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB'
     },
     EX51: {
-        monthly: 58.31, setup: 0,
+        monthly: 58.31, setup: 117.81,
         name: {
             English: 'Server EX51',
             Deutsch: 'Server EX51',
@@ -189,7 +189,7 @@ var servers = {
         comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
     },
     EX51SSD: {
-        monthly: 58.31, setup: 0,
+        monthly: 58.31, setup: 117.81,
         name: {
             English: 'Server EX51-SSD',
             Deutsch: 'Server EX51-SSD',
@@ -198,7 +198,7 @@ var servers = {
         comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
     },
     EX51SSDGPU: {
-        monthly: 117.81, setup: 0,
+        monthly: 117.81, setup: 117.81,
         name: {
             English: 'Server EX51-SSD-GPU',
             Deutsch: 'Server EX51-SSD-GPU',
@@ -208,7 +208,7 @@ var servers = {
 EX51-SSD-GPU: no hardware addons'
     },
     AX50SSD: {
-        monthly: 58.31, setup: 0,
+        monthly: 58.31, setup: 117.81,
         name: {
             English: 'Server AX50-SSD',
             Deutsch: 'Server AX50-SSD',
@@ -217,7 +217,7 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'AX50-SSD: AMD Ryzen 5 1600X Hexa-Core/32 GB/2 x 500GB SSD/30 TB'
     },
     AX60SSD: {
-        monthly: 70.21, setup: 0,
+        monthly: 70.21, setup: 141.61,
         name: {
             English: 'Server AX60-SSD',
             Deutsch: 'Server AX60-SSD',
