@@ -214,7 +214,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server AX50-SSD',
             Русский: 'Сервер AX50-SSD'
         },
-        comment: 'AX50-SSD: AMD Ryzen 5 1600X Hexa-Core/32 GB/2 x 500GB SSD/30 TB'
+        comment: 'AX50-SSD: AMD Ryzen 7 1700X Octa-Core/32 GB/2 x 500GB SSD/30 TB'
     },
     AX60SSD: {
         monthly: 70.21, setup: 141.61,
