@@ -216,6 +216,16 @@ EX51-SSD-GPU: no hardware addons'
         },
         comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
     },
+    AX160SSD: {
+        monthly: 201.11, setup: 201.11,
+        flexi_included: true,
+        name: {
+            English: 'Server AX160-SSD',
+            Deutsch: 'Server AX160-SSD',
+            Русский: 'Сервер AX160-SSD'
+        },
+        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
+    },
     PX61: {
         monthly: 70.21, setup: 141.61,
         name: {
