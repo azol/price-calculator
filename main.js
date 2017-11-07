@@ -603,7 +603,7 @@ var addons = {
         }
     },
     raid4: {
-        monthly: 15, flexi_required: true,
+        monthly: 24.99, flexi_required: true,
         name: {
             English: '4-Port Hardware RAID controller',
             Deutsch: '4-Port Hardware RAID-Controller',
@@ -679,7 +679,7 @@ var addons = {
         comment: 'Failover subnet /27: can`t be used with VMware ESXi'
     },
     ssd240: {
-        monthly: 11.9, flexi_required: true,
+        monthly: 7.74, flexi_required: true,
         name: {
             English: '240/250 GB SSD',
             Deutsch: '240/250 GB SSD',
@@ -687,7 +687,7 @@ var addons = {
         }
     },
     ssd240de: {
-        monthly: 14.28, flexi_required: true,
+        monthly: 12.5, flexi_required: true,
         name: {
             English: '240 GB SSD Datacenter Edition',
             Deutsch: '240 GB SSD Datacenter Edition',
@@ -695,24 +695,15 @@ var addons = {
         }
     },
     ssd240_dell_de: {
-        monthly: 19.04, flexi_required: true,
+        monthly: 16.07, flexi_required: true,
         name: {
             English: '240 GB SSD Datacenter Edition',
             Deutsch: '240 GB SSD Datacenter Edition',
             Русский: '240 ГБ SSD Datacenter Edition'
         }
     },
-    ssd300de: {
-        monthly: 29, flexi_required: true,
-        name: {
-            English: '300 GB SSD Datacenter Edition',
-            Deutsch: '300 GB SSD Datacenter Edition',
-            Русский: '300 ГБ SSD Datacenter Edition'
-        },
-        comment: '300 GB SSD DC: only for Dell DX150'
-    },
     ssd480de: {
-        monthly: 24.99, flexi_required: true,
+        monthly: 16.66, flexi_required: true,
         name: {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
@@ -728,7 +719,7 @@ var addons = {
         }
     },
     ssd500: {
-        monthly: 17.85, flexi_required: true,
+        monthly: 14.28, flexi_required: true,
         name: {
             English: '500 GB SSD',
             Deutsch: '500 GB SSD',
@@ -736,7 +727,7 @@ var addons = {
         }
     },
     ssd960de: {
-        monthly: 47.6, flexi_required: true,
+        monthly: 32.73, flexi_required: true,
         name: {
             English: '960 GB SSD Datacenter Edition',
             Deutsch: '960 GB SSD Datacenter Edition',
@@ -744,7 +735,7 @@ var addons = {
         }
     },
     ssd960_dell_de: {
-        monthly: 52.36, flexi_required: true,
+        monthly: 36.3, flexi_required: true,
         name: {
             English: '960 GB SSD Datacenter Edition',
             Deutsch: '960 GB SSD Datacenter Edition',
@@ -752,7 +743,7 @@ var addons = {
         }
     },
     ssd1920_de: {
-        monthly: 83.30, flexi_required: true,
+        monthly: 62.48, flexi_required: true,
         name: {
             English: '1.92 TB SSD Datacenter Edition',
             Deutsch: '1,92 TB SSD Datacenter Edition',
@@ -760,7 +751,7 @@ var addons = {
         }
     },
     nvme512: {
-        monthly: 24.99, flexi_required: true,
+        monthly: 21.42, flexi_required: true,
         name: {
             English: '512 GB NVMe',
             Deutsch: '512 GB NVMe',
@@ -769,7 +760,7 @@ var addons = {
         comment: "512 NVMe: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960: {
-        monthly: 83.30, flexi_required: true,
+        monthly: 54.74, flexi_required: true,
         name: {
             English: '960 GB NVMe Datacenter Edition',
             Deutsch: '960 GB NVMe Datacenter Edition',
@@ -778,7 +769,7 @@ var addons = {
         comment: "960 NVMe Datacenter Edition: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     sas600: {
-        monthly: 24.99, flexi_required: true,
+        monthly: 24.4, flexi_required: true,
         name: {
             English: '600 GB SAS',
             Deutsch: '600 GB SAS',
@@ -794,16 +785,8 @@ var addons = {
             Русский: '2 ТБ enterprise SATA HDD'
         },
     },
-    sata3000e: {
-        monthly: 17.85, flexi_required: true,
-        name: {
-            English: '3 TB enterprise SATA HDD',
-            Deutsch: '3 TB Enterprise SATA HDD',
-            Русский: '3 ТБ enterprise SATA HDD'
-        }
-    },
     sata4000e: {
-        monthly: 21.42, flexi_required: true,
+        monthly: 15.47, flexi_required: true,
         name: {
             English: '4 TB enterprise SATA HDD',
             Deutsch: '4 TB Enterprise SATA HDD',
@@ -811,7 +794,7 @@ var addons = {
         }
     },
     sata6000e: {
-        monthly: 29.75, flexi_required: true,
+        monthly: 20.83, flexi_required: true,
         name: {
             English: '6 TB enterprise SATA HDD',
             Deutsch: '6 TB Enterprise SATA HDD',
@@ -819,7 +802,7 @@ var addons = {
         }
     },
     sata10000e: {
-        monthly: 38.08, flexi_required: true,
+        monthly: 26.78, flexi_required: true,
         name: {
             English: '10 TB enterprise SATA HDD',
             Deutsch: '10 TB Enterprise SATA HDD',
