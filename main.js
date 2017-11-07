@@ -216,13 +216,13 @@ EX51-SSD-GPU: no hardware addons'
         },
         comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
     },
-    AX160SSD: {
+    AX160: {
         monthly: 201.11, setup: 201.11,
         flexi_included: true,
         name: {
-            English: 'Server AX160-SSD',
-            Deutsch: 'Server AX160-SSD',
-            Русский: 'Сервер AX160-SSD'
+            English: 'Server AX160',
+            Deutsch: 'Server AX160',
+            Русский: 'Сервер AX160'
         },
         comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
     },
@@ -514,14 +514,14 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
 };
 
 var addons = {
-    kvm: {
-        monthly: 19, setup: 149, flexi_required: true,
-        name: {
-            English: 'KVM-over-IP Remote Management',
-            Deutsch: 'KVM-over-IP Remote Management',
-            Русский: 'KVM-over-IP удалённое управление'
-        }
-    },
+    // kvm: {
+    //     monthly: 19, setup: 149, flexi_required: true,
+    //     name: {
+    //         English: 'KVM-over-IP Remote Management',
+    //         Deutsch: 'KVM-over-IP Remote Management',
+    //         Русский: 'KVM-over-IP удалённое управление'
+    //     }
+    // },
     usb16: {
         monthly: 1.79, flexi_required: true,
         name: {
@@ -711,7 +711,7 @@ var addons = {
         }
     },
     ssd480_dell_de: {
-        monthly: 29.75, flexi_required: true,
+        monthly: 20.23, flexi_required: true,
         name: {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
@@ -817,6 +817,14 @@ var addons = {
             Русский: 'Подключение LAN 1 ГБит'
         }
     },
+    ten_gbit_lan: {
+        monthly: 2.98,
+        name: {
+            English: '10 Gbit LAN connection ',
+            Deutsch: 'LAN Verbindung 10 Gbit',
+            Русский: 'Подключение LAN 10 ГБит'
+        }
+    },
     gbit_nic: {
         monthly: 2.38,
         name: {
@@ -834,7 +842,7 @@ var addons = {
         }
     },
     ten_gbit_nic_dell: {
-        monthly: 13.09, flexi_required: true,
+        monthly: 16.07, flexi_required: true,
         name: {
             English: 'Additional 10 Gbit NIC',
             Deutsch: 'Zusätzliche 10 Gbit-NIC',
@@ -935,7 +943,7 @@ var addons = {
         }
     },
     kvm_module: {
-        monthly: 3.57, setup: 19,
+        monthly: 3.57,
         name: {
             English: 'KVM-module',
             Deutsch: 'KVM-modul',
