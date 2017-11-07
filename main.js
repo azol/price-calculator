@@ -809,8 +809,16 @@ var addons = {
             Русский: '10 ТБ enterprise SATA HDD'
         }
     },
+    gbit_lan: {
+        monthly: 1.19,
+        name: {
+            English: '1 Gbit LAN connection ',
+            Deutsch: 'LAN Verbindung 1 Gbit',
+            Русский: 'Подключение LAN 1 ГБит'
+        }
+    },
     gbit_nic: {
-        monthly: 2.38, flexi_required: true,
+        monthly: 2.38,
         name: {
             English: 'Additional Gbit NIC',
             Deutsch: 'Zusätzliche Gbit-NIC',
