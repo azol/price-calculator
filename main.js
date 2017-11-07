@@ -846,7 +846,7 @@ var addons = {
     },
 
     switch_5port: {
-        setup: 29, flexi_required: true,
+        monthly: 2.38,
         name: {
             English: '5-Port Gbit switch',
             Deutsch: '5-Port Gbit-Switch',
@@ -854,7 +854,7 @@ var addons = {
         }
     },
     switch_8port: {
-        setup: 39, flexi_required: true,
+        monthly: 2.38,
         name: {
             English: '8-Port Gbit switch',
             Deutsch: '8-Port Gbit-Switch',
@@ -862,7 +862,7 @@ var addons = {
         }
     },
     switch_24port: {
-        setup: 269, flexi_required: true,
+        monthly: 15.47,
         name: {
             English: '24-Port Gbit switch',
             Deutsch: '24-Port Gbit-Switch',
@@ -870,7 +870,7 @@ var addons = {
         }
     },
     switch_12port_10gbit: {
-        setup: 999, flexi_required: true,
+        monthly: 51.17,
         name: {
             English: '12-Port 10 Gbit switch',
             Deutsch: '12-Port 10 Gbit-Switch',
@@ -878,7 +878,7 @@ var addons = {
         }
     },
     hdmi_emulator: {
-        setup: 22.61, flexi_required: false,
+        monthly: 1.19,
         name: {
             English: 'HDMI emulator',
             Deutsch: 'HDMI Emulator',
