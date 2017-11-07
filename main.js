@@ -523,7 +523,7 @@ var addons = {
         }
     },
     usb16: {
-        setup: 35,
+        monthly: 1.79, flexi_required: true,
         name: {
             English: '16 GB USB stick',
             Deutsch: '16 GB USB-Stick',
@@ -531,7 +531,7 @@ var addons = {
         }
     },
     usb64: {
-        setup: 79,
+        monthly: 4.17, flexi_required: true,
         name: {
             English: '64 GB USB stick',
             Deutsch: '64 GB USB-Stick',
