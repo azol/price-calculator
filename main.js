@@ -224,7 +224,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server AX160',
             Русский: 'Сервер AX160'
         },
-        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
+        comment: 'AX160: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB'
     },
     PX61: {
         monthly: 70.21, setup: 141.61,
