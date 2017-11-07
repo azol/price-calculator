@@ -810,7 +810,7 @@ var addons = {
         }
     },
     gbit_nic: {
-        setup: 29, flexi_required: true,
+        monthly: 2.38, flexi_required: true,
         name: {
             English: 'Additional Gbit NIC',
             Deutsch: 'Zusätzliche Gbit-NIC',
@@ -818,7 +818,7 @@ var addons = {
         }
     },
     ten_gbit_nic: {
-        monthly: 39, flexi_required: true,
+        monthly: 13.09, flexi_required: true,
         name: {
             English: 'Additional 10 Gbit NIC',
             Deutsch: 'Zusätzliche 10 Gbit-NIC',
