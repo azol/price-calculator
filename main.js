@@ -539,7 +539,7 @@ var addons = {
         }
     },
     ddr4ecc32gb: {
-        monthly: 39,
+        monthly: 26.18,
         name: {
             English: '32 GB DDR4 ECC RAM',
             Deutsch: '32 GB DDR4 ECC RAM',
