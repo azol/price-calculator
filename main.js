@@ -911,7 +911,7 @@ var addons = {
         comment: 'Reservation of rack space: no more then 50% of number of servers'
     },
     bbu: {
-        setup: 149,
+        monthly: 14.88,
         name: {
             English: 'BBU for RAID controller',
             Deutsch: 'BBU für RAID-Controller',
