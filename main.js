@@ -919,7 +919,7 @@ var addons = {
         }
     },
     kvm_module: {
-        monthly: 3.90, setup: 19,
+        monthly: 3.57, setup: 19,
         name: {
             English: 'KVM-module',
             Deutsch: 'KVM-modul',
