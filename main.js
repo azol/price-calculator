@@ -825,6 +825,14 @@ var addons = {
             Русский: 'Дополнительная 10 Гбит сетевая карта'
         }
     },
+    ten_gbit_nic_dell: {
+        monthly: 13.09, flexi_required: true,
+        name: {
+            English: 'Additional 10 Gbit NIC',
+            Deutsch: 'Zusätzliche 10 Gbit-NIC',
+            Русский: 'Дополнительная 10 Гбит сетевая карта'
+        }
+    },
     activate_second_onboard_nic: {
         flexi_required: true,
         name: {
