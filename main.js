@@ -565,6 +565,24 @@ var addons = {
             Русский: 'Windows Server 2016 Datacenter Edition'
         }
     },
+    win_std_epyc: {
+        monthly: 74.97, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2016 Standard',
+            Deutsch: 'Windows Server 2016 Standard',
+            Русский: 'Windows Server 2016 Standard'
+        }
+    },
+    win_dc_epyc: {
+        monthly: 465.29, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2016 Datacenter',
+            Deutsch: 'Windows Server 2016 Datacenter',
+            Русский: 'Windows Server 2016 Datacenter'
+        }
+    },
     plesk_web_admin: {
         monthly: 2.49, pay_entire_month: "yes",
         name: {
