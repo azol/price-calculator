@@ -852,7 +852,7 @@ var addons = {
         }
     },
     gbit_nic: {
-        monthly: 2.38,
+        monthly: 2.38, flexi_required: true,
         name: {
             English: 'Additional Gbit NIC',
             Deutsch: 'Zusätzliche Gbit-NIC',
