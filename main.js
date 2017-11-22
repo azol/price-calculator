@@ -580,7 +580,9 @@ EX51-SSD-GPU: no hardware addons',
             "select_backup",
             "custom_addon"
         ],
-        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB'
+        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB\n\
+AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
+AX160-NVMe: up to 12x RAM modules additional'
     },
     AX160SSD: {
         monthly: 213.01, setup: 213.01,
@@ -614,7 +616,9 @@ EX51-SSD-GPU: no hardware addons',
             "select_backup",
             "custom_addon"
         ],
-        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD/50 TB'
+        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD/50 TB\n\
+AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
+AX160-SSD: up to 12x RAM modules additional'
     },
     PX61: {
         monthly: 70.21, setup: 141.61,
