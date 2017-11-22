@@ -120,6 +120,8 @@ var servers = {
           "switch_8port",
           "switch_24port",
           "switch_12port_10gbit",
+          "switch_48port_10gbit",
+          "switch_96port_10gbit",
           "place_reservation",
           "traffic_overusage",
           "custom_addon"
@@ -515,13 +517,13 @@ EX51-SSD-GPU: no hardware addons',
             "custom_addon"
         ]
     },
-    AX160: {
+    AX160NVMe: {
         monthly: 201.11, setup: 201.11,
         flexi_included: true,
         name: {
-            English: 'Server AX160',
-            Deutsch: 'Server AX160',
-            Русский: 'Сервер AX160'
+            English: 'Server AX160-NVMe',
+            Deutsch: 'Server AX160-NVMe',
+            Русский: 'Сервер AX160-NVMe'
         },
         available_addons: [
             "usb16", "usb64",
@@ -547,7 +549,41 @@ EX51-SSD-GPU: no hardware addons',
             "select_backup",
             "custom_addon"
         ],
-        comment: 'AX160: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB'
+        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB'
+    },
+    AX160SSD: {
+        monthly: 213.01, setup: 213.01,
+        flexi_included: true,
+        name: {
+            English: 'Server AX160-SSD',
+            Deutsch: 'Server AX160-SSD',
+            Русский: 'Сервер AX160-SSD'
+        },
+        available_addons: [
+            "usb16", "usb64",
+            "ddr4ecc32gb",
+            "win_std_epyc", "win_dc_epyc",
+            "rdp_license",
+            "select_plesk", "plesk_power_pack",
+            "raid4",
+            "bbu",
+            "ip",
+            "subnet29", "subnet28", "subnet27",
+            "failover_ip",
+            "failover_subnet29", "failover_subnet28", "failover_subnet27",
+            "ssd240", "ssd240de",
+            "ssd480de",
+            "ssd500",
+            "ssd960de",
+            "ssd1920_de",
+            "nvme960",
+            "ten_gbit_lan",
+            "uplink_10_gbit",
+            "traffic_overusage",
+            "select_backup",
+            "custom_addon"
+        ],
+        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD/50 TB'
     },
     PX61: {
         monthly: 70.21, setup: 141.61,
@@ -1295,6 +1331,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
          "switch_8port",
          "switch_24port",
          "switch_12port_10gbit",
+         "switch_48port_10gbit",
+         "switch_96port_10gbit",
          "hdmi_emulator",
          "place_reservation",
          "traffic_overusage",
@@ -1716,7 +1754,23 @@ var addons = {
         name: {
             English: '12-Port 10 Gbit switch',
             Deutsch: '12-Port 10 Gbit-Switch',
-            Русский: 'Коммутатор 10 Гбит 12 порта'
+            Русский: 'Коммутатор 10 Гбит 12 портов'
+        }
+    },
+    switch_48port_10gbit: {
+        monthly: 391.51,
+        name: {
+            English: '48-Port 10 Gbit switch',
+            Deutsch: '48-Port 10 Gbit-Switch',
+            Русский: 'Коммутатор 10 Гбит 48 портов'
+        }
+    },
+    switch_96port_10gbit: {
+        monthly: 607.50,
+        name: {
+            English: '96-Port 10 Gbit switch',
+            Deutsch: '96-Port 10 Gbit-Switch',
+            Русский: 'Коммутатор 10 Гбит 96 портов'
         }
     },
     hdmi_emulator: {
