@@ -114,50 +114,7 @@ var servers = {
             Deutsch: 'Server SB',
             Русский: 'Сервер SB'
         },
-        comment: 'Dummy: Flexi-Pack included',
-        available_addons: [
-            "usb16", "usb64",
-            "ddr4ecc32gb",
-            "win_std", "win_dc",
-            "win_std_epyc", "win_dc_epyc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de", "ssd240_dell_de",
-            "ssd480de", "ssd480_dell_de",
-            "ssd500",
-            "ssd960de", "ssd960_dell_de",
-            "ssd1920_de", "ssd1920_dell_de",
-            "nvme512",
-            "nvme960",
-            "sas600",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "ten_gbit_nic_dell",
-            "activate_second_onboard_nic",
-            "uplink_10_gbit",
-            "switch_5port",
-            "switch_8port",
-            "switch_24port",
-            "switch_12port_10gbit",
-            "switch_48port_10gbit",
-            "switch_96port_10gbit",
-            "hdmi_emulator",
-            "place_reservation",
-            "traffic_overusage",
-            "kvm_module",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'Dummy: Flexi-Pack included'
     },
     EX40: {
         monthly: 49, setup: 0,
@@ -166,31 +123,7 @@ var servers = {
             Deutsch: 'Server EX40',
             Русский: 'Сервер EX40'
         },
-        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "gbit_nic",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB'
     },
     EX40SSD: {
         monthly: 59, setup: 0,
@@ -199,31 +132,7 @@ var servers = {
             Deutsch: 'Server EX40-SSD',
             Русский: 'Сервер EX40-SSD'
         },
-        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "gbit_nic",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
     },
     EX40Hybrid: {
         monthly: 69, setup: 69,
@@ -232,25 +141,7 @@ var servers = {
             Deutsch: 'Server EX40-Hybrid',
             Русский: 'Сервер EX40-Hybrid'
         },
-        comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "gbit_lan",
-            "gbit_nic",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB'
     },
     EX41: {
         monthly: 46.41, setup: 94.01,
@@ -259,36 +150,7 @@ var servers = {
             Deutsch: 'Server EX41',
             Русский: 'Сервер EX41'
         },
-        comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB'
     },
     EX41SSD: {
         monthly: 46.41, setup: 94.01,
@@ -297,36 +159,7 @@ var servers = {
             Deutsch: 'Server EX41-SSD',
             Русский: 'Сервер EX41-SSD'
         },
-        comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
     },
     EX41S: {
         monthly: 46.41, setup: 94.01,
@@ -335,36 +168,7 @@ var servers = {
             Deutsch: 'Server EX41S',
             Русский: 'Сервер EX41S'
         },
-        comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB'
     },
     EX41SSSD: {
         monthly: 46.41, setup: 94.01,
@@ -373,36 +177,7 @@ var servers = {
             Deutsch: 'Server EX41S-SSD',
             Русский: 'Сервер EX41S-SSD'
         },
-        comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB'
     },
     EX51: {
         monthly: 58.31, setup: 117.81,
@@ -411,36 +186,7 @@ var servers = {
             Deutsch: 'Server EX51',
             Русский: 'Сервер EX51'
         },
-        comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
     },
     EX51SSD: {
         monthly: 58.31, setup: 117.81,
@@ -449,36 +195,7 @@ var servers = {
             Deutsch: 'Server EX51-SSD',
             Русский: 'Сервер EX51-SSD'
         },
-        comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
     },
     EX51SSDGPU: {
         monthly: 117.81, setup: 117.81,
@@ -488,22 +205,7 @@ var servers = {
             Русский: 'Сервер EX51-SSD-GPU'
         },
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
-EX51-SSD-GPU: no hardware addons',
-        available_addons: [
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "hdmi_emulator",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
-
+EX51-SSD-GPU: no hardware addons'
     },
     AX60SSD: {
         monthly: 70.21, setup: 141.61,
@@ -512,35 +214,7 @@ EX51-SSD-GPU: no hardware addons',
             Deutsch: 'Server AX60-SSD',
             Русский: 'Сервер AX60-SSD'
         },
-        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
     },
     AX160NVMe: {
         monthly: 201.11, setup: 201.11,
@@ -550,30 +224,6 @@ EX51-SSD-GPU: no hardware addons',
             Deutsch: 'Server AX160-NVMe',
             Русский: 'Сервер AX160-NVMe'
         },
-        available_addons: [
-            "usb16", "usb64",
-            "ddr4ecc32gb",
-            "win_std_epyc", "win_dc_epyc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme960",
-            "ten_gbit_lan",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ],
         comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB\n\
 AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
 AX160-NVMe: up to 12x RAM modules additional'
@@ -586,30 +236,6 @@ AX160-NVMe: up to 12x RAM modules additional'
             Deutsch: 'Server AX160-SSD',
             Русский: 'Сервер AX160-SSD'
         },
-        available_addons: [
-            "usb16", "usb64",
-            "ddr4ecc32gb",
-            "win_std_epyc", "win_dc_epyc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme960",
-            "ten_gbit_lan",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ],
         comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD/50 TB\n\
 AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
 AX160-SSD: up to 12x RAM modules additional'
@@ -622,36 +248,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Русский: 'Сервер PX61'
         },
         comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB\n\
-PX61: no IP-KVM or IPMI',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+PX61: no IP-KVM or IPMI'
     },
     PX61SSD: {
         monthly: 70.21, setup: 141.61,
@@ -661,36 +258,7 @@ PX61: no IP-KVM or IPMI',
             Русский: 'Сервер PX61-SSD'
         },
         comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB\n\
-PX61-SSD: no IP-KVM or IPMI',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+PX61-SSD: no IP-KVM or IPMI'
     },
     PX61NVMe: {
         monthly: 70.21, setup: 141.61,
@@ -700,35 +268,7 @@ PX61-SSD: no IP-KVM or IPMI',
             Русский: 'Сервер PX61-NVMe'
         },
         comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
-PX61-NVMe: no IP-KVM or IPMI',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+PX61-NVMe: no IP-KVM or IPMI'
     },
     PX91: {
         monthly: 109, setup: 109,
@@ -737,38 +277,7 @@ PX61-NVMe: no IP-KVM or IPMI',
             Deutsch: 'Server PX91',
             Русский: 'Сервер PX91'
         },
-        comment: 'PX91: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 2TB SATA Ent/2nd NIC/50 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "activate_second_onboard_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "kvm_module",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'PX91: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 2TB SATA Ent/2nd NIC/50 TB'
     },
     PX91SSD: {
         monthly: 109, setup: 109,
@@ -777,38 +286,7 @@ PX61-NVMe: no IP-KVM or IPMI',
             Deutsch: 'Server PX91-SSD',
             Русский: 'Сервер PX91-SSD'
         },
-        comment: 'PX91-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 240GB SSD DC/2nd NIC/50 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "activate_second_onboard_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "kvm_module",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'PX91-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 240GB SSD DC/2nd NIC/50 TB'
     },
     PX121: {
         monthly: 139, setup: 139,
@@ -817,38 +295,7 @@ PX61-NVMe: no IP-KVM or IPMI',
             Deutsch: 'Server PX121',
             Русский: 'Сервер PX121'
         },
-        comment: 'PX121: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 4TB SATA Ent/2nd NIC/50 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "activate_second_onboard_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "kvm_module",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'PX121: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 4TB SATA Ent/2nd NIC/50 TB'
     },
     PX121SSD: {
         monthly: 139, setup: 139,
@@ -857,38 +304,7 @@ PX61-NVMe: no IP-KVM or IPMI',
             Deutsch: 'Server PX121-SSD',
             Русский: 'Сервер PX121-SSD'
         },
-        comment: 'PX121-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240", "ssd240de",
-            "ssd480de",
-            "ssd500",
-            "ssd960de",
-            "ssd1920_de",
-            "nvme512",
-            "nvme960",
-            "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "gbit_nic",
-            "ten_gbit_nic",
-            "activate_second_onboard_nic",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "kvm_module",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'PX121-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB'
     },
     SX61: {
         monthly: 82.11, setup: 82.11,
@@ -897,25 +313,7 @@ PX61-NVMe: no IP-KVM or IPMI',
             Deutsch: 'Server SX61',
             Русский: 'Сервер SX61'
         },
-        comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA/30 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "raid4",
-            "bbu",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "gbit_lan",
-            "gbit_nic",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA/30 TB'
     },
     SX131: {
         monthly: 201.11, setup: 201.11,
@@ -924,24 +322,7 @@ PX61-NVMe: no IP-KVM or IPMI',
             Deutsch: 'Server SX131',
             Русский: 'Сервер SX131'
         },
-        comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA/50 TB',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "gbit_lan",
-            "gbit_nic",
-            "traffic_overusage",
-            "kvm_module",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA/50 TB'
     },
     SX291: {
         monthly: 296.31, setup: 296.31,
@@ -950,24 +331,7 @@ PX61-NVMe: no IP-KVM or IPMI',
             Deutsch: 'Server SX291',
             Русский: 'Сервер SX291'
         },
-        comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included',
-        available_addons: [
-            "usb16", "usb64",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "gbit_lan",
-            "gbit_nic",
-            "traffic_overusage",
-            "kvm_module",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included'
     },
     DX141: {
         monthly: 129.71, setup: 129.71,
@@ -981,32 +345,7 @@ PX61-NVMe: no IP-KVM or IPMI',
 R530: have an iDRAC (IP-KVM)\n\
 R530: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R530: Flexi-Pack is included\n\
-R530 DX141: max 256 GB RAM DDR4 (6x 32GB)",
-        available_addons: [
-            "usb16", "usb64",
-            "ddr4ecc32gb",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240_dell_de",
-            "ssd480_dell_de",
-            "ssd960_dell_de",
-            "ssd1920_dell_de",
-            "sas600",
-            "sata2000e", "sata4000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "ten_gbit_nic_dell",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
     },
     DX151: {
         monthly: 153.51, setup: 153.51,
@@ -1020,32 +359,7 @@ R530 DX141: max 256 GB RAM DDR4 (6x 32GB)",
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R730: Flexi-Pack is included\n\
-R730 DX151: max 384 GB RAM DDR4 (10x 32GB)",
-        available_addons: [
-            "usb16", "usb64",
-            "ddr4ecc32gb",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240_dell_de",
-            "ssd480_dell_de",
-            "ssd960_dell_de",
-            "ssd1920_dell_de",
-            "sas600",
-            "sata2000e", "sata4000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "ten_gbit_nic_dell",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
     },
     DX291: {
         monthly: 224.91, setup: 224.91,
@@ -1060,32 +374,7 @@ R730 DX151: max 384 GB RAM DDR4 (10x 32GB)",
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R730: Flexi-Pack is included\n\
-R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
-        available_addons: [
-            "usb16", "usb64",
-            "ddr4ecc32gb",
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "ssd240_dell_de",
-            "ssd480_dell_de",
-            "ssd960_dell_de",
-            "ssd1920_dell_de",
-            "sas600",
-            "sata2000e", "sata4000e", "sata10000e",
-            "gbit_lan",
-            "ten_gbit_lan",
-            "ten_gbit_nic_dell",
-            "uplink_10_gbit",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
     },
     CX10: {
         monthly: 4.64, setup: 0,
@@ -1094,14 +383,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Server CX10',
             Русский: 'Сервер CX10'
         },
-        comment: 'CX10: 1 vCore 2 GHz/1 GB/25 GB SSD/1 snapshot/2 TB',
-        available_addons: [
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'CX10: 1 vCore 2 GHz/1 GB/25 GB SSD/1 snapshot/2 TB'
     },
     CX20: {
         monthly: 8.21, setup: 0,
@@ -1110,16 +392,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Server CX20',
             Русский: 'Сервер CX20'
         },
-        comment: 'CX20: 2 vCores 2 GHz/2 GB/50 GB SSD/2 snapshots/5 TB',
-        available_addons: [
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'CX20: 2 vCores 2 GHz/2 GB/50 GB SSD/2 snapshots/5 TB'
     },
     CX30: {
         monthly: 14.16, setup: 0,
@@ -1128,16 +401,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Server CX30',
             Русский: 'Сервер CX30'
         },
-        comment: 'CX30: 2 vCores 2 GHz/4 GB/100 GB SSD/3 snapshots/8 TB',
-        available_addons: [
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'CX30: 2 vCores 2 GHz/4 GB/100 GB SSD/3 snapshots/8 TB'
     },
     CX40: {
         monthly: 23.68, setup: 0,
@@ -1146,16 +410,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Server CX40',
             Русский: 'Сервер CX40'
         },
-        comment: 'CX40: 2 vCores 2 GHz/8 GB/200 GB SSD/4 snapshots/10 TB',
-        available_addons: [
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'CX40: 2 vCores 2 GHz/8 GB/200 GB SSD/4 snapshots/10 TB'
     },
     CX50: {
         monthly: 35.58, setup: 0,
@@ -1164,16 +419,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Server CX50',
             Русский: 'Сервер CX50'
         },
-        comment: 'CX50: 4 vCores 2 GHz/16 GB/400 GB SSD/5 snapshots/20 TB',
-        available_addons: [
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'CX50: 4 vCores 2 GHz/16 GB/400 GB SSD/5 snapshots/20 TB'
     },
     CX60: {
         monthly: 59.38, setup: 0,
@@ -1182,16 +428,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Server CX60',
             Русский: 'Сервер CX60'
         },
-        comment: 'CX60: 8 vCores 2 GHz/32 GB/600 GB SSD/6 snapshots/30 TB',
-        available_addons: [
-            "win_std", "win_dc",
-            "rdp_license",
-            "select_plesk", "plesk_power_pack",
-            "cpanel",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'CX60: 8 vCores 2 GHz/32 GB/600 GB SSD/6 snapshots/30 TB'
     },
     BX10: {
         monthly: 3.45, setup: 0,
@@ -1200,8 +437,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Storage Box BX10',
             Русский: 'Storage Box BX10'
         },
-        comment: 'BX10: 100 GB/1 TB traffic',
-        available_addons: []
+        comment: 'BX10: 100 GB/1 TB traffic'
     },
     BX20: {
         monthly: 5.83, setup: 0,
@@ -1210,8 +446,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Storage Box BX20',
             Русский: 'Storage Box BX20'
         },
-        comment: 'BX20: 500 GB/2 TB traffic',
-        available_addons: []
+        comment: 'BX20: 500 GB/2 TB traffic'
     },
     BX30: {
         monthly: 9.40, setup: 0,
@@ -1220,8 +455,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Storage Box BX30',
             Русский: 'Storage Box BX30'
         },
-        comment: 'BX30: 1 TB/5 TB traffic',
-        available_addons: []
+        comment: 'BX30: 1 TB/5 TB traffic'
     },
     BX40: {
         monthly: 11.78, setup: 0,
@@ -1230,8 +464,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Storage Box BX40',
             Русский: 'Storage Box BX40'
         },
-        comment: 'BX40: 2 TB/10 TB traffic',
-        available_addons: []
+        comment: 'BX40: 2 TB/10 TB traffic'
     },
     BX50: {
         monthly: 26.06, setup: 0,
@@ -1240,8 +473,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Storage Box BX50',
             Русский: 'Storage Box BX50'
         },
-        comment: 'BX50: 5 TB/15 TB traffic',
-        available_addons: []
+        comment: 'BX50: 5 TB/15 TB traffic'
     },
     BX60: {
         monthly: 47.48, setup: 0,
@@ -1250,8 +482,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Storage Box BX60',
             Русский: 'Storage Box BX60'
         },
-        comment: 'BX60: 10 TB/20 TB traffic',
-        available_addons: []
+        comment: 'BX60: 10 TB/20 TB traffic'
     },
     COLOCATION_1_3: {
         monthly: 119, setup: 119,
@@ -1260,16 +491,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Colocation 1/3 Rack',
             Русский: 'Colocation 1/3 Rack'
         },
-        comment: '1/3 Rack: 14 units',
-        available_addons: [
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: '1/3 Rack: 14 units'
     },
     COLOCATION_BASIC: {
         monthly: 199, setup: 199,
@@ -1278,16 +500,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Colocation Rack Basic',
             Русский: 'Colocation Rack Basic'
         },
-        comment: 'Rack Basic: 42 units',
-        available_addons: [
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'Rack Basic: 42 units'
     },
     COLOCATION_ADVANCED: {
         monthly: 299, setup: 299,
@@ -1296,73 +509,21 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)",
             Deutsch: 'Colocation Rack Advanced',
             Русский: 'Colocation Rack Advanced'
         },
-        comment: 'Rack Advanced: 47 units',
-        available_addons: [
-            "ip",
-            "subnet29", "subnet28", "subnet27",
-            "failover_ip",
-            "failover_subnet29", "failover_subnet28", "failover_subnet27",
-            "traffic_overusage",
-            "select_backup",
-            "custom_addon"
-        ]
+        comment: 'Rack Advanced: 47 units'
     },
 
     /*
      template: {
-     monthly: 0, setup: 0,
-     flexi_included: true,
-     number_of_cpus: 2,
-     name: {
-     English: '',
-     Deutsch: '',
-     Русский: ''
-     },
-     comment: 'line1\nline2',
-     },
-     available_addons: [
-         "usb16", "usb64",
-         "ddr4ecc32gb",
-         "win_std", "win_dc",
-         "win_std_epyc", "win_dc_epyc",
-         "rdp_license",
-         "select_plesk", "plesk_power_pack",
-         "cpanel",
-         "raid4",
-         "bbu",
-         "ip",
-         "subnet29", "subnet28", "subnet27",
-         "failover_ip",
-         "failover_subnet29", "failover_subnet28", "failover_subnet27",
-         "ssd240", "ssd240de", "ssd240_dell_de",
-         "ssd480de", "ssd480_dell_de",
-         "ssd500",
-         "ssd960de", "ssd960_dell_de",
-         "ssd1920_de", "ssd1920_dell_de",
-         "nvme512",
-         "nvme960",
-         "sas600",
-         "sata2000e", "sata4000e", "sata6000e", "sata10000e",
-         "gbit_lan",
-         "ten_gbit_lan",
-         "gbit_nic",
-         "ten_gbit_nic",
-         "ten_gbit_nic_dell",
-         "activate_second_onboard_nic",
-         "uplink_10_gbit",
-         "switch_5port",
-         "switch_8port",
-         "switch_24port",
-         "switch_12port_10gbit",
-         "switch_48port_10gbit",
-         "switch_96port_10gbit",
-         "hdmi_emulator",
-         "place_reservation",
-         "traffic_overusage",
-         "kvm_module",
-         "select_backup",
-         "custom_addon"
-     ]
+       monthly: 0, setup: 0,
+       flexi_included: true,
+       number_of_cpus: 2,
+       name: {
+         English: '',
+         Deutsch: '',
+         Русский: ''
+       },
+       comment: 'line1\nline2'
+     }
      */
 };
 
@@ -1998,7 +1159,6 @@ function onChange() {
     workspace.Servers[workspace.currentServer] = new Server(selectedServerModel);
 
     updateTabName();
-    updateForm();
     updateCalculationResult();
 }
 
@@ -2015,51 +1175,6 @@ function round(value, decimals) {
     return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 }
 
-/**
- * Show/hide form elements based on 'available_addons' of selected server
- */
- function updateForm() {
-  var selectedServer = workspace.Servers[workspace.currentServer];
-
-  Object.keys(addons).forEach(function (addon) {
-    switch(addon) {
-      case 'plesk_web_admin':
-        addon = 'select_plesk';
-        break;
-      case 'plesk_web_pro':
-        addon = 'select_plesk';
-        break;
-      case 'plesk_web_host':
-        addon = 'select_plesk';
-        break;
-      case 'backup100':
-        addon = 'select_backup';
-        break;
-      case 'backup500':
-        addon = 'select_backup';
-        break;
-      case 'backup1000':
-        addon = 'select_backup';
-        break;
-      case 'backup2000':
-        addon = 'select_backup';
-        break;
-      case 'backup5000':
-        addon = 'select_backup';
-        break;
-      case 'backup10000':
-        addon = 'select_backup';
-        break;
-      case 'flexi_pack':
-        return false;
-    }
-
-    // console.log(addon + " => " + selectedServer.model.available_addons.includes(addon));
-    document.getElementById(addon).disabled=!selectedServer.model.available_addons.includes(addon);
-
-  });
-
-}
 
 function updateTabName() {
     document.getElementById("panel-" + workspace.currentServer).textContent = workspace.Servers[workspace.currentServer].tabName();
