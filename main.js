@@ -932,6 +932,14 @@ var addons = {
             Русский: 'Коммутатор Гбит 24 порта'
         }
     },
+    switch_48port: {
+        monthly: 157.68,
+        name: {
+            English: '48-Port Gbit switch',
+            Deutsch: '48-Port Gbit-Switch',
+            Русский: 'Коммутатор Гбит 48 портов'
+        }
+    },
     switch_12port_10gbit: {
         monthly: 51.17,
         name: {
