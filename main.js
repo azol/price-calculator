@@ -597,28 +597,28 @@ var addons = {
         }
     },
     plesk_web_admin: {
-        monthly: 2.49, pay_entire_month: "yes",
+        monthly: 5.00, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web ADMIN Edition",
             Deutsch: "Plesk Onyx Web ADMIN Edition",
             Русский: "Plesk Onyx издание Web ADMIN"},
     },
     plesk_web_pro: {
-        monthly: 6.49, pay_entire_month: "yes",
+        monthly: 7.38, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web PRO Edition",
             Deutsch: "Plesk Onyx Web PRO Edition",
             Русский: "Plesk Onyx издание Web PRO"},
     },
     plesk_web_host: {
-        monthly: 24.99, pay_entire_month: "yes",
+        monthly: 22.25, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web HOST Edition",
             Deutsch: "Plesk Onyx Web HOST Edition",
             Русский: "Plesk Onyx издание Web HOST"},
     },
     plesk_power_pack: {
-        monthly: 9.9, pay_entire_month: true,
+        monthly: 9.28, pay_entire_month: true,
         name: {
             English: 'Plesk Power Pack',
             Deutsch: 'Plesk Power Pack',
