@@ -537,7 +537,7 @@ var addons = {
     //     }
     // },
     usb16: {
-        monthly: 1.79, flexi_required: true,
+        monthly: 1.50, flexi_required: true,
         name: {
             English: '16 GB USB stick',
             Deutsch: '16 GB USB-Stick',
@@ -545,7 +545,7 @@ var addons = {
         }
     },
     usb64: {
-        monthly: 4.17, flexi_required: true,
+        monthly: 3.50, flexi_required: true,
         name: {
             English: '64 GB USB stick',
             Deutsch: '64 GB USB-Stick',
@@ -553,7 +553,7 @@ var addons = {
         }
     },
     ddr4ecc32gb: {
-        monthly: 26.18,
+        monthly: 22.00,
         name: {
             English: '32 GB DDR4 ECC RAM',
             Deutsch: '32 GB DDR4 ECC RAM',
@@ -561,7 +561,7 @@ var addons = {
         }
     },
     win_std: {
-        monthly: 25, pay_entire_month: true,
+        monthly: 21.0084, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Standard Edition',
@@ -570,7 +570,7 @@ var addons = {
         }
     },
     win_dc: {
-        monthly: 155, pay_entire_month: true,
+        monthly: 130.2521, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Datacenter Edition',
@@ -579,7 +579,7 @@ var addons = {
         }
     },
     win_std_epyc: {
-        monthly: 74.97, pay_entire_month: true,
+        monthly: 63.00, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Standard',
@@ -588,7 +588,7 @@ var addons = {
         }
     },
     win_dc_epyc: {
-        monthly: 465.29, pay_entire_month: true,
+        monthly: 391.00, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Datacenter',
@@ -597,28 +597,28 @@ var addons = {
         }
     },
     plesk_web_admin: {
-        monthly: 5.00, pay_entire_month: "yes",
+        monthly: 4.20, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web ADMIN Edition",
             Deutsch: "Plesk Onyx Web ADMIN Edition",
             Русский: "Plesk Onyx издание Web ADMIN"},
     },
     plesk_web_pro: {
-        monthly: 7.38, pay_entire_month: "yes",
+        monthly: 6.20, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web PRO Edition",
             Deutsch: "Plesk Onyx Web PRO Edition",
             Русский: "Plesk Onyx издание Web PRO"},
     },
     plesk_web_host: {
-        monthly: 22.25, pay_entire_month: "yes",
+        monthly: 18.70, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web HOST Edition",
             Deutsch: "Plesk Onyx Web HOST Edition",
             Русский: "Plesk Onyx издание Web HOST"},
     },
     plesk_power_pack: {
-        monthly: 9.28, pay_entire_month: true,
+        monthly: 7.80, pay_entire_month: true,
         name: {
             English: 'Plesk Power Pack',
             Deutsch: 'Plesk Power Pack',
@@ -626,7 +626,7 @@ var addons = {
         }
     },
     cpanel: {
-        monthly: 29.9, pay_entire_month: true,
+        monthly: 25.1261, pay_entire_month: true,
         name: {
             English: 'cPanel',
             Deutsch: 'cPanel',
@@ -634,7 +634,7 @@ var addons = {
         }
     },
     raid4: {
-        monthly: 24.99, flexi_required: true,
+        monthly: 21, flexi_required: true,
         name: {
             English: '4-Port Hardware RAID controller',
             Deutsch: '4-Port Hardware RAID-Controller',
@@ -642,7 +642,7 @@ var addons = {
         }
     },
     ip: {
-        monthly: 1,
+        monthly: 0.8403,
         name: {
             English: 'Additional IP address',
             Deutsch: 'Zusätzliche IP-Adresse',
@@ -650,7 +650,7 @@ var addons = {
         }
     },
     subnet29: {
-        monthly: 8, flexi_required: false,
+        monthly: 6.7227, flexi_required: false,
         name: {
             English: 'Subnet /29',
             Deutsch: 'Subnet /29',
@@ -658,7 +658,7 @@ var addons = {
         }
     },
     subnet28: {
-        monthly: 16, flexi_required: false,
+        monthly: 13.4454, flexi_required: false,
         name: {
             English: 'Subnet /28',
             Deutsch: 'Subnet /28',
@@ -666,7 +666,7 @@ var addons = {
         }
     },
     subnet27: {
-        monthly: 32, flexi_required: false,
+        monthly: 26.8908, flexi_required: false,
         name: {
             English: 'Subnet /27',
             Deutsch: 'Subnet /27',
@@ -674,7 +674,7 @@ var addons = {
         }
     },
     failover_ip: {
-        monthly: 5, flexi_required: false,
+        monthly: 4.2017, flexi_required: false,
         name: {
             English: 'Failover IP',
             Deutsch: 'Failover-IP',
@@ -683,7 +683,7 @@ var addons = {
         comment: 'Failover IP: can`t be used with VMware ESXi'
     },
     failover_subnet29: {
-        monthly: 18, flexi_required: false,
+        monthly: 15.1261, flexi_required: false,
         name: {
             English: 'Failover subnet /29',
             Deutsch: 'Failover Subnet /29',
@@ -692,7 +692,7 @@ var addons = {
         comment: 'Failover subnet /29: can`t be used with VMware ESXi'
     },
     failover_subnet28: {
-        monthly: 26, flexi_required: false,
+        monthly: 21.8487, flexi_required: false,
         name: {
             English: 'Failover subnet /28',
             Deutsch: 'Failover Subnet /28',
@@ -701,7 +701,7 @@ var addons = {
         comment: 'Failover subnet /28: can`t be used with VMware ESXi'
     },
     failover_subnet27: {
-        monthly: 42, flexi_required: false,
+        monthly: 35.2941, flexi_required: false,
         name: {
             English: 'Failover subnet /27',
             Deutsch: 'Failover Subnet /27',
@@ -710,7 +710,7 @@ var addons = {
         comment: 'Failover subnet /27: can`t be used with VMware ESXi'
     },
     ssd240: {
-        monthly: 7.74, flexi_required: true,
+        monthly: 6.50, flexi_required: true,
         name: {
             English: '240/250 GB SSD',
             Deutsch: '240/250 GB SSD',
@@ -718,7 +718,7 @@ var addons = {
         }
     },
     ssd240de: {
-        monthly: 12.5, flexi_required: true,
+        monthly: 10.50, flexi_required: true,
         name: {
             English: '240 GB SSD Datacenter Edition',
             Deutsch: '240 GB SSD Datacenter Edition',
@@ -726,7 +726,7 @@ var addons = {
         }
     },
     ssd240_dell_de: {
-        monthly: 16.07, flexi_required: true,
+        monthly: 13.50, flexi_required: true,
         name: {
             English: '240 GB SSD Datacenter Edition',
             Deutsch: '240 GB SSD Datacenter Edition',
@@ -734,7 +734,7 @@ var addons = {
         }
     },
     ssd480de: {
-        monthly: 16.66, flexi_required: true,
+        monthly: 14.00, flexi_required: true,
         name: {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
@@ -742,7 +742,7 @@ var addons = {
         }
     },
     ssd480_dell_de: {
-        monthly: 20.23, flexi_required: true,
+        monthly: 17.00, flexi_required: true,
         name: {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
@@ -750,7 +750,7 @@ var addons = {
         }
     },
     ssd500: {
-        monthly: 14.28, flexi_required: true,
+        monthly: 12.00, flexi_required: true,
         name: {
             English: '500 GB SSD',
             Deutsch: '500 GB SSD',
@@ -758,7 +758,7 @@ var addons = {
         }
     },
     ssd960de: {
-        monthly: 32.73, flexi_required: true,
+        monthly: 27.50, flexi_required: true,
         name: {
             English: '960 GB SSD Datacenter Edition',
             Deutsch: '960 GB SSD Datacenter Edition',
@@ -766,7 +766,7 @@ var addons = {
         }
     },
     ssd960_dell_de: {
-        monthly: 36.3, flexi_required: true,
+        monthly: 30.50, flexi_required: true,
         name: {
             English: '960 GB SSD Datacenter Edition',
             Deutsch: '960 GB SSD Datacenter Edition',
@@ -774,7 +774,7 @@ var addons = {
         }
     },
     ssd1920_de: {
-        monthly: 62.48, flexi_required: true,
+        monthly: 52.50, flexi_required: true,
         name: {
             English: '1.92 TB SSD Datacenter Edition',
             Deutsch: '1,92 TB SSD Datacenter Edition',
@@ -782,7 +782,7 @@ var addons = {
         }
     },
     ssd1920_dell_de: {
-        monthly: 66.05, flexi_required: true,
+        monthly: 55.50, flexi_required: true,
         name: {
             English: '1.92 TB SSD Datacenter Edition',
             Deutsch: '1,92 TB SSD Datacenter Edition',
@@ -790,7 +790,7 @@ var addons = {
         }
     },
     nvme512: {
-        monthly: 21.42, flexi_required: true,
+        monthly: 18.00, flexi_required: true,
         name: {
             English: '512 GB NVMe',
             Deutsch: '512 GB NVMe',
@@ -799,7 +799,7 @@ var addons = {
         comment: "512 NVMe: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960: {
-        monthly: 54.74, flexi_required: true,
+        monthly: 46.00, flexi_required: true,
         name: {
             English: '960 GB NVMe Datacenter Edition',
             Deutsch: '960 GB NVMe Datacenter Edition',
@@ -808,7 +808,7 @@ var addons = {
         comment: "960 NVMe Datacenter Edition: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     sas600: {
-        monthly: 24.4, flexi_required: true,
+        monthly: 20.50, flexi_required: true,
         name: {
             English: '600 GB SAS',
             Deutsch: '600 GB SAS',
@@ -817,7 +817,7 @@ var addons = {
         comment: '600 GB SAS: is available only for DELL R730'
     },
     sata2000e: {
-        monthly: 11.9, flexi_required: true,
+        monthly: 10.00, flexi_required: true,
         name: {
             English: '2 TB enterprise SATA HDD',
             Deutsch: '2 TB Enterprise SATA HDD',
@@ -825,7 +825,7 @@ var addons = {
         },
     },
     sata4000e: {
-        monthly: 15.47, flexi_required: true,
+        monthly: 13.00, flexi_required: true,
         name: {
             English: '4 TB enterprise SATA HDD',
             Deutsch: '4 TB Enterprise SATA HDD',
@@ -833,7 +833,7 @@ var addons = {
         }
     },
     sata6000e: {
-        monthly: 20.83, flexi_required: true,
+        monthly: 17.50, flexi_required: true,
         name: {
             English: '6 TB enterprise SATA HDD',
             Deutsch: '6 TB Enterprise SATA HDD',
@@ -841,7 +841,7 @@ var addons = {
         }
     },
     sata10000e: {
-        monthly: 26.78, flexi_required: true,
+        monthly: 22.50, flexi_required: true,
         name: {
             English: '10 TB enterprise SATA HDD',
             Deutsch: '10 TB Enterprise SATA HDD',
@@ -849,7 +849,7 @@ var addons = {
         }
     },
     gbit_lan: {
-        monthly: 1.19,
+        monthly: 1.00,
         name: {
             English: '1 Gbit LAN connection ',
             Deutsch: 'LAN Verbindung 1 Gbit',
@@ -857,7 +857,7 @@ var addons = {
         }
     },
     ten_gbit_lan: {
-        monthly: 2.98,
+        monthly: 2.50,
         name: {
             English: '10 Gbit LAN connection ',
             Deutsch: 'LAN Verbindung 10 Gbit',
@@ -865,7 +865,7 @@ var addons = {
         }
     },
     gbit_nic: {
-        monthly: 2.38, flexi_required: true,
+        monthly: 2.00, flexi_required: true,
         name: {
             English: 'Additional Gbit NIC',
             Deutsch: 'Zusätzliche Gbit-NIC',
@@ -873,7 +873,7 @@ var addons = {
         }
     },
     ten_gbit_nic: {
-        monthly: 13.09, flexi_required: true,
+        monthly: 11.00, flexi_required: true,
         name: {
             English: 'Additional 10 Gbit NIC',
             Deutsch: 'Zusätzliche 10 Gbit-NIC',
@@ -881,7 +881,7 @@ var addons = {
         }
     },
     ten_gbit_nic_dell: {
-        monthly: 16.07, flexi_required: true,
+        monthly: 13.50, flexi_required: true,
         name: {
             English: 'Additional 10 Gbit NIC',
             Deutsch: 'Zusätzliche 10 Gbit-NIC',
@@ -898,7 +898,7 @@ var addons = {
         comment: 'Activate 2nd onboard Gbit NIC: available only for PX servers'
     },
     uplink_10_gbit: {
-        monthly: 46.41,
+        monthly: 39.00,
         flexi_required: true,
         name: {
             English: '10G dedicated uplink',
@@ -909,7 +909,7 @@ var addons = {
     },
 
     switch_5port: {
-        monthly: 2.38,
+        monthly: 2.00,
         name: {
             English: '5-Port Gbit switch',
             Deutsch: '5-Port Gbit-Switch',
@@ -917,7 +917,7 @@ var addons = {
         }
     },
     switch_8port: {
-        monthly: 2.38,
+        monthly: 2.00,
         name: {
             English: '8-Port Gbit switch',
             Deutsch: '8-Port Gbit-Switch',
@@ -925,7 +925,7 @@ var addons = {
         }
     },
     switch_24port: {
-        monthly: 15.47,
+        monthly: 13.00,
         name: {
             English: '24-Port Gbit switch',
             Deutsch: '24-Port Gbit-Switch',
@@ -933,7 +933,7 @@ var addons = {
         }
     },
     switch_48port: {
-        monthly: 157.68,
+        monthly: 132.50,
         name: {
             English: '48-Port Gbit switch',
             Deutsch: '48-Port Gbit-Switch',
@@ -941,7 +941,7 @@ var addons = {
         }
     },
     switch_12port_10gbit: {
-        monthly: 51.17,
+        monthly: 43.00,
         name: {
             English: '12-Port 10 Gbit switch',
             Deutsch: '12-Port 10 Gbit-Switch',
@@ -949,7 +949,7 @@ var addons = {
         }
     },
     switch_48port_10gbit: {
-        monthly: 391.51,
+        monthly: 329.00,
         name: {
             English: '48-Port 10 Gbit switch',
             Deutsch: '48-Port 10 Gbit-Switch',
@@ -957,7 +957,7 @@ var addons = {
         }
     },
     switch_96port_10gbit: {
-        monthly: 607.50,
+        monthly: 510.50,
         name: {
             English: '96-Port 10 Gbit switch',
             Deutsch: '96-Port 10 Gbit-Switch',
@@ -965,7 +965,7 @@ var addons = {
         }
     },
     hdmi_emulator: {
-        monthly: 1.19,
+        monthly: 1.00,
         name: {
             English: 'HDMI emulator',
             Deutsch: 'HDMI Emulator',
@@ -973,7 +973,7 @@ var addons = {
         }
     },
     rdp_license: {
-        monthly: 7,
+        monthly: 5.8824,
         name: {
             English: 'Additional RDP licence for Windows',
             Deutsch: 'Zusätzliche RDP-Lizenz für Windows',
@@ -981,7 +981,7 @@ var addons = {
         }
     },
     place_reservation: {
-        monthly: 9.90,
+        monthly: 8.3193,
         name: {
             English: 'Reservation of rack space',
             Deutsch: 'Platz Reservierung: Mietserver Stellfläche',
@@ -990,7 +990,7 @@ var addons = {
         comment: 'Reservation of rack space: no more then 50% of number of servers'
     },
     bbu: {
-        monthly: 14.88,
+        monthly: 12.50,
         name: {
             English: 'BBU for RAID controller',
             Deutsch: 'BBU für RAID-Controller',
@@ -998,7 +998,7 @@ var addons = {
         }
     },
     traffic_overusage: {
-        monthly: 1.39,
+        monthly: 1.1681,
         name: {
             English: 'Traffic overusage (TB)',
             Deutsch: 'Traffic overusage (TB)',
@@ -1006,7 +1006,7 @@ var addons = {
         }
     },
     kvm_module: {
-        monthly: 3.57,
+        monthly: 3.00,
         name: {
             English: 'KVM-module',
             Deutsch: 'KVM-modul',
@@ -1015,7 +1015,7 @@ var addons = {
         comment: 'KVM-module: only for PX91/121(-SSD) servers'
     },
     backup100: {
-        monthly: 3.45,
+        monthly: 2.90,
         name: {
             English: '100 GB Backup Space',
             Deutsch: '100 GB Backup Space',
@@ -1023,7 +1023,7 @@ var addons = {
         }
     },
     backup500: {
-        monthly: 5.83,
+        monthly: 4.90,
         name: {
             English: '500 GB Backup Space',
             Deutsch: '500 GB Backup Space',
@@ -1031,7 +1031,7 @@ var addons = {
         }
     },
     backup1000: {
-        monthly: 9.40,
+        monthly: 7.90,
         name: {
             English: '1,000 GB Backup Space',
             Deutsch: '1.000 GB Backup Space',
@@ -1039,7 +1039,7 @@ var addons = {
         }
     },
     backup2000: {
-        monthly: 11.78,
+        monthly: 9.90,
         name: {
             English: '2,000 GB Backup Space',
             Deutsch: '2.000 GB Backup Space',
@@ -1047,7 +1047,7 @@ var addons = {
         }
     },
     backup5000: {
-        monthly: 26.06,
+        monthly: 21.90,
         name: {
             English: '5,000 GB Backup Space',
             Deutsch: '5.000 GB Backup Space',
@@ -1055,7 +1055,7 @@ var addons = {
         }
     },
     backup10000: {
-        monthly: 47.48,
+        monthly: 39.90,
         name: {
             English: '10,000 GB Backup Space',
             Deutsch: '10.000 GB Backup Space',
@@ -1063,7 +1063,7 @@ var addons = {
         }
     },
     flexi_pack: {
-        monthly: 15, setup: 0,
+        monthly: 12.6050, setup: 0,
         name: {
             English: 'Flexi-Pack',
             Deutsch: 'Flexi-Pack',
@@ -1170,12 +1170,19 @@ function onChange() {
     updateCalculationResult();
 }
 
+/**
+ * Checks if VAT is checked and returns price with or without VAT.
+ * NOTE: prices are stored without any VAT (Netto)
+ *
+ * @param {Number} price Price to process.
+ * @returns {Number} Price or price without VAT.
+ */
 function vatPrice(price) {
     if (workspace.vatPercentage !== 0) {
         var cleanPrice = round(price / (100 + countryVATrate.Germany) * 100, 4);
-        return round(cleanPrice * (100 + workspace.vatPercentage) / 100, 2);
+        return round(price * (100 + workspace.vatPercentage) / 100, 2);
     } else {
-        return round(price / (100 + countryVATrate.Germany) * 100, 2);
+        return round(price, 2);
     }
 }
 
