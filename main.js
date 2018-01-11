@@ -2110,34 +2110,13 @@ Server.prototype = {
     getSetupPrice: function() {
         return ('setup' in this.model) ? this.model.setup : 0;
     },
-    getSetupPriceVatted: function() {
-        return this.vatPrice( this.getSetupPrice() );
-    },
     getMonthlyPrice: function() {
         return ('monthly' in this.model) ? this.model.monthly : 0;
-    },
-    getMonthlyPriceVatted: function() {
-        return this.vatPrice( this.getMonthlyPrice() );
     },
     getName: function() {
         return this.model.name[workspace.language];
     },
 
-    /**
-     * Checks if VAT is checked and returns price with or without VAT.
-     * NOTE: prices are stored with German VAT, so it has to be removed
-     *
-     * @param {Number} price Price to process.
-     * @returns {Number} Price or price without VAT.
-     */
-    vatPrice: function(price) {
-        if (workspace.vatPercentage !== 0) {
-            var cleanPrice = this.round(price / (100 + countryVATrate.Germany) * 100, 4);
-            return this.round(cleanPrice * (100 + workspace.vatPercentage) / 100, 2);
-        } else {
-            return this.round(price / (100 + countryVATrate.Germany) * 100, 2);
-        }
-    },
     /**
      * Returns rounded value to a decimal place.
      *
