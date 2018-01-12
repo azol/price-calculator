@@ -117,7 +117,7 @@ var servers = {
         comment: 'Dummy: Flexi-Pack included'
     },
     EX40: {
-        monthly: 49, setup: 0,
+        monthly: 41.1765, setup: 0,
         name: {
             English: 'Server EX40',
             Deutsch: 'Server EX40',
@@ -126,7 +126,7 @@ var servers = {
         comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB'
     },
     EX40SSD: {
-        monthly: 59, setup: 0,
+        monthly: 49.5798, setup: 0,
         name: {
             English: 'Server EX40-SSD',
             Deutsch: 'Server EX40-SSD',
@@ -135,7 +135,7 @@ var servers = {
         comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
     },
     EX40Hybrid: {
-        monthly: 69, setup: 69,
+        monthly: 57.9832, setup: 57.9832,
         name: {
             English: 'Server EX40-Hybrid',
             Deutsch: 'Server EX40-Hybrid',
@@ -144,7 +144,7 @@ var servers = {
         comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB'
     },
     EX41: {
-        monthly: 46.41, setup: 94.01,
+        monthly: 39, setup: 79,
         name: {
             English: 'Server EX41',
             Deutsch: 'Server EX41',
@@ -153,7 +153,7 @@ var servers = {
         comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB'
     },
     EX41SSD: {
-        monthly: 46.41, setup: 94.01,
+        monthly: 39, setup: 79,
         name: {
             English: 'Server EX41-SSD',
             Deutsch: 'Server EX41-SSD',
@@ -162,7 +162,7 @@ var servers = {
         comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
     },
     EX41S: {
-        monthly: 46.41, setup: 94.01,
+        monthly: 39, setup: 79,
         name: {
             English: 'Server EX41S',
             Deutsch: 'Server EX41S',
@@ -171,7 +171,7 @@ var servers = {
         comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB'
     },
     EX41SSSD: {
-        monthly: 46.41, setup: 94.01,
+        monthly: 39, setup: 79,
         name: {
             English: 'Server EX41S-SSD',
             Deutsch: 'Server EX41S-SSD',
@@ -180,7 +180,7 @@ var servers = {
         comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB'
     },
     EX51: {
-        monthly: 58.31, setup: 117.81,
+        monthly: 49, setup: 99,
         name: {
             English: 'Server EX51',
             Deutsch: 'Server EX51',
@@ -189,7 +189,7 @@ var servers = {
         comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
     },
     EX51SSD: {
-        monthly: 58.31, setup: 117.81,
+        monthly: 49, setup: 99,
         name: {
             English: 'Server EX51-SSD',
             Deutsch: 'Server EX51-SSD',
@@ -198,7 +198,7 @@ var servers = {
         comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
     },
     EX51SSDGPU: {
-        monthly: 117.81, setup: 117.81,
+        monthly: 99, setup: 99,
         name: {
             English: 'Server EX51-SSD-GPU',
             Deutsch: 'Server EX51-SSD-GPU',
@@ -208,7 +208,7 @@ var servers = {
 EX51-SSD-GPU: no hardware addons'
     },
     AX60SSD: {
-        monthly: 70.21, setup: 141.61,
+        monthly: 59, setup: 119,
         name: {
             English: 'Server AX60-SSD',
             Deutsch: 'Server AX60-SSD',
@@ -217,7 +217,7 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
     },
     AX160NVMe: {
-        monthly: 201.11, setup: 201.11,
+        monthly: 169, setup: 169,
         flexi_included: true,
         name: {
             English: 'Server AX160-NVMe',
@@ -229,7 +229,7 @@ AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
 AX160-NVMe: up to 12x RAM modules additional'
     },
     AX160SSD: {
-        monthly: 213.01, setup: 213.01,
+        monthly: 179, setup: 179,
         flexi_included: true,
         name: {
             English: 'Server AX160-SSD',
@@ -241,7 +241,7 @@ AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
 AX160-SSD: up to 12x RAM modules additional'
     },
     PX61: {
-        monthly: 70.21, setup: 141.61,
+        monthly: 59, setup: 119,
         name: {
             English: 'Server PX61',
             Deutsch: 'Server PX61',
@@ -251,7 +251,7 @@ AX160-SSD: up to 12x RAM modules additional'
 PX61: no IP-KVM or IPMI'
     },
     PX61SSD: {
-        monthly: 70.21, setup: 141.61,
+        monthly: 59, setup: 119,
         name: {
             English: 'Server PX61-SSD',
             Deutsch: 'Server PX61-SSD',
@@ -261,7 +261,7 @@ PX61: no IP-KVM or IPMI'
 PX61-SSD: no IP-KVM or IPMI'
     },
     PX61NVMe: {
-        monthly: 70.21, setup: 141.61,
+        monthly: 59, setup: 119,
         name: {
             English: 'Server PX61-NVMe',
             Deutsch: 'Server PX61-NVMe',
@@ -271,7 +271,7 @@ PX61-SSD: no IP-KVM or IPMI'
 PX61-NVMe: no IP-KVM or IPMI'
     },
     PX91: {
-        monthly: 109, setup: 109,
+        monthly: 91.5966, setup: 91.5966,
         name: {
             English: 'Server PX91',
             Deutsch: 'Server PX91',
@@ -280,7 +280,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         comment: 'PX91: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 2TB SATA Ent/2nd NIC/50 TB'
     },
     PX91SSD: {
-        monthly: 109, setup: 109,
+        monthly: 91.5966, setup: 91.5966,
         name: {
             English: 'Server PX91-SSD',
             Deutsch: 'Server PX91-SSD',
@@ -289,7 +289,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         comment: 'PX91-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 240GB SSD DC/2nd NIC/50 TB'
     },
     PX121: {
-        monthly: 139, setup: 139,
+        monthly: 116.8067, setup: 116.8067,
         name: {
             English: 'Server PX121',
             Deutsch: 'Server PX121',
@@ -298,7 +298,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         comment: 'PX121: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 4TB SATA Ent/2nd NIC/50 TB'
     },
     PX121SSD: {
-        monthly: 139, setup: 139,
+        monthly: 116.8067, setup: 116.8067,
         name: {
             English: 'Server PX121-SSD',
             Deutsch: 'Server PX121-SSD',
@@ -307,7 +307,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         comment: 'PX121-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB'
     },
     SX61: {
-        monthly: 82.11, setup: 82.11,
+        monthly: 69, setup: 69,
         name: {
             English: 'Server SX61',
             Deutsch: 'Server SX61',
@@ -316,7 +316,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA/30 TB'
     },
     SX131: {
-        monthly: 201.11, setup: 201.11,
+        monthly: 169, setup: 169,
         name: {
             English: 'Server SX131',
             Deutsch: 'Server SX131',
@@ -325,7 +325,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA/50 TB'
     },
     SX291: {
-        monthly: 296.31, setup: 296.31,
+        monthly: 249, setup: 249,
         name: {
             English: 'Server SX291',
             Deutsch: 'Server SX291',
@@ -334,7 +334,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included'
     },
     DX141: {
-        monthly: 129.71, setup: 129.71,
+        monthly: 109, setup: 109,
         flexi_included: true,
         name: {
             English: 'DELL PowerEdge™ R530 DX141',
@@ -348,7 +348,7 @@ R530: Flexi-Pack is included\n\
 R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
     },
     DX151: {
-        monthly: 153.51, setup: 153.51,
+        monthly: 129, setup: 129,
         flexi_included: true,
         name: {
             English: 'DELL PowerEdge™ R730 DX151',
@@ -362,7 +362,7 @@ R730: Flexi-Pack is included\n\
 R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
     },
     DX291: {
-        monthly: 224.91, setup: 224.91,
+        monthly: 189, setup: 189,
         flexi_included: true,
         number_of_cpus: 2,
         name: {
@@ -377,7 +377,7 @@ R730: Flexi-Pack is included\n\
 R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
     },
     CX10: {
-        monthly: 4.64, setup: 0,
+        monthly: 3.90, setup: 0,
         name: {
             English: 'Server CX10',
             Deutsch: 'Server CX10',
@@ -386,7 +386,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'CX10: 1 vCore 2 GHz/1 GB/25 GB SSD/1 snapshot/2 TB'
     },
     CX20: {
-        monthly: 8.21, setup: 0,
+        monthly: 6.90, setup: 0,
         name: {
             English: 'Server CX20',
             Deutsch: 'Server CX20',
@@ -395,7 +395,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'CX20: 2 vCores 2 GHz/2 GB/50 GB SSD/2 snapshots/5 TB'
     },
     CX30: {
-        monthly: 14.16, setup: 0,
+        monthly: 12.90, setup: 0,
         name: {
             English: 'Server CX30',
             Deutsch: 'Server CX30',
@@ -404,7 +404,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'CX30: 2 vCores 2 GHz/4 GB/100 GB SSD/3 snapshots/8 TB'
     },
     CX40: {
-        monthly: 23.68, setup: 0,
+        monthly: 19.90, setup: 0,
         name: {
             English: 'Server CX40',
             Deutsch: 'Server CX40',
@@ -413,7 +413,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'CX40: 2 vCores 2 GHz/8 GB/200 GB SSD/4 snapshots/10 TB'
     },
     CX50: {
-        monthly: 35.58, setup: 0,
+        monthly: 29.90, setup: 0,
         name: {
             English: 'Server CX50',
             Deutsch: 'Server CX50',
@@ -422,7 +422,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'CX50: 4 vCores 2 GHz/16 GB/400 GB SSD/5 snapshots/20 TB'
     },
     CX60: {
-        monthly: 59.38, setup: 0,
+        monthly: 49.90, setup: 0,
         name: {
             English: 'Server CX60',
             Deutsch: 'Server CX60',
@@ -431,7 +431,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'CX60: 8 vCores 2 GHz/32 GB/600 GB SSD/6 snapshots/30 TB'
     },
     BX10: {
-        monthly: 3.45, setup: 0,
+        monthly: 2.90, setup: 0,
         name: {
             English: 'Storage Box BX10',
             Deutsch: 'Storage Box BX10',
@@ -440,7 +440,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'BX10: 100 GB/1 TB traffic'
     },
     BX20: {
-        monthly: 5.83, setup: 0,
+        monthly: 4.90, setup: 0,
         name: {
             English: 'Storage Box BX20',
             Deutsch: 'Storage Box BX20',
@@ -458,7 +458,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'BX30: 1 TB/5 TB traffic'
     },
     BX40: {
-        monthly: 11.78, setup: 0,
+        monthly: 7.90, setup: 0,
         name: {
             English: 'Storage Box BX40',
             Deutsch: 'Storage Box BX40',
@@ -467,7 +467,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'BX40: 2 TB/10 TB traffic'
     },
     BX50: {
-        monthly: 26.06, setup: 0,
+        monthly: 21.90, setup: 0,
         name: {
             English: 'Storage Box BX50',
             Deutsch: 'Storage Box BX50',
@@ -476,7 +476,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'BX50: 5 TB/15 TB traffic'
     },
     BX60: {
-        monthly: 47.48, setup: 0,
+        monthly: 39.90, setup: 0,
         name: {
             English: 'Storage Box BX60',
             Deutsch: 'Storage Box BX60',
@@ -485,7 +485,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'BX60: 10 TB/20 TB traffic'
     },
     COLOCATION_1_3: {
-        monthly: 119, setup: 119,
+        monthly: 100, setup: 100,
         name: {
             English: 'Colocation 1/3 Rack',
             Deutsch: 'Colocation 1/3 Rack',
@@ -494,7 +494,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: '1/3 Rack: 14 units'
     },
     COLOCATION_BASIC: {
-        monthly: 199, setup: 199,
+        monthly: 167.2269, setup: 167.2269,
         name: {
             English: 'Colocation Rack Basic',
             Deutsch: 'Colocation Rack Basic',
@@ -503,7 +503,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'Rack Basic: 42 units'
     },
     COLOCATION_ADVANCED: {
-        monthly: 299, setup: 299,
+        monthly: 251.2605, setup: 251.2605,
         name: {
             English: 'Colocation Rack Advanced',
             Deutsch: 'Colocation Rack Advanced',
