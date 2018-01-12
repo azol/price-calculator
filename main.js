@@ -1179,7 +1179,6 @@ function onChange() {
  */
 function vatPrice(price) {
     if (workspace.vatPercentage !== 0) {
-        var cleanPrice = round(price / (100 + countryVATrate.Germany) * 100, 4);
         return round(price * (100 + workspace.vatPercentage) / 100, 2);
     } else {
         return round(price, 2);
@@ -1442,7 +1441,7 @@ Workspace.prototype = {
 
             this.clearAddons();
             this.setServer(this.Servers[this.currentServer].model_raw.replace(/SB.*/, "SB"));
-            var sbNumber = this.Servers[this.currentServer].sbServerMonthlyPrice;
+            var sbNumber = this.Servers[this.currentServer].sbNumber;
             this.setSbNumber((isNaN(sbNumber)) ? "" : sbNumber);
             var numOfServers = this.Servers[this.currentServer].amount;
             this.setNumberOfServers((numOfServers !== 1) ? numOfServers : "");
@@ -1805,16 +1804,21 @@ Workspace.prototype = {
 
 function Server(theModel) {
     var parsedSbNumber = parseInt(document.getElementById('sb_number').value);
-    this.sbServerMonthlyPrice = (isNaN(parsedSbNumber) ? 0 : parsedSbNumber);
-    if (theModel === 'SB' && this.sbServerMonthlyPrice >= 0) {
-        theModel = theModel + this.sbServerMonthlyPrice;
+    this.sbNumber = (isNaN(parsedSbNumber) ? 0 : parsedSbNumber);
+    if (theModel === 'SB' && this.sbNumber >= 0) {
+        theModel = theModel + this.sbNumber;
         if (!servers.hasOwnProperty(theModel)) {
             var newSbModel = copyObject(servers.SB);
-            //var newSbModel = new Server("SB");
-            newSbModel.monthly = this.sbServerMonthlyPrice;
-            newSbModel.name.English += this.sbServerMonthlyPrice;
-            newSbModel.name.Deutsch += this.sbServerMonthlyPrice;
-            newSbModel.name.Русский += this.sbServerMonthlyPrice;
+
+            // Calculate monthly price based on model name
+            // example: SB39 costs:
+            // - 39.00 €/month with German VAT
+            // - 32.77 €/month without VAT
+            newSbModel.monthly = this.sbNumber / (100 + countryVATrate.Germany) * 100;
+
+            newSbModel.name.English += this.sbNumber;
+            newSbModel.name.Deutsch += this.sbNumber;
+            newSbModel.name.Русский += this.sbNumber;
             servers[theModel] = newSbModel;
         }
 
