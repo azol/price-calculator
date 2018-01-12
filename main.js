@@ -395,7 +395,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'CX20: 2 vCores 2 GHz/2 GB/50 GB SSD/2 snapshots/5 TB'
     },
     CX30: {
-        monthly: 12.90, setup: 0,
+        monthly: 11.90, setup: 0,
         name: {
             English: 'Server CX30',
             Deutsch: 'Server CX30',
@@ -449,7 +449,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'BX20: 500 GB/2 TB traffic'
     },
     BX30: {
-        monthly: 9.40, setup: 0,
+        monthly: 7.90, setup: 0,
         name: {
             English: 'Storage Box BX30',
             Deutsch: 'Storage Box BX30',
@@ -458,7 +458,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         comment: 'BX30: 1 TB/5 TB traffic'
     },
     BX40: {
-        monthly: 7.90, setup: 0,
+        monthly: 9.90, setup: 0,
         name: {
             English: 'Storage Box BX40',
             Deutsch: 'Storage Box BX40',
