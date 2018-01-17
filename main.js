@@ -561,7 +561,7 @@ var addons = {
         }
     },
     win_std: {
-        monthly: 23.10, pay_entire_month: true,
+        monthly: 21.0084, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Standard Edition',
@@ -570,7 +570,7 @@ var addons = {
         }
     },
     win_dc: {
-        monthly: 143.30, pay_entire_month: true,
+        monthly: 130.2521, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Datacenter Edition',
