@@ -852,6 +852,15 @@ var addons = {
         },
         comment: "960 NVMe Datacenter Edition: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
+    nvme480_3d_xpoint: {
+        monthly: 42.50, flexi_required: true,
+        name: {
+            English: '480 GB NVMe SSD 3D XPoint',
+            Deutsch: '480 GB NVMe SSD 3D XPoint',
+            Русский: '480 ГБ NVMe SSD 3D XPoint'
+        },
+        comment: "480 GB NVMe SSD 3D XPoint: https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+    },
     sas600: {
         monthly: 20.50, flexi_required: true,
         name: {
