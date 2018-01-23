@@ -430,6 +430,51 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         },
         comment: 'CX60: 8 vCores 2 GHz/32 GB/600 GB SSD/6 snapshots/30 TB'
     },
+    CX11: {
+        monthly: 2.49, setup: 0,
+        name: {
+            English: 'Server CX11',
+            Deutsch: 'Server CX11',
+            Русский: 'Сервер CX11'
+        },
+        comment: 'CX11: 1 vCPU/2 GB/20 GB/20 TB'
+    },
+    CX21: {
+        monthly: 4.90, setup: 0,
+        name: {
+            English: 'Server CX21',
+            Deutsch: 'Server CX21',
+            Русский: 'Сервер CX21'
+        },
+        comment: 'CX21: 2 vCPU/4 GB/40 GB/20 TB'
+    },
+    CX31: {
+        monthly: 8.90, setup: 0,
+        name: {
+            English: 'Server CX31',
+            Deutsch: 'Server CX31',
+            Русский: 'Сервер CX31'
+        },
+        comment: 'CX31: 2 vCPU/8 GB/80 GB/20 TB'
+    },
+    CX41: {
+        monthly: 15.90, setup: 0,
+        name: {
+            English: 'Server CX41',
+            Deutsch: 'Server CX41',
+            Русский: 'Сервер CX41'
+        },
+        comment: 'CX41: 4 vCPU/16 GB/160 GB/20 TB'
+    },
+    CX51: {
+        monthly: 29.90, setup: 0,
+        name: {
+            English: 'Server CX51',
+            Deutsch: 'Server CX51',
+            Русский: 'Сервер CX51'
+        },
+        comment: 'CX51: 8 vCPU/32 GB/240 GB/20 TB'
+    },
     BX10: {
         monthly: 2.90, setup: 0,
         name: {
