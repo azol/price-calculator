@@ -1043,7 +1043,7 @@ var addons = {
         }
     },
     traffic_overusage: {
-        monthly: 1.1681,
+        monthly: 1.00,
         name: {
             English: 'Traffic overusage (TB)',
             Deutsch: 'Traffic overusage (TB)',
