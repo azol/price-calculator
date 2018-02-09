@@ -207,6 +207,62 @@ var servers = {
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
 EX51-SSD-GPU: no hardware addons'
     },
+    EX41_Finland: {
+        monthly: 39, setup: 39,
+        location: 'Finland',
+        name: {
+            English: 'Server EX41 (Finland)',
+            Deutsch: 'Server EX41 (Finnland)',
+            Русский: 'Сервер EX41 (Финляндия)'
+        },
+        comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB'
+    },
+    EX41SSD_Finland: {
+        monthly: 39, setup: 39,
+        location: 'Finland',
+        name: {
+            English: 'Server EX41-SSD (Finland)',
+            Deutsch: 'Server EX41-SSD (Finnland)',
+            Русский: 'Сервер EX41-SSD (Финляндия)'
+        },
+        comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
+    },
+    EX41S_Finland: {
+        monthly: 39, setup: 39,
+        name: {
+            English: 'Server EX41S (Finland)',
+            Deutsch: 'Server EX41S (Finnland)',
+            Русский: 'Сервер EX41S (Финляндия)'
+        },
+        comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB'
+    },
+    EX41SSSD_Finland: {
+        monthly: 39, setup: 39,
+        name: {
+            English: 'Server EX41S-SSD (Finland)',
+            Deutsch: 'Server EX41S-SSD (Finnland)',
+            Русский: 'Сервер EX41S-SSD (Финляндия)'
+        },
+        comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB'
+    },
+    EX51_Finland: {
+        monthly: 49, setup: 49,
+        name: {
+            English: 'Server EX51 (Finland)',
+            Deutsch: 'Server EX51 (Finnland)',
+            Русский: 'Сервер EX51 (Финляндия)'
+        },
+        comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
+    },
+    EX51SSD_Finland: {
+        monthly: 49, setup: 49,
+        name: {
+            English: 'Server EX51-SSD (Finland)',
+            Deutsch: 'Server EX51-SSD (Finnland)',
+            Русский: 'Сервер EX51-SSD (Финляндия)'
+        },
+        comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
+    },
     AX60SSD: {
         monthly: 59, setup: 119,
         name: {
@@ -266,6 +322,16 @@ PX61-SSD: no IP-KVM or IPMI'
             English: 'Server PX61-NVMe',
             Deutsch: 'Server PX61-NVMe',
             Русский: 'Сервер PX61-NVMe'
+        },
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
+PX61-NVMe: no IP-KVM or IPMI'
+    },
+    PX61NVMe_Finland: {
+        monthly: 59, setup: 59,
+        name: {
+            English: 'Server PX61-NVMe (Finland)',
+            Deutsch: 'Server PX61-NVMe (Finnland)',
+            Русский: 'Сервер PX61-NVMe (Финляндия)'
         },
         comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
 PX61-NVMe: no IP-KVM or IPMI'
