@@ -30,6 +30,7 @@ var countryVATrate = {
     "Slovenia": 22,
     "Spain": 21,
     "Sweden": 25,
+    "Switzerland": 7.7,
     "UK": 20,
 };
 
