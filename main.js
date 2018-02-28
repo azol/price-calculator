@@ -937,6 +937,15 @@ var addons = {
         },
         comment: '600 GB SAS: is available only for DELL R730'
     },
+    sata2000_dell: {
+        monthly: 13.00, flexi_required: true,
+        name: {
+            English: '2 TB enterprise SATA HDD',
+            Deutsch: '2 TB enterprise SATA HDD',
+            Русский: '2 ТБ enterprise SATA HDD'
+        },
+        comment: '2 TB enterprise SATA HDD: is available only for DELL servers'
+    },
     sata2000e: {
         monthly: 10.00, flexi_required: true,
         name: {
@@ -944,6 +953,15 @@ var addons = {
             Deutsch: '2 TB Enterprise SATA HDD',
             Русский: '2 ТБ enterprise SATA HDD'
         },
+    },
+    sata4000_dell: {
+        monthly: 16.00, flexi_required: true,
+        name: {
+            English: '4 TB enterprise SATA HDD',
+            Deutsch: '4 TB enterprise SATA HDD',
+            Русский: '4 ТБ enterprise SATA HDD'
+        },
+        comment: '4 TB enterprise SATA HDD: is available only for DELL servers'
     },
     sata4000e: {
         monthly: 13.00, flexi_required: true,
@@ -960,6 +978,15 @@ var addons = {
             Deutsch: '6 TB Enterprise SATA HDD',
             Русский: '6 ТБ enterprise SATA HDD'
         }
+    },
+    sata10000_dell: {
+        monthly: 25.50, flexi_required: true,
+        name: {
+            English: '10 TB enterprise SATA HDD',
+            Deutsch: '10 TB enterprise SATA HDD',
+            Русский: '10 ТБ enterprise SATA HDD'
+        },
+        comment: '10 TB enterprise SATA HDD: is available only for DELL servers'
     },
     sata10000e: {
         monthly: 22.50, flexi_required: true,
