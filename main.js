@@ -208,6 +208,24 @@ var servers = {
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
 EX51-SSD-GPU: no hardware addons'
     },
+    EX61: {
+        monthly: 59, setup: 119,
+        name: {
+            English: 'Server EX61',
+            Deutsch: 'Server EX61',
+            Русский: 'Сервер EX61'
+        },
+        comment: 'EX61: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 6TB SATA Ent/30 TB'
+    },
+    EX61NVMe: {
+        monthly: 59, setup: 119,
+        name: {
+            English: 'Server EX61-NVMe',
+            Deutsch: 'Server EX61-NVMe',
+            Русский: 'Сервер EX61-NVMe'
+        },
+        comment: 'EX61-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 512GB NVMe/30 TB'
+    },
     EX41_Finland: {
         monthly: 39, setup: 39,
         location: 'Finland',
