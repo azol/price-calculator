@@ -144,6 +144,24 @@ var servers = {
         },
         comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB'
     },
+    EX40_Finland: {
+        monthly: 27, setup: 0,
+        name: {
+            English: 'Server EX40 (Finland)',
+            Deutsch: 'Server EX40 (Finnland)',
+            Русский: 'Сервер EX40 (Финляндия)'
+        },
+        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB'
+    },
+    EX40SSD_Finland: {
+        monthly: 37, setup: 0,
+        name: {
+            English: 'Server EX40-SSD (Finland)',
+            Deutsch: 'Server EX40-SSD (Finnland)',
+            Русский: 'Сервер EX40-SSD (Финляндия)'
+        },
+        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
+    },
     EX41: {
         monthly: 39, setup: 79,
         name: {
