@@ -309,6 +309,15 @@ EX51-SSD-GPU: no hardware addons'
         },
         comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
     },
+    AX60SSD_Finland: {
+        monthly: 54, setup: 119,
+        name: {
+            English: 'Server AX60-SSD (Finland)',
+            Deutsch: 'Server AX60-SSD (Finnland)',
+            Русский: 'Сервер AX60-SSD (Финляндия)'
+        },
+        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
+    },
     AX160NVMe: {
         monthly: 169, setup: 169,
         flexi_included: true,
