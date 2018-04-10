@@ -373,7 +373,7 @@ PX61-SSD: no IP-KVM or IPMI'
 PX61-NVMe: no IP-KVM or IPMI'
     },
     PX61NVMe_Finland: {
-        monthly: 59, setup: 59,
+        monthly: 54, setup: 119,
         name: {
             English: 'Server PX61-NVMe (Finland)',
             Deutsch: 'Server PX61-NVMe (Finnland)',
