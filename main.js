@@ -274,7 +274,7 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB'
     },
     EX41SSSD_Finland: {
-        monthly: 39, setup: 79,
+        monthly: 34, setup: 79,
         name: {
             English: 'Server EX41S-SSD (Finland)',
             Deutsch: 'Server EX41S-SSD (Finnland)',
@@ -292,7 +292,7 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
     },
     EX51SSD_Finland: {
-        monthly: 49, setup: 99,
+        monthly: 44, setup: 99,
         name: {
             English: 'Server EX51-SSD (Finland)',
             Deutsch: 'Server EX51-SSD (Finnland)',
