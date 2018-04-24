@@ -245,7 +245,7 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'EX61-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 512GB NVMe/30 TB'
     },
     EX41_Finland: {
-        monthly: 39, setup: 79,
+        monthly: 34, setup: 79,
         location: 'Finland',
         name: {
             English: 'Server EX41 (Finland)',
@@ -265,7 +265,7 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
     },
     EX41S_Finland: {
-        monthly: 39, setup: 79,
+        monthly: 34, setup: 79,
         name: {
             English: 'Server EX41S (Finland)',
             Deutsch: 'Server EX41S (Finnland)',
@@ -283,7 +283,7 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB'
     },
     EX51_Finland: {
-        monthly: 49, setup: 99,
+        monthly: 44, setup: 99,
         name: {
             English: 'Server EX51 (Finland)',
             Deutsch: 'Server EX51 (Finnland)',
