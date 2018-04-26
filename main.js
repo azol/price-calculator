@@ -476,7 +476,7 @@ PX61-NVMe: no IP-KVM or IPMI'
         },
         comment: "DX152: Dual Intel® Xeon® Silver 4114 10-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC/50 TB\n\
 R640: have an iDRAC (IP-KVM)\n\
-R640: Drives are optional (240/480/960 GB, 1,92 TB GB SSD DC and 960 GB U.2 NVMe)\n\
+R640: Drives are optional (240/480/960 GB, 1,92 TB GB SSD DC and 960 GB NVMe)\n\
 R640: Windows 'for EPYC'\n\
 R640: Flexi-Pack is included\n\
 R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
@@ -492,7 +492,7 @@ R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
         },
         comment: "DX292: Dual Intel® Xeon® Gold 6130 16-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC/50 TB\n\
 R640: have an iDRAC (IP-KVM)\n\
-R640: Drives are optional (240/480/960 GB, 1,92 TB GB SSD DC and 960 GB U.2 NVMe)\n\
+R640: Drives are optional (240/480/960 GB, 1,92 TB GB SSD DC and 960 GB NVMe)\n\
 R640: Windows 'for EPYC'\n\
 R640: Flexi-Pack is included\n\
 R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
