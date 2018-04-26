@@ -465,48 +465,37 @@ PX61-NVMe: no IP-KVM or IPMI'
         },
         comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included'
     },
-    DX141: {
-        monthly: 109, setup: 109,
-        flexi_included: true,
-        name: {
-            English: 'DELL PowerEdge™ R530 DX141',
-            Deutsch: 'DELL PowerEdge™ R530 DX141',
-            Русский: 'DELL PowerEdge™ R530 DX141'
-        },
-        comment: "DX141: Single Intel® Xeon® E5-1650 v3 @ 3.5GHz Hexa-Core/64GB DDR4 ECC/Dell PERC H330/iDRAC/50 TB\n\
-R530: have an iDRAC (IP-KVM)\n\
-R530: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
-R530: Flexi-Pack is included\n\
-R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
-    },
-    DX151: {
-        monthly: 129, setup: 129,
-        flexi_included: true,
-        name: {
-            English: 'DELL PowerEdge™ R730 DX151',
-            Deutsch: 'DELL PowerEdge™ R730 DX151',
-            Русский: 'DELL PowerEdge™ R730 DX151'
-        },
-        comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/iDRAC/50 TB\n\
-R730: have an iDRAC (IP-KVM)\n\
-R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
-R730: Flexi-Pack is included\n\
-R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
-    },
-    DX291: {
-        monthly: 189, setup: 189,
+    DX152: {
+        monthly: 159, setup: 159,
         flexi_included: true,
         number_of_cpus: 2,
         name: {
-            English: 'DELL PowerEdge™ R730 DX291',
-            Deutsch: 'DELL PowerEdge™ R730 DX291',
-            Русский: 'DELL PowerEdge™ R730 DX291'
+            English: 'DELL PowerEdge™ R640 DX152',
+            Deutsch: 'DELL PowerEdge™ R640 DX152',
+            Русский: 'DELL PowerEdge™ R640 DX152'
         },
-        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/iDRAC/50 TB\n\
-R730: have an iDRAC (IP-KVM)\n\
-R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
-R730: Flexi-Pack is included\n\
-R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
+        comment: "DX152: Dual Intel® Xeon® Silver 4114 10-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC/50 TB\n\
+R640: have an iDRAC (IP-KVM)\n\
+R640: Drives are optional (240/480/960 GB, 1,92 TB GB SSD DC and 960 GB U.2 NVMe)\n\
+R640: Windows 'for EPYC'\n\
+R640: Flexi-Pack is included\n\
+R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
+    },
+    DX292: {
+        monthly: 219, setup: 219,
+        flexi_included: true,
+        number_of_cpus: 2,
+        name: {
+            English: 'DELL PowerEdge™ R640 DX292',
+            Deutsch: 'DELL PowerEdge™ R640 DX292',
+            Русский: 'DELL PowerEdge™ R640 DX292'
+        },
+        comment: "DX292: Dual Intel® Xeon® Gold 6130 16-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC/50 TB\n\
+R640: have an iDRAC (IP-KVM)\n\
+R640: Drives are optional (240/480/960 GB, 1,92 TB GB SSD DC and 960 GB U.2 NVMe)\n\
+R640: Windows 'for EPYC'\n\
+R640: Flexi-Pack is included\n\
+R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
     },
     CX10: {
         monthly: 3.90, setup: 0,
@@ -902,24 +891,8 @@ var addons = {
             Русский: '240 ГБ SSD Datacenter Edition'
         }
     },
-    ssd240_dell_de: {
-        monthly: 13.50, flexi_required: true,
-        name: {
-            English: '240 GB SSD Datacenter Edition',
-            Deutsch: '240 GB SSD Datacenter Edition',
-            Русский: '240 ГБ SSD Datacenter Edition'
-        }
-    },
     ssd480de: {
         monthly: 14.00, flexi_required: true,
-        name: {
-            English: '480 GB SSD Datacenter Edition',
-            Deutsch: '480 GB SSD Datacenter Edition',
-            Русский: '480 ГБ SSD Datacenter Edition'
-        }
-    },
-    ssd480_dell_de: {
-        monthly: 17.00, flexi_required: true,
         name: {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
@@ -942,24 +915,8 @@ var addons = {
             Русский: '960 ГБ SSD Datacenter Edition'
         }
     },
-    ssd960_dell_de: {
-        monthly: 30.50, flexi_required: true,
-        name: {
-            English: '960 GB SSD Datacenter Edition',
-            Deutsch: '960 GB SSD Datacenter Edition',
-            Русский: '960 ГБ SSD Datacenter Edition'
-        }
-    },
     ssd1920_de: {
         monthly: 52.50, flexi_required: true,
-        name: {
-            English: '1.92 TB SSD Datacenter Edition',
-            Deutsch: '1,92 TB SSD Datacenter Edition',
-            Русский: '1,92 ТБ SSD Datacenter Edition'
-        }
-    },
-    ssd1920_dell_de: {
-        monthly: 55.50, flexi_required: true,
         name: {
             English: '1.92 TB SSD Datacenter Edition',
             Deutsch: '1,92 TB SSD Datacenter Edition',
@@ -993,24 +950,6 @@ var addons = {
         },
         comment: "480 GB NVMe SSD 3D XPoint: https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
-    sas600: {
-        monthly: 20.50, flexi_required: true,
-        name: {
-            English: '600 GB SAS',
-            Deutsch: '600 GB SAS',
-            Русский: '600 ГБ SAS'
-        },
-        comment: '600 GB SAS: is available only for DELL R730'
-    },
-    sata2000_dell: {
-        monthly: 13.00, flexi_required: true,
-        name: {
-            English: '2 TB enterprise SATA HDD',
-            Deutsch: '2 TB enterprise SATA HDD',
-            Русский: '2 ТБ enterprise SATA HDD'
-        },
-        comment: '2 TB enterprise SATA HDD: is available only for DELL servers'
-    },
     sata2000e: {
         monthly: 10.00, flexi_required: true,
         name: {
@@ -1018,15 +957,6 @@ var addons = {
             Deutsch: '2 TB Enterprise SATA HDD',
             Русский: '2 ТБ enterprise SATA HDD'
         },
-    },
-    sata4000_dell: {
-        monthly: 16.00, flexi_required: true,
-        name: {
-            English: '4 TB enterprise SATA HDD',
-            Deutsch: '4 TB enterprise SATA HDD',
-            Русский: '4 ТБ enterprise SATA HDD'
-        },
-        comment: '4 TB enterprise SATA HDD: is available only for DELL servers'
     },
     sata4000e: {
         monthly: 13.00, flexi_required: true,
@@ -1043,15 +973,6 @@ var addons = {
             Deutsch: '6 TB Enterprise SATA HDD',
             Русский: '6 ТБ enterprise SATA HDD'
         }
-    },
-    sata10000_dell: {
-        monthly: 25.50, flexi_required: true,
-        name: {
-            English: '10 TB enterprise SATA HDD',
-            Deutsch: '10 TB enterprise SATA HDD',
-            Русский: '10 ТБ enterprise SATA HDD'
-        },
-        comment: '10 TB enterprise SATA HDD: is available only for DELL servers'
     },
     sata10000e: {
         monthly: 22.50, flexi_required: true,
