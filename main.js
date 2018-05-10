@@ -402,41 +402,19 @@ PX61-SSD: no IP-KVM or IPMI'
         comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
 PX61-NVMe: no IP-KVM or IPMI'
     },
-    PX91: {
-        monthly: 91.5966, setup: 91.5966,
+    PX92: {
+        monthly: 99, setup: 99,
+        flexi_included: true,
         name: {
-            English: 'Server PX91',
-            Deutsch: 'Server PX91',
-            Русский: 'Сервер PX91'
+            English: 'Server PX92',
+            Deutsch: 'Server PX92',
+            Русский: 'Сервер PX92'
         },
-        comment: 'PX91: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 2TB SATA Ent/2nd NIC/50 TB'
-    },
-    PX91SSD: {
-        monthly: 91.5966, setup: 91.5966,
-        name: {
-            English: 'Server PX91-SSD',
-            Deutsch: 'Server PX91-SSD',
-            Русский: 'Сервер PX91-SSD'
-        },
-        comment: 'PX91-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128 GB DDR4 ECC/2 x 240GB SSD DC/2nd NIC/50 TB'
-    },
-    PX121: {
-        monthly: 116.8067, setup: 116.8067,
-        name: {
-            English: 'Server PX121',
-            Deutsch: 'Server PX121',
-            Русский: 'Сервер PX121'
-        },
-        comment: 'PX121: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 4TB SATA Ent/2nd NIC/50 TB'
-    },
-    PX121SSD: {
-        monthly: 116.8067, setup: 116.8067,
-        name: {
-            English: 'Server PX121-SSD',
-            Deutsch: 'Server PX121-SSD',
-            Русский: 'Сервер PX121-SSD'
-        },
-        comment: 'PX121-SSD: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256 GB ECC/2 x 480GB SSD DC/2nd NIC/50 TB'
+        comment: 'PX92: Intel® Xeon® W-2145 Octa-Core Skylake W/128 GB DDR4 ECC/50 TB\n\
+PX92: SSD options: 8x NVMe and SSD (up to 4x NVMe or 6x SSD)\n\
+PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
+PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
+PX92: max 256 GB RAM DDR4 (4x 32GB)'
     },
     SX61: {
         monthly: 69, setup: 69,
