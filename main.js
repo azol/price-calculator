@@ -67,7 +67,7 @@ var messages = {
     },
     vat_isnt_included: {
         English: '(excl. VAT)',
-        Deutsch: '(exkl. USt)',
+        Deutsch: '(zzgl. USt)',
         Русский: '(цены указаны без НДС)'
     },
     first_invoice_addition: {
