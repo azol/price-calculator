@@ -391,6 +391,16 @@ PX61-SSD: no IP-KVM or IPMI'
         comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
 PX61-NVMe: no IP-KVM or IPMI'
     },
+    PX61NVMe_discount: {
+        monthly: 59, setup: 59,
+        name: {
+            English: 'Server PX61-NVMe',
+            Deutsch: 'Server PX61-NVMe',
+            Русский: 'Сервер PX61-NVMe'
+        },
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
+PX61-NVMe: no IP-KVM or IPMI'
+    },
     PX61_Finland: {
         monthly: 54, setup: 119,
         name: {
@@ -413,6 +423,16 @@ PX61-SSD: no IP-KVM or IPMI'
     },
     PX61NVMe_Finland: {
         monthly: 54, setup: 119,
+        name: {
+            English: 'Server PX61-NVMe (Finland)',
+            Deutsch: 'Server PX61-NVMe (Finnland)',
+            Русский: 'Сервер PX61-NVMe (Финляндия)'
+        },
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
+PX61-NVMe: no IP-KVM or IPMI'
+    },
+    PX61NVMe_Finland_discount: {
+        monthly: 54, setup: 59,
         name: {
             English: 'Server PX61-NVMe (Finland)',
             Deutsch: 'Server PX61-NVMe (Finnland)',
