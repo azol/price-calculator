@@ -761,23 +761,25 @@ var addons = {
             Русский: 'Windows Server 2016 Datacenter Edition'
         }
     },
-    win_std_epyc: {
+    win_std_24_kerne: {
         monthly: 63.00, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Standard',
             Deutsch: 'Windows Server 2016 Standard',
             Русский: 'Windows Server 2016 Standard'
-        }
+        },
+        comment: 'Windows server "24 Kerne" only for Dell and AX160 servers'
     },
-    win_dc_epyc: {
+    win_dc_24_kerne: {
         monthly: 391.00, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Datacenter',
             Deutsch: 'Windows Server 2016 Datacenter',
             Русский: 'Windows Server 2016 Datacenter'
-        }
+        },
+        comment: 'Windows server "24 Kerne" only for Dell and AX160 servers'
     },
     plesk_web_admin: {
         monthly: 4.20, pay_entire_month: "yes",
