@@ -736,7 +736,7 @@ var addons = {
         }
     },
     ddr4ecc32gb: {
-        monthly: 22.00,
+        monthly: 24.00,
         name: {
             English: '32 GB DDR4 ECC RAM',
             Deutsch: '32 GB DDR4 ECC RAM',
@@ -903,7 +903,7 @@ var addons = {
         }
     },
     ssd240de: {
-        monthly: 10.50, flexi_required: true,
+        monthly: 8.00, flexi_required: true,
         name: {
             English: '240 GB SSD Datacenter Edition',
             Deutsch: '240 GB SSD Datacenter Edition',
@@ -911,7 +911,7 @@ var addons = {
         }
     },
     ssd480de: {
-        monthly: 14.00, flexi_required: true,
+        monthly: 12.00, flexi_required: true,
         name: {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
@@ -919,7 +919,7 @@ var addons = {
         }
     },
     ssd500: {
-        monthly: 12.00, flexi_required: true,
+        monthly: 10.00, flexi_required: true,
         name: {
             English: '500 GB SSD',
             Deutsch: '500 GB SSD',
@@ -927,7 +927,7 @@ var addons = {
         }
     },
     ssd960de: {
-        monthly: 27.50, flexi_required: true,
+        monthly: 24.00, flexi_required: true,
         name: {
             English: '960 GB SSD Datacenter Edition',
             Deutsch: '960 GB SSD Datacenter Edition',
@@ -935,7 +935,7 @@ var addons = {
         }
     },
     ssd1920_de: {
-        monthly: 52.50, flexi_required: true,
+        monthly: 36.50, flexi_required: true,
         name: {
             English: '1.92 TB SSD Datacenter Edition',
             Deutsch: '1,92 TB SSD Datacenter Edition',
@@ -943,7 +943,7 @@ var addons = {
         }
     },
     nvme512: {
-        monthly: 18.00, flexi_required: true,
+        monthly: 14.00, flexi_required: true,
         name: {
             English: '512 GB NVMe',
             Deutsch: '512 GB NVMe',
@@ -952,7 +952,7 @@ var addons = {
         comment: "512 NVMe: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960: {
-        monthly: 46.00, flexi_required: true,
+        monthly: 30.00, flexi_required: true,
         name: {
             English: '960 GB NVMe Datacenter Edition',
             Deutsch: '960 GB NVMe Datacenter Edition',
@@ -986,7 +986,7 @@ var addons = {
         }
     },
     sata6000e: {
-        monthly: 17.50, flexi_required: true,
+        monthly: 14.50, flexi_required: true,
         name: {
             English: '6 TB enterprise SATA HDD',
             Deutsch: '6 TB Enterprise SATA HDD',
@@ -994,7 +994,7 @@ var addons = {
         }
     },
     sata10000e: {
-        monthly: 22.50, flexi_required: true,
+        monthly: 19.50, flexi_required: true,
         name: {
             English: '10 TB enterprise SATA HDD',
             Deutsch: '10 TB Enterprise SATA HDD',
