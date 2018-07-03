@@ -743,6 +743,14 @@ var addons = {
             Русский: '32 ГБ DDR4 оперативной памяти ECC'
         }
     },
+    ddr4ecc64gb: {
+        monthly: 52.00,
+        name: {
+            English: '64 GB DDR4 ECC RAM',
+            Deutsch: '64 GB DDR4 ECC RAM',
+            Русский: '64 ГБ DDR4 оперативной памяти ECC'
+        }
+    },
     win_std: {
         monthly: 21.0084, pay_entire_month: true,
         monthly_price_per_cpu: true,
@@ -902,6 +910,22 @@ var addons = {
             Русский: '240/250 ГБ SSD'
         }
     },
+    ssd500: {
+        monthly: 10.00, flexi_required: true,
+        name: {
+            English: '500 GB SSD',
+            Deutsch: '500 GB SSD',
+            Русский: '500 ГБ SSD'
+        }
+    },
+    ssd1000: {
+        monthly: 20.50, flexi_required: true,
+        name: {
+            English: '1 TB SSD',
+            Deutsch: '1 TB SSD',
+            Русский: '1 ТБ SSD'
+        }
+    },
     ssd240de: {
         monthly: 8.00, flexi_required: true,
         name: {
@@ -916,14 +940,6 @@ var addons = {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
             Русский: '480 ГБ SSD Datacenter Edition'
-        }
-    },
-    ssd500: {
-        monthly: 10.00, flexi_required: true,
-        name: {
-            English: '500 GB SSD',
-            Deutsch: '500 GB SSD',
-            Русский: '500 ГБ SSD'
         }
     },
     ssd960de: {
@@ -942,6 +958,15 @@ var addons = {
             Русский: '1,92 ТБ SSD Datacenter Edition'
         }
     },
+    ssd3840de: {
+        monthly: 89.50, flexi_required: true,
+        name: {
+            English: '3.84 TB SSD Datacenter Edition',
+            Deutsch: '3,84 TB SSD Datacenter Edition',
+            Русский: '3,84 ТБ SSD Datacenter Edition'
+        },
+        comment: "3.84 TB SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+    },
     nvme512: {
         monthly: 14.00, flexi_required: true,
         name: {
@@ -949,7 +974,7 @@ var addons = {
             Deutsch: '512 GB NVMe',
             Русский: '512 ГБ NVMe'
         },
-        comment: "512 NVMe: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+        comment: "512 NVMe: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960: {
         monthly: 30.00, flexi_required: true,
@@ -958,7 +983,7 @@ var addons = {
             Deutsch: '960 GB NVMe Datacenter Edition',
             Русский: '960 ГБ NVMe Datacenter Edition'
         },
-        comment: "960 NVMe Datacenter Edition: see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+        comment: "960 NVMe Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme480_3d_xpoint: {
         monthly: 42.50, flexi_required: true,
@@ -967,7 +992,25 @@ var addons = {
             Deutsch: '480 GB NVMe SSD 3D XPoint',
             Русский: '480 ГБ NVMe SSD 3D XPoint'
         },
-        comment: "480 GB NVMe SSD 3D XPoint: https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+        comment: "480 GB NVMe SSD 3D XPoint: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+    },
+    nvme1000: {
+        monthly: 23.50, flexi_required: true,
+        name: {
+            English: '1 TB NVMe',
+            Deutsch: '1 TB NVMe',
+            Русский: '1 ТБ NVMe'
+        },
+        comment: "1 TB NVMe: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+    },
+    nvme1920: {
+        monthly: 57.00, flexi_required: true,
+        name: {
+            English: '1.92 TB NVMe Datacenter Edition',
+            Deutsch: '1,92 TB NVMe Datacenter Edition',
+            Русский: '1,92 ТБ NVMe Datacenter Edition'
+        },
+        comment: "1.92 TB NVMe Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     sata2000e: {
         monthly: 10.00, flexi_required: true,
@@ -999,6 +1042,22 @@ var addons = {
             English: '10 TB enterprise SATA HDD',
             Deutsch: '10 TB Enterprise SATA HDD',
             Русский: '10 ТБ enterprise SATA HDD'
+        }
+    },
+    sata12000e: {
+        monthly: 26.50, flexi_required: true,
+        name: {
+            English: '12 TB enterprise SATA HDD',
+            Deutsch: '12 TB Enterprise SATA HDD',
+            Русский: '12 ТБ enterprise SATA HDD'
+        }
+    },
+    sata14000e: {
+        monthly: 33.00, flexi_required: true,
+        name: {
+            English: '14 TB enterprise SATA HDD',
+            Deutsch: '14 TB Enterprise SATA HDD',
+            Русский: '14 ТБ enterprise SATA HDD'
         }
     },
     gbit_lan: {
