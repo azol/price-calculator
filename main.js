@@ -110,13 +110,12 @@ var servers = {
         },
     },
     SB0: {
-        monthly: 0, setup: 0, flexi_included: true,
+        monthly: 0, setup: 0,
         name: {
             English: 'Server SB',
             Deutsch: 'Server SB',
             Русский: 'Сервер SB'
         },
-        comment: 'Dummy: Flexi-Pack included'
     },
     EX40: {
         monthly: 41.1765, setup: 0,
@@ -339,7 +338,6 @@ EX51-SSD-GPU: no hardware addons'
     },
     AX160NVMe: {
         monthly: 169, setup: 169,
-        flexi_included: true,
         name: {
             English: 'Server AX160-NVMe',
             Deutsch: 'Server AX160-NVMe',
@@ -351,7 +349,6 @@ AX160-NVMe: up to 12x RAM modules additional'
     },
     AX160SSD: {
         monthly: 179, setup: 179,
-        flexi_included: true,
         name: {
             English: 'Server AX160-SSD',
             Deutsch: 'Server AX160-SSD',
@@ -443,7 +440,6 @@ PX61-NVMe: no IP-KVM or IPMI'
     },
     PX92: {
         monthly: 99, setup: 99,
-        flexi_included: true,
         name: {
             English: 'Server PX92',
             Deutsch: 'Server PX92',
@@ -484,7 +480,6 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
     },
     DX152: {
         monthly: 159, setup: 159,
-        flexi_included: true,
         number_of_cpus: 2,
         name: {
             English: 'DELL PowerEdge™ R640 DX152',
@@ -495,12 +490,10 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
 R640: have an iDRAC (IP-KVM)\n\
 R640: Drives are optional (240/480/960 GB, 1,92 TB GB SSD DC and 960 GB NVMe)\n\
 R640: Windows 'for EPYC'\n\
-R640: Flexi-Pack is included\n\
 R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
     },
     DX292: {
         monthly: 219, setup: 219,
-        flexi_included: true,
         number_of_cpus: 2,
         name: {
             English: 'DELL PowerEdge™ R640 DX292',
@@ -511,7 +504,6 @@ R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
 R640: have an iDRAC (IP-KVM)\n\
 R640: Drives are optional (240/480/960 GB, 1,92 TB GB SSD DC and 960 GB NVMe)\n\
 R640: Windows 'for EPYC'\n\
-R640: Flexi-Pack is included\n\
 R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
     },
     CX10: {
@@ -698,7 +690,6 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
     /*
      template: {
        monthly: 0, setup: 0,
-       flexi_included: true,
        number_of_cpus: 2,
        name: {
          English: '',
@@ -712,7 +703,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
 
 var addons = {
     // kvm: {
-    //     monthly: 19, setup: 149, flexi_required: true,
+    //     monthly: 19, setup: 149,
     //     name: {
     //         English: 'KVM-over-IP Remote Management',
     //         Deutsch: 'KVM-over-IP Remote Management',
@@ -720,7 +711,7 @@ var addons = {
     //     }
     // },
     usb16: {
-        monthly: 1.50, flexi_required: true,
+        monthly: 1.50,
         name: {
             English: '16 GB USB stick',
             Deutsch: '16 GB USB-Stick',
@@ -728,7 +719,7 @@ var addons = {
         }
     },
     usb64: {
-        monthly: 3.50, flexi_required: true,
+        monthly: 3.50,
         name: {
             English: '64 GB USB stick',
             Deutsch: '64 GB USB-Stick',
@@ -827,7 +818,7 @@ var addons = {
         }
     },
     raid4: {
-        monthly: 21, flexi_required: true,
+        monthly: 21,
         name: {
             English: '4-Port Hardware RAID controller',
             Deutsch: '4-Port Hardware RAID-Controller',
@@ -843,7 +834,7 @@ var addons = {
         }
     },
     subnet29: {
-        monthly: 6.7227, flexi_required: false,
+        monthly: 6.7227,
         name: {
             English: 'Subnet /29',
             Deutsch: 'Subnet /29',
@@ -851,7 +842,7 @@ var addons = {
         }
     },
     subnet28: {
-        monthly: 13.4454, flexi_required: false,
+        monthly: 13.4454,
         name: {
             English: 'Subnet /28',
             Deutsch: 'Subnet /28',
@@ -859,7 +850,7 @@ var addons = {
         }
     },
     subnet27: {
-        monthly: 26.8908, flexi_required: false,
+        monthly: 26.8908,
         name: {
             English: 'Subnet /27',
             Deutsch: 'Subnet /27',
@@ -867,7 +858,7 @@ var addons = {
         }
     },
     failover_ip: {
-        monthly: 4.2017, flexi_required: false,
+        monthly: 4.2017,
         name: {
             English: 'Failover IP',
             Deutsch: 'Failover-IP',
@@ -876,7 +867,7 @@ var addons = {
         comment: 'Failover IP: can`t be used with VMware ESXi'
     },
     failover_subnet29: {
-        monthly: 15.1261, flexi_required: false,
+        monthly: 15.1261,
         name: {
             English: 'Failover subnet /29',
             Deutsch: 'Failover Subnet /29',
@@ -885,7 +876,7 @@ var addons = {
         comment: 'Failover subnet /29: can`t be used with VMware ESXi'
     },
     failover_subnet28: {
-        monthly: 21.8487, flexi_required: false,
+        monthly: 21.8487,
         name: {
             English: 'Failover subnet /28',
             Deutsch: 'Failover Subnet /28',
@@ -894,7 +885,7 @@ var addons = {
         comment: 'Failover subnet /28: can`t be used with VMware ESXi'
     },
     failover_subnet27: {
-        monthly: 35.2941, flexi_required: false,
+        monthly: 35.2941,
         name: {
             English: 'Failover subnet /27',
             Deutsch: 'Failover Subnet /27',
@@ -903,7 +894,7 @@ var addons = {
         comment: 'Failover subnet /27: can`t be used with VMware ESXi'
     },
     ssd240: {
-        monthly: 6.50, flexi_required: true,
+        monthly: 6.50,
         name: {
             English: '240/250 GB SSD',
             Deutsch: '240/250 GB SSD',
@@ -911,7 +902,7 @@ var addons = {
         }
     },
     ssd500: {
-        monthly: 10.00, flexi_required: true,
+        monthly: 10.00,
         name: {
             English: '500 GB SSD',
             Deutsch: '500 GB SSD',
@@ -919,7 +910,7 @@ var addons = {
         }
     },
     ssd1000: {
-        monthly: 20.50, flexi_required: true,
+        monthly: 20.50,
         name: {
             English: '1 TB SSD',
             Deutsch: '1 TB SSD',
@@ -927,7 +918,7 @@ var addons = {
         }
     },
     ssd240de: {
-        monthly: 8.00, flexi_required: true,
+        monthly: 8.00,
         name: {
             English: '240 GB SSD Datacenter Edition',
             Deutsch: '240 GB SSD Datacenter Edition',
@@ -935,7 +926,7 @@ var addons = {
         }
     },
     ssd480de: {
-        monthly: 12.00, flexi_required: true,
+        monthly: 12.00,
         name: {
             English: '480 GB SSD Datacenter Edition',
             Deutsch: '480 GB SSD Datacenter Edition',
@@ -943,7 +934,7 @@ var addons = {
         }
     },
     ssd960de: {
-        monthly: 24.00, flexi_required: true,
+        monthly: 24.00,
         name: {
             English: '960 GB SSD Datacenter Edition',
             Deutsch: '960 GB SSD Datacenter Edition',
@@ -951,7 +942,7 @@ var addons = {
         }
     },
     ssd1920_de: {
-        monthly: 36.50, flexi_required: true,
+        monthly: 36.50,
         name: {
             English: '1.92 TB SSD Datacenter Edition',
             Deutsch: '1,92 TB SSD Datacenter Edition',
@@ -959,7 +950,7 @@ var addons = {
         }
     },
     ssd3840de: {
-        monthly: 89.50, flexi_required: true,
+        monthly: 89.50,
         name: {
             English: '3.84 TB SSD Datacenter Edition',
             Deutsch: '3,84 TB SSD Datacenter Edition',
@@ -968,7 +959,7 @@ var addons = {
         comment: "3.84 TB SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme512: {
-        monthly: 14.00, flexi_required: true,
+        monthly: 14.00,
         name: {
             English: '512 GB NVMe',
             Deutsch: '512 GB NVMe',
@@ -977,7 +968,7 @@ var addons = {
         comment: "512 NVMe: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960de: {
-        monthly: 30.00, flexi_required: true,
+        monthly: 30.00,
         name: {
             English: '960 GB NVMe Datacenter Edition',
             Deutsch: '960 GB NVMe Datacenter Edition',
@@ -986,7 +977,7 @@ var addons = {
         comment: "960 NVMe Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme480_3d_xpoint: {
-        monthly: 42.50, flexi_required: true,
+        monthly: 42.50,
         name: {
             English: '480 GB NVMe SSD 3D XPoint',
             Deutsch: '480 GB NVMe SSD 3D XPoint',
@@ -995,7 +986,7 @@ var addons = {
         comment: "480 GB NVMe SSD 3D XPoint: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1000: {
-        monthly: 23.50, flexi_required: true,
+        monthly: 23.50,
         name: {
             English: '1 TB NVMe',
             Deutsch: '1 TB NVMe',
@@ -1004,7 +995,7 @@ var addons = {
         comment: "1 TB NVMe: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1920de: {
-        monthly: 57.00, flexi_required: true,
+        monthly: 57.00,
         name: {
             English: '1.92 TB NVMe Datacenter Edition',
             Deutsch: '1,92 TB NVMe Datacenter Edition',
@@ -1013,7 +1004,7 @@ var addons = {
         comment: "1.92 TB NVMe Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     sata2000e: {
-        monthly: 10.00, flexi_required: true,
+        monthly: 10.00,
         name: {
             English: '2 TB enterprise SATA HDD',
             Deutsch: '2 TB Enterprise SATA HDD',
@@ -1021,7 +1012,7 @@ var addons = {
         },
     },
     sata4000e: {
-        monthly: 13.00, flexi_required: true,
+        monthly: 13.00,
         name: {
             English: '4 TB enterprise SATA HDD',
             Deutsch: '4 TB Enterprise SATA HDD',
@@ -1029,7 +1020,7 @@ var addons = {
         }
     },
     sata6000e: {
-        monthly: 14.50, flexi_required: true,
+        monthly: 14.50,
         name: {
             English: '6 TB enterprise SATA HDD',
             Deutsch: '6 TB Enterprise SATA HDD',
@@ -1037,7 +1028,7 @@ var addons = {
         }
     },
     sata10000e: {
-        monthly: 19.50, flexi_required: true,
+        monthly: 19.50,
         name: {
             English: '10 TB enterprise SATA HDD',
             Deutsch: '10 TB Enterprise SATA HDD',
@@ -1045,7 +1036,7 @@ var addons = {
         }
     },
     sata12000e: {
-        monthly: 26.50, flexi_required: true,
+        monthly: 26.50,
         name: {
             English: '12 TB enterprise SATA HDD',
             Deutsch: '12 TB Enterprise SATA HDD',
@@ -1053,7 +1044,7 @@ var addons = {
         }
     },
     sata14000e: {
-        monthly: 33.00, flexi_required: true,
+        monthly: 33.00,
         name: {
             English: '14 TB enterprise SATA HDD',
             Deutsch: '14 TB Enterprise SATA HDD',
@@ -1077,7 +1068,7 @@ var addons = {
         }
     },
     gbit_nic: {
-        monthly: 2.00, flexi_required: true,
+        monthly: 2.00,
         name: {
             English: 'Gbit NIC',
             Deutsch: 'Gbit-NIC',
@@ -1085,7 +1076,7 @@ var addons = {
         }
     },
     ten_gbit_nic: {
-        monthly: 11.00, flexi_required: true,
+        monthly: 11.00,
         name: {
             English: '10 Gbit NIC',
             Deutsch: '10 Gbit-NIC',
@@ -1093,7 +1084,7 @@ var addons = {
         }
     },
     ten_gbit_dual_nic: {
-        monthly: 20.50, flexi_required: true,
+        monthly: 20.50,
         name: {
             English: 'Dual 10 Gbit NIC',
             Deutsch: 'Dual 10 Gbit-NIC',
@@ -1101,25 +1092,15 @@ var addons = {
         }
     },
     ten_gbit_dual_nic_dell: {
-        monthly: 13.50, flexi_required: true,
+        monthly: 13.50,
         name: {
             English: 'Dual 10 Gbit NIC',
             Deutsch: 'Dual 10 Gbit-NIC',
             Русский: 'Двойная 10 Гбит сетевая карта'
         }
     },
-    activate_second_onboard_nic: {
-        flexi_required: true,
-        name: {
-            English: 'Activate 2nd onboard Gbit NIC',
-            Deutsch: '2. Onboard Gbit NIC aktivieren',
-            Русский: 'Включение 2ой встроенной 1Гбит карты'
-        },
-        comment: 'Activate 2nd onboard Gbit NIC: available only for PX servers'
-    },
     uplink_10_gbit: {
         monthly: 39.00,
-        flexi_required: true,
         name: {
             English: '10G dedicated uplink',
             Deutsch: '10G dedicated Uplink',
@@ -1282,14 +1263,6 @@ var addons = {
             Русский: '10.000 ГБ места для резервных копий'
         }
     },
-    flexi_pack: {
-        monthly: 12.6050, setup: 0,
-        name: {
-            English: 'Flexi-Pack',
-            Deutsch: 'Flexi-Pack',
-            Русский: 'Flexi-пакет'
-        }
-    },
     // parameters should be set from GUI
     custom_addon: {
         monthly: 0, setup: 0,
@@ -1301,7 +1274,7 @@ var addons = {
     }
     /*
      template: {
-     monthly: 0, setup: 0, flexi_required: true, pay_entire_month: true,
+     monthly: 0, setup: 0, pay_entire_month: true,
      monthly_price_per_cpu: true,
      name: {
      English: '',
@@ -1766,7 +1739,6 @@ Workspace.prototype = {
 
                     serverItems.addItem(server);
                     serverCommentItems.addItem(server);
-                    var flexiCalculated = false;
                     for (var j = 0; j < server.serverAddons.length; j++) {
                         var addon = server.serverAddons[j];
                         var addonsAdded = 0;
@@ -1781,12 +1753,6 @@ Workspace.prototype = {
                         } else {
                             addonItems.addItem(addon);
                             addonCommentItems.addItem(addon);
-                        }
-
-                        // flexi-pack
-                        if (!flexiCalculated && addon.flexi_required === true && server.model.flexi_included !== true) {
-                            flexiCalculated = true;
-                            addonItems.addItem(addons.flexi_pack);
                         }
 
                         // payment for products charged for entire month
