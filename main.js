@@ -976,7 +976,7 @@ var addons = {
         },
         comment: "512 NVMe: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
-    nvme960: {
+    nvme960de: {
         monthly: 30.00, flexi_required: true,
         name: {
             English: '960 GB NVMe Datacenter Edition',
@@ -1003,7 +1003,7 @@ var addons = {
         },
         comment: "1 TB NVMe: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
-    nvme1920: {
+    nvme1920de: {
         monthly: 57.00, flexi_required: true,
         name: {
             English: '1.92 TB NVMe Datacenter Edition',
