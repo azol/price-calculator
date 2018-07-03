@@ -1092,12 +1092,20 @@ var addons = {
             Русский: 'Дополнительная 10 Гбит сетевая карта'
         }
     },
-    ten_gbit_nic_dell: {
+    ten_gbit_dual_nic: {
+        monthly: 20.50, flexi_required: true,
+        name: {
+            English: 'Additional dual 10 Gbit NIC',
+            Deutsch: 'Zusätzliche Dual 10 Gbit-NIC',
+            Русский: 'Дополнительная двойная 10 Гбит сетевая карта'
+        }
+    },
+    ten_gbit_dual_nic_dell: {
         monthly: 13.50, flexi_required: true,
         name: {
-            English: 'Additional 10 Gbit NIC',
-            Deutsch: 'Zusätzliche 10 Gbit-NIC',
-            Русский: 'Дополнительная 10 Гбит сетевая карта'
+            English: 'Additional dual 10 Gbit NIC',
+            Deutsch: 'Zusätzliche Dual 10 Gbit-NIC',
+            Русский: 'Дополнительная двойная 10 Гбит сетевая карта'
         }
     },
     activate_second_onboard_nic: {
