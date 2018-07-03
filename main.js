@@ -1079,33 +1079,33 @@ var addons = {
     gbit_nic: {
         monthly: 2.00, flexi_required: true,
         name: {
-            English: 'Additional Gbit NIC',
-            Deutsch: 'Zusätzliche Gbit-NIC',
-            Русский: 'Дополнительная 1Гбит сетевая карта'
+            English: 'Gbit NIC',
+            Deutsch: 'Gbit-NIC',
+            Русский: '1Гбит сетевая карта'
         }
     },
     ten_gbit_nic: {
         monthly: 11.00, flexi_required: true,
         name: {
-            English: 'Additional 10 Gbit NIC',
-            Deutsch: 'Zusätzliche 10 Gbit-NIC',
-            Русский: 'Дополнительная 10 Гбит сетевая карта'
+            English: '10 Gbit NIC',
+            Deutsch: '10 Gbit-NIC',
+            Русский: '10 Гбит сетевая карта'
         }
     },
     ten_gbit_dual_nic: {
         monthly: 20.50, flexi_required: true,
         name: {
-            English: 'Additional dual 10 Gbit NIC',
-            Deutsch: 'Zusätzliche Dual 10 Gbit-NIC',
-            Русский: 'Дополнительная двойная 10 Гбит сетевая карта'
+            English: 'Dual 10 Gbit NIC',
+            Deutsch: 'Dual 10 Gbit-NIC',
+            Русский: 'Двойная 10 Гбит сетевая карта'
         }
     },
     ten_gbit_dual_nic_dell: {
         monthly: 13.50, flexi_required: true,
         name: {
-            English: 'Additional dual 10 Gbit NIC',
-            Deutsch: 'Zusätzliche Dual 10 Gbit-NIC',
-            Русский: 'Дополнительная двойная 10 Гбит сетевая карта'
+            English: 'Dual 10 Gbit NIC',
+            Deutsch: 'Dual 10 Gbit-NIC',
+            Русский: 'Двойная 10 Гбит сетевая карта'
         }
     },
     activate_second_onboard_nic: {
