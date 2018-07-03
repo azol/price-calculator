@@ -893,6 +893,30 @@ var addons = {
         },
         comment: 'Failover subnet /27: can`t be used with VMware ESXi'
     },
+    vlan_subnet29: {
+        monthly: 15.1261,
+        name: {
+            English: 'VLAN subnet /29',
+            Deutsch: 'VLAN Subnet /29',
+            Русский: 'VLAN подсеть /29'
+        },
+    },
+    vlan_subnet28: {
+        monthly: 21.8487,
+        name: {
+            English: 'VLAN subnet /28',
+            Deutsch: 'VLAN Subnet /28',
+            Русский: 'VLAN подсеть /28'
+        },
+    },
+    vlan_subnet27: {
+        monthly: 35.2941,
+        name: {
+            English: 'VLAN subnet /27',
+            Deutsch: 'VLAN Subnet /27',
+            Русский: 'VLAN подсеть /27'
+        },
+    },
     ssd240: {
         monthly: 6.50,
         name: {
