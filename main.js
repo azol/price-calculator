@@ -451,6 +451,19 @@ PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
 PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
 PX92: max 256 GB RAM DDR4 (4x 32GB)'
     },
+    PX92_Finland: {
+        monthly: 94, setup: 99,
+        name: {
+            English: 'Server PX92 (Finland)',
+            Deutsch: 'Server PX92 (Finnland)',
+            Русский: 'Сервер PX92 (Финляндия)'
+        },
+        comment: 'PX92: Intel® Xeon® W-2145 Octa-Core Skylake W/128 GB DDR4 ECC/50 TB\n\
+PX92: SSD options: 8x NVMe and SSD (up to 4x NVMe or 6x SSD)\n\
+PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
+PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
+PX92: max 256 GB RAM DDR4 (4x 32GB)'
+    },
     SX61: {
         monthly: 69, setup: 69,
         name: {
