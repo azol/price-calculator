@@ -213,6 +213,12 @@
             </div>
           </div>
         </div>
+
+        <fieldset>
+          <legend>Server Options</legend>
+          <input type="checkbox" id="no_setup_fee" onchange="updateNoSetupFee(document.getElementById('select_servers').value, this.checked)"><label for="no_setup_fee">No Setup Fee</label>
+        </fieldset>
+
         <fieldset>
           <legend>Addons</legend>
           <input type="checkbox" id="win_std"><label for="win_std">win_std</label><br>

@@ -1398,6 +1398,7 @@ function onChange() {
 
     updateTabName();
     updateCalculationResult();
+    updateGuiForSelectedServer();
 }
 
 /**
@@ -1419,9 +1420,30 @@ function round(value, decimals) {
     return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
 }
 
+function updateGuiForSelectedServer() {
+    var selectedServerModel = document.getElementById('select_servers').value;
+
+    if (servers[selectedServerModel].noSetupFee === true) {
+        workspace.setNoSetupFee(true);
+    } else {
+        // both 'false' and 'undefined' cases
+        workspace.setNoSetupFee(false);
+    }
+}
+
 
 function updateTabName() {
     document.getElementById("panel-" + workspace.currentServer).textContent = workspace.Servers[workspace.currentServer].tabName();
+}
+
+/**
+ * In 'server' array set 'noSetupFee' for given 'modelName'.
+ *
+ * @param {String} modelName The server model name.
+ * @param {boolean} setupFeeFlag Setup Fee flag: 'true' or 'false'.
+ */
+function updateNoSetupFee(modelName, setupFeeFlag) {
+    servers[modelName].noSetupFee = setupFeeFlag;
 }
 
 /**
@@ -1500,6 +1522,9 @@ Workspace.prototype = {
     },
     setNumberOfServers: function(arg) {
         document.getElementById('number_of_servers').value = arg;
+    },
+    setNoSetupFee: function(arg) {
+        document.getElementById('no_setup_fee').checked = arg;
     },
     setCustomAddonText: function(arg) {
         document.getElementById('custom_addon').value = arg;
@@ -1596,6 +1621,7 @@ Workspace.prototype = {
         this.setServer("SB");
         this.setSbNumber('');
         this.setNumberOfServers("");
+        this.setNoSetupFee(false);
         this.setCustomAddonText("");
         this.setCustomAddonSetupPrice("");
         this.setCustomAddonMonthlyPrice("");
@@ -1675,6 +1701,9 @@ Workspace.prototype = {
             this.setSbNumber((isNaN(sbNumber)) ? "" : sbNumber);
             var numOfServers = this.Servers[this.currentServer].amount;
             this.setNumberOfServers((numOfServers !== 1) ? numOfServers : "");
+
+            var noSetupFeeFlag = this.Servers[this.currentServer].model.noSetupFee;
+            this.setNoSetupFee(noSetupFeeFlag !== undefined ? noSetupFeeFlag : false);
 
             if (this.Servers[this.currentServer].serverAddons) {
                 for (var i = 0; i < this.Servers[this.currentServer].serverAddons.length; i++) {
@@ -2156,8 +2185,12 @@ function ServerItems() {
                 setup: (newItem.model.setup !== undefined) ? newItem.model.setup : 0,
                 monthly: (newItem.model.monthly !== undefined) ? newItem.model.monthly : 0,
                 amount: 1
-
             };
+
+            if (newItem.model.noSetupFee === true) {
+                theNewItem.setup = 0;
+            }
+
             this.items.push(theNewItem);
             this.totalMonthly += theNewItem.monthly;
             this.totalSetup += theNewItem.setup;
