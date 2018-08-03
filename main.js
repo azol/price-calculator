@@ -473,7 +473,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
         },
         comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA/30 TB'
     },
-    SX131: {
+    SX131_old: {
         monthly: 169, setup: 169,
         name: {
             English: 'Server SX131',
@@ -482,7 +482,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
         },
         comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA/50 TB'
     },
-    SX291: {
+    SX291_old: {
         monthly: 249, setup: 249,
         name: {
             English: 'Server SX291',
