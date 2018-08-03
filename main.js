@@ -473,6 +473,42 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
         },
         comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA/30 TB'
     },
+    SX132: {
+        monthly: 169, setup: 169,
+        name: {
+            English: 'Server SX132',
+            Deutsch: 'Server SX132',
+            Русский: 'Сервер SX132'
+        },
+        comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise/50 TB'
+    },
+    SX292: {
+        monthly: 269, setup: 269,
+        name: {
+            English: 'Server SX292',
+            Deutsch: 'Server SX292',
+            Русский: 'Сервер SX292'
+        },
+        comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included'
+    },
+    SX132_Finland: {
+        monthly: 159, setup: 159,
+        name: {
+            English: 'Server SX132 (Finland)',
+            Deutsch: 'Server SX132 (Finnland)',
+            Русский: 'Сервер SX132 (Финляндия)'
+        },
+        comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise/50 TB'
+    },
+    SX292_Finland: {
+        monthly: 259, setup: 259,
+        name: {
+            English: 'Server SX292 (Finland)',
+            Deutsch: 'Server SX292 (Finnland)',
+            Русский: 'Сервер SX292 (Финляндия)'
+        },
+        comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included'
+    },
     SX131_old: {
         monthly: 169, setup: 169,
         name: {
