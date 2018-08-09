@@ -654,6 +654,51 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
         },
         comment: 'CX51: 8 vCPU/32 GB/240 GB/20 TB'
     },
+    CCX11: {
+        monthly: 19.90, setup: 0,
+        name: {
+            English: 'Server CCX11',
+            Deutsch: 'Server CCX11',
+            Русский: 'Сервер CCX11'
+        },
+        comment: 'CCX11: 2 vCPU/8 GB/80 GB/20 TB'
+    },
+    CCX21: {
+        monthly: 34.90, setup: 0,
+        name: {
+            English: 'Server CCX21',
+            Deutsch: 'Server CCX21',
+            Русский: 'Сервер CCX21'
+        },
+        comment: 'CCX21: 4 vCPU/16 GB/160 GB/20 TB'
+    },
+    CCX31: {
+        monthly: 69.90, setup: 0,
+        name: {
+            English: 'Server CCX31',
+            Deutsch: 'Server CCX31',
+            Русский: 'Сервер CCX31'
+        },
+        comment: 'CCX31: 8 vCPU/32 GB/240 GB/20 TB'
+    },
+    CCX41: {
+        monthly: 139.90, setup: 0,
+        name: {
+            English: 'Server CCX41',
+            Deutsch: 'Server CCX41',
+            Русский: 'Сервер CCX41'
+        },
+        comment: 'CCX41: 16 vCPU/64 GB/360 GB/20 TB'
+    },
+    CCX51: {
+        monthly: 269.90, setup: 0,
+        name: {
+            English: 'Server CCX51',
+            Deutsch: 'Server CCX51',
+            Русский: 'Сервер CCX51'
+        },
+        comment: 'CCX51: 32 vCPU/128 GB/540 GB/20 TB'
+    },
     BX10: {
         monthly: 2.90, setup: 0,
         name: {
