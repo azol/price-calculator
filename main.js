@@ -1207,14 +1207,6 @@ var addons = {
             Русский: '12 ТБ enterprise SATA HDD'
         }
     },
-    sata14000e: {
-        monthly: 33.00,
-        name: {
-            English: '14 TB enterprise SATA HDD',
-            Deutsch: '14 TB Enterprise SATA HDD',
-            Русский: '14 ТБ enterprise SATA HDD'
-        }
-    },
     gbit_lan: {
         monthly: 1.00,
         name: {
