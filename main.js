@@ -1158,6 +1158,15 @@ var addons = {
         },
         comment: "1.92 TB NVMe Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
+    sas600: {
+        monthly: 17.50,
+        name: {
+            English: '600 GB SAS',
+            Deutsch: '600 GB SAS',
+            Русский: '600 ГБ SAS'
+        },
+        comment: '600 GB SAS: is available only for DX141/151/291'
+    },
     sata2000e: {
         monthly: 10.00,
         name: {
