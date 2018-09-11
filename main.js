@@ -300,6 +300,16 @@ EX51-SSD-GPU: no hardware addons'
         },
         comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
     },
+    EX51SSDGPU_Finland: {
+        monthly: 94, setup: 99,
+        name: {
+            English: 'Server EX51-SSD-GPU (Finland)',
+            Deutsch: 'Server EX51-SSD-GPU (Finnland)',
+            Русский: 'Сервер EX51-SSD-GPU (Финляндия)'
+        },
+        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
+EX51-SSD-GPU: no hardware addons'
+    },
     EX61_Finland: {
         monthly: 54, setup: 119,
         name: {
