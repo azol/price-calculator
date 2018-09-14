@@ -1236,9 +1236,9 @@ var addons = {
     gbit_nic: {
         monthly: 2.00,
         name: {
-            English: 'Gbit NIC',
-            Deutsch: 'Gbit-NIC',
-            Русский: '1Гбит сетевая карта'
+            English: '1 Gbit NIC',
+            Deutsch: '1 Gbit-NIC',
+            Русский: '1 Гбит сетевая карта'
         }
     },
     ten_gbit_nic: {
