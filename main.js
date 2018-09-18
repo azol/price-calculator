@@ -502,7 +502,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
         comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included'
     },
     SX132_Finland: {
-        monthly: 159, setup: 159,
+        monthly: 159, setup: 169,
         name: {
             English: 'Server SX132 (Finland)',
             Deutsch: 'Server SX132 (Finnland)',
@@ -511,7 +511,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
         comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise/50 TB'
     },
     SX292_Finland: {
-        monthly: 259, setup: 259,
+        monthly: 259, setup: 269,
         name: {
             English: 'Server SX292 (Finland)',
             Deutsch: 'Server SX292 (Finnland)',
