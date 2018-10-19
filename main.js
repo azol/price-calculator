@@ -375,8 +375,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61',
             Русский: 'Сервер PX61'
         },
-        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB\n\
-PX61: no IP-KVM or IPMI'
+        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB'
     },
     PX61SSD: {
         monthly: 59, setup: 119,
@@ -385,8 +384,7 @@ PX61: no IP-KVM or IPMI'
             Deutsch: 'Server PX61-SSD',
             Русский: 'Сервер PX61-SSD'
         },
-        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB\n\
-PX61-SSD: no IP-KVM or IPMI'
+        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB'
     },
     PX61NVMe: {
         monthly: 59, setup: 119,
@@ -395,8 +393,7 @@ PX61-SSD: no IP-KVM or IPMI'
             Deutsch: 'Server PX61-NVMe',
             Русский: 'Сервер PX61-NVMe'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
-PX61-NVMe: no IP-KVM or IPMI'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
     },
     PX61NVMe_discount: {
         monthly: 59, setup: 59,
@@ -405,8 +402,7 @@ PX61-NVMe: no IP-KVM or IPMI'
             Deutsch: 'Server PX61-NVMe',
             Русский: 'Сервер PX61-NVMe'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
-PX61-NVMe: no IP-KVM or IPMI'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
     },
     PX61_Finland: {
         monthly: 54, setup: 119,
@@ -415,8 +411,7 @@ PX61-NVMe: no IP-KVM or IPMI'
             Deutsch: 'Server PX61 (Finnland)',
             Русский: 'Сервер PX61 (Финляндия)'
         },
-        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB\n\
-PX61: no IP-KVM or IPMI'
+        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB'
     },
     PX61SSD_Finland: {
         monthly: 54, setup: 119,
@@ -425,8 +420,7 @@ PX61: no IP-KVM or IPMI'
             Deutsch: 'Server PX61-SSD (Finnland)',
             Русский: 'Сервер PX61-SSD (Финляндия)'
         },
-        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB\n\
-PX61-SSD: no IP-KVM or IPMI'
+        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB'
     },
     PX61NVMe_Finland: {
         monthly: 54, setup: 119,
@@ -435,8 +429,7 @@ PX61-SSD: no IP-KVM or IPMI'
             Deutsch: 'Server PX61-NVMe (Finnland)',
             Русский: 'Сервер PX61-NVMe (Финляндия)'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
-PX61-NVMe: no IP-KVM or IPMI'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
     },
     PX61NVMe_Finland_discount: {
         monthly: 54, setup: 59,
@@ -445,8 +438,7 @@ PX61-NVMe: no IP-KVM or IPMI'
             Deutsch: 'Server PX61-NVMe (Finnland)',
             Русский: 'Сервер PX61-NVMe (Финляндия)'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB\n\
-PX61-NVMe: no IP-KVM or IPMI'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
     },
     PX92: {
         monthly: 99, setup: 99,
@@ -843,14 +835,6 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
 };
 
 var addons = {
-    // kvm: {
-    //     monthly: 19, setup: 149,
-    //     name: {
-    //         English: 'KVM-over-IP Remote Management',
-    //         Deutsch: 'KVM-over-IP Remote Management',
-    //         Русский: 'KVM-over-IP удалённое управление'
-    //     }
-    // },
     usb16: {
         monthly: 1.50,
         name: {
@@ -1371,15 +1355,6 @@ var addons = {
             Deutsch: 'Traffic overusage (TB)',
             Русский: 'Превышение трафика (ТБ)'
         }
-    },
-    kvm_module: {
-        monthly: 3.00,
-        name: {
-            English: 'KVM-module',
-            Deutsch: 'KVM-modul',
-            Русский: 'KVM-модуль'
-        },
-        comment: 'KVM-module: only for PX91/121(-SSD) servers'
     },
     backup100: {
         monthly: 2.90,
