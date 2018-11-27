@@ -337,15 +337,6 @@ EX51-SSD-GPU: no hardware addons'
         },
         comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
     },
-    AX60SSD_Finland: {
-        monthly: 54, setup: 119,
-        name: {
-            English: 'Server AX60-SSD (Finland)',
-            Deutsch: 'Server AX60-SSD (Finnland)',
-            Русский: 'Сервер AX60-SSD (Финляндия)'
-        },
-        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
-    },
     AX160NVMe: {
         monthly: 169, setup: 169,
         name: {
@@ -363,6 +354,37 @@ AX160-NVMe: up to 12x RAM modules additional'
             English: 'Server AX160-SSD',
             Deutsch: 'Server AX160-SSD',
             Русский: 'Сервер AX160-SSD'
+        },
+        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD/50 TB\n\
+AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
+AX160-SSD: up to 12x RAM modules additional'
+    },
+    AX60SSD_Finland: {
+        monthly: 54, setup: 119,
+        name: {
+            English: 'Server AX60-SSD (Finland)',
+            Deutsch: 'Server AX60-SSD (Finnland)',
+            Русский: 'Сервер AX60-SSD (Финляндия)'
+        },
+        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
+    },
+    AX160NVMe_Finland: {
+        monthly: 164, setup: 169,
+        name: {
+            English: 'Server AX160-NVMe (Finland)',
+            Deutsch: 'Server AX160-NVMe (Finnland)',
+            Русский: 'Сервер AX160-NVMe (Финляндия)'
+        },
+        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB\n\
+AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
+AX160-NVMe: up to 12x RAM modules additional'
+    },
+    AX160SSD_Finland: {
+        monthly: 174, setup: 179,
+        name: {
+            English: 'Server AX160-SSD (Finland)',
+            Deutsch: 'Server AX160-SSD (Finnland)',
+            Русский: 'Сервер AX160-SSD (Финляндия)'
         },
         comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD/50 TB\n\
 AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
