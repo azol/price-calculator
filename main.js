@@ -1085,85 +1085,85 @@ var addons = {
     ssd240: {
         monthly: 6.50,
         name: {
-            English: '240/250 GB SSD',
-            Deutsch: '240/250 GB SSD',
-            Русский: '240/250 ГБ SSD'
+            English: '240 GB SATA SSD',
+            Deutsch: '240 GB SATA SSD',
+            Русский: '240 ГБ SATA SSD'
         }
     },
     ssd500: {
         monthly: 10.00,
         name: {
-            English: '500 GB SSD',
-            Deutsch: '500 GB SSD',
-            Русский: '500 ГБ SSD'
+            English: '500 GB SATA SSD',
+            Deutsch: '500 GB SATA SSD',
+            Русский: '500 ГБ SATA SSD'
         }
     },
     ssd1000: {
-        monthly: 20.50,
+        monthly: 17.00,
         name: {
-            English: '1 TB SSD',
-            Deutsch: '1 TB SSD',
-            Русский: '1 ТБ SSD'
+            English: '1 TB SATA SSD',
+            Deutsch: '1 TB SATA SSD',
+            Русский: '1 ТБ SATA SSD'
         }
     },
     ssd240de: {
         monthly: 8.00,
         name: {
-            English: '240 GB SSD Datacenter Edition',
-            Deutsch: '240 GB SSD Datacenter Edition',
-            Русский: '240 ГБ SSD Datacenter Edition'
+            English: '240 GB SATA SSD Datacenter Edition',
+            Deutsch: '240 GB SATA SSD Datacenter Edition',
+            Русский: '240 ГБ SATA SSD Datacenter Edition'
         }
     },
     ssd480de: {
-        monthly: 12.00,
+        monthly: 10.00,
         name: {
-            English: '480 GB SSD Datacenter Edition',
-            Deutsch: '480 GB SSD Datacenter Edition',
-            Русский: '480 ГБ SSD Datacenter Edition'
+            English: '480 GB SATA SSD Datacenter Edition',
+            Deutsch: '480 GB SATA SSD Datacenter Edition',
+            Русский: '480 ГБ SATA SSD Datacenter Edition'
         }
     },
     ssd960de: {
-        monthly: 24.00,
+        monthly: 18.00,
         name: {
-            English: '960 GB SSD Datacenter Edition',
-            Deutsch: '960 GB SSD Datacenter Edition',
-            Русский: '960 ГБ SSD Datacenter Edition'
+            English: '960 GB SATA SSD Datacenter Edition',
+            Deutsch: '960 GB SATA SSD Datacenter Edition',
+            Русский: '960 ГБ SATA SSD Datacenter Edition'
         }
     },
     ssd1920_de: {
-        monthly: 36.50,
+        monthly: 32.50,
         name: {
-            English: '1.92 TB SSD Datacenter Edition',
-            Deutsch: '1,92 TB SSD Datacenter Edition',
-            Русский: '1,92 ТБ SSD Datacenter Edition'
+            English: '1.92 TB SATA SSD Datacenter Edition',
+            Deutsch: '1,92 TB SATA SSD Datacenter Edition',
+            Русский: '1,92 ТБ SATA SSD Datacenter Edition'
         }
     },
     ssd3840de: {
-        monthly: 89.50,
+        monthly: 58.5,
         name: {
-            English: '3.84 TB SSD Datacenter Edition',
-            Deutsch: '3,84 TB SSD Datacenter Edition',
-            Русский: '3,84 ТБ SSD Datacenter Edition'
+            English: '3.84 TB SATA SSD Datacenter Edition',
+            Deutsch: '3,84 TB SATA SSD Datacenter Edition',
+            Русский: '3,84 ТБ SATA SSD Datacenter Edition'
         },
-        comment: "3.84 TB SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+        comment: "3.84 TB SATA SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme512: {
         monthly: 14.00,
         name: {
-            English: '512 GB NVMe',
-            Deutsch: '512 GB NVMe',
-            Русский: '512 ГБ NVMe'
+            English: '512 GB NVMe SSD',
+            Deutsch: '512 GB NVMe SSD',
+            Русский: '512 ГБ NVMe SSD'
         },
-        comment: "512 NVMe: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+        comment: "512 NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960de: {
-        monthly: 30.00,
+        monthly: 28.00,
         name: {
-            English: '960 GB NVMe Datacenter Edition',
-            Deutsch: '960 GB NVMe Datacenter Edition',
-            Русский: '960 ГБ NVMe Datacenter Edition'
+            English: '960 GB NVMe SSD Datacenter Edition',
+            Deutsch: '960 GB NVMe SSD Datacenter Edition',
+            Русский: '960 ГБ NVMe SSD Datacenter Edition'
         },
-        comment: "960 NVMe Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+        comment: "960 NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme480_3d_xpoint: {
         monthly: 42.50,
@@ -1175,118 +1175,118 @@ var addons = {
         comment: "480 GB NVMe SSD 3D XPoint: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1000: {
-        monthly: 23.50,
+        monthly: 20.50,
         name: {
-            English: '1 TB NVMe',
-            Deutsch: '1 TB NVMe',
-            Русский: '1 ТБ NVMe'
+            English: '1 TB NVMe SSD',
+            Deutsch: '1 TB NVMe SSD',
+            Русский: '1 ТБ NVMe SSD'
         },
-        comment: "1 TB NVMe: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+        comment: "1 TB NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1920de: {
-        monthly: 57.00,
+        monthly: 48.50,
         name: {
-            English: '1.92 TB NVMe Datacenter Edition',
-            Deutsch: '1,92 TB NVMe Datacenter Edition',
-            Русский: '1,92 ТБ NVMe Datacenter Edition'
+            English: '1.92 TB NVMe SSD Datacenter Edition',
+            Deutsch: '1,92 TB NVMe SSD Datacenter Edition',
+            Русский: '1,92 ТБ NVMe SSD Datacenter Edition'
         },
-        comment: "1.92 TB NVMe Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+        comment: "1.92 TB NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     sas600: {
         monthly: 17.50,
         name: {
-            English: '600 GB SAS',
-            Deutsch: '600 GB SAS',
-            Русский: '600 ГБ SAS'
+            English: '600 GB SAS Enterprise Hard Drive',
+            Deutsch: '600 GB SAS Enterprise Hard Drive',
+            Русский: '600 ГБ SAS Enterprise жесткий диск'
         },
-        comment: '600 GB SAS: is available only for DX141/151/291'
+        comment: '600 GB SAS Enterprise Hard Drive: is available only for DX141/151/291'
     },
     sata2000e: {
         monthly: 10.00,
         name: {
-            English: '2 TB enterprise SATA HDD',
-            Deutsch: '2 TB Enterprise SATA HDD',
-            Русский: '2 ТБ enterprise SATA HDD'
+            English: '2 TB SATA Enterprise Hard Drive',
+            Deutsch: '2 TB SATA Enterprise Hard Drive',
+            Русский: '2 ТБ SATA Enterprise жесткий диск'
         },
     },
     sata4000e: {
         monthly: 13.00,
         name: {
-            English: '4 TB enterprise SATA HDD',
-            Deutsch: '4 TB Enterprise SATA HDD',
-            Русский: '4 ТБ enterprise SATA HDD'
+            English: '4 TB SATA Enterprise Hard Drive',
+            Deutsch: '4 TB SATA Enterprise Hard Drive',
+            Русский: '4 ТБ SATA Enterprise жесткий диск'
         }
     },
     sata6000e: {
         monthly: 14.50,
         name: {
-            English: '6 TB enterprise SATA HDD',
-            Deutsch: '6 TB Enterprise SATA HDD',
-            Русский: '6 ТБ enterprise SATA HDD'
+            English: '6 TB SATA Enterprise Hard Drive',
+            Deutsch: '6 TB SATA Enterprise Hard Drive',
+            Русский: '6 ТБ SATA Enterprise жесткий диск'
         }
     },
     sata10000e: {
         monthly: 19.50,
         name: {
-            English: '10 TB enterprise SATA HDD',
-            Deutsch: '10 TB Enterprise SATA HDD',
-            Русский: '10 ТБ enterprise SATA HDD'
+            English: '10 TB SATA Enterprise Hard Drive',
+            Deutsch: '10 TB SATA Enterprise Hard Drive',
+            Русский: '10 ТБ SATA Enterprise жесткий диск'
         }
     },
     sata12000e: {
         monthly: 26.50,
         name: {
-            English: '12 TB enterprise SATA HDD',
-            Deutsch: '12 TB Enterprise SATA HDD',
-            Русский: '12 ТБ enterprise SATA HDD'
+            English: '12 TB SATA Enterprise Hard Drive',
+            Deutsch: '12 TB SATA Enterprise Hard Drive',
+            Русский: '12 ТБ SATA Enterprise жесткий диск'
         }
     },
     gbit_lan: {
         monthly: 1.00,
         name: {
-            English: '1 Gbit LAN connection ',
-            Deutsch: 'LAN Verbindung 1 Gbit',
-            Русский: 'Подключение LAN 1 ГБит'
+            English: '1G LAN connection ',
+            Deutsch: 'LAN Verbindung 1G',
+            Русский: 'Подключение LAN 1G'
         }
     },
     ten_gbit_lan: {
         monthly: 2.50,
         name: {
-            English: '10 Gbit LAN connection ',
-            Deutsch: 'LAN Verbindung 10 Gbit',
-            Русский: 'Подключение LAN 10 ГБит'
+            English: '10G LAN connection ',
+            Deutsch: 'LAN Verbindung 10G',
+            Русский: 'Подключение LAN 10G'
         }
     },
     gbit_nic: {
         monthly: 2.00,
         name: {
-            English: '1 Gbit NIC',
-            Deutsch: '1 Gbit-NIC',
-            Русский: '1 Гбит сетевая карта'
+            English: '1G NIC',
+            Deutsch: '1G NIC',
+            Русский: '1G NIC'
         }
     },
     ten_gbit_nic: {
-        monthly: 11.00,
+        monthly: 8.00,
         name: {
-            English: '10 Gbit NIC',
-            Deutsch: '10 Gbit-NIC',
-            Русский: '10 Гбит сетевая карта'
+            English: '10G NIC',
+            Deutsch: '10G NIC',
+            Русский: '10G NIC'
         }
     },
     ten_gbit_dual_nic: {
-        monthly: 20.50,
+        monthly: 12.00,
         name: {
-            English: 'Dual 10 Gbit NIC',
-            Deutsch: 'Dual 10 Gbit-NIC',
-            Русский: 'Двойная 10 Гбит сетевая карта'
+            English: 'DUAL 10G NIC',
+            Deutsch: 'DUAL 10G NIC',
+            Русский: 'Двойной 10G NIC'
         }
     },
     ten_gbit_dual_nic_dell: {
-        monthly: 13.50,
+        monthly: 15.50,
         name: {
-            English: 'Dual 10 Gbit NIC',
-            Deutsch: 'Dual 10 Gbit-NIC',
-            Русский: 'Двойная 10 Гбит сетевая карта'
+            English: 'DUAL 10G NIC (Dell)',
+            Deutsch: 'DUAL 10G NIC (Dell)',
+            Русский: 'Двойной 10G NIC (Dell)'
         }
     },
     uplink_10_gbit: {
@@ -1340,7 +1340,7 @@ var addons = {
         }
     },
     switch_48port_10gbit: {
-        monthly: 329.00,
+        monthly: 325.50,
         name: {
             English: '48-Port 10 Gbit switch',
             Deutsch: '48-Port 10 Gbit-Switch',
@@ -1348,7 +1348,7 @@ var addons = {
         }
     },
     switch_96port_10gbit: {
-        monthly: 510.50,
+        monthly: 518.50,
         name: {
             English: '96-Port 10 Gbit switch',
             Deutsch: '96-Port 10 Gbit-Switch',
