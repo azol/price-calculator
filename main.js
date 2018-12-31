@@ -26,7 +26,7 @@ var countryVATrate = {
     "Portugal": 23,
     "Republic of Belarus": 20,
     "Romania": 19,
-    "Russia": 18,
+    "Russia": 20,
     "Slovakia": 20,
     "Slovenia": 22,
     "Spain": 21,
