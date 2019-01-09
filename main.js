@@ -908,7 +908,7 @@ var addons = {
         }
     },
     win_std: {
-        monthly: 21.0084, pay_entire_month: true,
+        monthly: 23.10, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Standard Edition',
@@ -917,7 +917,7 @@ var addons = {
         }
     },
     win_dc: {
-        monthly: 130.2521, pay_entire_month: true,
+        monthly: 143.30, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Datacenter Edition',
@@ -926,7 +926,7 @@ var addons = {
         }
     },
     win_std_24_kerne: {
-        monthly: 63.00, pay_entire_month: true,
+        monthly: 69.30, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Standard',
@@ -936,7 +936,7 @@ var addons = {
         comment: 'Windows server "24 Kerne" only for Dell and AX160 servers'
     },
     win_dc_24_kerne: {
-        monthly: 391.00, pay_entire_month: true,
+        monthly: 430.10, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
             English: 'Windows Server 2016 Datacenter',
@@ -1364,7 +1364,7 @@ var addons = {
         }
     },
     rdp_license: {
-        monthly: 6.50,
+        monthly: 7.50,
         name: {
             English: 'Additional RDP licence for Windows',
             Deutsch: 'Zusätzliche RDP-Lizenz für Windows',
