@@ -162,59 +162,23 @@ var servers = {
         },
         comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
     },
-    EX41: {
-        monthly: 39, setup: 79,
+    EX42: {
+        monthly: 39, setup: 39,
         name: {
-            English: 'Server EX41',
-            Deutsch: 'Server EX41',
-            Русский: 'Сервер EX41'
+            English: 'Server EX42',
+            Deutsch: 'Server EX42',
+            Русский: 'Сервер EX42'
         },
-        comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB'
+        comment: 'EX42: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
     },
-    EX41SSD: {
-        monthly: 39, setup: 79,
+    EX42NVMe: {
+        monthly: 39, setup: 39,
         name: {
-            English: 'Server EX41-SSD',
-            Deutsch: 'Server EX41-SSD',
-            Русский: 'Сервер EX41-SSD'
+            English: 'Server EX42-NVMe',
+            Deutsch: 'Server EX42-NVMe',
+            Русский: 'Сервер EX42-NVMe'
         },
-        comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
-    },
-    EX41S: {
-        monthly: 39, setup: 79,
-        name: {
-            English: 'Server EX41S',
-            Deutsch: 'Server EX41S',
-            Русский: 'Сервер EX41S'
-        },
-        comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB'
-    },
-    EX41SSSD: {
-        monthly: 39, setup: 79,
-        name: {
-            English: 'Server EX41S-SSD',
-            Deutsch: 'Server EX41S-SSD',
-            Русский: 'Сервер EX41S-SSD'
-        },
-        comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB'
-    },
-    EX51: {
-        monthly: 49, setup: 99,
-        name: {
-            English: 'Server EX51',
-            Deutsch: 'Server EX51',
-            Русский: 'Сервер EX51'
-        },
-        comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
-    },
-    EX51SSD: {
-        monthly: 49, setup: 99,
-        name: {
-            English: 'Server EX51-SSD',
-            Deutsch: 'Server EX51-SSD',
-            Русский: 'Сервер EX51-SSD'
-        },
-        comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
+        comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD/30 TB'
     },
     EX51SSDGPU: {
         monthly: 99, setup: 99,
@@ -244,61 +208,23 @@ EX51-SSD-GPU: no hardware addons'
         },
         comment: 'EX61-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 512GB NVMe/30 TB'
     },
-    EX41_Finland: {
-        monthly: 34, setup: 79,
-        location: 'Finland',
+    EX42_Finland: {
+        monthly: 34, setup: 39,
         name: {
-            English: 'Server EX41 (Finland)',
-            Deutsch: 'Server EX41 (Finnland)',
-            Русский: 'Сервер EX41 (Финляндия)'
+            English: 'Server EX42 (Finland)',
+            Deutsch: 'Server EX42 (Finnland)',
+            Русский: 'Сервер EX42 (Финляндия)'
         },
-        comment: 'EX41: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 4TB SATA Ent/30 TB'
+        comment: 'EX42: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
     },
-    EX41SSD_Finland: {
-        monthly: 34, setup: 79,
-        location: 'Finland',
+    EX42NVMe_Finland: {
+        monthly: 34, setup: 39,
         name: {
-            English: 'Server EX41-SSD (Finland)',
-            Deutsch: 'Server EX41-SSD (Finnland)',
-            Русский: 'Сервер EX41-SSD (Финляндия)'
+            English: 'Server EX42-NVMe (Finland)',
+            Deutsch: 'Server EX42-NVMe (Finnland)',
+            Русский: 'Сервер EX42-NVMe (Финляндия)'
         },
-        comment: 'EX41-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/32 GB/2 x 500GB SSD/30 TB'
-    },
-    EX41S_Finland: {
-        monthly: 34, setup: 79,
-        name: {
-            English: 'Server EX41S (Finland)',
-            Deutsch: 'Server EX41S (Finnland)',
-            Русский: 'Сервер EX41S (Финляндия)'
-        },
-        comment: 'EX41S: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 2TB SATA Ent/30 TB'
-    },
-    EX41SSSD_Finland: {
-        monthly: 34, setup: 79,
-        name: {
-            English: 'Server EX41S-SSD (Finland)',
-            Deutsch: 'Server EX41S-SSD (Finnland)',
-            Русский: 'Сервер EX41S-SSD (Финляндия)'
-        },
-        comment: 'EX41S-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 250GB SSD/30 TB'
-    },
-    EX51_Finland: {
-        monthly: 44, setup: 99,
-        name: {
-            English: 'Server EX51 (Finland)',
-            Deutsch: 'Server EX51 (Finnland)',
-            Русский: 'Сервер EX51 (Финляндия)'
-        },
-        comment: 'EX51: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
-    },
-    EX51SSD_Finland: {
-        monthly: 44, setup: 99,
-        name: {
-            English: 'Server EX51-SSD (Finland)',
-            Deutsch: 'Server EX51-SSD (Finnland)',
-            Русский: 'Сервер EX51-SSD (Финляндия)'
-        },
-        comment: 'EX51-SSD: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB'
+        comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD/30 TB'
     },
     EX51SSDGPU_Finland: {
         monthly: 94, setup: 99,
