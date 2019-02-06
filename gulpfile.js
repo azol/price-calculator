@@ -56,4 +56,5 @@ gulp.task('serve', ['build-css'], function() {
   });
   gulp.watch(config.app + 'scss/*.scss', ['build-css']);
   gulp.watch(config.app + 'price_calculator.html').on('change', browserSync.reload);
+  gulp.watch(config.app + 'main.js').on('change', browserSync.reload);
 });
