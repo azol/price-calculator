@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  price_calculator_web:
+     image: price_calculator
+     build: .
+     ports:
+       - "81:80"
+

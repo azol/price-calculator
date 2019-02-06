@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  price_calculator_web:
+     image: price_calculator_dev
+     build:
+       context: .
+       dockerfile: "Dockerfile-dev"
+     ports:
+       - "3000:3000"
+       - "3001:3001"
+     volumes:
+        - "./main.js:/app/main.js"
+        - "./price_calculator.html:/app/price_calculator.html"
+
