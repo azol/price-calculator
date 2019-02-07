@@ -21,6 +21,12 @@ docker-compose up
 
 open http://127.0.0.1:81/price_calculator.html for price calculator
 
+### Get price_calculator.html from production container
+
+```
+docker cp $(docker-compose ps -q price_calculator_web):/usr/share/nginx/html/price_calculator.html ./dist/
+```
+
 ## Workflow for local build
 
 Assuming `gulp` and `bower` are installed globally:
