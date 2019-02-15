@@ -29,10 +29,9 @@ docker cp $(docker-compose ps -q price_calculator_web):/usr/share/nginx/html/pri
 
 ## Workflow for local build
 
-Assuming `gulp` and `bower` are installed globally:
+Assuming `gulp` is installed globally:
 
     $ npm install
-    $ bower install
     $ gulp serve
     $ gulp
 

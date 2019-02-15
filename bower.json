@@ -1,7 +1,0 @@
-{
-  "name": "price_calculator",
-  "dependencies": {
-    "foundation": "~5.5.2",
-    "jquery": "~2.1.4"
-  }
-}

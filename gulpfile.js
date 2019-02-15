@@ -33,7 +33,7 @@ gulp.task('lint', function() {
 
 gulp.task('build-css', function() {
   return gulp.src(config.app + 'scss/app.scss')
-    .pipe(sass({outputStyle: 'compressed', includePaths: ['bower_components/foundation/scss']}))
+    .pipe(sass({outputStyle: 'compressed', includePaths: ['node_modules/foundation-sites/scss']}))
     .pipe(gulp.dest(config.tmp + 'css'))
     .pipe(browserSync.stream());
 });
