@@ -2,14 +2,15 @@
   "name": "price_calculator",
   "version": "0.1.0",
   "devDependencies": {
-    "browser-sync": "^2.9.8",
-    "del": "^2.0.2",
-    "gulp": "^3.9.0",
-    "gulp-htmlmin": "^1.1.4",
-    "gulp-inline-source": "^2.1.0",
-    "gulp-jshint": "^1.11.2",
+    "browser-sync": "^2.26.3",
+    "delete": "^1.1.0",
+    "gulp": "^4.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-jshint": "^2.1.0",
     "gulp-sass": "^4.0.2",
-    "run-sequence": "^1.1.4",
-    "foundation-sites": "^5.5.2"
+    "htmlmin": "0.0.7",
+    "jshint": "^2.10.1",
+    "foundation-sites": "^5.5.3"
   }
 }
