@@ -190,23 +190,23 @@ var servers = {
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
 EX51-SSD-GPU: no hardware addons'
     },
-    EX61: {
-        monthly: 59, setup: 119,
+    EX52: {
+        monthly: 59, setup: 59,
         name: {
-            English: 'Server EX61',
-            Deutsch: 'Server EX61',
-            Русский: 'Сервер EX61'
+            English: 'Server EX52',
+            Deutsch: 'Server EX52',
+            Русский: 'Сервер EX52'
         },
-        comment: 'EX61: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 6TB SATA Ent/30 TB'
+        comment: 'EX52: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent/30 TB'
     },
-    EX61NVMe: {
-        monthly: 59, setup: 119,
+    EX52NVMe: {
+        monthly: 59, setup: 59,
         name: {
-            English: 'Server EX61-NVMe',
-            Deutsch: 'Server EX61-NVMe',
-            Русский: 'Сервер EX61-NVMe'
+            English: 'Server EX52-NVMe',
+            Deutsch: 'Server EX52-NVMe',
+            Русский: 'Сервер EX52-NVMe'
         },
-        comment: 'EX61-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 512GB NVMe/30 TB'
+        comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 1TB NVMe/30 TB'
     },
     EX42_Finland: {
         monthly: 34, setup: 39,
@@ -236,24 +236,6 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
 EX51-SSD-GPU: no hardware addons'
     },
-    EX61_Finland: {
-        monthly: 54, setup: 119,
-        name: {
-            English: 'Server EX61 (Finland)',
-            Deutsch: 'Server EX61 (Finnland)',
-            Русский: 'Сервер EX61 (Финляндия)'
-        },
-        comment: 'EX61: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 6TB SATA Ent/30 TB'
-    },
-    EX61NVMe_Finland: {
-        monthly: 54, setup: 119,
-        name: {
-            English: 'Server EX61-NVMe (Finland)',
-            Deutsch: 'Server EX61-NVMe (Finnland)',
-            Русский: 'Сервер EX61-NVMe (Финляндия)'
-        },
-        comment: 'EX61-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 512GB NVMe/30 TB'
-    },
     AX60SSD: {
         monthly: 59, setup: 119,
         name: {
@@ -262,6 +244,16 @@ EX51-SSD-GPU: no hardware addons'
             Русский: 'Сервер AX60-SSD'
         },
         comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
+    },
+    AX100: {
+        monthly: 109, setup: 109,
+        name: {
+            English: 'Server AX100',
+            Deutsch: 'Server AX100',
+            Русский: 'Сервер AX100'
+        },
+        comment: 'AX100: AMD Ryzen Threadripper 2950X 16 Core/128 GB/50 TB\n\
+AX100: up to 8x disks in total: all disk types with exception of NVMe (customer grade)'
     },
     AX160NVMe: {
         monthly: 169, setup: 169,
