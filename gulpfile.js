@@ -54,6 +54,6 @@ exports.clean = clean;
 exports.lint = lint;
 exports.buildCss = buildCss;
 exports.buildHtml = buildHtml;
-exports.serve = serve;
+exports.serve = series(buildCss, serve);
 exports.build = series(clean, lint, buildCss, buildHtml);
 exports.default = exports.build
