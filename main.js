@@ -208,6 +208,24 @@ EX51-SSD-GPU: no hardware addons'
         },
         comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 1TB NVMe/30 TB'
     },
+    EX62: {
+        monthly: 69, setup: 69,
+        name: {
+            English: 'Server EX62',
+            Deutsch: 'Server EX62',
+            Русский: 'Сервер EX62'
+        },
+        comment: 'EX62: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent/30 TB'
+    },
+    EX62NVMe: {
+        monthly: 69, setup: 69,
+        name: {
+            English: 'Server EX62-NVMe',
+            Deutsch: 'Server EX62-NVMe',
+            Русский: 'Сервер EX62-NVMe'
+        },
+        comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD/30 TB'
+    },
     EX42_Finland: {
         monthly: 34, setup: 39,
         name: {
