@@ -1208,7 +1208,7 @@ var addons = {
             Deutsch: '1G NIC',
             Русский: '1G NIC'
         },
-        comment: "1G NIC not compatibale with 2016 and 2019"
+        comment: "1G NIC not compatible with Windows 2016 and 2019"
     },
     gbit_dual_nic: {
         monthly: 5.00,
