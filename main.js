@@ -1207,6 +1207,15 @@ var addons = {
             English: '1G NIC',
             Deutsch: '1G NIC',
             Русский: '1G NIC'
+        },
+        comment: "1G NIC not compatibale with 2016 and 2019"
+    },
+    gbit_dual_nic: {
+        monthly: 5.00,
+        name: {
+            English: 'DUAL 1G NIC',
+            Deutsch: 'DUAL 1G NIC',
+            Русский: 'Двойной 1G NIC'
         }
     },
     ten_gbit_nic: {
