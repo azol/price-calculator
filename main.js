@@ -1161,6 +1161,14 @@ var addons = {
             Русский: '6 ТБ SATA Enterprise жесткий диск'
         }
     },
+    sata8000e: {
+        monthly: 18.00,
+        name: {
+            English: '8 TB SATA Enterprise Hard Drive',
+            Deutsch: '8 TB SATA Enterprise Hard Drive',
+            Русский: '8 ТБ SATA Enterprise жесткий диск'
+        }
+    },
     sata10000e: {
         monthly: 19.50,
         name: {
