@@ -1349,6 +1349,15 @@ var addons = {
             Русский: 'Превышение трафика (ТБ)'
         }
     },
+    block_storage_volume: {
+        monthly: 0.04,
+        name: {
+            English: 'Block Storage Volume (GB)',
+            Deutsch: 'Block Storage Volume (GB)',
+            Русский: 'Том на блочном хранилище (ГБ)'
+        },
+        comment: 'Block Storage Volume: only for Cloud servers. Min 10GB, max 10,240GB'
+    },
     backup100: {
         monthly: 2.90,
         name: {
