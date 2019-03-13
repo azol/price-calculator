@@ -124,7 +124,7 @@ var servers = {
             Deutsch: 'Server EX40',
             Русский: 'Сервер EX40'
         },
-        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB'
+        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent'
     },
     EX40SSD: {
         monthly: 49.5798, setup: 0,
@@ -133,7 +133,7 @@ var servers = {
             Deutsch: 'Server EX40-SSD',
             Русский: 'Сервер EX40-SSD'
         },
-        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
+        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD'
     },
     EX40Hybrid: {
         monthly: 57.9832, setup: 57.9832,
@@ -142,7 +142,7 @@ var servers = {
             Deutsch: 'Server EX40-Hybrid',
             Русский: 'Сервер EX40-Hybrid'
         },
-        comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent/30 TB'
+        comment: 'EX40-Hybrid: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/2 x 2TB SATA Ent'
     },
     EX40_Finland: {
         monthly: 27, setup: 0,
@@ -151,7 +151,7 @@ var servers = {
             Deutsch: 'Server EX40 (Finnland)',
             Русский: 'Сервер EX40 (Финляндия)'
         },
-        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent/30 TB'
+        comment: 'EX40: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 2TB SATA Ent'
     },
     EX40SSD_Finland: {
         monthly: 37, setup: 0,
@@ -160,7 +160,7 @@ var servers = {
             Deutsch: 'Server EX40-SSD (Finnland)',
             Русский: 'Сервер EX40-SSD (Финляндия)'
         },
-        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD/30 TB'
+        comment: 'EX40-SSD: Intel® Core™ i7-4770 Quad-Core Haswell/32 GB/2 x 240GB SSD'
     },
     EX42: {
         monthly: 39, setup: 39,
@@ -169,7 +169,7 @@ var servers = {
             Deutsch: 'Server EX42',
             Русский: 'Сервер EX42'
         },
-        comment: 'EX42: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
+        comment: 'EX42: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent'
     },
     EX42NVMe: {
         monthly: 39, setup: 39,
@@ -178,7 +178,7 @@ var servers = {
             Deutsch: 'Server EX42-NVMe',
             Русский: 'Сервер EX42-NVMe'
         },
-        comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD/30 TB'
+        comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD'
     },
     EX51SSDGPU: {
         monthly: 99, setup: 99,
@@ -187,7 +187,7 @@ var servers = {
             Deutsch: 'Server EX51-SSD-GPU',
             Русский: 'Сервер EX51-SSD-GPU'
         },
-        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
+        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD\n\
 EX51-SSD-GPU: no hardware addons'
     },
     EX52: {
@@ -197,7 +197,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server EX52',
             Русский: 'Сервер EX52'
         },
-        comment: 'EX52: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent/30 TB'
+        comment: 'EX52: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
     },
     EX52NVMe: {
         monthly: 59, setup: 59,
@@ -206,7 +206,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server EX52-NVMe',
             Русский: 'Сервер EX52-NVMe'
         },
-        comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 1TB NVMe/30 TB'
+        comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 1TB NVMe'
     },
     EX62: {
         monthly: 69, setup: 69,
@@ -215,7 +215,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server EX62',
             Русский: 'Сервер EX62'
         },
-        comment: 'EX62: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent/30 TB'
+        comment: 'EX62: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
     },
     EX62NVMe: {
         monthly: 69, setup: 69,
@@ -224,7 +224,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server EX62-NVMe',
             Русский: 'Сервер EX62-NVMe'
         },
-        comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD/30 TB'
+        comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD'
     },
     EX42_Finland: {
         monthly: 34, setup: 39,
@@ -233,7 +233,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server EX42 (Finnland)',
             Русский: 'Сервер EX42 (Финляндия)'
         },
-        comment: 'EX42: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent/30 TB'
+        comment: 'EX42: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent'
     },
     EX42NVMe_Finland: {
         monthly: 34, setup: 39,
@@ -242,7 +242,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server EX42-NVMe (Finnland)',
             Русский: 'Сервер EX42-NVMe (Финляндия)'
         },
-        comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD/30 TB'
+        comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD'
     },
     EX51SSDGPU_Finland: {
         monthly: 94, setup: 99,
@@ -251,7 +251,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server EX51-SSD-GPU (Finnland)',
             Русский: 'Сервер EX51-SSD-GPU (Финляндия)'
         },
-        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD/30 TB\n\
+        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD\n\
 EX51-SSD-GPU: no hardware addons'
     },
     AX60SSD: {
@@ -261,7 +261,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server AX60-SSD',
             Русский: 'Сервер AX60-SSD'
         },
-        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
+        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD'
     },
     AX100: {
         monthly: 109, setup: 109,
@@ -270,7 +270,7 @@ EX51-SSD-GPU: no hardware addons'
             Deutsch: 'Server AX100',
             Русский: 'Сервер AX100'
         },
-        comment: 'AX100: AMD Ryzen Threadripper 2950X 16 Core/128 GB/50 TB\n\
+        comment: 'AX100: AMD Ryzen Threadripper 2950X 16 Core/128 GB\n\
 AX100: up to 8x disks in total: all disk types with exception of NVMe (customer grade)'
     },
     AX160NVMe: {
@@ -280,7 +280,7 @@ AX100: up to 8x disks in total: all disk types with exception of NVMe (customer 
             Deutsch: 'Server AX160-NVMe',
             Русский: 'Сервер AX160-NVMe'
         },
-        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB\n\
+        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe\n\
 AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
 AX160-NVMe: up to 12x RAM modules additional'
     },
@@ -291,7 +291,7 @@ AX160-NVMe: up to 12x RAM modules additional'
             Deutsch: 'Server AX160-SSD',
             Русский: 'Сервер AX160-SSD'
         },
-        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD/50 TB\n\
+        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD\n\
 AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
 AX160-SSD: up to 12x RAM modules additional'
     },
@@ -302,7 +302,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server AX60-SSD (Finnland)',
             Русский: 'Сервер AX60-SSD (Финляндия)'
         },
-        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD/30 TB'
+        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD'
     },
     AX160NVMe_Finland: {
         monthly: 164, setup: 169,
@@ -311,7 +311,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server AX160-NVMe (Finnland)',
             Русский: 'Сервер AX160-NVMe (Финляндия)'
         },
-        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe/50 TB\n\
+        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe\n\
 AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
 AX160-NVMe: up to 12x RAM modules additional'
     },
@@ -322,7 +322,7 @@ AX160-NVMe: up to 12x RAM modules additional'
             Deutsch: 'Server AX160-SSD (Finnland)',
             Русский: 'Сервер AX160-SSD (Финляндия)'
         },
-        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD/50 TB\n\
+        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD\n\
 AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
 AX160-SSD: up to 12x RAM modules additional'
     },
@@ -333,7 +333,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61',
             Русский: 'Сервер PX61'
         },
-        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB'
+        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent'
     },
     PX61SSD: {
         monthly: 59, setup: 119,
@@ -342,7 +342,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61-SSD',
             Русский: 'Сервер PX61-SSD'
         },
-        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB'
+        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC'
     },
     PX61NVMe: {
         monthly: 59, setup: 119,
@@ -351,7 +351,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61-NVMe',
             Русский: 'Сервер PX61-NVMe'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD'
     },
     PX61NVMe_discount: {
         monthly: 59, setup: 59,
@@ -360,7 +360,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61-NVMe',
             Русский: 'Сервер PX61-NVMe'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD'
     },
     PX61_Finland: {
         monthly: 54, setup: 119,
@@ -369,7 +369,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61 (Finnland)',
             Русский: 'Сервер PX61 (Финляндия)'
         },
-        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent/30 TB'
+        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent'
     },
     PX61SSD_Finland: {
         monthly: 54, setup: 119,
@@ -378,7 +378,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61-SSD (Finnland)',
             Русский: 'Сервер PX61-SSD (Финляндия)'
         },
-        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC/30 TB'
+        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC'
     },
     PX61NVMe_Finland: {
         monthly: 54, setup: 119,
@@ -387,7 +387,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61-NVMe (Finnland)',
             Русский: 'Сервер PX61-NVMe (Финляндия)'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD'
     },
     PX61NVMe_Finland_discount: {
         monthly: 54, setup: 59,
@@ -396,7 +396,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX61-NVMe (Finnland)',
             Русский: 'Сервер PX61-NVMe (Финляндия)'
         },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD/30 TB'
+        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD'
     },
     PX92: {
         monthly: 99, setup: 99,
@@ -405,7 +405,7 @@ AX160-SSD: up to 12x RAM modules additional'
             Deutsch: 'Server PX92',
             Русский: 'Сервер PX92'
         },
-        comment: 'PX92: Intel® Xeon® W-2145 Octa-Core Skylake W/128 GB DDR4 ECC/50 TB\n\
+        comment: 'PX92: Intel® Xeon® W-2145 Octa-Core Skylake W/128 GB DDR4 ECC\n\
 PX92: SSD options: 8x NVMe and SSD (up to 4x NVMe or 6x SSD)\n\
 PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
 PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
@@ -418,7 +418,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server PX92 (Finnland)',
             Русский: 'Сервер PX92 (Финляндия)'
         },
-        comment: 'PX92: Intel® Xeon® W-2145 Octa-Core Skylake W/128 GB DDR4 ECC/50 TB\n\
+        comment: 'PX92: Intel® Xeon® W-2145 Octa-Core Skylake W/128 GB DDR4 ECC\n\
 PX92: SSD options: 8x NVMe and SSD (up to 4x NVMe or 6x SSD)\n\
 PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
 PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
@@ -431,7 +431,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX62',
             Русский: 'Сервер SX62'
         },
-        comment: 'SX62: Intel® Xeon® E3-1270 v3 Quad-Core/32GB/4x 10TB SATA/30 TB'
+        comment: 'SX62: Intel® Xeon® E3-1270 v3 Quad-Core/32GB/4x 10TB SATA'
     },
     SX132: {
         monthly: 169, setup: 169,
@@ -440,7 +440,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX132',
             Русский: 'Сервер SX132'
         },
-        comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise/50 TB'
+        comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise'
     },
     SX292: {
         monthly: 269, setup: 269,
@@ -449,7 +449,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX292',
             Русский: 'Сервер SX292'
         },
-        comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256GB/Hardware-RAID Controller/15x 10TB SATA/100 TB included'
+        comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256GB/Hardware-RAID Controller/15x 10TB SATA'
     },
     SX62_Finland: {
         monthly: 64, setup: 69,
@@ -458,7 +458,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX62 (Finnland)',
             Русский: 'Сервер SX62 (Финляндия)'
         },
-        comment: 'SX62: Intel® Xeon® E3-1270 v3 Quad-Core/32GB/4x 10TB SATA/30 TB'
+        comment: 'SX62: Intel® Xeon® E3-1270 v3 Quad-Core/32GB/4x 10TB SATA'
     },
     SX132_Finland: {
         monthly: 159, setup: 169,
@@ -467,7 +467,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX132 (Finnland)',
             Русский: 'Сервер SX132 (Финляндия)'
         },
-        comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise/50 TB'
+        comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise'
     },
     SX292_Finland: {
         monthly: 259, setup: 269,
@@ -476,7 +476,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX292 (Finnland)',
             Русский: 'Сервер SX292 (Финляндия)'
         },
-        comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256GB/Hardware-RAID Controller/15x 10TB SATA/100 TB included'
+        comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256GB/Hardware-RAID Controller/15x 10TB SATA'
     },
     SX61_old: {
         monthly: 69, setup: 69,
@@ -485,7 +485,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX61',
             Русский: 'Сервер SX61'
         },
-        comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA/30 TB'
+        comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA'
     },
     SX131_old: {
         monthly: 169, setup: 169,
@@ -494,7 +494,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX131',
             Русский: 'Сервер SX131'
         },
-        comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA/50 TB'
+        comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA'
     },
     SX291_old: {
         monthly: 249, setup: 249,
@@ -503,7 +503,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'Server SX291',
             Русский: 'Сервер SX291'
         },
-        comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA/100 TB included'
+        comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA'
     },
     DX152: {
         monthly: 159, setup: 159,
@@ -513,7 +513,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'DELL PowerEdge™ R640 DX152',
             Русский: 'DELL PowerEdge™ R640 DX152'
         },
-        comment: "DX152: Dual Intel® Xeon® Silver 4114 10-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC/50 TB\n\
+        comment: "DX152: Dual Intel® Xeon® Silver 4114 10-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 R640: have an iDRAC (IP-KVM)\n\
 R640: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
 R640: Windows 'for EPYC'\n\
@@ -527,7 +527,7 @@ R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
             Deutsch: 'AMD EPYC™ 7551P DX180',
             Русский: 'AMD EPYC™ 7551P DX180'
         },
-        comment: "DX180: Singe AMD EPYC™ 7551P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC/50 TB\n\
+        comment: "DX180: Singe AMD EPYC™ 7551P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 DX180: have an iDRAC (IP-KVM)\n\
 DX180: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
 DX180: Windows 'for EPYC'\n\
@@ -541,7 +541,7 @@ DX180: max 512 GB RAM DDR4 (12x 32GB)"
             Deutsch: 'DELL PowerEdge™ R640 DX292',
             Русский: 'DELL PowerEdge™ R640 DX292'
         },
-        comment: "DX292: Dual Intel® Xeon® Gold 6130 16-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC/50 TB\n\
+        comment: "DX292: Dual Intel® Xeon® Gold 6130 16-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 R640: have an iDRAC (IP-KVM)\n\
 R640: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
 R640: Windows 'for EPYC'\n\
@@ -554,7 +554,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Deutsch: 'DELL PowerEdge™ R530 DX141',
             Русский: 'DELL PowerEdge™ R530 DX141'
         },
-        comment: "DX141: Single Intel® Xeon® E5-1650 v3 @ 3.5GHz Hexa-Core/64GB DDR4 ECC/Dell PERC H330/iDRAC/50 TB\n\
+        comment: "DX141: Single Intel® Xeon® E5-1650 v3 @ 3.5GHz Hexa-Core/64GB DDR4 ECC/Dell PERC H330/iDRAC\n\
 R530: have an iDRAC (IP-KVM)\n\
 R530: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
@@ -566,7 +566,7 @@ R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
             Deutsch: 'DELL PowerEdge™ R730 DX151',
             Русский: 'DELL PowerEdge™ R730 DX151'
         },
-        comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/iDRAC/50 TB\n\
+        comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/iDRAC\n\
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
@@ -579,7 +579,7 @@ R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
             Deutsch: 'DELL PowerEdge™ R730 DX291',
             Русский: 'DELL PowerEdge™ R730 DX291'
         },
-        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/iDRAC/50 TB\n\
+        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/iDRAC\n\
 R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
@@ -645,7 +645,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CX11',
             Русский: 'Сервер CX11'
         },
-        comment: 'CX11: 1 vCPU/2 GB/20 GB/20 TB'
+        comment: 'CX11: 1 vCPU/2 GB/20 GB'
     },
     CX21: {
         monthly: 4.90, setup: 0,
@@ -654,7 +654,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CX21',
             Русский: 'Сервер CX21'
         },
-        comment: 'CX21: 2 vCPU/4 GB/40 GB/20 TB'
+        comment: 'CX21: 2 vCPU/4 GB/40 GB'
     },
     CX31: {
         monthly: 8.90, setup: 0,
@@ -663,7 +663,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CX31',
             Русский: 'Сервер CX31'
         },
-        comment: 'CX31: 2 vCPU/8 GB/80 GB/20 TB'
+        comment: 'CX31: 2 vCPU/8 GB/80 GB'
     },
     CX41: {
         monthly: 15.90, setup: 0,
@@ -672,7 +672,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CX41',
             Русский: 'Сервер CX41'
         },
-        comment: 'CX41: 4 vCPU/16 GB/160 GB/20 TB'
+        comment: 'CX41: 4 vCPU/16 GB/160 GB'
     },
     CX51: {
         monthly: 29.90, setup: 0,
@@ -681,7 +681,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CX51',
             Русский: 'Сервер CX51'
         },
-        comment: 'CX51: 8 vCPU/32 GB/240 GB/20 TB'
+        comment: 'CX51: 8 vCPU/32 GB/240 GB'
     },
     CCX11: {
         monthly: 19.90, setup: 0,
@@ -690,7 +690,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CCX11',
             Русский: 'Сервер CCX11'
         },
-        comment: 'CCX11: 2 vCPU/8 GB/80 GB/20 TB'
+        comment: 'CCX11: 2 vCPU/8 GB/80 GB'
     },
     CCX21: {
         monthly: 34.90, setup: 0,
@@ -699,7 +699,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CCX21',
             Русский: 'Сервер CCX21'
         },
-        comment: 'CCX21: 4 vCPU/16 GB/160 GB/20 TB'
+        comment: 'CCX21: 4 vCPU/16 GB/160 GB'
     },
     CCX31: {
         monthly: 69.90, setup: 0,
@@ -708,7 +708,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CCX31',
             Русский: 'Сервер CCX31'
         },
-        comment: 'CCX31: 8 vCPU/32 GB/240 GB/20 TB'
+        comment: 'CCX31: 8 vCPU/32 GB/240 GB'
     },
     CCX41: {
         monthly: 139.90, setup: 0,
@@ -717,7 +717,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CCX41',
             Русский: 'Сервер CCX41'
         },
-        comment: 'CCX41: 16 vCPU/64 GB/360 GB/20 TB'
+        comment: 'CCX41: 16 vCPU/64 GB/360 GB'
     },
     CCX51: {
         monthly: 269.90, setup: 0,
@@ -726,7 +726,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Deutsch: 'Server CCX51',
             Русский: 'Сервер CCX51'
         },
-        comment: 'CCX51: 32 vCPU/128 GB/540 GB/20 TB'
+        comment: 'CCX51: 32 vCPU/128 GB/540 GB'
     },
     BX10: {
         monthly: 2.90, setup: 0,
