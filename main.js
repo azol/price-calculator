@@ -254,6 +254,42 @@ EX51-SSD-GPU: no hardware addons'
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD\n\
 EX51-SSD-GPU: no hardware addons'
     },
+    EX52_Finland: {
+        monthly: 54, setup: 59,
+        name: {
+            English: 'Server EX52 (Finland)',
+            Deutsch: 'Server EX52 (Finnland)',
+            Русский: 'Сервер EX52 (Финляндия)'
+        },
+        comment: 'EX52: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
+    },
+    EX52NVMe_Finland: {
+        monthly: 54, setup: 59,
+        name: {
+            English: 'Server EX52-NVMe (Finland)',
+            Deutsch: 'Server EX52-NVMe (Finnland)',
+            Русский: 'Сервер EX52-NVMe (Финляндия)'
+        },
+        comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 1TB NVMe'
+    },
+    EX62_Finland: {
+        monthly: 64, setup: 69,
+        name: {
+            English: 'Server EX62 (Finland)',
+            Deutsch: 'Server EX62 (Finnland)',
+            Русский: 'Сервер EX62 (Финляндия)'
+        },
+        comment: 'EX62: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
+    },
+    EX62NVMe_Finland: {
+        monthly: 64, setup: 69,
+        name: {
+            English: 'Server EX62-NVMe (Finland)',
+            Deutsch: 'Server EX62-NVMe (Finnland)',
+            Русский: 'Сервер EX62-NVMe (Финляндия)'
+        },
+        comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD'
+    },
     AX60SSD: {
         monthly: 59, setup: 119,
         name: {
