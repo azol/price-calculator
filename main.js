@@ -317,77 +317,26 @@ AX160-NVMe: up to 12x RAM modules additional'
 AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
 AX160-SSD: up to 12x RAM modules additional'
     },
-    PX61: {
-        monthly: 59, setup: 119,
+    PX62: {
+        monthly: 79, setup: 79,
         name: {
-            English: 'Server PX61',
-            Deutsch: 'Server PX61',
-            Русский: 'Сервер PX61'
+            English: 'Server PX62',
+            Deutsch: 'Server PX62',
+            Русский: 'Сервер PX62'
         },
-        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent'
+        comment: 'PX62: E-2176G Hexa-Core/64 GB ECC/2 x 8TB SATA Ent'
     },
-    PX61SSD: {
-        monthly: 59, setup: 119,
+    PX62NVMe: {
+        monthly: 79, setup: 79,
         name: {
-            English: 'Server PX61-SSD',
-            Deutsch: 'Server PX61-SSD',
-            Русский: 'Сервер PX61-SSD'
+            English: 'Server PX62-NVMe',
+            Deutsch: 'Server PX62-NVMe',
+            Русский: 'Сервер PX62-NVMe'
         },
-        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC'
-    },
-    PX61NVMe: {
-        monthly: 59, setup: 119,
-        name: {
-            English: 'Server PX61-NVMe',
-            Deutsch: 'Server PX61-NVMe',
-            Русский: 'Сервер PX61-NVMe'
-        },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD'
-    },
-    PX61NVMe_discount: {
-        monthly: 59, setup: 59,
-        name: {
-            English: 'Server PX61-NVMe',
-            Deutsch: 'Server PX61-NVMe',
-            Русский: 'Сервер PX61-NVMe'
-        },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD'
-    },
-    PX61_Finland: {
-        monthly: 54, setup: 119,
-        name: {
-            English: 'Server PX61 (Finland)',
-            Deutsch: 'Server PX61 (Finnland)',
-            Русский: 'Сервер PX61 (Финляндия)'
-        },
-        comment: 'PX61: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 4TB SATA Ent'
-    },
-    PX61SSD_Finland: {
-        monthly: 54, setup: 119,
-        name: {
-            English: 'Server PX61-SSD (Finland)',
-            Deutsch: 'Server PX61-SSD (Finnland)',
-            Русский: 'Сервер PX61-SSD (Финляндия)'
-        },
-        comment: 'PX61-SSD: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 480GB SSD DC'
-    },
-    PX61NVMe_Finland: {
-        monthly: 54, setup: 119,
-        name: {
-            English: 'Server PX61-NVMe (Finland)',
-            Deutsch: 'Server PX61-NVMe (Finnland)',
-            Русский: 'Сервер PX61-NVMe (Финляндия)'
-        },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD'
-    },
-    PX61NVMe_Finland_discount: {
-        monthly: 54, setup: 59,
-        name: {
-            English: 'Server PX61-NVMe (Finland)',
-            Deutsch: 'Server PX61-NVMe (Finnland)',
-            Русский: 'Сервер PX61-NVMe (Финляндия)'
-        },
-        comment: 'PX61-NVMe: E3-1275 v5 Quad-Core Skylake/64 GB ECC/2 x 512GB NVMe SSD'
+        comment: 'PX62-NVMe: E-2176G Hexa-Core/64 GB ECC/2 x 960GB NVMe SSD Datacenter Edition\n\
+PX62-NVMe: 0x SATA HDD + up to 2x NVMe SSDs, up to 6x SATA SSDs, but maximum 8 disks in total\n\
+PX62-NVMe: 1x SATA HDD + 1x NVMe SSD or 1x SATA SSD\n\
+PX62-NVMe: 2x SATA HDDs'
     },
     PX92: {
         monthly: 99, setup: 99,
