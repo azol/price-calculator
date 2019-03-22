@@ -1911,7 +1911,7 @@ Workspace.prototype = {
         var output = '';
         var maxTextLength = 0;
         var maxPriceLength = 0;
-        var expr = /^(.*) ([0-9\.]+ €)$/;
+        var expr = /^(.*) ([0-9.]+ €)$/;
 
         var lines = this.getCalculationString().split('\n');
         var line = '';
@@ -1975,7 +1975,7 @@ Workspace.prototype = {
         var output = '';
         var maxTextLength = 0;
         var maxPriceLength = 0;
-        var expr = /^(.*) ([0-9\.]+ €)$/;
+        var expr = /^(.*) ([0-9.]+ €)$/;
 
         var lines = this.getCalculationStringOldFormat().split('\n');
         var line = '';
