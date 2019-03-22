@@ -1690,11 +1690,7 @@ Workspace.prototype = {
 
         var new_li = document.createElement('li');
         new_li.className = 'tab-title active';
-
-        var a = document.createElement('li');
         new_li.innerHTML = '<a href="#panel-' + el_num + '" onclick="workspace.loadData(this)" id="panel-' + el_num + '">SB0</a>';
-
-
 
         var li_node = document.getElementById("panel-" + (workspace.Servers.length - 1)).parentNode;
         li_node.parentNode.insertBefore(new_li, li_node.nextSibling);
