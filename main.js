@@ -1511,8 +1511,6 @@ function updateNoSetupFee(modelName, setupFeeFlag) {
  */
 function updateCalculationResult() {
 
-    var serverToCalculate = workspace.Servers[workspace.currentServer];
-
     updateTabName();
 
     var calculationTextBeautified = workspace.getCalculationStringBeautifiedWrapper_2();
