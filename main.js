@@ -351,6 +351,27 @@ PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
 PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
 PX92: max 256 GB RAM DDR4 (4x 32GB)'
     },
+    PX62_Finland: {
+        monthly: 74, setup: 79,
+        name: {
+            English: 'Server PX62 (Finland)',
+            Deutsch: 'Server PX62 (Finnland)',
+            Русский: 'Сервер PX62 (Финляндия)'
+        },
+        comment: 'PX62: E-2176G Hexa-Core/64 GB ECC/2 x 8TB SATA Ent'
+    },
+    PX62NVMe_Finland: {
+        monthly: 74, setup: 79,
+        name: {
+            English: 'Server PX62-NVMe (Finland)',
+            Deutsch: 'Server PX62-NVMe (Finnland)',
+            Русский: 'Сервер PX62-NVMe (Финляндия)'
+        },
+        comment: 'PX62-NVMe: E-2176G Hexa-Core/64 GB ECC/2 x 960GB NVMe SSD Datacenter Edition\n\
+PX62-NVMe: 0x SATA HDD + up to 2x NVMe SSDs, up to 6x SATA SSDs, but maximum 8 disks in total\n\
+PX62-NVMe: 1x SATA HDD + 1x NVMe SSD or 1x SATA SSD\n\
+PX62-NVMe: 2x SATA HDDs'
+    },
     PX92_Finland: {
         monthly: 94, setup: 99,
         name: {
