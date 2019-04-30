@@ -118,20 +118,26 @@ const servers = {
         },
     },
     EX42: {
-        monthly: 39, setup: 39,
         name: {
             English: 'Server EX42',
             Deutsch: 'Server EX42',
             Русский: 'Сервер EX42'
         },
+        location: {
+            Germany: {monthly: 39, setup: 39},
+            Finland: {monthly: 34, setup: 39}
+        },
         comment: 'EX42: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent'
     },
     EX42NVMe: {
-        monthly: 39, setup: 39,
         name: {
             English: 'Server EX42-NVMe',
             Deutsch: 'Server EX42-NVMe',
             Русский: 'Сервер EX42-NVMe'
+        },
+        location: {
+            Germany: {monthly: 39, setup: 39},
+            Finland: {monthly: 34, setup: 39}
         },
         comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD'
     },
@@ -142,196 +148,134 @@ const servers = {
             Deutsch: 'Server EX51-SSD-GPU',
             Русский: 'Сервер EX51-SSD-GPU'
         },
+        location: {
+            Germany: {monthly: 99, setup: 0},
+            Finland: {monthly: 94, setup: 0}
+        },
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD\n\
 EX51-SSD-GPU: no hardware addons'
     },
     EX52: {
-        monthly: 59, setup: 59,
         name: {
             English: 'Server EX52',
             Deutsch: 'Server EX52',
             Русский: 'Сервер EX52'
         },
+        location: {
+            Germany: {monthly: 59, setup: 59},
+            Finland: {monthly: 54, setup: 59}
+        },
         comment: 'EX52: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
     },
     EX52NVMe: {
-        monthly: 59, setup: 59,
         name: {
             English: 'Server EX52-NVMe',
             Deutsch: 'Server EX52-NVMe',
             Русский: 'Сервер EX52-NVMe'
         },
+        location: {
+            Germany: {monthly: 59, setup: 59},
+            Finland: {monthly: 54, setup: 59}
+        },
         comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 1TB NVMe'
     },
     EX62: {
-        monthly: 69, setup: 69,
         name: {
             English: 'Server EX62',
             Deutsch: 'Server EX62',
             Русский: 'Сервер EX62'
         },
+        location: {
+            Germany: {monthly: 69, setup: 69},
+            Finland: {monthly: 64, setup: 69}
+        },
         comment: 'EX62: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
     },
     EX62NVMe: {
-        monthly: 69, setup: 69,
         name: {
             English: 'Server EX62-NVMe',
             Deutsch: 'Server EX62-NVMe',
             Русский: 'Сервер EX62-NVMe'
         },
-        comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD'
+        location: {
+            Germany: {monthly: 69, setup: 69},
+            Finland: {monthly: 64, setup: 69}
     },
-    EX42_Finland: {
-        monthly: 34, setup: 39,
-        name: {
-            English: 'Server EX42 (Finland)',
-            Deutsch: 'Server EX42 (Finnland)',
-            Русский: 'Сервер EX42 (Финляндия)'
-        },
-        comment: 'EX42: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 4TB SATA Ent'
-    },
-    EX42NVMe_Finland: {
-        monthly: 34, setup: 39,
-        name: {
-            English: 'Server EX42-NVMe (Finland)',
-            Deutsch: 'Server EX42-NVMe (Finnland)',
-            Русский: 'Сервер EX42-NVMe (Финляндия)'
-        },
-        comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD'
-    },
-    EX51SSDGPU_Finland: {
-        monthly: 94, setup: 99,
-        name: {
-            English: 'Server EX51-SSD-GPU (Finland)',
-            Deutsch: 'Server EX51-SSD-GPU (Finnland)',
-            Русский: 'Сервер EX51-SSD-GPU (Финляндия)'
-        },
-        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD\n\
-EX51-SSD-GPU: no hardware addons'
-    },
-    EX52_Finland: {
-        monthly: 54, setup: 59,
-        name: {
-            English: 'Server EX52 (Finland)',
-            Deutsch: 'Server EX52 (Finnland)',
-            Русский: 'Сервер EX52 (Финляндия)'
-        },
-        comment: 'EX52: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
-    },
-    EX52NVMe_Finland: {
-        monthly: 54, setup: 59,
-        name: {
-            English: 'Server EX52-NVMe (Finland)',
-            Deutsch: 'Server EX52-NVMe (Finnland)',
-            Русский: 'Сервер EX52-NVMe (Финляндия)'
-        },
-        comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 1TB NVMe'
-    },
-    EX62_Finland: {
-        monthly: 64, setup: 69,
-        name: {
-            English: 'Server EX62 (Finland)',
-            Deutsch: 'Server EX62 (Finnland)',
-            Русский: 'Сервер EX62 (Финляндия)'
-        },
-        comment: 'EX62: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
-    },
-    EX62NVMe_Finland: {
-        monthly: 64, setup: 69,
-        name: {
-            English: 'Server EX62-NVMe (Finland)',
-            Deutsch: 'Server EX62-NVMe (Finnland)',
-            Русский: 'Сервер EX62-NVMe (Финляндия)'
-        },
         comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD'
     },
     AX60SSD: {
-        monthly: 59, setup: 119,
         name: {
             English: 'Server AX60-SSD',
             Deutsch: 'Server AX60-SSD',
             Русский: 'Сервер AX60-SSD'
         },
+        location: {
+            Germany: {monthly: 59, setup: 119},
+            Finland: {monthly: 54, setup: 119}
+        },
         comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD'
     },
     AX100: {
-        monthly: 109, setup: 109,
         name: {
             English: 'Server AX100',
             Deutsch: 'Server AX100',
             Русский: 'Сервер AX100'
         },
+        location: {
+            Germany: {monthly: 109, setup: 109}
+        },
         comment: 'AX100: AMD Ryzen Threadripper 2950X 16 Core/128 GB\n\
 AX100: up to 8x disks in total: all disk types with exception of NVMe (customer grade)'
     },
     AX160NVMe: {
-        monthly: 169, setup: 169,
         name: {
             English: 'Server AX160-NVMe',
             Deutsch: 'Server AX160-NVMe',
             Русский: 'Сервер AX160-NVMe'
+        },
+        location: {
+            Germany: {monthly: 169, setup: 0},
+            Finland: {monthly: 164, setup: 0}
         },
         comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe\n\
 AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
 AX160-NVMe: up to 12x RAM modules additional'
     },
     AX160SSD: {
-        monthly: 179, setup: 179,
         name: {
             English: 'Server AX160-SSD',
             Deutsch: 'Server AX160-SSD',
             Русский: 'Сервер AX160-SSD'
         },
-        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD\n\
-AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
-AX160-SSD: up to 12x RAM modules additional'
+        location: {
+            Germany: {monthly: 179, setup: 0},
+            Finland: {monthly: 174, setup: 0}
     },
-    AX60SSD_Finland: {
-        monthly: 54, setup: 119,
-        name: {
-            English: 'Server AX60-SSD (Finland)',
-            Deutsch: 'Server AX60-SSD (Finnland)',
-            Русский: 'Сервер AX60-SSD (Финляндия)'
-        },
-        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD'
-    },
-    AX160NVMe_Finland: {
-        monthly: 164, setup: 169,
-        name: {
-            English: 'Server AX160-NVMe (Finland)',
-            Deutsch: 'Server AX160-NVMe (Finnland)',
-            Русский: 'Сервер AX160-NVMe (Финляндия)'
-        },
-        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe\n\
-AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
-AX160-NVMe: up to 12x RAM modules additional'
-    },
-    AX160SSD_Finland: {
-        monthly: 174, setup: 179,
-        name: {
-            English: 'Server AX160-SSD (Finland)',
-            Deutsch: 'Server AX160-SSD (Finnland)',
-            Русский: 'Сервер AX160-SSD (Финляндия)'
-        },
         comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD\n\
 AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
 AX160-SSD: up to 12x RAM modules additional'
     },
     PX62: {
-        monthly: 79, setup: 79,
         name: {
             English: 'Server PX62',
             Deutsch: 'Server PX62',
             Русский: 'Сервер PX62'
         },
+        location: {
+            Germany: {monthly: 79, setup: 79},
+            Finland: {monthly: 74, setup: 79}
+        },
         comment: 'PX62: E-2176G Hexa-Core/64 GB ECC/2 x 8TB SATA Ent'
     },
     PX62NVMe: {
-        monthly: 79, setup: 79,
         name: {
             English: 'Server PX62-NVMe',
             Deutsch: 'Server PX62-NVMe',
             Русский: 'Сервер PX62-NVMe'
+        },
+        location: {
+            Germany: {monthly: 79, setup: 79},
+            Finland: {monthly: 74, setup: 79}
         },
         comment: 'PX62-NVMe: E-2176G Hexa-Core/64 GB ECC/2 x 960GB NVMe SSD Datacenter Edition\n\
 PX62-NVMe: 0x SATA HDD + up to 2x NVMe SSDs, up to 6x SATA SSDs, but maximum 8 disks in total\n\
@@ -339,46 +283,15 @@ PX62-NVMe: 1x SATA HDD + 1x NVMe SSD or 1x SATA SSD\n\
 PX62-NVMe: 2x SATA HDDs'
     },
     PX92: {
-        monthly: 99, setup: 99,
         name: {
             English: 'Server PX92',
             Deutsch: 'Server PX92',
             Русский: 'Сервер PX92'
         },
-        comment: 'PX92: Intel® Xeon® W-2145 Octa-Core Skylake W/128 GB DDR4 ECC\n\
-PX92: SSD options: 8x NVMe and SSD (up to 4x NVMe or 6x SSD)\n\
-PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
-PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
-PX92: max 256 GB RAM DDR4 (4x 32GB)'
+        location: {
+            Germany: {monthly: 99, setup: 99},
+            Finland: {monthly: 94, setup: 99}
     },
-    PX62_Finland: {
-        monthly: 74, setup: 79,
-        name: {
-            English: 'Server PX62 (Finland)',
-            Deutsch: 'Server PX62 (Finnland)',
-            Русский: 'Сервер PX62 (Финляндия)'
-        },
-        comment: 'PX62: E-2176G Hexa-Core/64 GB ECC/2 x 8TB SATA Ent'
-    },
-    PX62NVMe_Finland: {
-        monthly: 74, setup: 79,
-        name: {
-            English: 'Server PX62-NVMe (Finland)',
-            Deutsch: 'Server PX62-NVMe (Finnland)',
-            Русский: 'Сервер PX62-NVMe (Финляндия)'
-        },
-        comment: 'PX62-NVMe: E-2176G Hexa-Core/64 GB ECC/2 x 960GB NVMe SSD Datacenter Edition\n\
-PX62-NVMe: 0x SATA HDD + up to 2x NVMe SSDs, up to 6x SATA SSDs, but maximum 8 disks in total\n\
-PX62-NVMe: 1x SATA HDD + 1x NVMe SSD or 1x SATA SSD\n\
-PX62-NVMe: 2x SATA HDDs'
-    },
-    PX92_Finland: {
-        monthly: 94, setup: 99,
-        name: {
-            English: 'Server PX92 (Finland)',
-            Deutsch: 'Server PX92 (Finnland)',
-            Русский: 'Сервер PX92 (Финляндия)'
-        },
         comment: 'PX92: Intel® Xeon® W-2145 Octa-Core Skylake W/128 GB DDR4 ECC\n\
 PX92: SSD options: 8x NVMe and SSD (up to 4x NVMe or 6x SSD)\n\
 PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
@@ -386,83 +299,71 @@ PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
 PX92: max 256 GB RAM DDR4 (4x 32GB)'
     },
     SX62: {
-        monthly: 69, setup: 69,
         name: {
             English: 'Server SX62',
             Deutsch: 'Server SX62',
             Русский: 'Сервер SX62'
         },
+        location: {
+            Germany: {monthly: 69, setup: 69},
+            Finland: {monthly: 64, setup: 69}
+        },
         comment: 'SX62: Intel® Xeon® E3-1270 v3 Quad-Core/32GB/4x 10TB SATA'
     },
     SX132: {
-        monthly: 169, setup: 169,
         name: {
             English: 'Server SX132',
             Deutsch: 'Server SX132',
             Русский: 'Сервер SX132'
         },
+        location: {
+            Germany: {monthly: 169, setup: 169},
+            Finland: {monthly: 159, setup: 169}
+        },
         comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise'
     },
     SX292: {
-        monthly: 269, setup: 269,
         name: {
             English: 'Server SX292',
             Deutsch: 'Server SX292',
             Русский: 'Сервер SX292'
         },
-        comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256GB/Hardware-RAID Controller/15x 10TB SATA'
-    },
-    SX62_Finland: {
-        monthly: 64, setup: 69,
-        name: {
-            English: 'Server SX62 (Finland)',
-            Deutsch: 'Server SX62 (Finnland)',
-            Русский: 'Сервер SX62 (Финляндия)'
-        },
-        comment: 'SX62: Intel® Xeon® E3-1270 v3 Quad-Core/32GB/4x 10TB SATA'
-    },
-    SX132_Finland: {
-        monthly: 159, setup: 169,
-        name: {
-            English: 'Server SX132 (Finland)',
-            Deutsch: 'Server SX132 (Finnland)',
-            Русский: 'Сервер SX132 (Финляндия)'
-        },
-        comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise'
-    },
-    SX292_Finland: {
-        monthly: 259, setup: 269,
-        name: {
-            English: 'Server SX292 (Finland)',
-            Deutsch: 'Server SX292 (Finnland)',
-            Русский: 'Сервер SX292 (Финляндия)'
+        location: {
+            Germany: {monthly: 269, setup: 269},
+            Finland: {monthly: 259, setup: 269}
         },
         comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256GB/Hardware-RAID Controller/15x 10TB SATA'
     },
     SX61_old: {
-        monthly: 69, setup: 69,
         name: {
             English: 'Server SX61',
             Deutsch: 'Server SX61',
             Русский: 'Сервер SX61'
         },
+        location: {
+            Germany: {monthly: 69, setup: 69}
+        },
         comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA'
     },
     SX131_old: {
-        monthly: 169, setup: 169,
         name: {
             English: 'Server SX131',
             Deutsch: 'Server SX131',
             Русский: 'Сервер SX131'
         },
+        location: {
+            Germany: {monthly: 169, setup: 169}
+        },
         comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA'
     },
     SX291_old: {
-        monthly: 249, setup: 249,
         name: {
             English: 'Server SX291',
             Deutsch: 'Server SX291',
             Русский: 'Сервер SX291'
+        },
+        location: {
+            Germany: {monthly: 249, setup: 249}
         },
         comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA'
     },
@@ -474,6 +375,9 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Deutsch: 'DELL PowerEdge™ R640 DX152',
             Русский: 'DELL PowerEdge™ R640 DX152'
         },
+        location: {
+            Germany: {monthly: 159, setup: 159}
+        },
         comment: "DX152: Dual Intel® Xeon® Silver 4114 10-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 R640: have an iDRAC (IP-KVM)\n\
 R640: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
@@ -481,12 +385,14 @@ R640: Windows 'for EPYC'\n\
 R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
     },
     DX180: {
-        monthly: 189, setup: 189,
         number_of_cpus: 1,
         name: {
             English: 'AMD EPYC™ 7551P DX180',
             Deutsch: 'AMD EPYC™ 7551P DX180',
             Русский: 'AMD EPYC™ 7551P DX180'
+        },
+        location: {
+            Germany: {monthly: 189, setup: 189}
         },
         comment: "DX180: Singe AMD EPYC™ 7551P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 DX180: have an iDRAC (IP-KVM)\n\
@@ -495,12 +401,14 @@ DX180: Windows 'for EPYC'\n\
 DX180: max 512 GB RAM DDR4 (12x 32GB)"
     },
     DX292: {
-        monthly: 219, setup: 219,
         number_of_cpus: 2,
         name: {
             English: 'DELL PowerEdge™ R640 DX292',
             Deutsch: 'DELL PowerEdge™ R640 DX292',
             Русский: 'DELL PowerEdge™ R640 DX292'
+        },
+        location: {
+            Germany: {monthly: 219, setup: 219}
         },
         comment: "DX292: Dual Intel® Xeon® Gold 6130 16-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 R640: have an iDRAC (IP-KVM)\n\
@@ -509,11 +417,13 @@ R640: Windows 'for EPYC'\n\
 R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
     },
     DX141_old: {
-        monthly: 109, setup: 109,
         name: {
             English: 'DELL PowerEdge™ R530 DX141',
             Deutsch: 'DELL PowerEdge™ R530 DX141',
             Русский: 'DELL PowerEdge™ R530 DX141'
+        },
+        location: {
+            Germany: {monthly: 109, setup: 109}
         },
         comment: "DX141: Single Intel® Xeon® E5-1650 v3 @ 3.5GHz Hexa-Core/64GB DDR4 ECC/Dell PERC H330/iDRAC\n\
 R530: have an iDRAC (IP-KVM)\n\
@@ -521,11 +431,13 @@ R530: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB 
 R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
     },
     DX151_old: {
-        monthly: 129, setup: 129,
         name: {
             English: 'DELL PowerEdge™ R730 DX151',
             Deutsch: 'DELL PowerEdge™ R730 DX151',
             Русский: 'DELL PowerEdge™ R730 DX151'
+        },
+        location: {
+            Germany: {monthly: 129, setup: 129}
         },
         comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/iDRAC\n\
 R730: have an iDRAC (IP-KVM)\n\
@@ -533,12 +445,14 @@ R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB 
 R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
     },
     DX291_old: {
-        monthly: 189, setup: 189,
         number_of_cpus: 2,
         name: {
             English: 'DELL PowerEdge™ R730 DX291',
             Deutsch: 'DELL PowerEdge™ R730 DX291',
             Русский: 'DELL PowerEdge™ R730 DX291'
+        },
+        location: {
+            Germany: {monthly: 189, setup: 189}
         },
         comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/iDRAC\n\
 R730: have an iDRAC (IP-KVM)\n\
@@ -546,227 +460,290 @@ R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB 
 R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
     },
     CX10: {
-        monthly: 3.90, setup: 0,
         name: {
             English: 'Server CX10',
             Deutsch: 'Server CX10',
             Русский: 'Сервер CX10'
         },
+        location: {
+            Germany: {monthly: 3.90, setup: 0}
+        },
         comment: 'CX10: 1 vCore 2 GHz/1 GB/25 GB SSD/1 snapshot/2 TB'
     },
     CX20: {
-        monthly: 6.90, setup: 0,
         name: {
             English: 'Server CX20',
             Deutsch: 'Server CX20',
             Русский: 'Сервер CX20'
         },
+        location: {
+            Germany: {monthly: 6.90, setup: 0}
+        },
         comment: 'CX20: 2 vCores 2 GHz/2 GB/50 GB SSD/2 snapshots/5 TB'
     },
     CX30: {
-        monthly: 11.90, setup: 0,
         name: {
             English: 'Server CX30',
             Deutsch: 'Server CX30',
             Русский: 'Сервер CX30'
         },
+        location: {
+            Germany: {monthly: 11.90, setup: 0}
+        },
         comment: 'CX30: 2 vCores 2 GHz/4 GB/100 GB SSD/3 snapshots/8 TB'
     },
     CX40: {
-        monthly: 19.90, setup: 0,
         name: {
             English: 'Server CX40',
             Deutsch: 'Server CX40',
             Русский: 'Сервер CX40'
         },
+        location: {
+            Germany: {monthly: 19.90, setup: 0}
+        },
         comment: 'CX40: 2 vCores 2 GHz/8 GB/200 GB SSD/4 snapshots/10 TB'
     },
     CX50: {
-        monthly: 29.90, setup: 0,
         name: {
             English: 'Server CX50',
             Deutsch: 'Server CX50',
             Русский: 'Сервер CX50'
         },
+        location: {
+            Germany: {monthly: 29.90, setup: 0}
+        },
         comment: 'CX50: 4 vCores 2 GHz/16 GB/400 GB SSD/5 snapshots/20 TB'
     },
     CX60: {
-        monthly: 49.90, setup: 0,
         name: {
             English: 'Server CX60',
             Deutsch: 'Server CX60',
             Русский: 'Сервер CX60'
         },
+        location: {
+            Germany: {monthly: 49.90, setup: 0}
+        },
         comment: 'CX60: 8 vCores 2 GHz/32 GB/600 GB SSD/6 snapshots/30 TB'
     },
     CX11: {
-        monthly: 2.49, setup: 0,
         name: {
             English: 'Server CX11',
             Deutsch: 'Server CX11',
             Русский: 'Сервер CX11'
         },
+        location: {
+            Germany: {monthly: 2.49, setup: 0},
+            Finland: {monthly: 2.49, setup: 0}
+        },
         comment: 'CX11: 1 vCPU/2 GB/20 GB'
     },
     CX21: {
-        monthly: 4.90, setup: 0,
         name: {
             English: 'Server CX21',
             Deutsch: 'Server CX21',
             Русский: 'Сервер CX21'
         },
+        location: {
+            Germany: {monthly: 4.90, setup: 0},
+            Finland: {monthly: 4.90, setup: 0}
+        },
         comment: 'CX21: 2 vCPU/4 GB/40 GB'
     },
     CX31: {
-        monthly: 8.90, setup: 0,
         name: {
             English: 'Server CX31',
             Deutsch: 'Server CX31',
             Русский: 'Сервер CX31'
         },
+        location: {
+            Germany: {monthly: 8.90, setup: 0},
+            Finland: {monthly: 8.90, setup: 0}
+        },
         comment: 'CX31: 2 vCPU/8 GB/80 GB'
     },
     CX41: {
-        monthly: 15.90, setup: 0,
         name: {
             English: 'Server CX41',
             Deutsch: 'Server CX41',
             Русский: 'Сервер CX41'
         },
+        location: {
+            Germany: {monthly: 15.90, setup: 0},
+            Finland: {monthly: 15.90, setup: 0}
+        },
         comment: 'CX41: 4 vCPU/16 GB/160 GB'
     },
     CX51: {
-        monthly: 29.90, setup: 0,
         name: {
             English: 'Server CX51',
             Deutsch: 'Server CX51',
             Русский: 'Сервер CX51'
         },
+        location: {
+            Germany: {monthly: 29.90, setup: 0},
+            Finland: {monthly: 29.90, setup: 0}
+        },
         comment: 'CX51: 8 vCPU/32 GB/240 GB'
     },
     CCX11: {
-        monthly: 19.90, setup: 0,
         name: {
             English: 'Server CCX11',
             Deutsch: 'Server CCX11',
             Русский: 'Сервер CCX11'
         },
+        location: {
+            Germany: {monthly: 19.90, setup: 0},
+            Finland: {monthly: 19.90, setup: 0}
+        },
         comment: 'CCX11: 2 vCPU/8 GB/80 GB'
     },
     CCX21: {
-        monthly: 34.90, setup: 0,
         name: {
             English: 'Server CCX21',
             Deutsch: 'Server CCX21',
             Русский: 'Сервер CCX21'
         },
+        location: {
+            Germany: {monthly: 34.90, setup: 0},
+            Finland: {monthly: 34.90, setup: 0}
+        },
         comment: 'CCX21: 4 vCPU/16 GB/160 GB'
     },
     CCX31: {
-        monthly: 69.90, setup: 0,
         name: {
             English: 'Server CCX31',
             Deutsch: 'Server CCX31',
             Русский: 'Сервер CCX31'
         },
+        location: {
+            Germany: {monthly: 69.90, setup: 0},
+            Finland: {monthly: 69.90, setup: 0}
+        },
         comment: 'CCX31: 8 vCPU/32 GB/240 GB'
     },
     CCX41: {
-        monthly: 139.90, setup: 0,
         name: {
             English: 'Server CCX41',
             Deutsch: 'Server CCX41',
             Русский: 'Сервер CCX41'
         },
+        location: {
+            Germany: {monthly: 139.90, setup: 0},
+            Finland: {monthly: 139.90, setup: 0}
+        },
         comment: 'CCX41: 16 vCPU/64 GB/360 GB'
     },
     CCX51: {
-        monthly: 269.90, setup: 0,
         name: {
             English: 'Server CCX51',
             Deutsch: 'Server CCX51',
             Русский: 'Сервер CCX51'
         },
+        location: {
+            Germany: {monthly: 269.90, setup: 0},
+            Finland: {monthly: 269.90, setup: 0}
+        },
         comment: 'CCX51: 32 vCPU/128 GB/540 GB'
     },
     BX10: {
-        monthly: 2.90, setup: 0,
         name: {
             English: 'Storage Box BX10',
             Deutsch: 'Storage Box BX10',
             Русский: 'Storage Box BX10'
         },
+        location: {
+            Germany: {monthly: 2.90, setup: 0}
+        },
         comment: 'BX10: 100 GB/1 TB traffic'
     },
     BX20: {
-        monthly: 4.90, setup: 0,
         name: {
             English: 'Storage Box BX20',
             Deutsch: 'Storage Box BX20',
             Русский: 'Storage Box BX20'
         },
+        location: {
+            Germany: {monthly: 4.90, setup: 0}
+        },
         comment: 'BX20: 500 GB/2 TB traffic'
     },
     BX30: {
-        monthly: 7.90, setup: 0,
         name: {
             English: 'Storage Box BX30',
             Deutsch: 'Storage Box BX30',
             Русский: 'Storage Box BX30'
         },
+        location: {
+            Germany: {monthly: 7.90, setup: 0}
+        },
         comment: 'BX30: 1 TB/5 TB traffic'
     },
     BX40: {
-        monthly: 9.90, setup: 0,
         name: {
             English: 'Storage Box BX40',
             Deutsch: 'Storage Box BX40',
             Русский: 'Storage Box BX40'
         },
+        location: {
+            Germany: {monthly: 9.90, setup: 0}
+        },
         comment: 'BX40: 2 TB/10 TB traffic'
     },
     BX50: {
-        monthly: 21.90, setup: 0,
         name: {
             English: 'Storage Box BX50',
             Deutsch: 'Storage Box BX50',
             Русский: 'Storage Box BX50'
         },
+        location: {
+            Germany: {monthly: 21.90, setup: 0}
+        },
         comment: 'BX50: 5 TB/15 TB traffic'
     },
     BX60: {
-        monthly: 39.90, setup: 0,
         name: {
             English: 'Storage Box BX60',
             Deutsch: 'Storage Box BX60',
             Русский: 'Storage Box BX60'
         },
+        location: {
+            Germany: {monthly: 39.90, setup: 0}
+        },
         comment: 'BX60: 10 TB/20 TB traffic'
     },
     COLOCATION_1_3: {
-        monthly: 100, setup: 100,
         name: {
             English: 'Colocation 1/3 Rack',
             Deutsch: 'Colocation 1/3 Rack',
             Русский: 'Colocation 1/3 Rack'
         },
+        location: {
+            Germany: {monthly: 100, setup: 100},
+            Finland: {monthly: 139, setup: 139}
+        },
         comment: '1/3 Rack: 14 units'
     },
     COLOCATION_BASIC: {
-        monthly: 167.2269, setup: 167.2269,
         name: {
             English: 'Colocation Rack Basic',
             Deutsch: 'Colocation Rack Basic',
             Русский: 'Colocation Rack Basic'
         },
+        location: {
+            Germany: {monthly: 167.2269, setup: 167.2269},
+            Finland: {monthly: 167.2269, setup: 167.2269}
+        },
         comment: 'Rack Basic: 42 units'
     },
     COLOCATION_ADVANCED: {
-        monthly: 251.2605, setup: 251.2605,
         name: {
             English: 'Colocation Rack Advanced',
             Deutsch: 'Colocation Rack Advanced',
             Русский: 'Colocation Rack Advanced'
+        },
+        location: {
+            Germany: {monthly: 251.2605, setup: 251.2605},
+            Finland: {monthly: 349, setup: 349}
         },
         comment: 'Rack Advanced: 47 units'
     },
@@ -2132,6 +2109,15 @@ Workspace.prototype = {
 function Server(theModel) {
     var parsedSbNumber = parseInt(document.getElementById('sb_number').value);
     this.sbNumber = (isNaN(parsedSbNumber) ? 0 : parsedSbNumber);
+
+    // Check location Germany or Finland
+    var inp = document.getElementsByName('loc');
+    for (var i = 0; i < inp.length; i++) {
+        if (inp[i].type == "radio" && inp[i].checked) {
+            this.location = inp[i].value;
+        }
+    }
+
     if (theModel === 'SB' && this.sbNumber >= 0) {
         theModel = theModel + this.sbNumber;
         if (!servers.hasOwnProperty(theModel)) {
@@ -2150,7 +2136,17 @@ function Server(theModel) {
         }
 
     }
-    this.model = servers[theModel];
+
+    this.model = copyObject(servers[theModel]);
+    if (this.location === 'Finland') {
+        this.model.name.Deutsch += ' (Finnland)';
+        this.model.name.English += ' (Finland)';
+        this.model.name.Русский += ' (Финляндия)';
+    }
+    if (typeof this.model.location !== 'undefined') {
+        this.model.monthly = this.model.location[this.location].monthly;
+        this.model.setup = this.model.location[this.location].setup;
+    }
     this.model_raw = theModel;
     var number_of_servers = parseInt(document.getElementById('number_of_servers').value);
     this.amount = (number_of_servers > 1) ? number_of_servers : 1;
