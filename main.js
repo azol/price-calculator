@@ -1,6 +1,6 @@
 'use strict';
 
-var countryVATrate = {
+const countryVATrate = {
     "All others (no VAT)": 0,
     "Austria": 20,
     "Belgium": 21,
@@ -35,7 +35,7 @@ var countryVATrate = {
     "UK": 20,
 };
 
-var messages = {
+const messages = {
     setup_fee: {
         English: 'Setup costs:',
         Deutsch: 'Einmalige Kosten:',
@@ -100,7 +100,7 @@ var messages = {
      */
 };
 
-var servers = {
+const servers = {
     SB: {
         monthly: 0, setup: 0,
         name: {
@@ -785,7 +785,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
      */
 };
 
-var addons = {
+const addons = {
     usb16: {
         monthly: 1.50,
         name: {
