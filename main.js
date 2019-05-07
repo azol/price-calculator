@@ -142,15 +142,14 @@ const servers = {
         comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD'
     },
     EX51SSDGPU: {
-        monthly: 99, setup: 99,
         name: {
             English: 'Server EX51-SSD-GPU',
             Deutsch: 'Server EX51-SSD-GPU',
             Русский: 'Сервер EX51-SSD-GPU'
         },
         location: {
-            Germany: {monthly: 99, setup: 0},
-            Finland: {monthly: 94, setup: 0}
+            Germany: {monthly: 99, setup: 99},
+            Finland: {monthly: 94, setup: 99}
         },
         comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD\n\
 EX51-SSD-GPU: no hardware addons'
@@ -234,8 +233,8 @@ AX100: up to 8x disks in total: all disk types with exception of NVMe (customer 
             Русский: 'Сервер AX160-NVMe'
         },
         location: {
-            Germany: {monthly: 169, setup: 0},
-            Finland: {monthly: 164, setup: 0}
+            Germany: {monthly: 169, setup: 169},
+            Finland: {monthly: 164, setup: 169}
         },
         comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe\n\
 AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
@@ -248,8 +247,8 @@ AX160-NVMe: up to 12x RAM modules additional'
             Русский: 'Сервер AX160-SSD'
         },
         location: {
-            Germany: {monthly: 179, setup: 0},
-            Finland: {monthly: 174, setup: 0}
+            Germany: {monthly: 179, setup: 179},
+            Finland: {monthly: 174, setup: 179}
     },
         comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD\n\
 AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
@@ -730,8 +729,7 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Colocation Rack Basic'
         },
         location: {
-            Germany: {monthly: 167.2269, setup: 167.2269},
-            Finland: {monthly: 167.2269, setup: 167.2269}
+            Germany: {monthly: 167.2269, setup: 167.2269}
         },
         comment: 'Rack Basic: 42 units'
     },
