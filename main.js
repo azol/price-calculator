@@ -2239,6 +2239,7 @@ function Server(theModel) {
     var parsedSbNumber = parseInt(document.getElementById('sb_number').value);
     this.sbNumber = (isNaN(parsedSbNumber) ? 0 : parsedSbNumber);
 
+    // Create new SBxx server in 'servers' array
     if (theModel === 'SB' && this.sbNumber >= 0) {
         theModel = theModel + this.sbNumber;
         if (!servers.hasOwnProperty(theModel)) {
