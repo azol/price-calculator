@@ -748,12 +748,15 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
 
     /*
      template: {
-       monthly: 0, setup: 0,
        number_of_cpus: 2,
        name: {
          English: '',
          Deutsch: '',
          Русский: ''
+       },
+       location: {
+         Germany: {monthly: 0, setup: 0},
+         Finland: {monthly: 0, setup: 0} // the last location is a default location
        },
        comment: 'line1\nline2'
      }
