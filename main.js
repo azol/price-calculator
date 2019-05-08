@@ -908,6 +908,30 @@ const addons = {
             Русский: 'Подсеть /27'
         }
     },
+    subnet26: {
+        monthly: 53.7815,
+        name: {
+            English: 'Subnet /26',
+            Deutsch: 'Subnet /26',
+            Русский: 'Подсеть /26'
+        }
+    },
+    subnet25: {
+        monthly: 107.5630,
+        name: {
+            English: 'Subnet /25',
+            Deutsch: 'Subnet /25',
+            Русский: 'Подсеть /25'
+        }
+    },
+    subnet24: {
+        monthly: 215.1261,
+        name: {
+            English: 'Subnet /24',
+            Deutsch: 'Subnet /24',
+            Русский: 'Подсеть /24'
+        }
+    },
     failover_ip: {
         monthly: 4.2017,
         name: {
@@ -943,6 +967,33 @@ const addons = {
             Русский: 'Failover подсеть /27'
         },
         comment: 'Failover subnet /27: can`t be used with VMware ESXi'
+    },
+    failover_subnet26: {
+        monthly:  62.1849,
+        name: {
+            English: 'Failover subnet /26',
+            Deutsch: 'Failover Subnet /26',
+            Русский: 'Failover подсеть /26'
+        },
+        comment: 'Failover subnet /26: can`t be used with VMware ESXi'
+    },
+    failover_subnet25: {
+        monthly:  115.9664,
+        name: {
+            English: 'Failover subnet /25',
+            Deutsch: 'Failover Subnet /25',
+            Русский: 'Failover подсеть /25'
+        },
+        comment: 'Failover subnet /25: can`t be used with VMware ESXi'
+    },
+    failover_subnet24: {
+        monthly: 223.5294,
+        name: {
+            English: 'Failover subnet /24',
+            Deutsch: 'Failover Subnet /24',
+            Русский: 'Failover подсеть /24'
+        },
+        comment: 'Failover subnet /24: can`t be used with VMware ESXi'
     },
     vlan_subnet29: {
         monthly: 15.1261,
