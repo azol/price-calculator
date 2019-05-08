@@ -22,6 +22,6 @@ WORKDIR /app
 ADD . /app
 RUN gulp
 
-FROM nginx
+FROM nginx:1.15.12
 COPY --from=price_calculator /app/dist/price_calculator.html /usr/share/nginx/html/
 
