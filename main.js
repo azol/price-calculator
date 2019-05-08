@@ -1453,39 +1453,28 @@ function onLoad() {
     prepareWorkspace();
     //workspace.copyCurrentServerTab();
 
-    //loadTestData_3servers();
+    // loadTestServers();
     updateCalculationResult();
     //$(document).foundation('tab', 'reflow');
     onChange();
 }
 
-function loadTestData_3servers() {
+function loadTestServers() {
 
     var i=1;
     workspace.currentServer=i;
-    workspace.Servers[i] = new Server("PX60");
+    workspace.Servers[i] = new Server("EX42");
     updateCalculationResult();
-    workspace.copyCurrentServerTab();
 
+    workspace.createNewTab();
     i=2;
     workspace.currentServer=i;
-    workspace.Servers[i] = new Server("PX70");
-    updateCalculationResult();
-    workspace.copyCurrentServerTab();
-
-    i=3;
-    workspace.currentServer=i;
-    workspace.Servers[i] = new Server("PX91");
-    updateCalculationResult();
-    workspace.copyCurrentServerTab();
-
-    i=4;
-    workspace.currentServer=i;
-    workspace.Servers[i] = new Server("EX40");
+    workspace.Servers[i] = new Server("AX100");
     updateCalculationResult();
 
-//    workspace.copyCurrentServerTab();
+    workspace.createNewTab();
 
+    onChange();
 }
 
 /**
