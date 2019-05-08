@@ -531,8 +531,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CX11'
         },
         location: {
-            Germany: {monthly: 2.49, setup: 0},
-            Finland: {monthly: 2.49, setup: 0}
+            Finland: {monthly: 2.49, setup: 0},
+            Germany: {monthly: 2.49, setup: 0}
         },
         comment: 'CX11: 1 vCPU/2 GB/20 GB'
     },
@@ -543,8 +543,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CX21'
         },
         location: {
-            Germany: {monthly: 4.90, setup: 0},
-            Finland: {monthly: 4.90, setup: 0}
+            Finland: {monthly: 4.90, setup: 0},
+            Germany: {monthly: 4.90, setup: 0}
         },
         comment: 'CX21: 2 vCPU/4 GB/40 GB'
     },
@@ -555,8 +555,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CX31'
         },
         location: {
-            Germany: {monthly: 8.90, setup: 0},
-            Finland: {monthly: 8.90, setup: 0}
+            Finland: {monthly: 8.90, setup: 0},
+            Germany: {monthly: 8.90, setup: 0}
         },
         comment: 'CX31: 2 vCPU/8 GB/80 GB'
     },
@@ -567,8 +567,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CX41'
         },
         location: {
-            Germany: {monthly: 15.90, setup: 0},
-            Finland: {monthly: 15.90, setup: 0}
+            Finland: {monthly: 15.90, setup: 0},
+            Germany: {monthly: 15.90, setup: 0}
         },
         comment: 'CX41: 4 vCPU/16 GB/160 GB'
     },
@@ -579,8 +579,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CX51'
         },
         location: {
-            Germany: {monthly: 29.90, setup: 0},
-            Finland: {monthly: 29.90, setup: 0}
+            Finland: {monthly: 29.90, setup: 0},
+            Germany: {monthly: 29.90, setup: 0}
         },
         comment: 'CX51: 8 vCPU/32 GB/240 GB'
     },
@@ -591,8 +591,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CCX11'
         },
         location: {
-            Germany: {monthly: 19.90, setup: 0},
-            Finland: {monthly: 19.90, setup: 0}
+            Finland: {monthly: 19.90, setup: 0},
+            Germany: {monthly: 19.90, setup: 0}
         },
         comment: 'CCX11: 2 vCPU/8 GB/80 GB'
     },
@@ -603,8 +603,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CCX21'
         },
         location: {
-            Germany: {monthly: 34.90, setup: 0},
-            Finland: {monthly: 34.90, setup: 0}
+            Finland: {monthly: 34.90, setup: 0},
+            Germany: {monthly: 34.90, setup: 0}
         },
         comment: 'CCX21: 4 vCPU/16 GB/160 GB'
     },
@@ -615,8 +615,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CCX31'
         },
         location: {
-            Germany: {monthly: 69.90, setup: 0},
-            Finland: {monthly: 69.90, setup: 0}
+            Finland: {monthly: 69.90, setup: 0},
+            Germany: {monthly: 69.90, setup: 0}
         },
         comment: 'CCX31: 8 vCPU/32 GB/240 GB'
     },
@@ -627,8 +627,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CCX41'
         },
         location: {
-            Germany: {monthly: 139.90, setup: 0},
-            Finland: {monthly: 139.90, setup: 0}
+            Finland: {monthly: 139.90, setup: 0},
+            Germany: {monthly: 139.90, setup: 0}
         },
         comment: 'CCX41: 16 vCPU/64 GB/360 GB'
     },
@@ -639,8 +639,8 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
             Русский: 'Сервер CCX51'
         },
         location: {
-            Germany: {monthly: 269.90, setup: 0},
-            Finland: {monthly: 269.90, setup: 0}
+            Finland: {monthly: 269.90, setup: 0},
+            Germany: {monthly: 269.90, setup: 0}
         },
         comment: 'CCX51: 32 vCPU/128 GB/540 GB'
     },
