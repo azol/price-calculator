@@ -1504,6 +1504,15 @@ function loadTestData_3servers() {
  */
 function onChange() {
     var selectedServerModel = document.getElementById('select_servers').value;
+
+    if (selectedServerModel != workspace.Servers[workspace.currentServer].model_raw) {
+        workspace.uncheckAllLocations();
+        workspace.disableAllLocations();
+        for (let location in servers[selectedServerModel].location) {
+            workspace.enableLocationByValue(location);
+        }
+    }
+
     workspace.Servers[workspace.currentServer] = new Server(selectedServerModel);
 
     updateTabName();
@@ -1631,6 +1640,64 @@ Workspace.prototype = {
     setNumberOfServers: function(arg) {
         document.getElementById('number_of_servers').value = arg;
     },
+    /**
+     * Removes 'checked' attribute from all the radio buttons with 'loc' name
+     */
+    uncheckAllLocations: function() {
+        const inp = document.getElementsByName('loc');
+        for (let i = 0; i < inp.length; i++) {
+            inp[i].checked = false;
+        }
+    },
+    /**
+     * Marks a button with value 'radioButtonValue' as checked (selected)
+     *
+     * Please note that all other buttons with name 'loc' will be unchecked automatically
+     * @param {String} radioButtonValue
+     */
+    checkLocationByValue: function(radioButtonValue) {
+        const inp = document.getElementsByName('loc');
+        for (let i = 0; i < inp.length; i++) {
+            if (inp[i].value === radioButtonValue) {
+                inp[i].checked = true;
+            }
+        }
+    },
+    /**
+     * Marks as disabled (inactive) all the radio buttons with 'loc' name
+     */
+    disableAllLocations: function() {
+        const inp = document.getElementsByName('loc');
+        for (let i = 0; i < inp.length; i++) {
+            inp[i].disabled = true;
+        }
+    },
+    /**
+     * Marks a button with value 'radioButtonValue' as enabled (acrtive)
+     * (applied only for radio buttons with name='loc')
+     * @param {String} radioButtonValue
+     */
+    enableLocationByValue: function(radioButtonValue) {
+        const inp = document.getElementsByName('loc');
+        for (let i = 0; i < inp.length; i++) {
+            if (inp[i].value === radioButtonValue) {
+                inp[i].disabled = false;
+            }
+        }
+    },
+    /**
+     * Returns currenly checked location from GUI
+     */
+    getCheckedLocation: function() {
+        let checkedLocation;
+        const inp = document.getElementsByName('loc');
+        for (let i = 0; i < inp.length; i++) {
+            if (inp[i].type == "radio" && inp[i].checked) {
+                checkedLocation = inp[i].value;
+            }
+        }
+        return checkedLocation;
+    },
     setNoSetupFee: function(arg) {
         document.getElementById('no_setup_fee').checked = arg;
     },
@@ -1729,6 +1796,8 @@ Workspace.prototype = {
         this.setServer("SB");
         this.setSbNumber('');
         this.setNumberOfServers("");
+        this.disableAllLocations();
+        this.uncheckAllLocations();
         this.setNoSetupFee(false);
         this.setCustomAddonText("");
         this.setCustomAddonSetupPrice("");
@@ -1805,6 +1874,14 @@ Workspace.prototype = {
             this.setSbNumber((isNaN(sbNumber)) ? "" : sbNumber);
             var numOfServers = this.Servers[this.currentServer].amount;
             this.setNumberOfServers((numOfServers !== 1) ? numOfServers : "");
+
+            this.uncheckAllLocations();
+            this.disableAllLocations();
+            let loc;
+            for (loc in this.Servers[this.currentServer].model.location) {
+                this.enableLocationByValue(loc);
+            }
+            this.checkLocationByValue(this.Servers[this.currentServer].location);
 
             var noSetupFeeFlag = this.Servers[this.currentServer].model.noSetupFee;
             this.setNoSetupFee(noSetupFeeFlag !== undefined ? noSetupFeeFlag : false);
@@ -2162,14 +2239,6 @@ function Server(theModel) {
     var parsedSbNumber = parseInt(document.getElementById('sb_number').value);
     this.sbNumber = (isNaN(parsedSbNumber) ? 0 : parsedSbNumber);
 
-    // Check location Germany or Finland
-    var inp = document.getElementsByName('loc');
-    for (var i = 0; i < inp.length; i++) {
-        if (inp[i].type == "radio" && inp[i].checked) {
-            this.location = inp[i].value;
-        }
-    }
-
     if (theModel === 'SB' && this.sbNumber >= 0) {
         theModel = theModel + this.sbNumber;
         if (!servers.hasOwnProperty(theModel)) {
@@ -2190,6 +2259,15 @@ function Server(theModel) {
     }
 
     this.model = copyObject(servers[theModel]);
+
+    const locationFromGUI = workspace.getCheckedLocation();
+    if (typeof locationFromGUI == 'undefined') {
+        this.location = this.getDefaultLocation();
+        workspace.checkLocationByValue(this.location);
+    } else {
+        this.location = locationFromGUI;
+    }
+
     if (this.location === 'Finland') {
         this.model.name.Deutsch += ' (Finnland)';
         this.model.name.English += ' (Finland)';
@@ -2496,7 +2574,21 @@ Server.prototype = {
             this.addAddon(addon, 1);
         }
     },
-
+    /**
+     * return the last defined location
+     */
+    getDefaultLocation: function() {
+        let defaultLocation;
+        if (typeof this.model.location !== 'undefined') {
+            // the last location is a default location
+            for (let location in this.model.location) {
+                defaultLocation = location;
+            }
+            return defaultLocation;
+        } else {
+            return undefined;
+        }
+    },
     getSetupPrice: function() {
         return ('setup' in this.model) ? this.model.setup : 0;
     },
