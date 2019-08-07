@@ -1106,7 +1106,7 @@ const addons = {
         comment: "960 NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme480_3d_xpoint: {
-        monthly: 37.00,
+        monthly: 43.00,
         name: {
             English: '480 GB NVMe SSD 3D XPoint',
             Deutsch: '480 GB NVMe SSD 3D XPoint',
