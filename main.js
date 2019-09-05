@@ -377,7 +377,7 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
         location: {
             Germany: {monthly: 159, setup: 159}
         },
-        comment: "DX152: Dual Intel® Xeon® Silver 4114 10-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
+        comment: "DX152: Dual Intel® Xeon® SP Silver 10-Core @ 2.20GHz/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 R640: have an iDRAC (IP-KVM)\n\
 R640: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
 R640: Windows 'for EPYC'\n\
@@ -409,7 +409,7 @@ DX180: max 512 GB RAM DDR4 (12x 32GB)"
         location: {
             Germany: {monthly: 219, setup: 219}
         },
-        comment: "DX292: Dual Intel® Xeon® Gold 6130 16-Core/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
+        comment: "DX292: Dual Intel® Xeon® SP Gold 16-Core @ 2.10GHz/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 R640: have an iDRAC (IP-KVM)\n\
 R640: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
 R640: Windows 'for EPYC'\n\
