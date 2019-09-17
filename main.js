@@ -1132,6 +1132,15 @@ const addons = {
         },
         comment: "1.92 TB NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
+    nvme3840de: {
+        monthly: 57.00,
+        name: {
+            English: '3.84 TB NVMe SSD Datacenter Edition',
+            Deutsch: '3,84 TB NVMe SSD Datacenter Edition',
+            Русский: '3,84 ТБ NVMe SSD Datacenter Edition'
+        },
+        comment: "3.84 TB NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+    },
     sas600: {
         monthly: 17.50,
         name: {
