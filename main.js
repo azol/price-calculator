@@ -796,43 +796,95 @@ const addons = {
             Русский: '64 ГБ DDR4 оперативной памяти ECC'
         }
     },
-    win_std: {
+    win_std_8cores: {
         monthly: 23.10, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Standard Edition',
-            Deutsch: 'Windows Server 2016 Standard Edition',
-            Русский: 'Windows Server 2016 Standard Edition'
+            English: 'Windows Server 2016 Standard Edition - 8 cores',
+            Deutsch: 'Windows Server 2016 Standard Edition - 8 cores',
+            Русский: 'Windows Server 2016 Standard Edition - 8 ядер'
         }
     },
-    win_dc: {
+    win_dc_8cores: {
         monthly: 143.30, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Datacenter Edition',
-            Deutsch: 'Windows Server 2016 Datacenter Edition',
-            Русский: 'Windows Server 2016 Datacenter Edition'
+            English: 'Windows Server 2016 Datacenter Edition - 8 cores',
+            Deutsch: 'Windows Server 2016 Datacenter Edition - 8 cores',
+            Русский: 'Windows Server 2016 Datacenter Edition - 8 ядер'
         }
     },
-    win_std_24_kerne: {
+    win_std_10cores: {
+        monthly: 29.20, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2016 Standard Edition - 10 cores',
+            Deutsch: 'Windows Server 2016 Standard Edition - 10 cores',
+            Русский: 'Windows Server 2016 Standard Edition - 10 ядер'
+        }
+    },
+    win_dc_10cores: {
+        monthly: 179.30, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2016 Datacenter Edition - 10 cores',
+            Deutsch: 'Windows Server 2016 Datacenter Edition - 10 cores',
+            Русский: 'Windows Server 2016 Datacenter Edition - 10 ядер'
+        }
+    },
+    win_std_16cores: {
+        monthly: 46.20, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2016 Standard Edition - 16 cores',
+            Deutsch: 'Windows Server 2016 Standard Edition - 16 cores',
+            Русский: 'Windows Server 2016 Standard Edition - 16 ядер'
+        }
+    },
+    win_dc_16cores: {
+        monthly: 286.60, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2016 Datacenter Edition - 16 cores',
+            Deutsch: 'Windows Server 2016 Datacenter Edition - 16 cores',
+            Русский: 'Windows Server 2016 Datacenter Edition - 16 ядер'
+        }
+    },
+    win_std_24cores: {
         monthly: 69.30, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Standard',
-            Deutsch: 'Windows Server 2016 Standard',
-            Русский: 'Windows Server 2016 Standard'
-        },
-        comment: 'Windows server "24 Kerne" only for Dell and AX160 servers'
+            English: 'Windows Server 2016 Standard Edition - 24 cores',
+            Deutsch: 'Windows Server 2016 Standard Edition - 24 cores',
+            Русский: 'Windows Server 2016 Standard Edition - 24 ядра'
+        }
     },
-    win_dc_24_kerne: {
+    win_dc_24cores: {
         monthly: 430.10, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Datacenter',
-            Deutsch: 'Windows Server 2016 Datacenter',
-            Русский: 'Windows Server 2016 Datacenter'
-        },
-        comment: 'Windows server "24 Kerne" only for Dell and AX160 servers'
+            English: 'Windows Server 2016 Datacenter Edition - 24 cores',
+            Deutsch: 'Windows Server 2016 Datacenter Edition - 24 cores',
+            Русский: 'Windows Server 2016 Datacenter Edition - 24 ядра'
+        }
+    },
+    win_std_32cores: {
+        monthly: 92.40, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2016 Standard Edition - 32 cores',
+            Deutsch: 'Windows Server 2016 Standard Edition - 32 cores',
+            Русский: 'Windows Server 2016 Standard Edition - 32 ядра'
+        }
+    },
+    win_dc_32cores: {
+        monthly: 560.35, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2016 Datacenter Edition - 32 cores',
+            Deutsch: 'Windows Server 2016 Datacenter Edition - 32 cores',
+            Русский: 'Windows Server 2016 Datacenter Edition - 32 ядра'
+        }
     },
     plesk_web_admin: {
         monthly: 4.20, pay_entire_month: "yes",
