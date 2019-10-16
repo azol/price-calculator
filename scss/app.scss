@@ -62,6 +62,10 @@ textarea {
   display: inline-block;
 }
 
+.row {
+  max-width: none;
+}
+
 @mixin hetzner-border() {
   border: {
     color: $input-prefix-border-color;
