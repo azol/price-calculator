@@ -186,7 +186,7 @@ const servers = {
         location: {
             Germany: {monthly: 69, setup: 69},
             Finland: {monthly: 64, setup: 69}
-    },
+        },
         comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD'
     },
     AX100: {
