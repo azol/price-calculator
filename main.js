@@ -141,19 +141,6 @@ const servers = {
         },
         comment: 'EX42-NVMe: Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 512GB NVMe SSD'
     },
-    EX51SSDGPU: {
-        name: {
-            English: 'Server EX51-SSD-GPU',
-            Deutsch: 'Server EX51-SSD-GPU',
-            Русский: 'Сервер EX51-SSD-GPU'
-        },
-        location: {
-            Germany: {monthly: 99, setup: 99},
-            Finland: {monthly: 94, setup: 99}
-        },
-        comment: 'EX51-SSD-GPU: GeForce® GTX 1080/Intel® Core™ i7-6700 Quad-Core Skylake/64 GB/2 x 500GB SSD\n\
-EX51-SSD-GPU: no hardware addons'
-    },
     EX52: {
         name: {
             English: 'Server EX52',
