@@ -189,18 +189,6 @@ const servers = {
     },
         comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD'
     },
-    AX60SSD: {
-        name: {
-            English: 'Server AX60-SSD',
-            Deutsch: 'Server AX60-SSD',
-            Русский: 'Сервер AX60-SSD'
-        },
-        location: {
-            Germany: {monthly: 59, setup: 119},
-            Finland: {monthly: 54, setup: 119}
-        },
-        comment: 'AX60-SSD: AMD Ryzen 7 1700X Octa-Core/64 GB/2 x 500GB SSD'
-    },
     AX100: {
         name: {
             English: 'Server AX100',
