@@ -1425,6 +1425,22 @@ const addons = {
             Русский: 'BBU для RAID-контроллера'
         }
     },
+    ecc_ram_upgrade: {
+        monthly: 5,
+        name: {
+            English: 'Upgrade to ECC RAM',
+            Deutsch: 'Upgrade auf ECC RAM',
+            Русский: 'Установка ECC опеаративной памяти'
+        }
+    },
+    ram_upgrade_64_to_128: {
+        monthly: 20,
+        name: {
+            English: 'Upgrade from 64GB to 128GB non-ECC RAM',
+            Deutsch: 'Upgrade von 64GB auf 128GB Non-ECC RAM',
+            Русский: 'Увеличение RAM с 64 ГБ до 128 ГБ без ECC'
+        }
+    },
     traffic_overusage: {
         monthly: 1.00,
         name: {
