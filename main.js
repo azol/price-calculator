@@ -189,6 +189,50 @@ const servers = {
         },
         comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD'
     },
+    AX41: {
+        name: {
+            English: 'Server AX41',
+            Deutsch: 'Server AX41',
+            Русский: 'Сервер AX41'
+        },
+        location: {
+            Germany: {monthly: 39, setup: 39}
+        },
+        comment: 'AX41: AMD Ryzen 5 3600 (6 cores)/64 GB/2 x 2 TB HDD'
+    },
+    AX41NVMe: {
+        name: {
+            English: 'Server AX41-NVMe',
+            Deutsch: 'Server AX41-NVMe',
+            Русский: 'Сервер AX41-NVMe'
+        },
+        location: {
+            Germany: {monthly: 39, setup: 39}
+        },
+        comment: 'AX41-NVMe: AMD Ryzen 5 3600 (6 cores)/64 GB/2 x 512 GB NVMe SSD'
+    },
+    AX51: {
+        name: {
+            English: 'Server AX51',
+            Deutsch: 'Server AX51',
+            Русский: 'Сервер AX51'
+        },
+        location: {
+            Germany: {monthly: 59, setup: 59}
+        },
+        comment: 'AX51: AMD Ryzen 7 3700X (8 cores)/64 GB ECC/2 x 8 TB HDD'
+    },
+    AX51NVMe: {
+        name: {
+            English: 'Server AX51-NVMe',
+            Deutsch: 'Server AX51-NVMe',
+            Русский: 'Сервер AX51-NVMe'
+        },
+        location: {
+            Germany: {monthly: 59, setup: 59}
+        },
+        comment: 'AX51-NVMe: AMD Ryzen 7 3700X (8 cores)/64 GB ECC/2 x 1 TB NVMe SSD'
+    },
     AX100: {
         name: {
             English: 'Server AX100',
