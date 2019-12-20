@@ -819,90 +819,90 @@ const addons = {
         monthly: 23.10, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Standard Edition - 8 cores',
-            Deutsch: 'Windows Server 2016 Standard Edition - 8 cores',
-            Русский: 'Windows Server 2016 Standard Edition - 8 ядер'
+            English: 'Windows Server 2019 Standard Edition - 8 cores',
+            Deutsch: 'Windows Server 2019 Standard Edition - 8 cores',
+            Русский: 'Windows Server 2019 Standard Edition - 8 ядер'
         }
     },
     win_dc_8cores: {
         monthly: 143.30, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Datacenter Edition - 8 cores',
-            Deutsch: 'Windows Server 2016 Datacenter Edition - 8 cores',
-            Русский: 'Windows Server 2016 Datacenter Edition - 8 ядер'
+            English: 'Windows Server 2019 Datacenter Edition - 8 cores',
+            Deutsch: 'Windows Server 2019 Datacenter Edition - 8 cores',
+            Русский: 'Windows Server 2019 Datacenter Edition - 8 ядер'
         }
     },
     win_std_10cores: {
         monthly: 29.20, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Standard Edition - 10 cores',
-            Deutsch: 'Windows Server 2016 Standard Edition - 10 cores',
-            Русский: 'Windows Server 2016 Standard Edition - 10 ядер'
+            English: 'Windows Server 2019 Standard Edition - 10 cores',
+            Deutsch: 'Windows Server 2019 Standard Edition - 10 cores',
+            Русский: 'Windows Server 2019 Standard Edition - 10 ядер'
         }
     },
     win_dc_10cores: {
         monthly: 179.30, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Datacenter Edition - 10 cores',
-            Deutsch: 'Windows Server 2016 Datacenter Edition - 10 cores',
-            Русский: 'Windows Server 2016 Datacenter Edition - 10 ядер'
+            English: 'Windows Server 2019 Datacenter Edition - 10 cores',
+            Deutsch: 'Windows Server 2019 Datacenter Edition - 10 cores',
+            Русский: 'Windows Server 2019 Datacenter Edition - 10 ядер'
         }
     },
     win_std_16cores: {
         monthly: 46.20, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Standard Edition - 16 cores',
-            Deutsch: 'Windows Server 2016 Standard Edition - 16 cores',
-            Русский: 'Windows Server 2016 Standard Edition - 16 ядер'
+            English: 'Windows Server 2019 Standard Edition - 16 cores',
+            Deutsch: 'Windows Server 2019 Standard Edition - 16 cores',
+            Русский: 'Windows Server 2019 Standard Edition - 16 ядер'
         }
     },
     win_dc_16cores: {
         monthly: 286.60, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Datacenter Edition - 16 cores',
-            Deutsch: 'Windows Server 2016 Datacenter Edition - 16 cores',
-            Русский: 'Windows Server 2016 Datacenter Edition - 16 ядер'
+            English: 'Windows Server 2019 Datacenter Edition - 16 cores',
+            Deutsch: 'Windows Server 2019 Datacenter Edition - 16 cores',
+            Русский: 'Windows Server 2019 Datacenter Edition - 16 ядер'
         }
     },
     win_std_24cores: {
         monthly: 69.30, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Standard Edition - 24 cores',
-            Deutsch: 'Windows Server 2016 Standard Edition - 24 cores',
-            Русский: 'Windows Server 2016 Standard Edition - 24 ядра'
+            English: 'Windows Server 2019 Standard Edition - 24 cores',
+            Deutsch: 'Windows Server 2019 Standard Edition - 24 cores',
+            Русский: 'Windows Server 2019 Standard Edition - 24 ядра'
         }
     },
     win_dc_24cores: {
         monthly: 430.10, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Datacenter Edition - 24 cores',
-            Deutsch: 'Windows Server 2016 Datacenter Edition - 24 cores',
-            Русский: 'Windows Server 2016 Datacenter Edition - 24 ядра'
+            English: 'Windows Server 2019 Datacenter Edition - 24 cores',
+            Deutsch: 'Windows Server 2019 Datacenter Edition - 24 cores',
+            Русский: 'Windows Server 2019 Datacenter Edition - 24 ядра'
         }
     },
     win_std_32cores: {
         monthly: 92.40, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Standard Edition - 32 cores',
-            Deutsch: 'Windows Server 2016 Standard Edition - 32 cores',
-            Русский: 'Windows Server 2016 Standard Edition - 32 ядра'
+            English: 'Windows Server 2019 Standard Edition - 32 cores',
+            Deutsch: 'Windows Server 2019 Standard Edition - 32 cores',
+            Русский: 'Windows Server 2019 Standard Edition - 32 ядра'
         }
     },
     win_dc_32cores: {
         monthly: 560.35, pay_entire_month: true,
         monthly_price_per_cpu: true,
         name: {
-            English: 'Windows Server 2016 Datacenter Edition - 32 cores',
-            Deutsch: 'Windows Server 2016 Datacenter Edition - 32 cores',
-            Русский: 'Windows Server 2016 Datacenter Edition - 32 ядра'
+            English: 'Windows Server 2019 Datacenter Edition - 32 cores',
+            Deutsch: 'Windows Server 2019 Datacenter Edition - 32 cores',
+            Русский: 'Windows Server 2019 Datacenter Edition - 32 ядра'
         }
     },
     plesk_web_admin: {
