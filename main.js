@@ -1441,6 +1441,14 @@ const addons = {
             Русский: 'Увеличение RAM с 64 ГБ до 128 ГБ без ECC'
         }
     },
+    ram_upgrade_64_to_128_ecc: {
+        monthly: 30,
+        name: {
+            English: 'Upgrade from 64GB to 128GB ECC RAM',
+            Deutsch: 'Upgrade von 64GB auf 128GB ECC RAM',
+            Русский: 'Увеличение RAM с 64 ГБ до 128 ГБ с ECC'
+        }
+    },
     traffic_overusage: {
         monthly: 1.00,
         name: {
