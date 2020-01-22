@@ -808,7 +808,7 @@ const addons = {
         }
     },
     ddr4ecc64gb: {
-        monthly: 34.00,
+        monthly: 22.50,
         name: {
             English: '64 GB DDR4 ECC RAM',
             Deutsch: '64 GB DDR4 ECC RAM',
@@ -1168,7 +1168,7 @@ const addons = {
         comment: "512 NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960de: {
-        monthly: 19.00,
+        monthly: 13.00,
         name: {
             English: '960 GB NVMe SSD Datacenter Edition',
             Deutsch: '960 GB NVMe SSD Datacenter Edition',
@@ -1186,7 +1186,7 @@ const addons = {
         comment: "480 GB NVMe SSD 3D XPoint: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1000: {
-        monthly: 12.00,
+        monthly: 10.00,
         name: {
             English: '1 TB NVMe SSD',
             Deutsch: '1 TB NVMe SSD',
@@ -1195,7 +1195,7 @@ const addons = {
         comment: "1 TB NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1920de: {
-        monthly: 36.00,
+        monthly: 24.50,
         name: {
             English: '1.92 TB NVMe SSD Datacenter Edition',
             Deutsch: '1,92 TB NVMe SSD Datacenter Edition',
@@ -1204,7 +1204,7 @@ const addons = {
         comment: "1.92 TB NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme3840de: {
-        monthly: 57.00,
+        monthly: 45.00,
         name: {
             English: '3.84 TB NVMe SSD Datacenter Edition',
             Deutsch: '3,84 TB NVMe SSD Datacenter Edition',
