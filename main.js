@@ -25,6 +25,7 @@ const countryVATrate = {
     "Poland": 23,
     "Portugal": 23,
     "Republic of Belarus": 20,
+    "Republic of Singapore": 7,
     "Romania": 19,
     "Russia": 20,
     "Slovakia": 20,
