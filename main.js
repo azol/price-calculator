@@ -275,6 +275,24 @@ AX160-NVMe: up to 12x RAM modules additional'
 AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
 AX160-SSD: up to 12x RAM modules additional'
     },
+    AX161: {
+        name: {
+            English: 'Server AX161',
+            Deutsch: 'Server AX161',
+            Русский: 'Сервер AX161'
+        },
+        location: {
+            Germany: {monthly: 119, setup: 119},
+            Finland: {monthly: 109, setup: 119}
+    },
+        comment: 'AX161: AMD EPYC 7502P 32-core/128 GB ECC\n\
+AX161: 0x SATA HDD + up to 8x NVMe/SATA SSDs\n\
+AX161: 1x SATA HDD + up to 3x NVMe/SATA SSDs\n\
+AX161: 2x SATA HDD + up to 2x NVMe/SATA SSDs\n\
+AX161: 3x SATA HDD\n\
+AX161: up to 12x 32 GB ECC RAM modules additional (512 GB max)\n\
+AX161: 9..16x 64 GB ECC RAM modules (1024 GB max)'
+    },
     PX62: {
         name: {
             English: 'Server PX62',
