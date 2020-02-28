@@ -22,6 +22,7 @@ const countryVATrate = {
     "Luxembourg": 17,
     "Malta": 18,
     "The Netherlands": 21,
+    "Norway": 25,
     "Poland": 23,
     "Portugal": 23,
     "Republic of Belarus": 20,
