@@ -1170,7 +1170,7 @@ const addons = {
         }
     },
     ssd3840de: {
-        monthly: 38.00,
+        monthly: 47.00,
         name: {
             English: '3.84 TB SATA SSD Datacenter Edition',
             Deutsch: '3,84 TB SATA SSD Datacenter Edition',
