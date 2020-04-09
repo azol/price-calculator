@@ -422,7 +422,7 @@ R640: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 G
 R640: Windows 'for EPYC'\n\
 R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
     },
-    DX180: {
+    DX181: {
         number_of_cpus: 1,
         name: {
             English: 'AMD EPYC™ 7551P DX180',
@@ -432,10 +432,9 @@ R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
         location: {
             Germany: {monthly: 189, setup: 189}
         },
-        comment: "DX180: Singe AMD EPYC™ 7551P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
+        comment: "DX180: Singe AMD EPYC™ 7502P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 DX180: have an iDRAC (IP-KVM)\n\
-DX180: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
-DX180: Windows 'for EPYC'\n\
+DX180: Drives are optional (240/480/960 GB, 1.92/3.84 TB SSD DC, 960 GB, 1.92/3.84 TB NVMe and 480 GB 3D XPoint)\n\
 DX180: max 512 GB RAM DDR4 (12x 32GB)"
     },
     DX292: {
@@ -482,6 +481,23 @@ R730: have an iDRAC (IP-KVM)\n\
 R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
 R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
     },
+    DX180_old: {
+        number_of_cpus: 1,
+        name: {
+            English: 'AMD EPYC™ 7551P DX180',
+            Deutsch: 'AMD EPYC™ 7551P DX180',
+            Русский: 'AMD EPYC™ 7551P DX180'
+        },
+        location: {
+            Germany: {monthly: 189, setup: 189}
+        },
+        comment: "DX180: Singe AMD EPYC™ 7551P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
+DX180: have an iDRAC (IP-KVM)\n\
+DX180: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
+DX180: Windows 'for EPYC'\n\
+DX180: max 512 GB RAM DDR4 (12x 32GB)"
+    },
+
     DX291_old: {
         number_of_cpus: 2,
         name: {
