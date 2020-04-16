@@ -579,6 +579,66 @@ R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
         },
         comment: 'CX60: 8 vCores 2 GHz/32 GB/600 GB SSD/6 snapshots/30 TB'
     },
+    CPX11: {
+        name: {
+            English: 'Server CPX11',
+            Deutsch: 'Server CPX11',
+            Русский: 'Сервер CPX11'
+        },
+        location: {
+            Finland: {monthly: 3.49, setup: 0},
+            Germany: {monthly: 3.49, setup: 0}
+        },
+        comment: 'CPX11: 2 vCPU/2 GB/40 GB'
+    },
+    CPX21: {
+        name: {
+            English: 'Server CPX21',
+            Deutsch: 'Server CPX21',
+            Русский: 'Сервер CPX21'
+        },
+        location: {
+            Finland: {monthly: 6.90, setup: 0},
+            Germany: {monthly: 6.90, setup: 0}
+        },
+        comment: 'CPX21: 3 vCPU/4 GB/80 GB'
+    },
+    CPX31: {
+        name: {
+            English: 'Server CPX31',
+            Deutsch: 'Server CPX31',
+            Русский: 'Сервер CPX31'
+        },
+        location: {
+            Finland: {monthly: 12.40, setup: 0},
+            Germany: {monthly: 12.40, setup: 0}
+        },
+        comment: 'CPX31: 4 vCPU/8 GB/160 GB'
+    },
+    CPX41: {
+        name: {
+            English: 'Server CPX41',
+            Deutsch: 'Server CPX41',
+            Русский: 'Сервер CPX41'
+        },
+        location: {
+            Finland: {monthly: 22.90, setup: 0},
+            Germany: {monthly: 22.90, setup: 0}
+        },
+        comment: 'CPX41: 8 vCPU/16 GB/240 GB'
+    },
+    CPX51: {
+        name: {
+            English: 'Server CPX51',
+            Deutsch: 'Server CPX51',
+            Русский: 'Сервер CPX51'
+        },
+        location: {
+            Finland: {monthly: 49.90, setup: 0},
+            Germany: {monthly: 49.90, setup: 0}
+        },
+        comment: 'CPX51: 16 vCPU/32 GB/360 GB'
+    },
     CX11: {
         name: {
             English: 'Server CX11',
