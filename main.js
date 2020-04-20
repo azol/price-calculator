@@ -1531,6 +1531,14 @@ const addons = {
             Русский: 'перенос сервера'
         }
     },
+    server_move_dell: {
+        setup: 70.59,
+        name: {
+            English: 'server move (Dell)',
+            Deutsch: 'Serverumzug (Dell)',
+            Русский: 'перенос сервера (Dell)'
+        }
+    },
     server_rebuild_and_move: {
         setup: 99.00,
         name: {
