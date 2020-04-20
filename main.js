@@ -235,46 +235,6 @@ const servers = {
         },
         comment: 'AX51-NVMe: AMD Ryzen 7 3700X (8 cores)/64 GB ECC/2 x 1 TB NVMe SSD'
     },
-    AX100: {
-        name: {
-            English: 'Server AX100',
-            Deutsch: 'Server AX100',
-            Русский: 'Сервер AX100'
-        },
-        location: {
-            Germany: {monthly: 109, setup: 109}
-        },
-        comment: 'AX100: AMD Ryzen Threadripper 2950X 16 Core/128 GB\n\
-AX100: up to 8x disks in total: all disk types with exception of NVMe (customer grade)'
-    },
-    AX160NVMe: {
-        name: {
-            English: 'Server AX160-NVMe',
-            Deutsch: 'Server AX160-NVMe',
-            Русский: 'Сервер AX160-NVMe'
-        },
-        location: {
-            Germany: {monthly: 169, setup: 169},
-            Finland: {monthly: 164, setup: 169}
-        },
-        comment: 'AX160-NVMe: AMD EPYC 7401P 24-Core/128 GB/2 x 960 GB NVMe\n\
-AX160-NVMe: up to 8x disks in total (0..5x NVMe plus SSDs for the rest slots)\n\
-AX160-NVMe: up to 12x RAM modules additional'
-    },
-    AX160SSD: {
-        name: {
-            English: 'Server AX160-SSD',
-            Deutsch: 'Server AX160-SSD',
-            Русский: 'Сервер AX160-SSD'
-        },
-        location: {
-            Germany: {monthly: 179, setup: 179},
-            Finland: {monthly: 174, setup: 179}
-    },
-        comment: 'AX160-SSD: AMD EPYC 7401P 24-Core/128 GB/2 x 1.92 TB SSD\n\
-AX160-SSD: up to 8x disks in total (0..6x NVMe plus SSDs for the rest slots)\n\
-AX160-SSD: up to 12x RAM modules additional'
-    },
     AX161: {
         name: {
             English: 'Server AX161',
