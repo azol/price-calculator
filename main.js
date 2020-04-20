@@ -1515,6 +1515,74 @@ const addons = {
             Русский: '10.000 ГБ места для резервных копий'
         }
     },
+    remote_hands: {
+        setup: 17.65,
+        name: {
+            English: 'remote hands',
+            Deutsch: 'Remote Hands',
+            Русский: 'удаленные руки'
+        }
+    },
+    server_move: {
+        setup: 32.77,
+        name: {
+            English: 'server move',
+            Deutsch: 'Serverumzug',
+            Русский: 'перенос сервера'
+        }
+    },
+    server_rebuild_and_move: {
+        setup: 99.00,
+        name: {
+            English: 'server move and rebuilt in other chassis type',
+            Deutsch: 'Serverumzug und Umbau in anderes Gehäuse',
+            Русский: 'перенос сервера с пересборкой в другой корпус'
+        }
+    },
+    replace_ram: {
+        setup: 32.77,
+        name: {
+            English: 'Replace all RAM modules without a specific reason',
+            Deutsch: 'Tausch aller RAM Bausteine ohne konkrete Begründung',
+            Русский: 'Замена всех модулей памяти без конкретной причины'
+        }
+    },
+    replace_hardware_part: {
+        setup: 32.77,
+        name: {
+            English: 'Replace any hardware part without a specific reason',
+            Deutsch: 'Tausch sonstiger Komponenten ohne konkrete Begründung',
+            Русский: 'Замена компонента сервера без конкретной причины'
+        },
+        comment: "Replace any hardware part: raid controller, additional network card, drives ...\n\
+Replace any hardware part: Raid Controller, separate Netzwerkkarte, Platten ..."
+    },
+    replace_entire_server: {
+        setup: 57.98,
+        name: {
+            English: 'Replace the entire server without a specific reason',
+            Deutsch: 'Tausch des kompletten Servers ohne konkrete Begründung',
+            Русский: 'Замена сервера без конкретной причины'
+        },
+        comment: "Replace the entire server: we will transfer the existing drives to the new server\n\
+Replace the entire server: Übernahme der Festplatten in das neue System"
+    },
+    gigabit_optic_sfp: {
+        monthly: 0.5,
+        name: {
+            English: '1G Optic SFP',
+            Deutsch: '1G Optik SFP',
+            Русский: 'Оптический модуль 1G SFP'
+        }
+    },
+    ten_gigabit_optic_sfp_plus: {
+        monthly: 1.5,
+        name: {
+            English: '10G Optic SFP+',
+            Deutsch: '10G Optik SFP+',
+            Русский: 'Оптический модуль 10G SFP+'
+        }
+    },
     // parameters should be set from GUI
     custom_addon: {
         monthly: 0, setup: 0,
