@@ -235,6 +235,17 @@ const servers = {
         },
         comment: 'AX51-NVMe: AMD Ryzen 7 3700X (8 cores)/64 GB ECC/2 x 1 TB NVMe SSD'
     },
+    AX61NVMe: {
+        name: {
+            English: 'Server AX61-NVMe',
+            Deutsch: 'Server AX61-NVMe',
+            Русский: 'Сервер AX61-NVMe'
+        },
+        location: {
+            Finland: {monthly: 84, setup: 89}
+        },
+        comment: 'AX61-NVMe: AMD Ryzen 9 3900 (12 cores)/128 GB ECC/2 x 1.92 TB NVMe SSD'
+    },
     AX161: {
         name: {
             English: 'Server AX161',
