@@ -198,7 +198,8 @@ const servers = {
             Русский: 'Сервер AX41'
         },
         location: {
-            Germany: {monthly: 39, setup: 39}
+            Germany: {monthly: 39, setup: 39},
+            Finland: {monthly: 34, setup: 39}
         },
         comment: 'AX41: AMD Ryzen 5 3600 (6 cores)/64 GB/2 x 2 TB HDD'
     },
@@ -209,7 +210,8 @@ const servers = {
             Русский: 'Сервер AX41-NVMe'
         },
         location: {
-            Germany: {monthly: 39, setup: 39}
+            Germany: {monthly: 39, setup: 39},
+            Finland: {monthly: 34, setup: 39}
         },
         comment: 'AX41-NVMe: AMD Ryzen 5 3600 (6 cores)/64 GB/2 x 512 GB NVMe SSD'
     },
@@ -220,7 +222,8 @@ const servers = {
             Русский: 'Сервер AX51'
         },
         location: {
-            Germany: {monthly: 59, setup: 59}
+            Germany: {monthly: 59, setup: 59},
+            Finland: {monthly: 54, setup: 59}
         },
         comment: 'AX51: AMD Ryzen 7 3700X (8 cores)/64 GB ECC/2 x 8 TB HDD'
     },
@@ -231,7 +234,8 @@ const servers = {
             Русский: 'Сервер AX51-NVMe'
         },
         location: {
-            Germany: {monthly: 59, setup: 59}
+            Germany: {monthly: 59, setup: 59},
+            Finland: {monthly: 54, setup: 59}
         },
         comment: 'AX51-NVMe: AMD Ryzen 7 3700X (8 cores)/64 GB ECC/2 x 1 TB NVMe SSD'
     },
