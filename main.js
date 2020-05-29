@@ -957,12 +957,140 @@ const addons = {
             Русский: 'Plesk Power Pack'
         }
     },
-    cpanel: {
-        monthly: 25.1261, pay_entire_month: true,
+    cpanel_100: {
+        monthly: 32.00, pay_entire_month: true,
         name: {
-            English: 'cPanel',
-            Deutsch: 'cPanel',
-            Русский: 'cPanel'
+            English: 'cPanel 100',
+            Deutsch: 'cPanel 100',
+            Русский: 'cPanel 100'
+        }
+    },
+    cpanel_150: {
+        monthly: 34.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 150',
+            Deutsch: 'cPanel 150',
+            Русский: 'cPanel 150'
+        }
+    },
+    cpanel_200: {
+        monthly: 39.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 200',
+            Deutsch: 'cPanel 200',
+            Русский: 'cPanel 200'
+        }
+    },
+    cpanel_250: {
+        monthly: 44.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 250',
+            Deutsch: 'cPanel 250',
+            Русский: 'cPanel 250'
+        }
+    },
+    cpanel_300: {
+        monthly: 49.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 300',
+            Deutsch: 'cPanel 300',
+            Русский: 'cPanel 300'
+        }
+    },
+    cpanel_350: {
+        monthly: 54.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 350',
+            Deutsch: 'cPanel 350',
+            Русский: 'cPanel 350'
+        }
+    },
+    cpanel_400: {
+        monthly: 59.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 400',
+            Deutsch: 'cPanel 400',
+            Русский: 'cPanel 400'
+        }
+    },
+    cpanel_450: {
+        monthly: 64.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 450',
+            Deutsch: 'cPanel 450',
+            Русский: 'cPanel 450'
+        }
+    },
+    cpanel_500: {
+        monthly: 69.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 500',
+            Deutsch: 'cPanel 500',
+            Русский: 'cPanel 500'
+        }
+    },
+    cpanel_600: {
+        monthly: 79.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 600',
+            Deutsch: 'cPanel 600',
+            Русский: 'cPanel 600'
+        }
+    },
+    cpanel_700: {
+        monthly: 89.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 700',
+            Deutsch: 'cPanel 700',
+            Русский: 'cPanel 700'
+        }
+    },
+    cpanel_800: {
+        monthly: 99.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 800',
+            Deutsch: 'cPanel 800',
+            Русский: 'cPanel 800'
+        }
+    },
+    cpanel_900: {
+        monthly: 109.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 900',
+            Deutsch: 'cPanel 900',
+            Русский: 'cPanel 900'
+        }
+    },
+    cpanel_1000: {
+        monthly: 119.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 1000',
+            Deutsch: 'cPanel 1000',
+            Русский: 'cPanel 1000'
+        }
+    },
+    cpanel_1500: {
+        monthly: 169.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 1500',
+            Deutsch: 'cPanel 1500',
+            Русский: 'cPanel 1500'
+        }
+    },
+    cpanel_2000: {
+        monthly: 219.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 2000',
+            Deutsch: 'cPanel 2000',
+            Русский: 'cPanel 2000'
+        }
+    },
+    cpanel_2500: {
+        monthly: 269.50, pay_entire_month: true,
+        name: {
+            English: 'cPanel 2500',
+            Deutsch: 'cPanel 2500',
+            Русский: 'cPanel 2500'
         }
     },
     raid4: {
@@ -1929,6 +2057,7 @@ Workspace.prototype = {
         }
         document.getElementById('select_backup').value = 'no';
         document.getElementById('select_plesk').value  = 'no';
+        document.getElementById('select_cpanel').value  = 'no';
     },
     deleteCurrentTab: function() {
 
@@ -2097,6 +2226,7 @@ Workspace.prototype = {
                     } else {
                         var backup_expr = /^backup([0-9]+)$/;
                         var plesk_expr = /^plesk_([_a-z]+)$/;
+                        var cpanel_expr = /^cpanel_([0-9]+)$/;
                         var temp;
 
                         temp = currentAddon.match(backup_expr);
@@ -2107,6 +2237,11 @@ Workspace.prototype = {
                         temp = currentAddon.match(plesk_expr);
                         if (temp !== null) {
                             document.getElementById('select_plesk').value = temp[1];
+                        }
+
+                        temp = currentAddon.match(cpanel_expr);
+                        if (temp !== null) {
+                            document.getElementById('select_cpanel').value = temp[1];
                         }
                     }
                 }
@@ -2762,6 +2897,9 @@ Server.prototype = {
         }
         if (document.getElementById('select_plesk').value !== 'no') {
             this.addAddon('plesk_' + document.getElementById('select_plesk').value);
+        }
+        if (document.getElementById('select_cpanel').value !== 'no') {
+            this.addAddon('cpanel_' + document.getElementById('select_cpanel').value);
         }
         if (document.getElementById('custom_addon').value !== '') {
             this.addAddon(addon, 1);
