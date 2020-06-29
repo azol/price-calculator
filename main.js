@@ -2574,9 +2574,9 @@ function Server(theModel) {
 
             // Calculate monthly price based on model name
             // example: SB39 costs:
-            // - 39.00 €/month with German VAT
+            // - 39.00 €/month with 19% VAT
             // - 32.77 €/month without VAT
-            newSbModel.monthly = this.sbNumber / (100 + countryVATrate.Germany) * 100;
+            newSbModel.monthly = this.sbNumber / 119 * 100;
 
             newSbModel.name.English += this.sbNumber;
             newSbModel.name.Deutsch += this.sbNumber;
