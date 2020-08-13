@@ -1301,7 +1301,7 @@ const addons = {
         }
     },
     ssd3840de: {
-        monthly: 47.00,
+        monthly: 43.50,
         name: {
             English: '3.84 TB SATA SSD Datacenter Edition',
             Deutsch: '3,84 TB SATA SSD Datacenter Edition',
@@ -1319,7 +1319,7 @@ const addons = {
         comment: "512 NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960de: {
-        monthly: 13.00,
+        monthly: 16.50,
         name: {
             English: '960 GB NVMe SSD Datacenter Edition',
             Deutsch: '960 GB NVMe SSD Datacenter Edition',
@@ -1328,7 +1328,7 @@ const addons = {
         comment: "960 NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme480_3d_xpoint: {
-        monthly: 43.00,
+        monthly: 47.00,
         name: {
             English: '480 GB NVMe SSD 3D XPoint',
             Deutsch: '480 GB NVMe SSD 3D XPoint',
@@ -1337,7 +1337,7 @@ const addons = {
         comment: "480 GB NVMe SSD 3D XPoint: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1000: {
-        monthly: 10.00,
+        monthly: 12.00,
         name: {
             English: '1 TB NVMe SSD',
             Deutsch: '1 TB NVMe SSD',
@@ -1346,7 +1346,7 @@ const addons = {
         comment: "1 TB NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1920de: {
-        monthly: 24.50,
+        monthly: 26.50,
         name: {
             English: '1.92 TB NVMe SSD Datacenter Edition',
             Deutsch: '1,92 TB NVMe SSD Datacenter Edition',
@@ -1355,7 +1355,7 @@ const addons = {
         comment: "1.92 TB NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme3840de: {
-        monthly: 45.00,
+        monthly: 48.00,
         name: {
             English: '3.84 TB NVMe SSD Datacenter Edition',
             Deutsch: '3,84 TB NVMe SSD Datacenter Edition',
@@ -1446,7 +1446,7 @@ const addons = {
         comment: "1G NIC not compatible with Windows 2016 and 2019"
     },
     gbit_dual_nic: {
-        monthly: 5.00,
+        monthly: 2.50,
         name: {
             English: 'DUAL 1G NIC',
             Deutsch: 'DUAL 1G NIC',
