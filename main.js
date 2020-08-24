@@ -246,6 +246,7 @@ const servers = {
             Русский: 'Сервер AX61-NVMe'
         },
         location: {
+            Germany: {monthly: 89, setup: 89},
             Finland: {monthly: 84, setup: 89}
         },
         comment: 'AX61-NVMe: AMD Ryzen 9 3900 (12 cores)/128 GB ECC/2 x 1.92 TB NVMe SSD'
