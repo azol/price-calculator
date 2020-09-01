@@ -4,17 +4,18 @@ Hetzner Price Calculator
 
 ## Workflow for development with docker
 
-```
+```console
 docker-compose -f docker-compose-dev.yml build
 docker-compose -f docker-compose-dev.yml up
 ```
 
 open http://127.0.0.1:3000 for price calculator
+
 open http://127.0.0.2:3001 for Browser Sync's webinterface
 
-## Workflow for pruction container
+## Workflow for production container
 
-```
+```console
 docker-compose build
 docker-compose up
 ```
