@@ -21,12 +21,6 @@ docker-compose up
 
 open http://127.0.0.1:81/price_calculator.html for price calculator
 
-### Get price_calculator.html from production container
-
-```
-docker cp $(docker-compose ps -q price_calculator_web):/usr/share/nginx/html/price_calculator.html ./dist/
-```
-
 ## Workflow for local build
 
 Assuming `gulp` is installed globally:
@@ -36,6 +30,19 @@ Assuming `gulp` is installed globally:
     $ gulp
 
 Resulting file is placed in `dist` directory.
+
+## Share `price_calculator.html` with colleagues
+
+* get `price_calculator.html` from production container and zip it:
+
+```console
+docker cp $(docker-compose ps -q price_calculator_web):/usr/share/nginx/html/price_calculator.html ./dist/
+zip dist/price_calculator.zip dist/price_calculator.html
+```
+
+* share `html` file from ./dist/ with Arno Pirner via rocket chat
+* upload `zip` file from ./dist to [iwiki](https://iwiki.hetzner.de/Datei:price_calculator.zip)
+
 
 ### Run in Docker
 
