@@ -38,7 +38,7 @@ Resulting file is placed in `dist` directory.
 
 ```console
 docker cp $(docker-compose ps -q price_calculator_web):/usr/share/nginx/html/price_calculator.html ./dist/
-zip dist/price_calculator.zip dist/price_calculator.html
+zip -j dist/price_calculator.zip dist/price_calculator.html
 ```
 
 * share `html` file from ./dist/ with Arno Pirner via rocket chat
