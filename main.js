@@ -1462,13 +1462,23 @@ const addons = {
             Русский: '10G NIC'
         }
     },
-    ten_gbit_dual_nic: {
+    ten_gbit_dual_nic_x520: {
         monthly: 12.00,
         name: {
-            English: 'DUAL 10G NIC',
-            Deutsch: 'DUAL 10G NIC',
-            Русский: 'Двойной 10G NIC'
-        }
+            English: 'DUAL 10G NIC (Intel X520-DA2)',
+            Deutsch: 'DUAL 10G NIC (Intel X520-DA2)',
+            Русский: 'Двойной 10G NIC (Intel X520-DA2)'
+        },
+        comment: 'DUAL 10G NIC (Intel X520-DA2): Not available DX-Server, AX41(-NVMe), AX51(-NVMe), AX61(-NVMe)'
+    },
+    ten_gbit_dual_nic_x710: {
+        monthly: 14.00,
+        name: {
+            English: 'DUAL 10G NIC (Intel X710-DA2)',
+            Deutsch: 'DUAL 10G NIC (Intel X710-DA2)',
+            Русский: 'Двойной 10G NIC (Intel X710-DA2)'
+        },
+        comment: 'DUAL 10G NIC (Intel X710-DA2): Suitable for AX41(-NVMe), AX51(-NVMe), AX61(-NVMe). Not available for AX160-models'
     },
     ten_gbit_dual_nic_dell: {
         monthly: 15.50,
