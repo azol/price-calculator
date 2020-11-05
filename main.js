@@ -1424,110 +1424,110 @@ const addons = {
     gbit_lan: {
         monthly: 1.00,
         name: {
-            English: '1G LAN connection ',
-            Deutsch: 'LAN Verbindung 1G',
-            Русский: 'Подключение LAN 1G'
+            English: '1 Gbit LAN connection ',
+            Deutsch: 'LAN Verbindung 1 Gbit',
+            Русский: 'Подключение LAN 1 Гбит'
         }
     },
     ten_gbit_lan: {
         monthly: 2.50,
         name: {
-            English: '10G LAN connection ',
-            Deutsch: 'LAN Verbindung 10G',
-            Русский: 'Подключение LAN 10G'
+            English: '10 Gbit LAN connection ',
+            Deutsch: 'LAN Verbindung 10 Gbit',
+            Русский: 'Подключение LAN 10 Гбит'
         }
     },
     gbit_nic: {
         monthly: 2.00,
         name: {
-            English: '1G NIC',
-            Deutsch: '1G NIC',
-            Русский: '1G NIC'
+            English: '1 Gbit NIC',
+            Deutsch: '1 Gbit NIC',
+            Русский: '1 Гбит NIC'
         },
-        comment: "1G NIC not compatible with Windows 2016 and 2019"
+        comment: "1 Gbit NIC not compatible with Windows 2016 and 2019"
     },
     gbit_dual_nic: {
         monthly: 2.50,
         name: {
-            English: 'DUAL 1G NIC',
-            Deutsch: 'DUAL 1G NIC',
-            Русский: 'Двойной 1G NIC'
+            English: 'Dual 1 Gbit NIC',
+            Deutsch: 'Dual 1 Gbit NIC',
+            Русский: 'Двойной 1 Гбит NIC'
         }
     },
     ten_gbit_nic: {
         monthly: 8.00,
         name: {
-            English: '10G NIC',
-            Deutsch: '10G NIC',
-            Русский: '10G NIC'
+            English: '10 Gbit NIC',
+            Deutsch: '10 Gbit NIC',
+            Русский: '10 Гбит NIC'
         }
     },
     ten_gbit_dual_nic_x520: {
         monthly: 12.00,
         name: {
-            English: 'DUAL 10G NIC (Intel X520-DA2)',
-            Deutsch: 'DUAL 10G NIC (Intel X520-DA2)',
-            Русский: 'Двойной 10G NIC (Intel X520-DA2)'
+            English: 'Dual 10 Gbit NIC (Intel X520-DA2)',
+            Deutsch: 'Dual 10 Gbit NIC (Intel X520-DA2)',
+            Русский: 'Двойной 10 Гбит NIC (Intel X520-DA2)'
         },
-        comment: 'DUAL 10G NIC (Intel X520-DA2): Not available DX-Server, AX41(-NVMe), AX51(-NVMe), AX61(-NVMe)'
+        comment: 'Dual 10 Gbit (Intel X520-DA2): Not available DX-Server, AX41(-NVMe), AX51(-NVMe), AX61(-NVMe)'
     },
     ten_gbit_dual_nic_x710: {
         monthly: 14.00,
         name: {
-            English: 'DUAL 10G NIC (Intel X710-DA2)',
-            Deutsch: 'DUAL 10G NIC (Intel X710-DA2)',
-            Русский: 'Двойной 10G NIC (Intel X710-DA2)'
+            English: 'Dual 10 Gbit NIC (Intel X710-DA2)',
+            Deutsch: 'Dual 10 Gbit (Intel X710-DA2)',
+            Русский: 'Двойной 10 Гбит NIC (Intel X710-DA2)'
         },
-        comment: 'DUAL 10G NIC (Intel X710-DA2): Suitable for AX41(-NVMe), AX51(-NVMe), AX61(-NVMe). Not available for AX160-models'
+        comment: 'Dual 10 Gbit NIC (Intel X710-DA2): Suitable for AX41(-NVMe), AX51(-NVMe), AX61(-NVMe). Not available for AX160-models'
     },
     ten_gbit_dual_nic_dell: {
         monthly: 15.50,
         name: {
-            English: 'DUAL 10G NIC (Dell)',
-            Deutsch: 'DUAL 10G NIC (Dell)',
-            Русский: 'Двойной 10G NIC (Dell)'
+            English: 'Dual 10 Gbit NIC (Dell)',
+            Deutsch: 'Dual 10 Gbit NIC (Dell)',
+            Русский: 'Двойной 10 Гбит NIC (Dell)'
         }
     },
     uplink_10_gbit: {
         monthly: 39.00,
         name: {
-            English: '10G dedicated uplink',
-            Deutsch: '10G dedicated Uplink',
-            Русский: 'Выделенный 10G Uplink'
+            English: '10 Gbit Uplink',
+            Deutsch: '10 Gbit Uplink',
+            Русский: '10 Гбит Uplink'
         },
-        comment: '10G uplink: includes 10Gbit NIC. Available only for DX, PX, AX and EX-Skylake.'
+        comment: '10 Gbit Uplink: includes 10 Gbit NIC. Available only for DX, PX, AX and EX-Skylake.'
     },
 
     switch_5port: {
         monthly: 2.00,
         name: {
-            English: '5-Port Gbit switch',
-            Deutsch: '5-Port Gbit-Switch',
-            Русский: 'Коммутатор Гбит 5 портов'
+            English: '5-Port 1 Gbit switch',
+            Deutsch: '5-Port 1 Gbit-Switch',
+            Русский: 'Коммутатор 1 Гбит 5 портов'
         }
     },
     switch_8port: {
         monthly: 2.00,
         name: {
-            English: '8-Port Gbit switch',
-            Deutsch: '8-Port Gbit-Switch',
-            Русский: 'Коммутатор Гбит 8 портов'
+            English: '8-Port 1 Gbit switch',
+            Deutsch: '8-Port 1 Gbit-Switch',
+            Русский: 'Коммутатор 1 Гбит 8 портов'
         }
     },
     switch_24port: {
         monthly: 13.00,
         name: {
-            English: '24-Port Gbit switch',
-            Deutsch: '24-Port Gbit-Switch',
-            Русский: 'Коммутатор Гбит 24 порта'
+            English: '24-Port 1 Gbit switch',
+            Deutsch: '24-Port 1 Gbit-Switch',
+            Русский: 'Коммутатор 1 Гбит 24 порта'
         }
     },
     switch_48port: {
         monthly: 135.50,
         name: {
-            English: '48-Port Gbit switch',
-            Deutsch: '48-Port Gbit-Switch',
-            Русский: 'Коммутатор Гбит 48 портов'
+            English: '48-Port 1 Gbit switch',
+            Deutsch: '48-Port 1 Gbit-Switch',
+            Русский: 'Коммутатор 1 Гбит 48 портов'
         }
     },
     switch_12port_10gbit: {
@@ -1739,17 +1739,17 @@ Replace the entire server: Übernahme der Festplatten in das neue System"
     gigabit_optic_sfp: {
         monthly: 0.5,
         name: {
-            English: '1G Optic SFP',
-            Deutsch: '1G Optik SFP',
+            English: '1 Gbit optics SFP',
+            Deutsch: '1 Gbit Optik SFP',
             Русский: 'Оптический модуль 1G SFP'
         }
     },
     ten_gigabit_optic_sfp_plus: {
         monthly: 1.5,
         name: {
-            English: '10G Optic SFP+',
-            Deutsch: '10G Optik SFP+',
-            Русский: 'Оптический модуль 10G SFP+'
+            English: '10 Gbit optics SFP+',
+            Deutsch: '10 Gbit Optik SFP+',
+            Русский: 'Оптический модуль 10 Гбит SFP+'
         }
     },
     // parameters should be set from GUI
