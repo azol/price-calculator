@@ -153,7 +153,7 @@ const servers = {
             Germany: {monthly: 59, setup: 59},
             Finland: {monthly: 54, setup: 59}
         },
-        comment: 'EX52: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
+        comment: 'EX52: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/128 GB/2 x 8TB SATA Ent'
     },
     EX52NVMe: {
         name: {
@@ -165,7 +165,7 @@ const servers = {
             Germany: {monthly: 59, setup: 59},
             Finland: {monthly: 54, setup: 59}
         },
-        comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/64 GB/2 x 1TB NVMe'
+        comment: 'EX52-NVMe: Intel® Core™ i7-8700 Hexa-Core Coffee Lake/128 GB/2 x 1TB NVMe'
     },
     EX62: {
         name: {
@@ -177,7 +177,7 @@ const servers = {
             Germany: {monthly: 69, setup: 69},
             Finland: {monthly: 64, setup: 69}
         },
-        comment: 'EX62: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 8TB SATA Ent'
+        comment: 'EX62: Intel® Core™ i9-9900K Octa-Core Coffee Lake/128 GB/2 x 8TB SATA Ent'
     },
     EX62NVMe: {
         name: {
@@ -189,7 +189,7 @@ const servers = {
             Germany: {monthly: 69, setup: 69},
             Finland: {monthly: 64, setup: 69}
         },
-        comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/64 GB/2 x 1TB NVMe SSD'
+        comment: 'EX62-NVMe: Intel® Core™ i9-9900K Octa-Core Coffee Lake/128 GB/2 x 1TB NVMe SSD'
     },
     AX41: {
         name: {
