@@ -251,6 +251,18 @@ const servers = {
         },
         comment: 'AX61-NVMe: AMD Ryzen 9 3900 (12 cores)/128 GB ECC/2 x 1.92 TB NVMe SSD'
     },
+    AX101: {
+        name: {
+            English: 'Server AX101',
+            Deutsch: 'Server AX101',
+            Русский: 'Сервер AX101'
+        },
+        location: {
+            Germany: {monthly: 99, setup: 99},
+            Finland: {monthly: 94, setup: 99}
+    },
+        comment: 'AX101: AMD Ryzen 9 5950X 16-core Zen3/128GB DDR4 ECC/2x 3,8TB DC NVMe SSD'
+    },
     AX161: {
         name: {
             English: 'Server AX161',
@@ -312,6 +324,22 @@ PX92: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
 PX92: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
 PX92: max 256 GB RAM DDR4 (4x 32GB)'
     },
+    PX93: {
+        name: {
+            English: 'Server PX93',
+            Deutsch: 'Server PX93',
+            Русский: 'Сервер PX93'
+        },
+        location: {
+            Germany: {monthly: 119, setup: 119},
+            Finland: {monthly: 109, setup: 119}
+    },
+        comment: 'PX93: Intel® Xeon® W-2295 18-Core Cascade-lake W/128 GB DDR4 ECC\n\
+PX93: SSD options: 8x NVMe and SSD (up to 4x NVMe or 6x SSD)\n\
+PX93: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
+PX93: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
+PX93: max 256 GB RAM DDR4 (4x 32GB)'
+    },
     SX62: {
         name: {
             English: 'Server SX62',
@@ -323,6 +351,18 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Finland: {monthly: 64, setup: 69}
         },
         comment: 'SX62: Intel® Xeon® E3-1270 v3 Quad-Core/32GB/4x 10TB SATA'
+    },
+    SX63: {
+        name: {
+            English: 'Server SX63',
+            Deutsch: 'Server SX63',
+            Русский: 'Сервер SX63'
+        },
+        location: {
+            Germany: {monthly: 69, setup: 69},
+            Finland: {monthly: 64, setup: 69}
+        },
+        comment: 'SX63: Intel® Xeon® E3-1275 v5 Quad-Core/64GB DDR4 ECC/4x 16TB SATA Enterprise'
     },
     SX132: {
         name: {
@@ -336,6 +376,19 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
         },
         comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise'
     },
+    SX133: {
+        name: {
+            English: 'Server SX133',
+            Deutsch: 'Server SX133',
+            Русский: 'Сервер SX133'
+        },
+        location: {
+            Germany: {monthly: 169, setup: 169},
+            Finland: {monthly: 159, setup: 169}
+        },
+        comment: 'SX133: Intel® Xeon® W-2145 Hexa-Core Skylake/128GB DDR4 ECC\n\
+        2x 960GB DC NVMe SSD/10x 16TB SATA Enterprise'
+    },
     SX292: {
         name: {
             English: 'Server SX292',
@@ -347,6 +400,19 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Finland: {monthly: 259, setup: 269}
         },
         comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256GB/Hardware-RAID Controller/15x 10TB SATA'
+    },
+    SX293: {
+        name: {
+            English: 'Server SX293',
+            Deutsch: 'Server SX293',
+            Русский: 'Сервер SX293'
+        },
+        location: {
+            Germany: {monthly: 269, setup: 269},
+            Finland: {monthly: 259, setup: 269}
+        },
+        comment: 'SX293: Intel® Xeon® W-2145 Hexa-Core Skylake/256GB DDR4 ECC/Hardware-RAID Controller\n\
+        14x 16TB SATA Enterprise'
     },
     SX61_old: {
         name: {
