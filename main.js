@@ -335,10 +335,10 @@ PX92: max 256 GB RAM DDR4 (4x 32GB)'
             Finland: {monthly: 109, setup: 119}
     },
         comment: 'PX93: Intel® Xeon® W-2295 18-Core Cascade-lake W/128 GB DDR4 ECC\n\
-PX93: SSD options: 8x NVMe and SSD (up to 4x NVMe or 6x SSD)\n\
-PX93: HDD options: 1x HDD + 3x NVMe or SSD / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
-PX93: 480 GB NVMe SSD 3D XPoint -- 1x max.\n\
-PX93: max 256 GB RAM DDR4 (4x 32GB)'
+PX93: SSD options: 8x NVMe and SSD (up to 8x NVMe SSDs or 6x SSD)\n\
+PX93: HDD options: 1x HDD + 3x NVMe or SSDs / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
+PX93: 480 GB NVMe SSD 3D XPoint -- 8x\n\
+PX93: up to 4x 32GB modules additional (max 256 GB RAM DDR4)'
     },
     SX62: {
         name: {
