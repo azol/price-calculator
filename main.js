@@ -959,6 +959,24 @@ const addons = {
             Русский: 'Windows Server 2019 Datacenter Edition - 16 ядер'
         }
     },
+    win_std_18cores: {
+        monthly: 52.00, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2019 Standard Edition - 18 cores',
+            Deutsch: 'Windows Server 2019 Standard Edition - 18 cores',
+            Русский: 'Windows Server 2019 Standard Edition - 18 ядер'
+        }
+    },
+    win_dc_18cores: {
+        monthly: 322.40, pay_entire_month: true,
+        monthly_price_per_cpu: true,
+        name: {
+            English: 'Windows Server 2019 Datacenter Edition - 18 cores',
+            Deutsch: 'Windows Server 2019 Datacenter Edition - 18 cores',
+            Русский: 'Windows Server 2019 Datacenter Edition - 18 ядер'
+        }
+    },
     win_std_24cores: {
         monthly: 69.30, pay_entire_month: true,
         monthly_price_per_cpu: true,
