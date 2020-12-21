@@ -1647,7 +1647,7 @@ const addons = {
         }
     },
     rdp_license: {
-        monthly: 7.50,
+        monthly: 8.25,
         name: {
             English: 'Additional RDP licence for Windows',
             Deutsch: 'Zusätzliche RDP-Lizenz für Windows',
