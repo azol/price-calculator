@@ -1014,21 +1014,21 @@ const addons = {
         }
     },
     plesk_web_admin: {
-        monthly: 4.20, pay_entire_month: "yes",
+        monthly: 4.60, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web ADMIN Edition",
             Deutsch: "Plesk Onyx Web ADMIN Edition",
             Русский: "Plesk Onyx издание Web ADMIN"},
     },
     plesk_web_pro: {
-        monthly: 6.20, pay_entire_month: "yes",
+        monthly: 6.80, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web PRO Edition",
             Deutsch: "Plesk Onyx Web PRO Edition",
             Русский: "Plesk Onyx издание Web PRO"},
     },
     plesk_web_host: {
-        monthly: 18.70, pay_entire_month: "yes",
+        monthly: 20.60, pay_entire_month: "yes",
         name: {
             English: "Plesk Onyx Web HOST Edition",
             Deutsch: "Plesk Onyx Web HOST Edition",
@@ -1043,7 +1043,7 @@ const addons = {
         }
     },
     cpanel_100: {
-        monthly: 32.00, pay_entire_month: true,
+        monthly: 34.50, pay_entire_month: true,
         name: {
             English: 'cPanel 100',
             Deutsch: 'cPanel 100',
@@ -1051,7 +1051,7 @@ const addons = {
         }
     },
     cpanel_150: {
-        monthly: 34.50, pay_entire_month: true,
+        monthly: 38.90, pay_entire_month: true,
         name: {
             English: 'cPanel 150',
             Deutsch: 'cPanel 150',
@@ -1059,7 +1059,7 @@ const addons = {
         }
     },
     cpanel_200: {
-        monthly: 39.50, pay_entire_month: true,
+        monthly: 47.60, pay_entire_month: true,
         name: {
             English: 'cPanel 200',
             Deutsch: 'cPanel 200',
@@ -1067,7 +1067,7 @@ const addons = {
         }
     },
     cpanel_250: {
-        monthly: 44.50, pay_entire_month: true,
+        monthly: 56.40, pay_entire_month: true,
         name: {
             English: 'cPanel 250',
             Deutsch: 'cPanel 250',
@@ -1075,7 +1075,7 @@ const addons = {
         }
     },
     cpanel_300: {
-        monthly: 49.50, pay_entire_month: true,
+        monthly: 65.10, pay_entire_month: true,
         name: {
             English: 'cPanel 300',
             Deutsch: 'cPanel 300',
@@ -1083,7 +1083,7 @@ const addons = {
         }
     },
     cpanel_350: {
-        monthly: 54.50, pay_entire_month: true,
+        monthly: 73.90, pay_entire_month: true,
         name: {
             English: 'cPanel 350',
             Deutsch: 'cPanel 350',
@@ -1091,7 +1091,7 @@ const addons = {
         }
     },
     cpanel_400: {
-        monthly: 59.50, pay_entire_month: true,
+        monthly: 82.60, pay_entire_month: true,
         name: {
             English: 'cPanel 400',
             Deutsch: 'cPanel 400',
@@ -1099,7 +1099,7 @@ const addons = {
         }
     },
     cpanel_450: {
-        monthly: 64.50, pay_entire_month: true,
+        monthly: 91.40, pay_entire_month: true,
         name: {
             English: 'cPanel 450',
             Deutsch: 'cPanel 450',
@@ -1107,7 +1107,7 @@ const addons = {
         }
     },
     cpanel_500: {
-        monthly: 69.50, pay_entire_month: true,
+        monthly: 100.10, pay_entire_month: true,
         name: {
             English: 'cPanel 500',
             Deutsch: 'cPanel 500',
@@ -1115,7 +1115,7 @@ const addons = {
         }
     },
     cpanel_600: {
-        monthly: 79.50, pay_entire_month: true,
+        monthly: 117.60, pay_entire_month: true,
         name: {
             English: 'cPanel 600',
             Deutsch: 'cPanel 600',
@@ -1123,7 +1123,7 @@ const addons = {
         }
     },
     cpanel_700: {
-        monthly: 89.50, pay_entire_month: true,
+        monthly: 135.10, pay_entire_month: true,
         name: {
             English: 'cPanel 700',
             Deutsch: 'cPanel 700',
@@ -1131,7 +1131,7 @@ const addons = {
         }
     },
     cpanel_800: {
-        monthly: 99.50, pay_entire_month: true,
+        monthly: 152.60, pay_entire_month: true,
         name: {
             English: 'cPanel 800',
             Deutsch: 'cPanel 800',
@@ -1139,7 +1139,7 @@ const addons = {
         }
     },
     cpanel_900: {
-        monthly: 109.50, pay_entire_month: true,
+        monthly: 170.10, pay_entire_month: true,
         name: {
             English: 'cPanel 900',
             Deutsch: 'cPanel 900',
@@ -1147,7 +1147,7 @@ const addons = {
         }
     },
     cpanel_1000: {
-        monthly: 119.50, pay_entire_month: true,
+        monthly: 187.60, pay_entire_month: true,
         name: {
             English: 'cPanel 1000',
             Deutsch: 'cPanel 1000',
@@ -1155,7 +1155,7 @@ const addons = {
         }
     },
     cpanel_1500: {
-        monthly: 169.50, pay_entire_month: true,
+        monthly: 275.10, pay_entire_month: true,
         name: {
             English: 'cPanel 1500',
             Deutsch: 'cPanel 1500',
@@ -1163,7 +1163,7 @@ const addons = {
         }
     },
     cpanel_2000: {
-        monthly: 219.50, pay_entire_month: true,
+        monthly: 362.60, pay_entire_month: true,
         name: {
             English: 'cPanel 2000',
             Deutsch: 'cPanel 2000',
@@ -1171,7 +1171,7 @@ const addons = {
         }
     },
     cpanel_2500: {
-        monthly: 269.50, pay_entire_month: true,
+        monthly: 450.10, pay_entire_month: true,
         name: {
             English: 'cPanel 2500',
             Deutsch: 'cPanel 2500',
