@@ -458,10 +458,10 @@ R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
         location: {
             Germany: {monthly: 189, setup: 189}
         },
-        comment: "DX180: Singe AMD EPYC™ 7502P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
-DX180: have an iDRAC (IP-KVM)\n\
-DX180: Drives are optional (240/480/960 GB, 1.92/3.84 TB SSD DC, 960 GB, 1.92/3.84 TB NVMe and 480 GB 3D XPoint)\n\
-DX180: max 512 GB RAM DDR4 (12x 32GB)"
+        comment: "DX181: Singe AMD EPYC™ 7502P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
+DX181: have an iDRAC (IP-KVM)\n\
+DX181: Drives are optional (240/480/960 GB, 1.92/3.84 TB SSD DC, 960 GB, 1.92/3.84 TB NVMe and 480 GB 3D XPoint)\n\
+DX181: max 512 GB RAM DDR4 (12x 32GB)"
     },
     DX292: {
         number_of_cpus: 2,
