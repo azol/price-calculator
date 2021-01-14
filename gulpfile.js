@@ -46,6 +46,7 @@ function serve() {
     }
   });
   watch(config.app + 'scss/*.scss', buildCss);
+  watch(config.app + 'changes.js').on('change', reload);
   watch(config.app + 'price_calculator.html').on('change', reload);
   watch(config.app + 'main.js').on('change', reload);
 }

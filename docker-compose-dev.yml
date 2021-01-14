@@ -12,4 +12,5 @@ services:
      volumes:
         - "./main.js:/app/main.js"
         - "./price_calculator.html:/app/price_calculator.html"
+        - "./changes.js:/app/changes.js"
 
