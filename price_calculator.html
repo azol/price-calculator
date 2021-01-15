@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="node_modules/foundation-sites/css/normalize.min.css" inline>
   <link rel="stylesheet" href=".tmp/css/app.css" inline>
   <script src="node_modules/foundation-sites/js/vendor/modernizr.js" inline></script>
+  <script src="changes.js" inline></script>
 </head>
 <body onload="onLoad()">
   <noscript>
@@ -19,7 +20,7 @@
   <form onchange="onChange()" autocomplete="off">
 
     <div class="row">
-      <div class="large-4 columns">
+      <div class="large-3 columns">
         <div class="row collapse prefix-radius">
           <div class="medium-6 columns">
             <label class="prefix">Language:</label>
@@ -31,7 +32,7 @@
           </select>
         </div>
       </div>
-      <div class="large-4 columns">
+      <div class="large-3 columns">
         <div class="row collapse prefix-radius">
           <div class="medium-3 columns">
             <label class="medium-3 columns prefix">VAT:</label>
@@ -75,7 +76,7 @@
           </select>
         </div>
       </div>
-      <div class="large-4 columns">
+      <div class="large-3 columns">
         <div class="row collapse prefix-radius">
           <div class="medium-4 columns">
             <label class="prefix">Date:</label>
@@ -83,6 +84,14 @@
           <div class="medium-8 columns">
             <input type="text" id="ordering_date" value="today">
           </div>
+        </div>
+      </div>
+      <div class="large-3 columns">
+        <div id="releaseInfo">
+          <a href="#">Release date: <script>document.write(releaseDate)</script></a>
+          <script>
+            document.getElementById("releaseInfo").title=recentChanges;
+          </script>
         </div>
       </div>
     </div>

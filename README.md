@@ -32,6 +32,10 @@ Assuming `gulp` is installed globally:
 
 Resulting file is placed in `dist` directory.
 
+## Prepare release information
+
+* update `releaseDate` and `recentChanges` in `changes.js`
+
 ## Share `price_calculator.html` with colleagues
 
 * get `price_calculator.html` from production container and zip it:
