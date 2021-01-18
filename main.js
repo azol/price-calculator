@@ -2,6 +2,7 @@
 
 const countryVATrate = {
     "All others (no VAT)": 0,
+    "Australia": 10,
     "Austria": 20,
     "Belgium": 21,
     "Bulgaria": 20,
@@ -31,6 +32,7 @@ const countryVATrate = {
     "Russia": 20,
     "Slovakia": 20,
     "Slovenia": 22,
+    "South Africa": 15,
     "Spain": 21,
     "Sweden": 25,
     "Switzerland": 7.7,
