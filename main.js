@@ -1491,6 +1491,14 @@ const addons = {
             Русский: '12 ТБ SATA Enterprise жесткий диск'
         }
     },
+    sata16000e: {
+        monthly: 27.00,
+        name: {
+            English: '16 TB SATA Enterprise Hard Drive',
+            Deutsch: '16 TB SATA Enterprise Hard Drive',
+            Русский: '16 ТБ SATA Enterprise жесткий диск'
+        }
+    },
     gbit_lan: {
         monthly: 1.00,
         name: {
