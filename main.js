@@ -1444,7 +1444,7 @@ const addons = {
         comment: '600 GB SAS Enterprise Hard Drive: is available only for DX141/151/291'
     },
     sata2000e: {
-        monthly: 10.00,
+        monthly: 9.00,
         name: {
             English: '2 TB SATA Enterprise Hard Drive',
             Deutsch: '2 TB SATA Enterprise Hard Drive',
@@ -1452,7 +1452,7 @@ const addons = {
         },
     },
     sata4000e: {
-        monthly: 13.00,
+        monthly: 12.00,
         name: {
             English: '4 TB SATA Enterprise Hard Drive',
             Deutsch: '4 TB SATA Enterprise Hard Drive',
@@ -1460,7 +1460,7 @@ const addons = {
         }
     },
     sata6000e: {
-        monthly: 14.50,
+        monthly: 15.00,
         name: {
             English: '6 TB SATA Enterprise Hard Drive',
             Deutsch: '6 TB SATA Enterprise Hard Drive',
@@ -1476,7 +1476,7 @@ const addons = {
         }
     },
     sata10000e: {
-        monthly: 19.50,
+        monthly: 21.00,
         name: {
             English: '10 TB SATA Enterprise Hard Drive',
             Deutsch: '10 TB SATA Enterprise Hard Drive',
@@ -1484,7 +1484,7 @@ const addons = {
         }
     },
     sata12000e: {
-        monthly: 26.50,
+        monthly: 24.00,
         name: {
             English: '12 TB SATA Enterprise Hard Drive',
             Deutsch: '12 TB SATA Enterprise Hard Drive',
