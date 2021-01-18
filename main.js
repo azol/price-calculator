@@ -372,8 +372,8 @@ PX93: up to 4x 32GB modules additional (max 256 GB RAM DDR4)'
             Germany: {monthly: 169, setup: 169},
             Finland: {monthly: 159, setup: 169}
         },
-        comment: 'SX133: Intel® Xeon® W-2145 Hexa-Core Skylake/128GB DDR4 ECC\n\
-        2x 960GB DC NVMe SSD/10x 16TB SATA Enterprise'
+        comment: 'SX133: Intel® Xeon® W-2145 Octa-Core Skylake W/128GB DDR4 ECC\n\
+SX133: 2x 960GB DC NVMe SSD/10x 16TB SATA Enterprise'
     },
     SX292: {
         name: {
@@ -397,8 +397,8 @@ PX93: up to 4x 32GB modules additional (max 256 GB RAM DDR4)'
             Germany: {monthly: 269, setup: 269},
             Finland: {monthly: 259, setup: 269}
         },
-        comment: 'SX293: Intel® Xeon® W-2145 Hexa-Core Skylake/256GB DDR4 ECC/Hardware-RAID Controller\n\
-        14x 16TB SATA Enterprise'
+        comment: 'SX293: Intel® Xeon® W-2145 Octa-Core Skylake W/256GB DDR4 ECC\n\
+SX133: 2x 1.92TB DC NVMe SSD/14x 16TB SATA Enterprise'
     },
     SX61_old: {
         name: {
