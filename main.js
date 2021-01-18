@@ -1179,7 +1179,7 @@ const addons = {
             Deutsch: '16-Port Hardware RAID-Controller',
             Русский: '16-портовый RAID-контроллер'
         },
-        comment: '16-Port Hardware RAID-controller: only for SX293'
+        comment: '16-Port Hardware RAID-controller: only for SX133 and SX293'
     },
     ip: {
         monthly: 0.8403,
