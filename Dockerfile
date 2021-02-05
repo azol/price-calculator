@@ -1,4 +1,7 @@
-FROM ubuntu:18.04 as basic_software
+FROM ubuntu:20.04 as basic_software
+
+ENV TZ=Europe/Kaliningrad
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt update
 RUN apt dist-upgrade -y
@@ -22,6 +25,6 @@ WORKDIR /app
 ADD . /app
 RUN gulp
 
-FROM nginx:1.15.12
+FROM nginx:1.18.0
 COPY --from=price_calculator /app/dist/price_calculator.html /usr/share/nginx/html/
 
