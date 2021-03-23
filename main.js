@@ -326,18 +326,6 @@ PX93: HDD options: 1x HDD + 3x NVMe or SSDs / 2x HDD + 2x NVMe or SSD / 3x HDD\n
 PX93: 480 GB NVMe SSD 3D XPoint -- 8x\n\
 PX93: up to 4x 32GB modules additional (max 256 GB RAM DDR4)'
     },
-    SX62: {
-        name: {
-            English: 'Server SX62',
-            Deutsch: 'Server SX62',
-            Русский: 'Сервер SX62'
-        },
-        location: {
-            Germany: {monthly: 69, setup: 69},
-            Finland: {monthly: 64, setup: 69}
-        },
-        comment: 'SX62: Intel® Xeon® E3-1270 v3 Quad-Core/32GB/4x 10TB SATA'
-    },
     SX63: {
         name: {
             English: 'Server SX63',
@@ -349,18 +337,6 @@ PX93: up to 4x 32GB modules additional (max 256 GB RAM DDR4)'
             Finland: {monthly: 64, setup: 69}
         },
         comment: 'SX63: Intel® Xeon® E3-1275 v5 Quad-Core/64GB DDR4 ECC/4x 16TB SATA Enterprise'
-    },
-    SX132: {
-        name: {
-            English: 'Server SX132',
-            Deutsch: 'Server SX132',
-            Русский: 'Сервер SX132'
-        },
-        location: {
-            Germany: {monthly: 169, setup: 169},
-            Finland: {monthly: 159, setup: 169}
-        },
-        comment: 'SX132: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/128GB/10x 10TB SATA Enterprise'
     },
     SX133: {
         name: {
@@ -375,18 +351,6 @@ PX93: up to 4x 32GB modules additional (max 256 GB RAM DDR4)'
         comment: 'SX133: Intel® Xeon® W-2145 Octa-Core Skylake W/128GB DDR4 ECC\n\
 SX133: 2x 960GB DC NVMe SSD/10x 16TB SATA Enterprise'
     },
-    SX292: {
-        name: {
-            English: 'Server SX292',
-            Deutsch: 'Server SX292',
-            Русский: 'Сервер SX292'
-        },
-        location: {
-            Germany: {monthly: 269, setup: 269},
-            Finland: {monthly: 259, setup: 269}
-        },
-        comment: 'SX292: Intel® Xeon® E5-1650 v3 Hexa-Core Haswell/256GB/Hardware-RAID Controller/15x 10TB SATA'
-    },
     SX293: {
         name: {
             English: 'Server SX293',
@@ -399,39 +363,6 @@ SX133: 2x 960GB DC NVMe SSD/10x 16TB SATA Enterprise'
         },
         comment: 'SX293: Intel® Xeon® W-2145 Octa-Core Skylake W/256GB DDR4 ECC\n\
 SX133: 2x 1.92TB DC NVMe SSD/14x 16TB SATA Enterprise'
-    },
-    SX61_old: {
-        name: {
-            English: 'Server SX61',
-            Deutsch: 'Server SX61',
-            Русский: 'Сервер SX61'
-        },
-        location: {
-            Germany: {monthly: 69, setup: 69}
-        },
-        comment: 'SX61: Intel® Core i7-3770 Quad-Core/32GB/4x 6TB SATA'
-    },
-    SX131_old: {
-        name: {
-            English: 'Server SX131',
-            Deutsch: 'Server SX131',
-            Русский: 'Сервер SX131'
-        },
-        location: {
-            Germany: {monthly: 169, setup: 169}
-        },
-        comment: 'SX131: Intel® Xeon® E5-1650v2 Hexa-Core/64GB/10x 6TB SATA'
-    },
-    SX291_old: {
-        name: {
-            English: 'Server SX291',
-            Deutsch: 'Server SX291',
-            Русский: 'Сервер SX291'
-        },
-        location: {
-            Germany: {monthly: 249, setup: 249}
-        },
-        comment: 'SX291: Intel® Xeon® E5-1650v2 Hexa-Core/128GB/Hardware-RAID Controller/15x 6TB SATA'
     },
     DX152: {
         monthly: 159, setup: 159,
@@ -480,66 +411,6 @@ R640: have an iDRAC (IP-KVM)\n\
 R640: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
 R640: Windows 'for EPYC'\n\
 R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
-    },
-    DX141_old: {
-        name: {
-            English: 'DELL PowerEdge™ R530 DX141',
-            Deutsch: 'DELL PowerEdge™ R530 DX141',
-            Русский: 'DELL PowerEdge™ R530 DX141'
-        },
-        location: {
-            Germany: {monthly: 109, setup: 109}
-        },
-        comment: "DX141: Single Intel® Xeon® E5-1650 v3 @ 3.5GHz Hexa-Core/64GB DDR4 ECC/Dell PERC H330/iDRAC\n\
-R530: have an iDRAC (IP-KVM)\n\
-R530: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
-R530 DX141: max 256 GB RAM DDR4 (6x 32GB)"
-    },
-    DX151_old: {
-        name: {
-            English: 'DELL PowerEdge™ R730 DX151',
-            Deutsch: 'DELL PowerEdge™ R730 DX151',
-            Русский: 'DELL PowerEdge™ R730 DX151'
-        },
-        location: {
-            Germany: {monthly: 129, setup: 129}
-        },
-        comment: "DX151: Single Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/64GB DDR4 ECC/Dell PERC H730/iDRAC\n\
-R730: have an iDRAC (IP-KVM)\n\
-R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
-R730 DX151: max 384 GB RAM DDR4 (10x 32GB)"
-    },
-    DX180_old: {
-        number_of_cpus: 1,
-        name: {
-            English: 'AMD EPYC™ 7551P DX180',
-            Deutsch: 'AMD EPYC™ 7551P DX180',
-            Русский: 'AMD EPYC™ 7551P DX180'
-        },
-        location: {
-            Germany: {monthly: 189, setup: 189}
-        },
-        comment: "DX180: Singe AMD EPYC™ 7551P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
-DX180: have an iDRAC (IP-KVM)\n\
-DX180: Drives are optional (240/480/960 GB, 1,92 TB SSD DC, 960 GB NVMe and 480 GB 3D XPoint)\n\
-DX180: Windows 'for EPYC'\n\
-DX180: max 512 GB RAM DDR4 (12x 32GB)"
-    },
-
-    DX291_old: {
-        number_of_cpus: 2,
-        name: {
-            English: 'DELL PowerEdge™ R730 DX291',
-            Deutsch: 'DELL PowerEdge™ R730 DX291',
-            Русский: 'DELL PowerEdge™ R730 DX291'
-        },
-        location: {
-            Germany: {monthly: 189, setup: 189}
-        },
-        comment: "DX291: Dual Intel® Xeon® E5-2600 v3 @2.10GHz Octa-Core/128GB DDR4 ECC/Dell PERC H730/iDRAC\n\
-R730: have an iDRAC (IP-KVM)\n\
-R730: Drives are optional (2/4/10TB SATA, 600GB SAS, 240/480/960 GB and 1,92 TB GB SSD DC)\n\
-R730 DX291: max 768 GB RAM DDR4 (20x 32GB)"
     },
     CPX11: {
         name: {
