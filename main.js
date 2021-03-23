@@ -1296,6 +1296,15 @@ const addons = {
         },
         comment: "1 TB NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
+    nvme2000: {
+        monthly: 16.00,
+        name: {
+            English: '2 TB NVMe SSD',
+            Deutsch: '2 TB NVMe SSD',
+            Русский: '2 ТБ NVMe SSD'
+        },
+        comment: "2 TB NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
+    },
     nvme1920de: {
         monthly: 22.00,
         name: {
