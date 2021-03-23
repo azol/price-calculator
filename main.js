@@ -1196,7 +1196,7 @@ const addons = {
         },
     },
     ssd240: {
-        monthly: 4.00,
+        monthly: 3.50,
         name: {
             English: '240 GB SATA SSD',
             Deutsch: '240 GB SATA SSD',
@@ -1204,7 +1204,7 @@ const addons = {
         }
     },
     ssd500: {
-        monthly: 6.00,
+        monthly: 5.00,
         name: {
             English: '500 GB SATA SSD',
             Deutsch: '500 GB SATA SSD',
@@ -1212,7 +1212,7 @@ const addons = {
         }
     },
     ssd1000: {
-        monthly: 10.50,
+        monthly: 7.50,
         name: {
             English: '1 TB SATA SSD',
             Deutsch: '1 TB SATA SSD',
@@ -1244,7 +1244,7 @@ const addons = {
         }
     },
     ssd1920_de: {
-        monthly: 22.00,
+        monthly: 20.00,
         name: {
             English: '1.92 TB SATA SSD Datacenter Edition',
             Deutsch: '1,92 TB SATA SSD Datacenter Edition',
@@ -1252,7 +1252,7 @@ const addons = {
         }
     },
     ssd3840de: {
-        monthly: 43.50,
+        monthly: 36.50,
         name: {
             English: '3.84 TB SATA SSD Datacenter Edition',
             Deutsch: '3,84 TB SATA SSD Datacenter Edition',
@@ -1261,7 +1261,7 @@ const addons = {
         comment: "3.84 TB SATA SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme512: {
-        monthly: 7.50,
+        monthly: 6.00,
         name: {
             English: '512 GB NVMe SSD',
             Deutsch: '512 GB NVMe SSD',
@@ -1270,7 +1270,7 @@ const addons = {
         comment: "512 NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme960de: {
-        monthly: 16.50,
+        monthly: 13.50,
         name: {
             English: '960 GB NVMe SSD Datacenter Edition',
             Deutsch: '960 GB NVMe SSD Datacenter Edition',
@@ -1288,7 +1288,7 @@ const addons = {
         comment: "480 GB NVMe SSD 3D XPoint: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1000: {
-        monthly: 12.00,
+        monthly: 9.50,
         name: {
             English: '1 TB NVMe SSD',
             Deutsch: '1 TB NVMe SSD',
@@ -1297,7 +1297,7 @@ const addons = {
         comment: "1 TB NVMe SSD: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme1920de: {
-        monthly: 26.50,
+        monthly: 22.00,
         name: {
             English: '1.92 TB NVMe SSD Datacenter Edition',
             Deutsch: '1,92 TB NVMe SSD Datacenter Edition',
@@ -1306,7 +1306,7 @@ const addons = {
         comment: "1.92 TB NVMe SSD Datacenter Edition: for compatibility see https://wiki.hetzner.de/index.php/Root_Server_Hardware/en#Drives"
     },
     nvme3840de: {
-        monthly: 48.00,
+        monthly: 38.50,
         name: {
             English: '3.84 TB NVMe SSD Datacenter Edition',
             Deutsch: '3,84 TB NVMe SSD Datacenter Edition',
@@ -1481,7 +1481,7 @@ const addons = {
         }
     },
     switch_48port: {
-        monthly: 135.50,
+        monthly: 130.00,
         name: {
             English: '48-Port 1 Gbit switch',
             Deutsch: '48-Port 1 Gbit-Switch',
@@ -1497,7 +1497,7 @@ const addons = {
         }
     },
     switch_48port_10gbit: {
-        monthly: 332.00,
+        monthly: 311.00,
         name: {
             English: '48-Port 10 Gbit switch',
             Deutsch: '48-Port 10 Gbit-Switch',
@@ -1505,7 +1505,7 @@ const addons = {
         }
     },
     switch_96port_10gbit: {
-        monthly: 529.00,
+        monthly: 495.00,
         name: {
             English: '96-Port 10 Gbit switch',
             Deutsch: '96-Port 10 Gbit-Switch',
