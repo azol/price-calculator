@@ -324,7 +324,8 @@ PX62-NVMe: 2x SATA HDDs'
 PX93: SSD options: 8x NVMe and SSD (up to 8x NVMe SSDs or 6x SSD)\n\
 PX93: HDD options: 1x HDD + 3x NVMe or SSDs / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
 PX93: 480 GB NVMe SSD 3D XPoint -- 8x\n\
-PX93: up to 4x 32GB modules additional (max 256 GB RAM DDR4)'
+PX93: up to 4x 32 GB ECC RAM modules additional (512 GB max)\n\
+PX93: 5..8x 64 GB ECC RAM modules (1024 GB max)'
     },
     SX63: {
         name: {
@@ -394,7 +395,8 @@ R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
         comment: "DX181: Singe AMD EPYC™ 7502P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
 DX181: have an iDRAC (IP-KVM)\n\
 DX181: Drives are optional (240/480/960 GB, 1.92/3.84 TB SSD DC, 960 GB, 1.92/3.84 TB NVMe and 480 GB 3D XPoint)\n\
-DX181: max 512 GB RAM DDR4 (12x 32GB)"
+DX181: up to 12x 32 GB ECC RAM modules additional (512 GB max)\n\
+DX181: 9..16x 64 GB ECC RAM modules (1024 GB max)"
     },
     DX292: {
         number_of_cpus: 2,
