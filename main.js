@@ -374,6 +374,7 @@ SX133: 2x 1.92TB DC NVMe SSD/14x 16TB SATA Enterprise'
             Русский: 'DELL PowerEdge™ R640 DX152'
         },
         location: {
+            Finland: {monthly: 159, setup: 159},
             Germany: {monthly: 159, setup: 159}
         },
         comment: "DX152: Dual Intel® Xeon® SP Silver 10-Core @ 2.20GHz/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
@@ -390,6 +391,7 @@ R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
             Русский: 'AMD EPYC™ 7551P DX180'
         },
         location: {
+            Finland: {monthly: 189, setup: 189},
             Germany: {monthly: 189, setup: 189}
         },
         comment: "DX181: Singe AMD EPYC™ 7502P 32-Core/128GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
@@ -406,6 +408,7 @@ DX181: 9..16x 64 GB ECC RAM modules (1024 GB max)"
             Русский: 'DELL PowerEdge™ R640 DX292'
         },
         location: {
+            Finland: {monthly: 219, setup: 219},
             Germany: {monthly: 219, setup: 219}
         },
         comment: "DX292: Dual Intel® Xeon® SP Gold 16-Core @ 2.10GHz/64GB DDR4 ECC/Dell PERC H730P/iDRAC\n\
