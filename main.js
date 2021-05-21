@@ -386,9 +386,9 @@ R640 DX152: max 768 GB RAM DDR4 (22x 32GB)"
     DX181: {
         number_of_cpus: 1,
         name: {
-            English: 'AMD EPYC™ 7551P DX180',
-            Deutsch: 'AMD EPYC™ 7551P DX180',
-            Русский: 'AMD EPYC™ 7551P DX180'
+            English: 'AMD EPYC™ 7551P DX181',
+            Deutsch: 'AMD EPYC™ 7551P DX181',
+            Русский: 'AMD EPYC™ 7551P DX181'
         },
         location: {
             Finland: {monthly: 189, setup: 189},
