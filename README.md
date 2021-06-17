@@ -46,7 +46,7 @@ zip -j dist/price_calculator.zip dist/price_calculator.html
 ```
 
 * share `html` file from ./dist/ with Arno Pirner via rocket chat
-* upload `zip` file from ./dist to [iwiki](https://iwiki.hetzner.de/Datei:price_calculator.zip)
+* upload `zip` file from ./dist to [iwiki](https://iwiki.hetzner.company/Datei:price_calculator.zip)
 
 
 ### Run in Docker
