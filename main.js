@@ -260,8 +260,8 @@ const servers = {
             Русский: 'Сервер AX101'
         },
         location: {
-            Germany: {monthly: 99, setup: 99},
-            Finland: {monthly: 94, setup: 99}
+            Germany: {monthly: 99, setup: 199},
+            Finland: {monthly: 94, setup: 199}
     },
         comment: 'AX101: AMD Ryzen 9 5950X 16-core Zen3/128GB DDR4 ECC/2x 3,8TB DC NVMe SSD'
     },
