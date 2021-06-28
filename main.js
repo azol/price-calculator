@@ -327,43 +327,43 @@ PX93: 480 GB NVMe SSD 3D XPoint -- 8x\n\
 PX93: up to 4x 32 GB ECC RAM modules additional (512 GB max)\n\
 PX93: 5..8x 64 GB ECC RAM modules (1024 GB max)'
     },
-    SX63: {
+    SX64: {
         name: {
-            English: 'Server SX63',
-            Deutsch: 'Server SX63',
-            Русский: 'Сервер SX63'
+            English: 'Server SX64',
+            Deutsch: 'Server SX64',
+            Русский: 'Сервер SX64'
         },
         location: {
-            Germany: {monthly: 69, setup: 69},
-            Finland: {monthly: 64, setup: 69}
+            Germany: {monthly: 79, setup: 99},
+            Finland: {monthly: 74, setup: 99}
         },
-        comment: 'SX63: Intel® Xeon® E3-1275 v5 Quad-Core/64GB DDR4 ECC/4x 16TB SATA Enterprise'
+        comment: 'SX64: AMD Ryzen 5 3600/64GB DDR4 ECC/4x 16TB SATA Enterprise'
     },
-    SX133: {
+    SX134: {
         name: {
-            English: 'Server SX133',
-            Deutsch: 'Server SX133',
-            Русский: 'Сервер SX133'
+            English: 'Server SX134',
+            Deutsch: 'Server SX134',
+            Русский: 'Сервер SX134'
         },
         location: {
-            Germany: {monthly: 169, setup: 169},
-            Finland: {monthly: 159, setup: 169}
+            Germany: {monthly: 199, setup: 299},
+            Finland: {monthly: 189, setup: 299}
         },
-        comment: 'SX133: Intel® Xeon® W-2145 Octa-Core Skylake W/128GB DDR4 ECC\n\
-SX133: 2x 960GB DC NVMe SSD/10x 16TB SATA Enterprise'
+        comment: 'SX134: AMD Ryzen 7 3700X/128GB DDR4 ECC\n\
+SX134: 2x 960GB DC NVMe SSD/10x 16TB SATA Enterprise'
     },
-    SX293: {
+    SX294: {
         name: {
-            English: 'Server SX293',
-            Deutsch: 'Server SX293',
-            Русский: 'Сервер SX293'
+            English: 'Server SX294',
+            Deutsch: 'Server SX294',
+            Русский: 'Сервер SX294'
         },
         location: {
-            Germany: {monthly: 269, setup: 269},
-            Finland: {monthly: 259, setup: 269}
+            Germany: {monthly: 319, setup: 499},
+            Finland: {monthly: 309, setup: 499}
         },
-        comment: 'SX293: Intel® Xeon® W-2145 Octa-Core Skylake W/256GB DDR4 ECC\n\
-SX133: 2x 1.92TB DC NVMe SSD/14x 16TB SATA Enterprise'
+        comment: 'SX294: Intel® Xeon® W-2145 Octa-Core Skylake W/256GB DDR4 ECC\n\
+SX294: 2x 3.84TB DC NVMe SSD/14x 16TB SATA Enterprise'
     },
     DX152: {
         monthly: 159, setup: 159,
