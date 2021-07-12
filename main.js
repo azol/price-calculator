@@ -1200,36 +1200,12 @@ const addons = {
             Русский: 'VLAN подсеть /27'
         },
     },
-    ssd240: {
-        monthly: 3.50,
-        name: {
-            English: '240 GB SATA SSD',
-            Deutsch: '240 GB SATA SSD',
-            Русский: '240 ГБ SATA SSD'
-        }
-    },
-    ssd500: {
-        monthly: 5.00,
-        name: {
-            English: '500 GB SATA SSD',
-            Deutsch: '500 GB SATA SSD',
-            Русский: '500 ГБ SATA SSD'
-        }
-    },
     ssd1000: {
         monthly: 7.50,
         name: {
             English: '1 TB SATA SSD',
             Deutsch: '1 TB SATA SSD',
             Русский: '1 ТБ SATA SSD'
-        }
-    },
-    ssd240de: {
-        monthly: 5.00,
-        name: {
-            English: '240 GB SATA SSD Datacenter Edition',
-            Deutsch: '240 GB SATA SSD Datacenter Edition',
-            Русский: '240 ГБ SATA SSD Datacenter Edition'
         }
     },
     ssd480de: {
@@ -1345,36 +1321,12 @@ const addons = {
             Русский: '2 ТБ SATA Enterprise жесткий диск'
         },
     },
-    sata4000e: {
-        monthly: 12.00,
-        name: {
-            English: '4 TB SATA Enterprise Hard Drive',
-            Deutsch: '4 TB SATA Enterprise Hard Drive',
-            Русский: '4 ТБ SATA Enterprise жесткий диск'
-        }
-    },
     sata6000e: {
         monthly: 15.00,
         name: {
             English: '6 TB SATA Enterprise Hard Drive',
             Deutsch: '6 TB SATA Enterprise Hard Drive',
             Русский: '6 ТБ SATA Enterprise жесткий диск'
-        }
-    },
-    sata8000e: {
-        monthly: 18.00,
-        name: {
-            English: '8 TB SATA Enterprise Hard Drive',
-            Deutsch: '8 TB SATA Enterprise Hard Drive',
-            Русский: '8 ТБ SATA Enterprise жесткий диск'
-        }
-    },
-    sata10000e: {
-        monthly: 21.00,
-        name: {
-            English: '10 TB SATA Enterprise Hard Drive',
-            Deutsch: '10 TB SATA Enterprise Hard Drive',
-            Русский: '10 ТБ SATA Enterprise жесткий диск'
         }
     },
     sata12000e: {
