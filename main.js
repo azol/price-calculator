@@ -324,8 +324,8 @@ PX62-NVMe: 2x SATA HDDs'
 PX93: SSD options: 8x NVMe and SSD (up to 8x NVMe SSDs or 6x SSD)\n\
 PX93: HDD options: 1x HDD + 3x NVMe or SSDs / 2x HDD + 2x NVMe or SSD / 3x HDD\n\
 PX93: 480 GB NVMe SSD 3D XPoint -- 8x\n\
-PX93: up to 4x 32 GB ECC RAM modules additional (512 GB max)\n\
-PX93: 5..8x 64 GB ECC RAM modules (1024 GB max)'
+PX93: up to 4x 32 GB ECC RAM modules additional (256 GB max)\n\
+PX93: 5..8x 64 GB ECC RAM modules (512 GB max) (default RAM will be removed with NO price reduction)'
     },
     SX64: {
         name: {
