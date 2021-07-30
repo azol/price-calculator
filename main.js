@@ -1059,6 +1059,7 @@ const addons = {
     },
     ip: {
         monthly: 0.8403,
+        setup: 19,
         name: {
             English: 'Additional IP address',
             Deutsch: 'Zusätzliche IP-Adresse',
@@ -1067,6 +1068,7 @@ const addons = {
     },
     subnet29: {
         monthly: 6.7227,
+        setup: 152,
         name: {
             English: 'Subnet /29',
             Deutsch: 'Subnet /29',
@@ -1075,6 +1077,7 @@ const addons = {
     },
     subnet28: {
         monthly: 13.4454,
+        setup: 304,
         name: {
             English: 'Subnet /28',
             Deutsch: 'Subnet /28',
@@ -1083,6 +1086,7 @@ const addons = {
     },
     subnet27: {
         monthly: 26.8908,
+        setup: 608,
         name: {
             English: 'Subnet /27',
             Deutsch: 'Subnet /27',
@@ -1091,6 +1095,7 @@ const addons = {
     },
     subnet26: {
         monthly: 53.7815,
+        setup: 1216,
         name: {
             English: 'Subnet /26',
             Deutsch: 'Subnet /26',
@@ -1099,6 +1104,7 @@ const addons = {
     },
     subnet25: {
         monthly: 107.5630,
+        setup: 2432,
         name: {
             English: 'Subnet /25',
             Deutsch: 'Subnet /25',
@@ -1107,6 +1113,7 @@ const addons = {
     },
     subnet24: {
         monthly: 215.1261,
+        setup: 4864,
         name: {
             English: 'Subnet /24',
             Deutsch: 'Subnet /24',
@@ -1115,6 +1122,7 @@ const addons = {
     },
     failover_ip: {
         monthly: 4.2017,
+        setup: 19,
         name: {
             English: 'Failover IP',
             Deutsch: 'Failover-IP',
@@ -1124,6 +1132,7 @@ const addons = {
     },
     failover_subnet29: {
         monthly: 15.1261,
+        setup: 152,
         name: {
             English: 'Failover subnet /29',
             Deutsch: 'Failover Subnet /29',
@@ -1133,6 +1142,7 @@ const addons = {
     },
     failover_subnet28: {
         monthly: 21.8487,
+        setup: 304,
         name: {
             English: 'Failover subnet /28',
             Deutsch: 'Failover Subnet /28',
@@ -1142,6 +1152,7 @@ const addons = {
     },
     failover_subnet27: {
         monthly: 35.2941,
+        setup: 608,
         name: {
             English: 'Failover subnet /27',
             Deutsch: 'Failover Subnet /27',
@@ -1151,6 +1162,7 @@ const addons = {
     },
     failover_subnet26: {
         monthly:  62.1849,
+        setup: 1216,
         name: {
             English: 'Failover subnet /26',
             Deutsch: 'Failover Subnet /26',
@@ -1160,6 +1172,7 @@ const addons = {
     },
     failover_subnet25: {
         monthly:  115.9664,
+        setup: 2432,
         name: {
             English: 'Failover subnet /25',
             Deutsch: 'Failover Subnet /25',
@@ -1169,6 +1182,7 @@ const addons = {
     },
     failover_subnet24: {
         monthly: 223.5294,
+        setup: 4864,
         name: {
             English: 'Failover subnet /24',
             Deutsch: 'Failover Subnet /24',
@@ -1178,6 +1192,7 @@ const addons = {
     },
     vlan_subnet29: {
         monthly: 15.1261,
+        setup: 152,
         name: {
             English: 'VLAN subnet /29',
             Deutsch: 'VLAN Subnet /29',
@@ -1186,6 +1201,7 @@ const addons = {
     },
     vlan_subnet28: {
         monthly: 21.8487,
+        setup: 304,
         name: {
             English: 'VLAN subnet /28',
             Deutsch: 'VLAN Subnet /28',
@@ -1194,10 +1210,38 @@ const addons = {
     },
     vlan_subnet27: {
         monthly: 35.2941,
+        setup: 608,
         name: {
             English: 'VLAN subnet /27',
             Deutsch: 'VLAN Subnet /27',
             Русский: 'VLAN подсеть /27'
+        },
+    },
+    vlan_subnet26: {
+        monthly:  62.1849,
+        setup: 1216,
+        name: {
+            English: 'VLAN subnet /26',
+            Deutsch: 'VLAN Subnet /26',
+            Русский: 'VLAN подсеть /26'
+        },
+    },
+    vlan_subnet25: {
+        monthly:  115.9664,
+        setup: 2432,
+        name: {
+            English: 'VLAN subnet /25',
+            Deutsch: 'VLAN Subnet /25',
+            Русский: 'VLAN подсеть /25'
+        },
+    },
+    vlan_subnet24: {
+        monthly: 223.5294,
+        setup: 4864,
+        name: {
+            English: 'VLAN subnet /24',
+            Deutsch: 'VLAN Subnet /24',
+            Русский: 'VLAN подсеть /24'
         },
     },
     ssd1000: {
