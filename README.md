@@ -1,54 +1,70 @@
-# Price Calculator
+# Getting Started with Create React App
 
-Hetzner Price Calculator
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Workflow for development with docker
+## Available Scripts
 
-```console
-docker-compose -f docker-compose-dev.yml build
-docker-compose -f docker-compose-dev.yml up
-```
+In the project directory, you can run:
 
-open http://127.0.0.1:3000 for price calculator
+### `npm start`
 
-open http://127.0.0.2:3001 for Browser Sync's webinterface
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Workflow for production container
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```console
-docker-compose build
-docker-compose up
-```
+### `npm test`
 
-open http://127.0.0.1:81/price_calculator.html for price calculator
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Workflow for local build
+### `npm run build`
 
-Assuming `gulp` is installed globally:
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-    $ npm install
-    $ gulp serve
-    $ gulp
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Resulting file is placed in `dist` directory.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Prepare release information
+### `npm run eject`
 
-* update `releaseDate` and `recentChanges` in `changes.js`
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-## Share `price_calculator.html` with colleagues
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-* get `price_calculator.html` from production container and zip it:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```console
-docker cp $(docker-compose ps -q price_calculator_web):/usr/share/nginx/html/price_calculator.html ./dist/
-zip -j dist/price_calculator.zip dist/price_calculator.html
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-* share `html` file from ./dist/ with Arno Pirner via rocket chat
-* upload `zip` file from ./dist to [iwiki](https://iwiki.hetzner.company/Datei:price_calculator.zip)
+## Learn More
 
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Run in Docker
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-docker run --restart=always --name price_calculator -d -p 81:80 -v /home/alex/dockers/price_calculator:/usr/share/nginx/html:ro nginx
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
