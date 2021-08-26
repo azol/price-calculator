@@ -49,7 +49,14 @@ const addonsNetwork = addons.filter(addon =>
   addon === 'place_reservation'
 );
 
-const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon) || addonsBackup.includes(addon) || addonsCpanel.includes(addon) || addonsPlesk.includes(addon) || addon === 'custom_addon'));
+const addonsMisc = addons.filter(addon =>
+  !(addonsStorage.includes(addon) ||
+    addonsNetwork.includes(addon) ||
+    addonsBackup.includes(addon) ||
+    addonsCpanel.includes(addon) ||
+    addonsPlesk.includes(addon) ||
+    addon === 'custom_addon'
+  ));
 
 const locations = {
   GERMANY: 'Germany',
