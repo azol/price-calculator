@@ -6,6 +6,9 @@ import { vatRates, languages, servers as SERVERS, addons as ADDONS } from './dat
 const servers = Object.keys(SERVERS).filter(server => !server.startsWith('SB'));
 const addons = Object.keys(ADDONS);
 
+const addonBackupNo = 'backupNo';
+const addonsBackup = [addonBackupNo, ...addons.filter(addon => addon.startsWith('backup'))];
+
 const addonsStorage = addons.filter(addon =>
   addon.startsWith('usb') ||
   addon.startsWith('ddr') ||
@@ -13,8 +16,7 @@ const addonsStorage = addons.filter(addon =>
   addon.startsWith('nvme') ||
   addon.startsWith('sas') ||
   addon.startsWith('sata') ||
-  addon === 'block_storage_volume' ||
-  addon.startsWith('backup')
+  addon === 'block_storage_volume'
 );
 
 const addonsNetwork = addons.filter(addon =>
@@ -41,7 +43,7 @@ const addonsNetwork = addons.filter(addon =>
   addon === 'place_reservation'
 );
 
-const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon)));
+const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon) || addonsBackup.includes(addon)));
 
 function Languages(props) {
   return (
@@ -100,6 +102,25 @@ function Servers(props) {
   );
 }
 
+function AddonBackup(props) {
+  return (
+    <li className="field has-addons">
+      <div className="control">
+        <div className="select is-small">
+          <select id="my-select-addon-backup" defaultValue={props.addons[0]} onChange={(event) => props.handleAddon(event.target.value, 1)}>{
+            props.addons.map(addon =>
+              <option key={addon} value={addon}>{addon}</option>
+            )}
+          </select>
+        </div>
+      </div>
+      <div className="control">
+        <label htmlFor="my-select-addon-backup" className="button is-small">backup</label>
+      </div>
+    </li>
+  );
+}
+
 function Addon(props) {
   if (props.type === 'checkbox') {
     return (
@@ -132,6 +153,7 @@ function Addons(props) {
           <Addon addon={addon} name={addon} type={props.type} handleAddon={props.handleAddon} />
         </li>
       )}
+      {props.isAddonsStorage ? <AddonBackup addons={addonsBackup} handleAddon={props.handleAddon} /> : ''}
     </ul>
   );
 }
@@ -163,6 +185,14 @@ function App() {
   const [numberOfServers, setNumberOfServers] = useState(1);
 
   function handleAddon(addon, number) {
+    if (addonsBackup.includes(addon)) {
+      const serverAddonsWithoutBackupAddons = new Map([...serverAddons].filter(([addon, _]) => !addonsBackup.includes(addon)));
+      if (addon !== addonBackupNo) {
+        serverAddonsWithoutBackupAddons.set(addon, number);
+      }
+      setServerAddons(serverAddonsWithoutBackupAddons);
+      return;
+    }
     if (number > 0) {
       setServerAddons(new Map(serverAddons.set(addon, number)))
     } else {
@@ -189,7 +219,7 @@ function App() {
           <Addons addons={addonsMisc} language={language} type="checkbox" handleAddon={handleAddon} />
         </div>
         <div className="column">
-          <Addons addons={addonsStorage} language={language} handleAddon={handleAddon} />
+          <Addons addons={addonsStorage} isAddonsStorage language={language} handleAddon={handleAddon} />
         </div>
         <div className="column">
           <Addons addons={addonsNetwork} language={language} handleAddon={handleAddon} />
