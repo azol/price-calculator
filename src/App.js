@@ -9,6 +9,9 @@ const addons = Object.keys(ADDONS);
 const addonBackupNo = 'backupNo';
 const addonsBackup = [addonBackupNo, ...addons.filter(addon => addon.startsWith('backup'))];
 
+const addonCpanelNo = 'cpanel_No';
+const addonsCpanel = [addonCpanelNo, ...addons.filter(addon => addon.startsWith('cpanel_'))];
+
 const addonsStorage = addons.filter(addon =>
   addon.startsWith('usb') ||
   addon.startsWith('ddr') ||
@@ -43,7 +46,7 @@ const addonsNetwork = addons.filter(addon =>
   addon === 'place_reservation'
 );
 
-const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon) || addonsBackup.includes(addon)));
+const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon) || addonsBackup.includes(addon) || addonsCpanel.includes(addon)));
 
 function Languages(props) {
   return (
@@ -154,6 +157,7 @@ function Addons(props) {
         </li>
       )}
       {props.isAddonsStorage ? <AddonSelection label='backup' addons={addonsBackup} handleAddon={props.handleAddon} /> : ''}
+      {props.isAddonsMisc ? <AddonSelection label='cPanel' addons={addonsCpanel} handleAddon={props.handleAddon} /> : ''}
     </ul>
   );
 }
@@ -185,6 +189,14 @@ function App() {
   const [numberOfServers, setNumberOfServers] = useState(1);
 
   function handleAddon(addon, number) {
+    if (addonsCpanel.includes(addon)) {
+      const serverAddonsWithoutCpanelAddons = new Map([...serverAddons].filter(([addon, _]) => !addonsCpanel.includes(addon)));
+      if (addon !== addonCpanelNo) {
+        serverAddonsWithoutCpanelAddons.set(addon, number);
+      }
+      setServerAddons(serverAddonsWithoutCpanelAddons);
+      return;
+    }
     if (addonsBackup.includes(addon)) {
       const serverAddonsWithoutBackupAddons = new Map([...serverAddons].filter(([addon, _]) => !addonsBackup.includes(addon)));
       if (addon !== addonBackupNo) {
@@ -216,7 +228,7 @@ function App() {
       </div>
       <div className="columns">
         <div className="column">
-          <Addons addons={addonsMisc} language={language} type="checkbox" handleAddon={handleAddon} />
+          <Addons addons={addonsMisc} isAddonsMisc language={language} type="checkbox" handleAddon={handleAddon} />
         </div>
         <div className="column">
           <Addons addons={addonsStorage} isAddonsStorage language={language} handleAddon={handleAddon} />
