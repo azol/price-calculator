@@ -188,21 +188,21 @@ function App() {
   const [serverAddons, setServerAddons] = useState(new Map());
   const [numberOfServers, setNumberOfServers] = useState(1);
 
+  function handleAddonSelection(addon, number, addons, addonNo) {
+    const serverAddonsWithoutSelectionAddons = new Map([...serverAddons].filter(([addon, _]) => !addons.includes(addon)));
+    if (addon !== addonNo) {
+      serverAddonsWithoutSelectionAddons.set(addon, number);
+    }
+    setServerAddons(serverAddonsWithoutSelectionAddons);
+  }
+
   function handleAddon(addon, number) {
     if (addonsCpanel.includes(addon)) {
-      const serverAddonsWithoutCpanelAddons = new Map([...serverAddons].filter(([addon, _]) => !addonsCpanel.includes(addon)));
-      if (addon !== addonCpanelNo) {
-        serverAddonsWithoutCpanelAddons.set(addon, number);
-      }
-      setServerAddons(serverAddonsWithoutCpanelAddons);
+      handleAddonSelection(addon, number, addonsCpanel, addonCpanelNo);
       return;
     }
     if (addonsBackup.includes(addon)) {
-      const serverAddonsWithoutBackupAddons = new Map([...serverAddons].filter(([addon, _]) => !addonsBackup.includes(addon)));
-      if (addon !== addonBackupNo) {
-        serverAddonsWithoutBackupAddons.set(addon, number);
-      }
-      setServerAddons(serverAddonsWithoutBackupAddons);
+      handleAddonSelection(addon, number, addonsBackup, addonBackupNo);
       return;
     }
     if (number > 0) {
