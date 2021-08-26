@@ -101,14 +101,27 @@ function Servers(props) {
 }
 
 function Addon(props) {
-  return (
-    <div className="control">
-      <label className="checkbox">
-        <input className="checkbox mr-2" id={props.addon} type="checkbox" onChange={(event) => props.handleAddon(props.addon, event.target.checked ? 1 : 0)} />
-        {props.name}
-      </label>
-    </div>
-  );
+  if (props.type === 'checkbox') {
+    return (
+      <div className="control">
+        <label className="checkbox">
+          <input className="checkbox mr-2" id={props.addon} type="checkbox" onChange={(event) => props.handleAddon(props.addon, event.target.checked ? 1 : 0)} />
+          {props.name}
+        </label>
+      </div>
+    );
+  } else {
+    return (
+      <div className="field has-addons">
+        <div className="control">
+          <input className="input is-small" id={props.addon} type="number" min="0" step="1" defaultValue="0" onChange={(event) => props.handleAddon(props.addon, event.target.value)} />
+        </div>
+        <div className="control">
+          <label htmlFor={props.addon} className="button is-small">{props.name}</label>
+        </div>
+      </div>
+    );
+  }
 }
 
 function Addons(props) {
@@ -116,7 +129,7 @@ function Addons(props) {
     <ul>
       {props.addons.map((addon) =>
         <li key={addon} className="field">
-          <Addon addon={addon} name={addon} handleAddon={props.handleAddon} />
+          <Addon addon={addon} name={addon} type={props.type} handleAddon={props.handleAddon} />
         </li>
       )}
     </ul>
@@ -173,7 +186,7 @@ function App() {
       </div>
       <div className="columns">
         <div className="column">
-          <Addons addons={addonsMisc} language={language} handleAddon={handleAddon} />
+          <Addons addons={addonsMisc} language={language} type="checkbox" handleAddon={handleAddon} />
         </div>
         <div className="column">
           <Addons addons={addonsStorage} language={language} handleAddon={handleAddon} />
