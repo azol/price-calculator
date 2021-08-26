@@ -133,7 +133,7 @@ function AddonSelection(props) {
 }
 
 function Addon(props) {
-  if (props.type === 'checkbox' & props.addon !== 'rdp_license') {
+  if (props.type === 'checkbox' & props.addon !== 'rdp_license' & props.addon !== 'remote_hands') {
     return (
       <div className="control">
         <label className="checkbox">
