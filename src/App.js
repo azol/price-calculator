@@ -172,6 +172,7 @@ function Result(props) {
     return `server is: ${props.server}
 numberOfServers: ${props.numberOfServers}
 addons: ${[...props.serverAddons.keys()].map(addon => addon)}
+noSetupFee: ${props.noSetupFee}
 country: ${props.country}
 language: ${props.language}`;
   }
@@ -191,6 +192,7 @@ function App() {
   const [server, setServer] = useState(servers[0]);
   const [serverAddons, setServerAddons] = useState(new Map());
   const [numberOfServers, setNumberOfServers] = useState(1);
+  const [noSetupFee, setNoSetupFee] = useState(false);
 
   function handleAddonSelection(addon, number, addons, addonNo) {
     const serverAddonsWithoutSelectionAddons = new Map([...serverAddons].filter(([addon, _]) => !addons.includes(addon)));
@@ -234,6 +236,14 @@ function App() {
           <input id="my-input-numberOfServers" className="input is-small" value={numberOfServers} type="number" min="1" step="1" onInput={(event) => setNumberOfServers(event.target.value)} />
         </div>
       </div>
+      <div className="field">
+        <div className="control">
+          <label className="checkbox">
+            <input className="checkbox mr-2" type="checkbox" checked={noSetupFee} onChange={(event) => setNoSetupFee(event.target.checked)} />
+            No setup fee
+          </label>
+        </div>
+      </div>
       <div className="columns">
         <div className="column">
           <Addons addons={addonsMisc} isAddonsMisc language={language} type="checkbox" handleAddon={handleAddon} />
@@ -245,7 +255,7 @@ function App() {
           <Addons addons={addonsNetwork} language={language} handleAddon={handleAddon} />
         </div>
       </div>
-      <Result server={server} numberOfServers={numberOfServers} serverAddons={serverAddons} country={country} language={language} />
+      <Result server={server} numberOfServers={numberOfServers} serverAddons={serverAddons} noSetupFee={noSetupFee} country={country} language={language} />
     </main>
   );
 }
