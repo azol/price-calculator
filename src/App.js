@@ -1,6 +1,8 @@
 import './App.scss';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { vatRates, languages, servers as SERVERS, addons as ADDONS } from './data';
+import { getCalculationData } from './calculate';
+import { table } from 'table';
 
 // TODO: process sb servers
 const servers = Object.keys(SERVERS).filter(server => !server.startsWith('SB'));
@@ -179,21 +181,10 @@ function Addons(props) {
 }
 
 function Result(props) {
-
-  function formatResult() {
-    return `server is: ${props.server}
-numberOfServers: ${props.numberOfServers}
-addons: ${[...props.serverAddons.keys()].map(addon => addon)}
-location: ${props.location}
-noSetupFee: ${props.noSetupFee}
-country: ${props.country}
-language: ${props.language}`;
-  }
-
   return (
     <div className="field">
       <div className="control">
-        <textarea className="textarea is-small is-family-monospace" readOnly value={formatResult()} />
+        <textarea className="textarea is-small is-family-monospace" readOnly defaultValue='Calculating...' value={props.value} />
       </div>
     </div>
   );
@@ -207,6 +198,7 @@ function App() {
   const [numberOfServers, setNumberOfServers] = useState(1);
   const [noSetupFee, setNoSetupFee] = useState(false);
   const [location, setLocation] = useState(locations.GERMANY);
+  const [formattedCalculationData, setFormattedCalculationData] = useState();
 
   function handleAddonSelection(addon, number, addons, addonNo) {
     const serverAddonsWithoutSelectionAddons = new Map([...serverAddons].filter(([addon, _]) => !addons.includes(addon)));
@@ -235,6 +227,73 @@ function App() {
       serverAddons.delete(addon);
       setServerAddons(new Map(serverAddons));
     }
+  }
+
+  useEffect(() => {
+    const unformatttedCalculationData = getCalculationData({
+      language: language,
+      country: country,
+      server: server,
+      serverAddons: serverAddons,
+      numberOfServers: numberOfServers,
+      noSetupFee: noSetupFee,
+      location: location,
+      servers: SERVERS,
+      addons: ADDONS
+    });
+    const formattedCalculationData = formatCalculationData(unformatttedCalculationData, language);
+    setFormattedCalculationData(formattedCalculationData);
+  }, [country, language, location, noSetupFee, numberOfServers, server, serverAddons]);
+
+  function formatCalculationData(data, language) {
+    const calcDataPreformatted = data.calculationData.map(
+      map => [...map].flat()
+    ).map(([item, money]) => {
+      const itemData = [...item].flat();
+      const itemLocalized = { ...SERVERS, ...ADDONS }[itemData[0]].name[language];
+      const number = itemData[1];
+      return [
+        number > 1 ? `${number}x ${itemLocalized}` : itemLocalized,
+        money
+      ];
+    });
+
+    const currencyFormatter = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });
+
+    const calculationDataPreformattedMonthly = calcDataPreformatted
+      .map(([item, money]) => [item, money[0]])
+      .filter(item => item[1] !== '0')
+      .map(([item, money]) => [item, currencyFormatter.format(money)]);
+
+    const calculationDataPreformattedSetup = calcDataPreformatted
+      .map(([item, money]) => [item, money[1]])
+      .filter(item => item[1] !== '0')
+      .map(([item, money]) => [item, currencyFormatter.format(money)]);
+
+
+    const setup = data.totalSetup !== '0' ? [
+      ['Setup costs:', ''],
+      ...calculationDataPreformattedSetup,
+      ['------------------', ''],
+      ['Total setup costs:', currencyFormatter.format(data.totalSetup)],
+      ['', ''],
+    ] : [];
+
+    const text = table([
+      ...setup,
+      ['Monthly costs:', ''],
+      ...calculationDataPreformattedMonthly,
+      ['--------------------', ''],
+      ['Total monthly costs:', currencyFormatter.format(data.totalMonthly)]
+    ], {
+      drawHorizontalLine: () => false,
+      drawVerticalLine: () => false,
+      columns: [
+        { alignment: 'left' },
+        { alignment: 'right' }
+      ],
+    })
+    return text;
   }
 
   return (
@@ -281,7 +340,7 @@ function App() {
           <Addons addons={addonsNetwork} language={language} handleAddon={handleAddon} />
         </div>
       </div>
-      <Result server={server} numberOfServers={numberOfServers} serverAddons={serverAddons} location={location} noSetupFee={noSetupFee} country={country} language={language} />
+      <Result value={formattedCalculationData} />
     </main>
   );
 }
