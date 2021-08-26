@@ -6,6 +6,43 @@ import { vatRates, languages, servers as SERVERS, addons as ADDONS } from './dat
 const servers = Object.keys(SERVERS).filter(server => !server.startsWith('SB'));
 const addons = Object.keys(ADDONS);
 
+const addonsStorage = addons.filter(addon =>
+  addon.startsWith('usb') ||
+  addon.startsWith('ddr') ||
+  addon.startsWith('ssd') ||
+  addon.startsWith('nvme') ||
+  addon.startsWith('sas') ||
+  addon.startsWith('sata') ||
+  addon === 'block_storage_volume' ||
+  addon.startsWith('backup')
+);
+
+const addonsNetwork = addons.filter(addon =>
+  addon.startsWith('ip') ||
+  addon.startsWith('subnet') ||
+  addon.startsWith('failover_') ||
+  addon.startsWith('vlan_') ||
+  addon === 'gbit_lan' ||
+  addon === 'ten_gbit_lan' ||
+  addon === 'gbit_nic' ||
+  addon === 'gbit_dual_nic' ||
+  addon === 'ten_gbit_nic' ||
+  addon === 'ten_gbit_dual_nic_x520' ||
+  addon === 'ten_gbit_dual_nic_x710' ||
+  addon === 'ten_gbit_dual_nic_dell' ||
+  addon === 'uplink_10_gbit' ||
+  addon === 'switch_5port' ||
+  addon === 'switch_8port' ||
+  addon === 'switch_24port' ||
+  addon === 'switch_48port' ||
+  addon === 'switch_12port_10gbit' ||
+  addon === 'switch_48port_10gbit' ||
+  addon === 'switch_96port_10gbit' ||
+  addon === 'place_reservation'
+);
+
+const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon)));
+
 function Languages(props) {
   return (
     <div className="field has-addons">
@@ -77,7 +114,7 @@ function Addon(props) {
 function Addons(props) {
   return (
     <ul>
-      {addons.map((addon) =>
+      {props.addons.map((addon) =>
         <li key={addon} className="field">
           <Addon addon={addon} name={addon} handleAddon={props.handleAddon} />
         </li>
@@ -134,7 +171,17 @@ function App() {
           <input id="my-input-numberOfServers" className="input is-small" value={numberOfServers} type="number" min="1" step="1" onInput={(event) => setNumberOfServers(event.target.value)} />
         </div>
       </div>
-      <Addons language={language} handleAddon={handleAddon} />
+      <div className="columns">
+        <div className="column">
+          <Addons addons={addonsMisc} language={language} handleAddon={handleAddon} />
+        </div>
+        <div className="column">
+          <Addons addons={addonsStorage} language={language} handleAddon={handleAddon} />
+        </div>
+        <div className="column">
+          <Addons addons={addonsNetwork} language={language} handleAddon={handleAddon} />
+        </div>
+      </div>
       <Result server={server} numberOfServers={numberOfServers} serverAddons={serverAddons} country={country} language={language} />
     </main>
   );
