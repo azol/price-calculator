@@ -102,7 +102,7 @@ function Servers(props) {
   );
 }
 
-function AddonBackup(props) {
+function AddonSelection(props) {
   return (
     <li className="field has-addons">
       <div className="control">
@@ -115,7 +115,7 @@ function AddonBackup(props) {
         </div>
       </div>
       <div className="control">
-        <label htmlFor="my-select-addon-backup" className="button is-small">backup</label>
+        <label htmlFor="my-select-addon-backup" className="button is-small">{props.label}</label>
       </div>
     </li>
   );
@@ -153,7 +153,7 @@ function Addons(props) {
           <Addon addon={addon} name={addon} type={props.type} handleAddon={props.handleAddon} />
         </li>
       )}
-      {props.isAddonsStorage ? <AddonBackup addons={addonsBackup} handleAddon={props.handleAddon} /> : ''}
+      {props.isAddonsStorage ? <AddonSelection label='backup' addons={addonsBackup} handleAddon={props.handleAddon} /> : ''}
     </ul>
   );
 }
