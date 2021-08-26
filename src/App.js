@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { useState } from 'react';
 import { vatRates, languages, servers as SERVERS, addons as ADDONS } from './data';
 
@@ -8,45 +8,69 @@ const addons = Object.keys(ADDONS);
 
 function Languages(props) {
   return (
-    <label>Language
-      <select value={props.language} onChange={(event) => props.setLanguage(event.target.value)}>{
-        props.languages.map(lang =>
-          <option key={lang} value={lang}>{lang}</option>
-        )}
-      </select>
-    </label>
+    <div className="field has-addons">
+      <div className="control">
+        <label htmlFor="my-select-language" className="button is-small">Language</label>
+      </div>
+      <div className="control">
+        <div className="select is-small">
+          <select id="my-select-language" value={props.language} onChange={(event) => props.setLanguage(event.target.value)}>{
+            props.languages.map(lang =>
+              <option key={lang} value={lang}>{lang}</option>
+            )}
+          </select>
+        </div>
+      </div>
+    </div>
   );
 }
 
 function VatRates(props) {
   return (
-    <label>VAT
-      <select value={props.country} onChange={(event) => props.setCountry(event.target.value)}>{
-        Object.keys(props.vatRates).map(country =>
-          <option key={country} value={country}>{country}</option>
-        )}
-      </select>
-    </label>
+    <div className="field has-addons">
+      <div className="control">
+        <label htmlFor="my-select-country" className="button is-small">VAT</label>
+      </div>
+      <div className="control">
+        <div className="select is-small">
+          <select id="my-select-country" value={props.country} onChange={(event) => props.setCountry(event.target.value)}>{
+            Object.keys(props.vatRates).map(country =>
+              <option key={country} value={country}>{country}</option>
+            )}
+          </select>
+        </div>
+      </div>
+    </div>
   );
 }
 
 function Servers(props) {
   return (
-    <label>Server
-      <select value={props.server} onChange={(event) => props.setServer(event.target.value)}>{
-        props.servers.map(server =>
-          <option key={server} value={server}>{server}</option>
-        )}
-      </select>
-    </label>
+    <div className="field has-addons">
+      <div className="control">
+        <label htmlFor="my-select-server" className="button is-small">Server</label>
+      </div>
+      <div className="control">
+        <div className="select is-small">
+          <select id="my-select-server" value={props.server} onChange={(event) => props.setServer(event.target.value)}>{
+            props.servers.map(server =>
+              <option key={server} value={server}>{server}</option>
+            )}
+          </select>
+        </div>
+      </div>
+    </div>
   );
 }
 
 function Addon(props) {
   return (
-    <label>{props.name}
-      <input id={props.addon} type="checkbox" onChange={(event) => props.handleAddon(props.addon, event.target.checked ? 1 : 0)} />
-    </label>
+    <div className="control">
+      <label className="checkbox">
+        <input className="checkbox mr-2" id={props.addon} type="checkbox" onChange={(event) => props.handleAddon(props.addon, event.target.checked ? 1 : 0)} />
+        {props.name}
+      </label>
+    </div>
   );
 }
 
@@ -54,7 +78,7 @@ function Addons(props) {
   return (
     <ul>
       {addons.map((addon) =>
-        <li key={addon}>
+        <li key={addon} className="field">
           <Addon addon={addon} name={addon} handleAddon={props.handleAddon} />
         </li>
       )}
@@ -73,7 +97,11 @@ language: ${props.language}`;
   }
 
   return (
-    <textarea readOnly value={formatResult()} />
+    <div className="field">
+      <div className="control">
+        <textarea className="textarea is-small is-family-monospace" readOnly value={formatResult()} />
+      </div>
+    </div>
   );
 }
 
@@ -94,13 +122,18 @@ function App() {
   }
 
   return (
-    <main>
+    <main className="container">
       <Languages languages={languages} language={language} setLanguage={setLanguage} />
       <VatRates vatRates={vatRates} country={country} setCountry={setCountry} />
       <Servers servers={servers} server={server} setServer={setServer} />
-      <label>Servers
-        <input value={numberOfServers} type="number" min="1" step="1" onInput={(event) => setNumberOfServers(event.target.value)} />
-      </label>
+      <div className="field has-addons">
+        <div className="control">
+          <label htmlFor="my-input-numberOfServers" className="button is-small">Servers</label>
+        </div>
+        <div className="control">
+          <input id="my-input-numberOfServers" className="input is-small" value={numberOfServers} type="number" min="1" step="1" onInput={(event) => setNumberOfServers(event.target.value)} />
+        </div>
+      </div>
       <Addons language={language} handleAddon={handleAddon} />
       <Result server={server} numberOfServers={numberOfServers} serverAddons={serverAddons} country={country} language={language} />
     </main>
