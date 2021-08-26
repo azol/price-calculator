@@ -9,6 +9,9 @@ const addons = Object.keys(ADDONS);
 const addonBackupNo = 'backupNo';
 const addonsBackup = [addonBackupNo, ...addons.filter(addon => addon.startsWith('backup'))];
 
+const addonPleskNo = 'plesk_No';
+const addonsPlesk = [addonPleskNo, ...addons.filter(addon => addon.startsWith('plesk_') & addon !== 'plesk_power_pack')];
+
 const addonCpanelNo = 'cpanel_No';
 const addonsCpanel = [addonCpanelNo, ...addons.filter(addon => addon.startsWith('cpanel_'))];
 
@@ -46,7 +49,7 @@ const addonsNetwork = addons.filter(addon =>
   addon === 'place_reservation'
 );
 
-const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon) || addonsBackup.includes(addon) || addonsCpanel.includes(addon)));
+const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon) || addonsBackup.includes(addon) || addonsCpanel.includes(addon) || addonsPlesk.includes(addon)));
 
 function Languages(props) {
   return (
@@ -157,6 +160,7 @@ function Addons(props) {
         </li>
       )}
       {props.isAddonsStorage ? <AddonSelection label='backup' addons={addonsBackup} handleAddon={props.handleAddon} /> : ''}
+      {props.isAddonsMisc ? <AddonSelection label='Plesk' addons={addonsPlesk} handleAddon={props.handleAddon} /> : ''}
       {props.isAddonsMisc ? <AddonSelection label='cPanel' addons={addonsCpanel} handleAddon={props.handleAddon} /> : ''}
     </ul>
   );
@@ -197,6 +201,10 @@ function App() {
   }
 
   function handleAddon(addon, number) {
+    if (addonsPlesk.includes(addon)) {
+      handleAddonSelection(addon, number, addonsPlesk, addonPleskNo);
+      return;
+    }
     if (addonsCpanel.includes(addon)) {
       handleAddonSelection(addon, number, addonsCpanel, addonCpanelNo);
       return;
