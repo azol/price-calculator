@@ -51,6 +51,11 @@ const addonsNetwork = addons.filter(addon =>
 
 const addonsMisc = addons.filter(addon => !(addonsStorage.includes(addon) || addonsNetwork.includes(addon) || addonsBackup.includes(addon) || addonsCpanel.includes(addon) || addonsPlesk.includes(addon)));
 
+const locations = {
+  GERMANY: 'Germany',
+  FINLAND: 'Finland'
+}
+
 function Languages(props) {
   return (
     <div className="field has-addons">
@@ -172,6 +177,7 @@ function Result(props) {
     return `server is: ${props.server}
 numberOfServers: ${props.numberOfServers}
 addons: ${[...props.serverAddons.keys()].map(addon => addon)}
+location: ${props.location}
 noSetupFee: ${props.noSetupFee}
 country: ${props.country}
 language: ${props.language}`;
@@ -193,6 +199,7 @@ function App() {
   const [serverAddons, setServerAddons] = useState(new Map());
   const [numberOfServers, setNumberOfServers] = useState(1);
   const [noSetupFee, setNoSetupFee] = useState(false);
+  const [location, setLocation] = useState(locations.GERMANY);
 
   function handleAddonSelection(addon, number, addons, addonNo) {
     const serverAddonsWithoutSelectionAddons = new Map([...serverAddons].filter(([addon, _]) => !addons.includes(addon)));
@@ -238,6 +245,18 @@ function App() {
       </div>
       <div className="field">
         <div className="control">
+          <label className="radio">
+            <input className="mr-2" type="radio" name="location" checked={location === locations.GERMANY} onChange={(event) => setLocation(locations.GERMANY)} />
+            {locations.GERMANY}
+          </label>
+          <label className="radio">
+            <input className="mr-2" type="radio" name="location" checked={location === locations.FINLAND} onChange={(event) => setLocation(locations.FINLAND)} />
+            {locations.FINLAND}
+          </label>
+        </div>
+      </div>
+      <div className="field">
+        <div className="control">
           <label className="checkbox">
             <input className="checkbox mr-2" type="checkbox" checked={noSetupFee} onChange={(event) => setNoSetupFee(event.target.checked)} />
             No setup fee
@@ -255,7 +274,7 @@ function App() {
           <Addons addons={addonsNetwork} language={language} handleAddon={handleAddon} />
         </div>
       </div>
-      <Result server={server} numberOfServers={numberOfServers} serverAddons={serverAddons} noSetupFee={noSetupFee} country={country} language={language} />
+      <Result server={server} numberOfServers={numberOfServers} serverAddons={serverAddons} location={location} noSetupFee={noSetupFee} country={country} language={language} />
     </main>
   );
 }
