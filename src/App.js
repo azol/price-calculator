@@ -198,6 +198,7 @@ function App() {
   const [numberOfServers, setNumberOfServers] = useState(1);
   const [noSetupFee, setNoSetupFee] = useState(false);
   const [location, setLocation] = useState(locations.GERMANY);
+  const [calculationData, setCalculationData] = useState();
   const [formattedCalculationData, setFormattedCalculationData] = useState();
 
   function handleAddonSelection(addon, number, addons, addonNo) {
@@ -242,6 +243,7 @@ function App() {
       addons: ADDONS
     });
     const formattedCalculationData = formatCalculationData(unformatttedCalculationData, language);
+    setCalculationData(unformatttedCalculationData);
     setFormattedCalculationData(formattedCalculationData);
   }, [country, language, location, noSetupFee, numberOfServers, server, serverAddons]);
 
