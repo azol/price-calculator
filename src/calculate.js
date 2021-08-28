@@ -53,6 +53,14 @@ export function getCalculationData(props) {
       ]
     );
   });
+  const additionalCalculationData = addonsCalculationData
+    .filter((map) => [...map].flat()[1][2])
+    .map(map => new Map([...map].map(([item, money]) => [item, [
+      new Money(money[0]).divide(new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate())
+        .multiply(new Date().getDate() - 1).format(),
+      money[1],
+      money[2]
+    ]])));
 
   const allCalculationData = [serverCalculationData, ...addonsCalculationData]
   const totalMonthly = allCalculationData
@@ -65,11 +73,20 @@ export function getCalculationData(props) {
     .map(money => new Money(money))
     .reduce((prev, current) => prev.add(current), new Money('0'))
     .format();
+  const totalAdditional = additionalCalculationData
+    .map(map => [...map].flat())
+    .map(([item, money]) => money)
+    .filter(money => money[2])
+    .map(money => money[0])
+    .reduce((prev, current) => prev.add(current), new Money('0'))
+    .format()
 
   return {
     calculationData: allCalculationData,
     totalSetup: totalSetup,
     totalMonthly: totalMonthly,
+    calculationDataAdditional: additionalCalculationData,
+    totalAdditional: totalAdditional,
     vatRate: vatRate
   }
 }

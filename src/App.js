@@ -261,6 +261,18 @@ function App() {
       ];
     });
 
+    const additionalDataPreformatted = data.calculationDataAdditional.map(
+      map => [...map].flat()
+    ).map(([item, money]) => {
+      const itemData = [...item].flat();
+      const itemLocalized = { ...SERVERS, ...ADDONS }[itemData[0]].name[language];
+      const number = itemData[1];
+      return [
+        number > 1 ? `${number}x ${itemLocalized}` : itemLocalized,
+        money
+      ];
+    });
+
     const currencyFormatter = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });
 
     const calculationDataPreformattedMonthly = calcDataPreformatted
@@ -270,6 +282,11 @@ function App() {
 
     const calculationDataPreformattedSetup = calcDataPreformatted
       .map(([item, money]) => [item, money[1]])
+      .filter(item => item[1] !== '0')
+      .map(([item, money]) => [item, currencyFormatter.format(money)]);
+
+    const calculationDataPreformattedAdditional = additionalDataPreformatted
+      .map(([item, money]) => [item, money[0]])
       .filter(item => item[1] !== '0')
       .map(([item, money]) => [item, currencyFormatter.format(money)]);
 
@@ -287,6 +304,14 @@ function App() {
       [`(incl. VAT ${data.vatRate}%)`, '']
     ];
 
+    const additionalPayment = data.totalAdditional !== '0' ? [
+      ['', ''],
+      ['Additional payment for product(s) charged for entire month:', ''],
+      ...calculationDataPreformattedAdditional,
+      ['--------------------', ''],
+      ['Total additional costs:', currencyFormatter.format(data.totalAdditional)],
+    ] : [];
+
     const text = table([
       ...setup,
       ['Monthly costs:', ''],
@@ -295,6 +320,7 @@ function App() {
       ['Total monthly costs:', currencyFormatter.format(data.totalMonthly)],
       ['', ''],
       ...vat,
+      ...additionalPayment
     ], {
       drawHorizontalLine: () => false,
       drawVerticalLine: () => false,
