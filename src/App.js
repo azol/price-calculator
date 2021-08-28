@@ -239,6 +239,7 @@ function App() {
       numberOfServers: numberOfServers,
       noSetupFee: noSetupFee,
       location: location,
+      vatRates: vatRates,
       servers: SERVERS,
       addons: ADDONS
     });
@@ -272,7 +273,6 @@ function App() {
       .filter(item => item[1] !== '0')
       .map(([item, money]) => [item, currencyFormatter.format(money)]);
 
-
     const setup = data.totalSetup !== '0' ? [
       ['Setup costs:', ''],
       ...calculationDataPreformattedSetup,
@@ -281,12 +281,20 @@ function App() {
       ['', ''],
     ] : [];
 
+    const vat = data.vatRate === '0' ? [
+      ['(excl. VAT)', '']
+    ] : [
+      [`(incl. VAT ${data.vatRate}%)`, '']
+    ];
+
     const text = table([
       ...setup,
       ['Monthly costs:', ''],
       ...calculationDataPreformattedMonthly,
       ['--------------------', ''],
-      ['Total monthly costs:', currencyFormatter.format(data.totalMonthly)]
+      ['Total monthly costs:', currencyFormatter.format(data.totalMonthly)],
+      ['', ''],
+      ...vat,
     ], {
       drawHorizontalLine: () => false,
       drawVerticalLine: () => false,
