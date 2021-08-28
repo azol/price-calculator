@@ -39,6 +39,71 @@ export const vatRates = {
 
 export const languages = ['English', 'Deutsch', 'Русский'];
 
+export const messages = {
+    setup_fee: {
+        English: 'Setup costs:',
+        Deutsch: 'Einmalige Kosten:',
+        Русский: 'Плата за установку:'
+    },
+    total_setup: {
+        English: 'Total setup costs:',
+        Deutsch: 'Gesamte einmalige Kosten:',
+        Русский: 'Итого плата за установку:'
+    },
+    total_monthly: {
+        English: 'Total monthly costs:',
+        Deutsch: 'Gesamte monatliche Kosten:',
+        Русский: 'Итого ежемесячная плата:'
+    },
+    total_additional: {
+        English: 'Total additional costs:',
+        Deutsch: 'Gesamte zusätzliche Kosten:',
+        Русский: 'Итого дополнительная плата:'
+    },
+    monthly: {
+        English: 'Monthly costs:',
+        Deutsch: 'Monatliche Kosten:',
+        Русский: 'Ежемесячная плата:'
+    },
+    vat_is_included: {
+        English: '(incl. VAT __VATRATE__%)',
+        Deutsch: '(inkl. __VATRATE__ % USt)',
+        Русский: '(цены указаны с НДС __VATRATE__%)'
+    },
+    vat_isnt_included: {
+        English: '(excl. VAT)',
+        Deutsch: '(zzgl. USt)',
+        Русский: '(цены указаны без НДС)'
+    },
+    first_invoice_addition: {
+        English: 'Additional payment for product(s) charged for entire month:',
+        Deutsch: 'Zusätzliche kosten fuer Produkt(e) die fuer den gesamente Monat berechnet werden:',
+        Русский: 'В первый счёт будет дополнительно включена плата за продукт(ы) лицензируемые помесячно:'
+    },
+    comment: {
+        English: 'Comment:',
+        Deutsch: 'Kommentar:',
+        Русский: 'Комментарий:'
+    },
+    first_invoice_amount: {
+        English: 'First invoice’s amount:',
+        Deutsch: 'First invoice’s amount:',
+        Русский: 'Сумма первого счёта:'
+    },
+    subsequent_amount: {
+        English: 'Subsequent invoices amount:',
+        Deutsch: 'Subsequent invoices amount:',
+        Русский: 'Сумма в последующих счетах:'
+    },
+    /*
+     template: {
+     English: '',
+     Deutsch: '',
+     Русский: ''
+     },
+     */
+};
+
 export const servers = {
     SB: {
         monthly: 0, setup: 0,

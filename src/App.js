@@ -1,6 +1,6 @@
 import './App.scss';
 import { useState, useEffect } from 'react';
-import { vatRates, languages, servers as SERVERS, addons as ADDONS } from './data';
+import { vatRates, languages, messages, servers as SERVERS, addons as ADDONS } from './data';
 import { getCalculationData } from './calculate';
 import { table } from 'table';
 
@@ -291,33 +291,33 @@ function App() {
       .map(([item, money]) => [item, currencyFormatter.format(money)]);
 
     const setup = data.totalSetup !== '0' ? [
-      ['Setup costs:', ''],
+      [messages.setup_fee[language], ''],
       ...calculationDataPreformattedSetup,
       ['------------------', ''],
-      ['Total setup costs:', currencyFormatter.format(data.totalSetup)],
+      [messages.total_setup[language], currencyFormatter.format(data.totalSetup)],
       ['', ''],
     ] : [];
 
     const vat = data.vatRate === '0' ? [
-      ['(excl. VAT)', '']
+      [messages.vat_isnt_included[language], '']
     ] : [
-      [`(incl. VAT ${data.vatRate}%)`, '']
+      [messages.vat_is_included[language].replace('__VATRATE__', data.vatRate), '']
     ];
 
     const additionalPayment = data.totalAdditional !== '0' ? [
       ['', ''],
-      ['Additional payment for product(s) charged for entire month:', ''],
+      [messages.first_invoice_addition[language], ''],
       ...calculationDataPreformattedAdditional,
       ['--------------------', ''],
-      ['Total additional costs:', currencyFormatter.format(data.totalAdditional)],
+      [messages.total_additional[language], currencyFormatter.format(data.totalAdditional)],
     ] : [];
 
     const text = table([
       ...setup,
-      ['Monthly costs:', ''],
+      [messages.monthly[language], ''],
       ...calculationDataPreformattedMonthly,
       ['--------------------', ''],
-      ['Total monthly costs:', currencyFormatter.format(data.totalMonthly)],
+      [messages.total_monthly[language], currencyFormatter.format(data.totalMonthly)],
       ['', ''],
       ...vat,
       ...additionalPayment
