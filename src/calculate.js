@@ -1,4 +1,5 @@
 import { Money } from 'bigint-money';
+import { defaultSbServerPrefix } from './App';
 
 const getVatted = (number, vatRate) => (
   new Money(vatRate).divide('100').multiply(number).add(number)
@@ -6,7 +7,20 @@ const getVatted = (number, vatRate) => (
 
 export function getCalculationData(props) {
   const vatRate = props.vatRates[props.country].toString(10);
-  const serverToProcess = props.servers[props.server];
+  let serverToProcess = props.servers[props.server];
+  if (props.server.startsWith(defaultSbServerPrefix)) {
+    const deVattedPrice = props.server.slice(2);
+    const monthlyPrice = new Money(deVattedPrice)
+      .divide(new Money('100').add(props.vatRates['Germany']))
+      .multiply('100')
+      .format();
+    serverToProcess = {
+      location: {
+        Germany: { monthly: parseFloat(monthlyPrice), setup: 0 },
+        Finland: { monthly: parseFloat(monthlyPrice), setup: 0 }
+      },
+    }
+  }
   const serverCalculationData = new Map().set(
     new Map().set(props.server, props.numberOfServers),
     [

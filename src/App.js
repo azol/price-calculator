@@ -4,8 +4,9 @@ import { vatRates, languages, messages, servers as SERVERS, addons as ADDONS } f
 import { getCalculationData } from './calculate';
 import { table } from 'table';
 
-// TODO: process sb servers
-const servers = Object.keys(SERVERS).filter(server => !server.startsWith('SB'));
+export const defaultSbServerPrefix = 'SB';
+const defaultSbServer = defaultSbServerPrefix + '34';
+const servers = [defaultSbServerPrefix, ...Object.keys(SERVERS).filter(server => !server.startsWith('SB'))];
 const addons = Object.keys(ADDONS);
 
 const addonBackupNo = 'backupNo';
@@ -104,6 +105,10 @@ function VatRates(props) {
 }
 
 function Servers(props) {
+  const sbInput = !props.server.startsWith(defaultSbServerPrefix) ? '' :
+    <div className="control">
+      <input className="input is-small" type="number" min="10" step="1" value={props.server.slice(2)} onChange={(event) => props.setServer(defaultSbServerPrefix + event.target.value)} />
+    </div>
   return (
     <div className="field has-addons">
       <div className="control">
@@ -111,13 +116,14 @@ function Servers(props) {
       </div>
       <div className="control">
         <div className="select is-small">
-          <select id="my-select-server" value={props.server} onChange={(event) => props.setServer(event.target.value)}>{
+          <select id="my-select-server" value={props.server} onChange={(event) => props.setServer(event.target.value === defaultSbServerPrefix ? defaultSbServer : event.target.value)}>{
             props.servers.map(server =>
               <option key={server} value={server}>{server}</option>
             )}
           </select>
         </div>
       </div>
+      {sbInput}
     </div>
   );
 }
@@ -193,7 +199,7 @@ function Result(props) {
 function App() {
   const [language, setLanguage] = useState(languages[0]);
   const [country, setCountry] = useState(Object.keys(vatRates)[0]);
-  const [server, setServer] = useState(servers[0]);
+  const [server, setServer] = useState(defaultSbServer);
   const [serverAddons, setServerAddons] = useState(new Map());
   const [numberOfServers, setNumberOfServers] = useState(1);
   const [noSetupFee, setNoSetupFee] = useState(false);
@@ -253,7 +259,12 @@ function App() {
       map => [...map].flat()
     ).map(([item, money]) => {
       const itemData = [...item].flat();
-      const itemLocalized = { ...SERVERS, ...ADDONS }[itemData[0]].name[language];
+      let itemLocalized = ''
+      if (itemData[0].startsWith(defaultSbServerPrefix)) {
+        itemLocalized = SERVERS.SB.name[language] + itemData[0].slice(2);
+      } else {
+        itemLocalized = { ...SERVERS, ...ADDONS }[itemData[0]].name[language];
+      }
       const number = itemData[1];
       return [
         number > 1 ? `${number}x ${itemLocalized}` : itemLocalized,
