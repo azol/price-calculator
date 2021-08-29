@@ -204,6 +204,7 @@ function App() {
   const [numberOfServers, setNumberOfServers] = useState(1);
   const [noSetupFee, setNoSetupFee] = useState(false);
   const [location, setLocation] = useState(locations.GERMANY);
+  const [locationSelectable, setLocationSelecatable] = useState(true);
   const [calculationData, setCalculationData] = useState();
   const [formattedCalculationData, setFormattedCalculationData] = useState();
 
@@ -253,6 +254,10 @@ function App() {
     setCalculationData(unformatttedCalculationData);
     setFormattedCalculationData(formattedCalculationData);
   }, [country, language, location, noSetupFee, numberOfServers, server, serverAddons]);
+
+  useEffect(() => {
+    setLocationSelecatable(server.startsWith(defaultSbServerPrefix));
+  }, [server]);
 
   function formatCalculationData(data, language) {
     const calcDataPreformatted = data.calculationData.map(
@@ -359,11 +364,11 @@ function App() {
       <div className="field">
         <div className="control">
           <label className="radio">
-            <input className="mr-2" type="radio" name="location" checked={location === locations.GERMANY} onChange={(event) => setLocation(locations.GERMANY)} />
+            <input className="mr-2" type="radio" name="location" checked={location === locations.GERMANY & !locationSelectable} disabled={locationSelectable} onChange={(event) => setLocation(locations.GERMANY)} />
             {locations.GERMANY}
           </label>
           <label className="radio">
-            <input className="mr-2" type="radio" name="location" checked={location === locations.FINLAND} onChange={(event) => setLocation(locations.FINLAND)} />
+            <input className="mr-2" type="radio" name="location" checked={location === locations.FINLAND & !locationSelectable} disabled={locationSelectable} onChange={(event) => setLocation(locations.FINLAND)} />
             {locations.FINLAND}
           </label>
         </div>
