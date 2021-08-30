@@ -1,4 +1,5 @@
 import './App.scss';
+import 'firacode/distr/fira_code.css';
 import { useState, useEffect } from 'react';
 import { vatRates, languages, messages, servers as SERVERS, addons as ADDONS } from './data';
 import { getCalculationData } from './calculate';
