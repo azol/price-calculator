@@ -190,7 +190,7 @@ function Result(props) {
   return (
     <div className="field">
       <div className="control">
-        <textarea className="textarea is-small is-family-monospace" readOnly defaultValue='Calculating...' value={props.value} />
+        <textarea className="textarea is-small is-family-monospace" readOnly value={props.value} />
       </div>
     </div>
   );
@@ -205,8 +205,20 @@ function App() {
   const [noSetupFee, setNoSetupFee] = useState(false);
   const [location, setLocation] = useState(locations.GERMANY);
   const [locationSelectable, setLocationSelecatable] = useState(true);
-  const [calculationData, setCalculationData] = useState();
-  const [formattedCalculationData, setFormattedCalculationData] = useState();
+  const [calculationData, setCalculationData] = useState(
+    getCalculationData({
+      language: language,
+      country: country,
+      server: server,
+      serverAddons: serverAddons,
+      numberOfServers: numberOfServers,
+      noSetupFee: noSetupFee,
+      location: location,
+      vatRates: vatRates,
+      servers: SERVERS,
+      addons: ADDONS
+    })
+  );
 
   function handleAddonSelection(addon, number, addons, addonNo) {
     const serverAddonsWithoutSelectionAddons = new Map([...serverAddons].filter(([addon, _]) => !addons.includes(addon)));
@@ -238,7 +250,7 @@ function App() {
   }
 
   useEffect(() => {
-    const unformatttedCalculationData = getCalculationData({
+    setCalculationData(getCalculationData({
       language: language,
       country: country,
       server: server,
@@ -249,18 +261,16 @@ function App() {
       vatRates: vatRates,
       servers: SERVERS,
       addons: ADDONS
-    });
-    const formattedCalculationData = formatCalculationData(unformatttedCalculationData, language);
-    setCalculationData(unformatttedCalculationData);
-    setFormattedCalculationData(formattedCalculationData);
+    }));
   }, [country, language, location, noSetupFee, numberOfServers, server, serverAddons]);
+
 
   useEffect(() => {
     setLocationSelecatable(server.startsWith(defaultSbServerPrefix));
   }, [server]);
 
-  function formatCalculationData(data, language) {
-    const calcDataPreformatted = data.calculationData.map(
+  function formatCalculationData() {
+    const calcDataPreformatted = calculationData.calculationData.map(
       map => [...map].flat()
     ).map(([item, money]) => {
       const itemData = [...item].flat();
@@ -277,7 +287,7 @@ function App() {
       ];
     });
 
-    const additionalDataPreformatted = data.calculationDataAdditional.map(
+    const additionalDataPreformatted = calculationData.calculationDataAdditional.map(
       map => [...map].flat()
     ).map(([item, money]) => {
       const itemData = [...item].flat();
@@ -306,26 +316,26 @@ function App() {
       .filter(item => item[1] !== '0')
       .map(([item, money]) => [item, currencyFormatter.format(money)]);
 
-    const setup = data.totalSetup !== '0' ? [
+    const setup = calculationData.totalSetup !== '0' ? [
       [messages.setup_fee[language], ''],
       ...calculationDataPreformattedSetup,
       ['------------------', ''],
-      [messages.total_setup[language], currencyFormatter.format(data.totalSetup)],
+      [messages.total_setup[language], currencyFormatter.format(calculationData.totalSetup)],
       ['', ''],
     ] : [];
 
-    const vat = data.vatRate === '0' ? [
+    const vat = calculationData.vatRate === '0' ? [
       [messages.vat_isnt_included[language], '']
     ] : [
-      [messages.vat_is_included[language].replace('__VATRATE__', data.vatRate), '']
+      [messages.vat_is_included[language].replace('__VATRATE__', calculationData.vatRate), '']
     ];
 
-    const additionalPayment = data.totalAdditional !== '0' ? [
+    const additionalPayment = calculationData.totalAdditional !== '0' ? [
       ['', ''],
       [messages.first_invoice_addition[language], ''],
       ...calculationDataPreformattedAdditional,
       ['--------------------', ''],
-      [messages.total_additional[language], currencyFormatter.format(data.totalAdditional)],
+      [messages.total_additional[language], currencyFormatter.format(calculationData.totalAdditional)],
     ] : [];
 
     const text = table([
@@ -333,7 +343,7 @@ function App() {
       [messages.monthly[language], ''],
       ...calculationDataPreformattedMonthly,
       ['--------------------', ''],
-      [messages.total_monthly[language], currencyFormatter.format(data.totalMonthly)],
+      [messages.total_monthly[language], currencyFormatter.format(calculationData.totalMonthly)],
       ['', ''],
       ...vat,
       ...additionalPayment
@@ -392,7 +402,7 @@ function App() {
           <Addons addons={addonsNetwork} language={language} handleAddon={handleAddon} />
         </div>
       </div>
-      <Result value={formattedCalculationData} />
+      <Result value={formatCalculationData(calculationData)} />
     </main>
   );
 }
