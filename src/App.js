@@ -206,6 +206,9 @@ function App() {
   const [noSetupFee, setNoSetupFee] = useState(false);
   const [location, setLocation] = useState(locations.GERMANY);
   const [locationSelectable, setLocationSelecatable] = useState(true);
+  const [date, setDate] = useState(
+    new Date().toISOString().split('T')[0]
+  );
   const [calculationData, setCalculationData] = useState(
     getCalculationData({
       language: language,
@@ -216,6 +219,7 @@ function App() {
       noSetupFee: noSetupFee,
       location: location,
       vatRates: vatRates,
+      date: date,
       servers: SERVERS,
       addons: ADDONS
     })
@@ -260,10 +264,11 @@ function App() {
       noSetupFee: noSetupFee,
       location: location,
       vatRates: vatRates,
+      date: date,
       servers: SERVERS,
       addons: ADDONS
     }));
-  }, [country, language, location, noSetupFee, numberOfServers, server, serverAddons]);
+  }, [country, language, location, noSetupFee, numberOfServers, server, serverAddons, date]);
 
 
   useEffect(() => {
@@ -364,6 +369,11 @@ function App() {
       <Languages languages={languages} language={language} setLanguage={setLanguage} />
       <VatRates vatRates={vatRates} country={country} setCountry={setCountry} />
       <Servers servers={servers} server={server} setServer={setServer} />
+      <div className="field">
+        <div className="control">
+          <input type="date" className="input is-small" step="1" value={date} required onChange={(event) => event.target.value !== '' ? setDate(event.target.value) : () => { }} />
+        </div>
+      </div>
       <div className="field has-addons">
         <div className="control">
           <label htmlFor="my-input-numberOfServers" className="button is-small">Servers</label>

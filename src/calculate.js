@@ -70,8 +70,8 @@ export function getCalculationData(props) {
   const additionalCalculationData = addonsCalculationData
     .filter((map) => [...map].flat()[1][2])
     .map(map => new Map([...map].map(([item, money]) => [item, [
-      new Money(money[0]).divide(new Date(new Date().getFullYear(), new Date().getMonth() + 1, 0).getDate())
-        .multiply(new Date().getDate() - 1).format(),
+      new Money(money[0]).divide(new Date(new Date(props.date).getFullYear(), new Date(props.date).getMonth() + 1, '0').getDate())
+        .multiply(new Date(props.date).getDate() - 1).format(),
       money[1],
       money[2]
     ]])));
