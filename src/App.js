@@ -183,6 +183,19 @@ function Addons(props) {
       {props.isAddonsStorage ? <AddonSelection label='backup' addons={addonsBackup} handleAddon={props.handleAddon} /> : ''}
       {props.isAddonsMisc ? <AddonSelection label='Plesk' addons={addonsPlesk} handleAddon={props.handleAddon} /> : ''}
       {props.isAddonsMisc ? <AddonSelection label='cPanel' addons={addonsCpanel} handleAddon={props.handleAddon} /> : ''}
+      {props.isAddonsMisc ?
+        <div className="field has-addons">
+          <div className="control">
+            <input className="input is-small" id='aa-a' min="0" step="1" placeholder="Custom addon name" />
+          </div>
+          <div className="control">
+            <input className="input is-small" id='aa-aa' type="number" min="0" step="1" defaultValue="0" />
+          </div>
+          <div className="control">
+            <input className="input is-small" id='aa-ab' type="number" min="0" step="1" defaultValue="0" />
+          </div>
+        </div>
+        : ''}
     </ul>
   );
 }
@@ -345,6 +358,7 @@ function App() {
 
   return (
     <main className="container">
+      <p>Hello!</p>
       <Languages languages={languages} language={language} setLanguage={setLanguage} />
       <VatRates vatRates={vatRates} country={country} setCountry={setCountry} />
       <Servers servers={servers} server={server} setServer={setServer} />
