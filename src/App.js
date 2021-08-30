@@ -205,25 +205,11 @@ function App() {
   const [numberOfServers, setNumberOfServers] = useState(1);
   const [noSetupFee, setNoSetupFee] = useState(false);
   const [location, setLocation] = useState(locations.GERMANY);
-  const [locationSelectable, setLocationSelecatable] = useState(true);
   const [date, setDate] = useState(
     new Date().toISOString().split('T')[0]
   );
-  const [calculationData, setCalculationData] = useState(
-    getCalculationData({
-      language: language,
-      country: country,
-      server: server,
-      serverAddons: serverAddons,
-      numberOfServers: numberOfServers,
-      noSetupFee: noSetupFee,
-      location: location,
-      vatRates: vatRates,
-      date: date,
-      servers: SERVERS,
-      addons: ADDONS
-    })
-  );
+
+  const locationSelectable = !server.startsWith(defaultSbServerPrefix);
 
   function handleAddonSelection(addon, number, addons, addonNo) {
     const serverAddonsWithoutSelectionAddons = new Map([...serverAddons].filter(([addon, _]) => !addons.includes(addon)));
@@ -254,8 +240,8 @@ function App() {
     }
   }
 
-  useEffect(() => {
-    setCalculationData(getCalculationData({
+  function formatCalculationData() {
+    const calculationData = getCalculationData({
       language: language,
       country: country,
       server: server,
@@ -267,15 +253,8 @@ function App() {
       date: date,
       servers: SERVERS,
       addons: ADDONS
-    }));
-  }, [country, language, location, noSetupFee, numberOfServers, server, serverAddons, date]);
-
-
-  useEffect(() => {
-    setLocationSelecatable(server.startsWith(defaultSbServerPrefix));
-  }, [server]);
-
-  function formatCalculationData() {
+    })
+    // return 'ops';
     const calcDataPreformatted = calculationData.calculationData.map(
       map => [...map].flat()
     ).map(([item, money]) => {
@@ -385,11 +364,11 @@ function App() {
       <div className="field">
         <div className="control">
           <label className="radio">
-            <input className="mr-2" type="radio" name="location" checked={location === locations.GERMANY & !locationSelectable} disabled={locationSelectable} onChange={(event) => setLocation(locations.GERMANY)} />
+            <input className="mr-2" type="radio" name="location" checked={location === locations.GERMANY & locationSelectable} disabled={!locationSelectable} onChange={(event) => setLocation(locations.GERMANY)} />
             {locations.GERMANY}
           </label>
           <label className="radio">
-            <input className="mr-2" type="radio" name="location" checked={location === locations.FINLAND & !locationSelectable} disabled={locationSelectable} onChange={(event) => setLocation(locations.FINLAND)} />
+            <input className="mr-2" type="radio" name="location" checked={location === locations.FINLAND & locationSelectable} disabled={!locationSelectable} onChange={(event) => setLocation(locations.FINLAND)} />
             {locations.FINLAND}
           </label>
         </div>
@@ -413,7 +392,7 @@ function App() {
           <Addons addons={addonsNetwork} language={language} handleAddon={handleAddon} />
         </div>
       </div>
-      <Result value={formatCalculationData(calculationData)} />
+      <Result value={formatCalculationData()} />
     </main>
   );
 }
