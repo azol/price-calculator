@@ -424,8 +424,8 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Русский: 'Сервер CPX11'
         },
         location: {
-            Finland: {monthly: 3.49, setup: 0},
-            Germany: {monthly: 3.49, setup: 0}
+            Finland: {monthly: 3.99, setup: 0},
+            Germany: {monthly: 3.99, setup: 0}
         },
         comment: 'CPX11: 2 vCPU/2 GB/40 GB'
     },
@@ -484,8 +484,8 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Русский: 'Сервер CX11'
         },
         location: {
-            Finland: {monthly: 2.49, setup: 0},
-            Germany: {monthly: 2.49, setup: 0}
+            Finland: {monthly: 3.49, setup: 0},
+            Germany: {monthly: 3.49, setup: 0}
         },
         comment: 'CX11: 1 vCPU/2 GB/20 GB'
     },
