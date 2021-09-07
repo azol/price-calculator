@@ -595,7 +595,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 269.90, setup: 0},
             Germany: {monthly: 269.90, setup: 0}
         },
-        comment: 'CCX51: 32 vCPU/128 GB/540 GB'
+        comment: 'CCX51: 32 vCPU/128 GB/600 GB'
     },
     BX10: {
         name: {
