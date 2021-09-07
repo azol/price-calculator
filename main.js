@@ -427,7 +427,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 3.99, setup: 0},
             Germany: {monthly: 3.99, setup: 0}
         },
-        comment: 'CPX11: 2 vCPU/2 GB/40 GB'
+        comment: 'CPX11: 2 AMD vCPU/2 GB/40 GB'
     },
     CPX21: {
         name: {
@@ -439,7 +439,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 6.90, setup: 0},
             Germany: {monthly: 6.90, setup: 0}
         },
-        comment: 'CPX21: 3 vCPU/4 GB/80 GB'
+        comment: 'CPX21: 3 AMD vCPU/4 GB/80 GB'
     },
     CPX31: {
         name: {
@@ -451,7 +451,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 12.40, setup: 0},
             Germany: {monthly: 12.40, setup: 0}
         },
-        comment: 'CPX31: 4 vCPU/8 GB/160 GB'
+        comment: 'CPX31: 4 AMD vCPU/8 GB/160 GB'
     },
     CPX41: {
         name: {
@@ -463,7 +463,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 22.90, setup: 0},
             Germany: {monthly: 22.90, setup: 0}
         },
-        comment: 'CPX41: 8 vCPU/16 GB/240 GB'
+        comment: 'CPX41: 8 AMD vCPU/16 GB/240 GB'
     },
     CPX51: {
         name: {
@@ -475,7 +475,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 49.90, setup: 0},
             Germany: {monthly: 49.90, setup: 0}
         },
-        comment: 'CPX51: 16 vCPU/32 GB/360 GB'
+        comment: 'CPX51: 16 AMD vCPU/32 GB/360 GB'
     },
     CX11: {
         name: {
@@ -487,7 +487,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 3.49, setup: 0},
             Germany: {monthly: 3.49, setup: 0}
         },
-        comment: 'CX11: 1 vCPU/2 GB/20 GB'
+        comment: 'CX11: 1 Intel vCPU/2 GB/20 GB'
     },
     CX21: {
         name: {
@@ -499,7 +499,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 4.90, setup: 0},
             Germany: {monthly: 4.90, setup: 0}
         },
-        comment: 'CX21: 2 vCPU/4 GB/40 GB'
+        comment: 'CX21: 2 Intel vCPU/4 GB/40 GB'
     },
     CX31: {
         name: {
@@ -511,7 +511,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 8.90, setup: 0},
             Germany: {monthly: 8.90, setup: 0}
         },
-        comment: 'CX31: 2 vCPU/8 GB/80 GB'
+        comment: 'CX31: 2 Intel vCPU/8 GB/80 GB'
     },
     CX41: {
         name: {
@@ -523,7 +523,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 15.90, setup: 0},
             Germany: {monthly: 15.90, setup: 0}
         },
-        comment: 'CX41: 4 vCPU/16 GB/160 GB'
+        comment: 'CX41: 4 Intel vCPU/16 GB/160 GB'
     },
     CX51: {
         name: {
@@ -535,7 +535,79 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 29.90, setup: 0},
             Germany: {monthly: 29.90, setup: 0}
         },
-        comment: 'CX51: 8 vCPU/32 GB/240 GB'
+        comment: 'CX51: 8 Intel vCPU/32 GB/240 GB'
+    },
+    CCX12: {
+      name: {
+          English: 'Server CCX12',
+          Deutsch: 'Server CCX12',
+          Русский: 'Сервер CCX12'
+      },
+      location: {
+          Finland: {monthly: 19.90, setup: 0},
+          Germany: {monthly: 19.90, setup: 0}
+      },
+      comment: 'CCX12: 2 AMD vCPU/8 GB/80 GB'
+    },
+    CCX22: {
+      name: {
+          English: 'Server CCX22',
+          Deutsch: 'Server CCX22',
+          Русский: 'Сервер CCX22'
+      },
+      location: {
+          Finland: {monthly: 34.90, setup: 0},
+          Germany: {monthly: 34.90, setup: 0}
+      },
+      comment: 'CCX22: 4 AMD vCPU/16 GB/160 GB'
+    },
+    CCX32: {
+        name: {
+            English: 'Server CCX32',
+            Deutsch: 'Server CCX32',
+            Русский: 'Сервер CCX32'
+        },
+        location: {
+            Finland: {monthly: 69.90, setup: 0},
+            Germany: {monthly: 69.90, setup: 0}
+        },
+        comment: 'CCX32: 8 AMD vCPU/32 GB/240 GB'
+    },
+    CCX42: {
+        name: {
+            English: 'Server CCX42',
+            Deutsch: 'Server CCX42',
+            Русский: 'Сервер CCX42'
+        },
+        location: {
+            Finland: {monthly: 139.90, setup: 0},
+            Germany: {monthly: 139.90, setup: 0}
+        },
+        comment: 'CCX42: 16 AMD vCPU/64 GB/360 GB'
+    },
+    CCX52: {
+        name: {
+            English: 'Server CCX52',
+            Deutsch: 'Server CCX52',
+            Русский: 'Сервер CCX52'
+        },
+        location: {
+            Finland: {monthly: 269.90, setup: 0},
+            Germany: {monthly: 269.90, setup: 0}
+        },
+        comment: 'CCX52: 32 AMD vCPU/128 GB/600 GB'
+    },
+    CCX62: {
+      name: {
+          English: 'Server CCX62',
+          Deutsch: 'Server CCX62',
+          Русский: 'Сервер CCX62'
+      },
+      location: {
+          Finland: {monthly: 399.90, setup: 0},
+          Germany: {monthly: 399.90, setup: 0}
+      },
+      comment: 'CCX62: 48 AMD vCPU/192 GB/960 GB'
     },
     CCX11: {
         name: {
@@ -547,7 +619,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 19.90, setup: 0},
             Germany: {monthly: 19.90, setup: 0}
         },
-        comment: 'CCX11: 2 vCPU/8 GB/80 GB'
+        comment: 'CCX11: 2 Intel vCPU/8 GB/80 GB'
     },
     CCX21: {
         name: {
@@ -559,7 +631,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 34.90, setup: 0},
             Germany: {monthly: 34.90, setup: 0}
         },
-        comment: 'CCX21: 4 vCPU/16 GB/160 GB'
+        comment: 'CCX21: 4 Intel vCPU/16 GB/160 GB'
     },
     CCX31: {
         name: {
@@ -571,7 +643,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 69.90, setup: 0},
             Germany: {monthly: 69.90, setup: 0}
         },
-        comment: 'CCX31: 8 vCPU/32 GB/240 GB'
+        comment: 'CCX31: 8 Intel vCPU/32 GB/240 GB'
     },
     CCX41: {
         name: {
@@ -583,7 +655,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 139.90, setup: 0},
             Germany: {monthly: 139.90, setup: 0}
         },
-        comment: 'CCX41: 16 vCPU/64 GB/360 GB'
+        comment: 'CCX41: 16 Intel vCPU/64 GB/360 GB'
     },
     CCX51: {
         name: {
@@ -595,7 +667,7 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
             Finland: {monthly: 269.90, setup: 0},
             Germany: {monthly: 269.90, setup: 0}
         },
-        comment: 'CCX51: 32 vCPU/128 GB/540 GB'
+        comment: 'CCX51: 32 Intel vCPU/128 GB/600 GB'
     },
     BX10: {
         name: {
