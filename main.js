@@ -537,6 +537,78 @@ R640 DX292: max 768 GB RAM DDR4 (22x 32GB)"
         },
         comment: 'CX51: 8 vCPU/32 GB/240 GB'
     },
+    CCX12: {
+      name: {
+          English: 'Server CCX12',
+          Deutsch: 'Server CCX12',
+          Русский: 'Сервер CCX12'
+      },
+      location: {
+          Finland: {monthly: 19.90, setup: 0},
+          Germany: {monthly: 19.90, setup: 0}
+      },
+      comment: 'CCX12: 2 AMD vCPU/8 GB/80 GB'
+    },
+    CCX22: {
+      name: {
+          English: 'Server CCX22',
+          Deutsch: 'Server CCX22',
+          Русский: 'Сервер CCX22'
+      },
+      location: {
+          Finland: {monthly: 34.90, setup: 0},
+          Germany: {monthly: 34.90, setup: 0}
+      },
+      comment: 'CCX22: 4 AMD vCPU/16 GB/160 GB'
+    },
+    CCX32: {
+        name: {
+            English: 'Server CCX32',
+            Deutsch: 'Server CCX32',
+            Русский: 'Сервер CCX32'
+        },
+        location: {
+            Finland: {monthly: 69.90, setup: 0},
+            Germany: {monthly: 69.90, setup: 0}
+        },
+        comment: 'CCX32: 8 AMD vCPU/32 GB/240 GB'
+    },
+    CCX42: {
+        name: {
+            English: 'Server CCX42',
+            Deutsch: 'Server CCX42',
+            Русский: 'Сервер CCX42'
+        },
+        location: {
+            Finland: {monthly: 139.90, setup: 0},
+            Germany: {monthly: 139.90, setup: 0}
+        },
+        comment: 'CCX42: 16 AMD vCPU/64 GB/360 GB'
+    },
+    CCX52: {
+        name: {
+            English: 'Server CCX52',
+            Deutsch: 'Server CCX52',
+            Русский: 'Сервер CCX52'
+        },
+        location: {
+            Finland: {monthly: 269.90, setup: 0},
+            Germany: {monthly: 269.90, setup: 0}
+        },
+        comment: 'CCX52: 32 AMD vCPU/128 GB/600 GB'
+    },
+    CCX62: {
+      name: {
+          English: 'Server CCX62',
+          Deutsch: 'Server CCX62',
+          Русский: 'Сервер CCX62'
+      },
+      location: {
+          Finland: {monthly: 399.90, setup: 0},
+          Germany: {monthly: 399.90, setup: 0}
+      },
+      comment: 'CCX62: 48 AMD vCPU/192 GB/960 GB'
+    },
     CCX11: {
         name: {
             English: 'Server CCX11',
