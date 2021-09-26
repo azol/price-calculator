@@ -1821,23 +1821,11 @@ $(document).foundation();
  * Init application.
  */
 function onLoad() {
-    //workspace.setLanguage('English');
-    //updateDate();
-    //updateCalculationResult();
-//        serverItems.clear();
-//        addonItems.clear();
-//        additionalPaymentItems.clear();
-//        serverCommentItems.clear();
-//        addonCommentItems.clear();
 
 
     workspace.Servers[workspace.currentServer] = new Server("SB");
     prepareWorkspace();
-    //workspace.copyCurrentServerTab();
-
-    // loadTestServers();
     updateCalculationResult();
-    //$(document).foundation('tab', 'reflow');
     onChange();
 }
 
@@ -1858,17 +1846,6 @@ function loadTestServers() {
 
     onChange();
 }
-
-/**
- * Updates Date input field to todays date.
- */
-// function updateDate() {
-//     var today = new Date();
-//     document.getElementById('ordering_date').value =
-//         today.getFullYear() + '/' +
-//         (today.getMonth() + 1) + '/' +
-//         today.getDate();
-// }
 
 /**
  * Called each time we change something in the form.
@@ -1962,8 +1939,6 @@ function prepareWorkspace() {
     workspace.setLanguage('English');
     workspace.setVatPercentageByCountry('All others (no VAT)');
 
-    // updateDate();
-    //updateCalculationResult();
 
 
 }
@@ -2119,9 +2094,6 @@ Workspace.prototype = {
             workspace.createNewTab();
         }
 
-//            var tab;
-//            tab = document.getElementById('panel-' + serverToRemoveIndex);
-//            tab.parentNode.parentNode.removeChild(tab.parentNode);
 
         var panel;
         panel = document.getElementById('panel-' + serverToRemoveIndex);
@@ -2210,7 +2182,6 @@ Workspace.prototype = {
         var newElementNumber = (this.Servers.length === 0) ? 1 : this.Servers.length;
 
         //deactivate currently active elements
-        //this.removeClass(document.getElementsByClassName('active')[0], 'active');
         this.dropActiveClass();
 
         var newLiElement = document.createElement('li');
@@ -2225,15 +2196,12 @@ Workspace.prototype = {
 
         this.Servers[newElementNumber] = this.Servers[this.currentServer];
         this.currentServer = newElementNumber;
-        //$(document).foundation('tab', 'reflow');
 
         var ttt = {};
-        //new Object();
         ttt.id = "panel-" + this.currentServer;
         this.loadData(ttt);
         $(document).foundation('tab', 'reflow');
 
-        //updateCalculationResult();
     },
     loadData: function(arg) {
         this.currentServer = parseInt(arg.id.replace("panel-", ""));
