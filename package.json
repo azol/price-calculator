@@ -12,5 +12,8 @@
     "gulp-sass": "^4.0.2",
     "htmlmin": "0.0.7",
     "jshint": "^2.10.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
