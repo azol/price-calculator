@@ -19,7 +19,7 @@
   </head>
   <style>
     .no-js form {
-        display: none;
+      display: none;
     }
   </style>
   <body onload="onLoad()">
@@ -30,14 +30,12 @@
       </div>
     </noscript>
     <form onchange="onChange()" autocomplete="off">
-      <div class="grid-x">
+      <div class="grid-x grid-padding-x">
         <div class="large-3 cell">
-          <div class="grid-x collapse prefix-radius">
-            <div class="medium-6 cell">
-              <label class="prefix">Language:</label>
-            </div>
+          <div class="input-group">
+            <label class="input-group-label">Language:</label>
             <select
-              class="medium-6 cell"
+              class="input-group-field"
               id="select_languages"
               onChange="workspace.setLanguage(this.value)"
             >
@@ -48,13 +46,11 @@
           </div>
         </div>
         <div class="large-3 cell">
-          <div class="grid-x collapse prefix-radius">
-            <div class="medium-3 cell">
-              <label class="medium-3 cell prefix">VAT:</label>
-            </div>
+          <div class="input-group">
+            <label class="input-group-label">VAT:</label>
             <select
+              class="input-group-field"
               id="select_country"
-              class="medium-9 cell"
               onChange="workspace.setVatPercentageByCountry(this.value)"
             >
               <option>All others (no VAT)</option>
@@ -96,13 +92,14 @@
           </div>
         </div>
         <div class="large-3 cell">
-          <div class="grid-x collapse prefix-radius">
-            <div class="medium-4 cell">
-              <label class="prefix">Date:</label>
-            </div>
-            <div class="medium-8 cell">
-              <input type="text" id="ordering_date" value="today" />
-            </div>
+          <div class="input-group">
+            <label class="input-group-label">Date:</label>
+            <input
+              class="input-group-field"
+              type="text"
+              id="ordering_date"
+              value="today"
+            />
           </div>
         </div>
         <div class="large-3 cell">
@@ -121,39 +118,26 @@
       </div>
 
       <div class="grid-x">
-        <div class="text-center">
-          <div class="button-bar">
-            <ul class="button-group round">
-              <li>
-                <a
-                  href="#"
-                  class="tiny button success"
-                  onclick="workspace.createNewTab()"
-                  id="new"
-                  >Add Tab</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="tiny button success"
-                  onclick="workspace.copyCurrentServerTab()"
-                  id="cp"
-                  >Copy Tab</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="tiny button success"
-                  onclick="workspace.deleteCurrentTab()"
-                  id="close"
-                  >Close Tab</a
-                >
-              </li>
-            </ul>
-          </div>
+        <div class="button-group small align-center round">
+          <a href="#" class="button" onclick="workspace.createNewTab()" id="new"
+            >Add Tab</a
+          >
+          <a
+            href="#"
+            class="button"
+            onclick="workspace.copyCurrentServerTab()"
+            id="cp"
+            >Copy Tab</a
+          >
+          <a
+            href="#"
+            class="button"
+            onclick="workspace.deleteCurrentTab()"
+            id="close"
+            >Close Tab</a
+          >
         </div>
+
         <ul class="tabs" data-tab>
           <li class="tab-title active">
             <a href="#panel-1" onclick="workspace.loadData(this)" id="panel-1"
@@ -1156,13 +1140,16 @@
         <div class="large-1 cell">
           <div class="switch tiny radius">
             <input
+              class="switch-input"
               id="new_format_output"
               type="checkbox"
               onchange="workspace.setNewOutputFormat(this.checked)"
             />
-            <label for="new_format_output">Style</label>
+            <label class="switch-paddle" for="new_format_output">
+              <span class="show-for-sr">Style</span>
+            </label>
           </div>
-          <label for="new_format_output">Style</label>
+          <!-- <label for="new_format_output">Style</label> -->
         </div>
         <div class="large-11 cell">
           <textarea id="output" readonly>calculation output</textarea>

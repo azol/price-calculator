@@ -1,6 +1,6 @@
 #  Styles
 
-## Exists id 6
+## Exists in 6
 
     button-group
     large-1
@@ -32,16 +32,16 @@
     button
     success ???
 
-## Not in 6
+## In 5
 
 button-bar
 round
-columns
+columns -> cell
 prefix
 postfix
-panel
+panel -> remove (no JS)
 radius
-row
+row -> grid-x
 collapse
 postfix-radius
 prefix-radius
