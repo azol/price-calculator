@@ -1,858 +1,1194 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAALAAAADwAAAAwAAAAOAAAADgAAAAwAAAAQAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAABEAAAAVwAAAFYAAABWAAAAVgAAAFYAAABWAAAAUAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAuAAAALoAAADQAAAAvQAAAMcAAADHAAAAvQAAAMoAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALkAAACOAAAAvAAAAJcAAACsAAAArAAAAJcAAADAAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC5AAAAigAAALkAAACTAAAAqAAAAKgAAACSAAAAvgAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvAAAAKEAAADHAAAApwAAALkAAAC5AAAApwAAAMcAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALoAAACQAAAAvQAAAJgAAACtAAAArQAAAJgAAADBAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC4AAAAhwAAALgAAACQAAAApgAAAKcAAACQAAAAvQAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAxgAAANoAAADoAAAA2wAAAN4AAADTAAAAzAAAANkAAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAM0AAAD/AAAA/wAAAP8AAADqAAAAsgAAALQAAADRAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAADKAAAA2gAAAM0AAADNAAAAzQAAAMsAAADPAAAA5QAAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvgAAAEEAAAAMAAAADwAAAA8AAAAOAAAAHwAAAMAAAAA1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAMcAAAC1AAAAngAAAJ8AAACfAAAAngAAAKYAAADcAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAACSAAAAugAAALkAAAC5AAAAuQAAALkAAAC5AAAAqgAAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAABAAAAAAAAAAAAAAAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAA==">
-  <title>Price Calculator</title>
-  <link rel="stylesheet" href=".tmp/css/app.css" inline>
-  <script src="changes.js" inline></script>
-</head>
-<body onload="onLoad()">
-  <noscript>
-    <div class="panel callout radius text-center">
-      <h1>JavaScript</h1>
-      <p>Your browser does not support JavaScript!</p>
-    </div>
-  </noscript>
-  <form onchange="onChange()" autocomplete="off">
-
-    <div class="row">
-      <div class="large-3 columns">
-        <div class="row collapse prefix-radius">
-          <div class="medium-6 columns">
-            <label class="prefix">Language:</label>
-          </div>
-          <select class="medium-6 columns" id="select_languages" onChange="workspace.setLanguage(this.value)">
-            <option>English</option>
-            <option>Deutsch</option>
-            <option>Русский</option>
-          </select>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAALAAAADwAAAAwAAAAOAAAADgAAAAwAAAAQAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAABEAAAAVwAAAFYAAABWAAAAVgAAAFYAAABWAAAAUAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAuAAAALoAAADQAAAAvQAAAMcAAADHAAAAvQAAAMoAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALkAAACOAAAAvAAAAJcAAACsAAAArAAAAJcAAADAAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC5AAAAigAAALkAAACTAAAAqAAAAKgAAACSAAAAvgAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvAAAAKEAAADHAAAApwAAALkAAAC5AAAApwAAAMcAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALoAAACQAAAAvQAAAJgAAACtAAAArQAAAJgAAADBAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC4AAAAhwAAALgAAACQAAAApgAAAKcAAACQAAAAvQAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAxgAAANoAAADoAAAA2wAAAN4AAADTAAAAzAAAANkAAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAM0AAAD/AAAA/wAAAP8AAADqAAAAsgAAALQAAADRAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAADKAAAA2gAAAM0AAADNAAAAzQAAAMsAAADPAAAA5QAAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvgAAAEEAAAAMAAAADwAAAA8AAAAOAAAAHwAAAMAAAAA1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAMcAAAC1AAAAngAAAJ8AAACfAAAAngAAAKYAAADcAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAACSAAAAugAAALkAAAC5AAAAuQAAALkAAAC5AAAAqgAAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAABAAAAAAAAAAAAAAAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAA=="
+    />
+    <title>Price Calculator</title>
+    <link rel="stylesheet" href=".tmp/css/app.css" inline />
+    <script src="changes.js" inline></script>
+  </head>
+  <body onload="onLoad()">
+    <noscript>
+      <div class="callout primary radius text-center">
+        <h1>JavaScript</h1>
+        <p>Your browser does not support JavaScript!</p>
       </div>
-      <div class="large-3 columns">
-        <div class="row collapse prefix-radius">
-          <div class="medium-3 columns">
-            <label class="medium-3 columns prefix">VAT:</label>
-          </div>
-          <select id="select_country" class="medium-9 columns" onChange="workspace.setVatPercentageByCountry(this.value)">
-            <option>All others (no VAT)</option>
-            <option>Russia</option>
-            <option>Germany</option>
-            <option disabled>-------------------</option>
-            <option>Austria</option>
-            <option>Belgium</option>
-            <option>Bulgaria</option>
-            <option>Cyprus</option>
-            <option>Croatia</option>
-            <option>Czech Republic</option>
-            <option>Denmark</option>
-            <option>Estonia</option>
-            <option>Finland</option>
-            <option>France</option>
-            <option>Greece</option>
-            <option>Hungary</option>
-            <option>Ireland</option>
-            <option>Italy</option>
-            <option>Latvia</option>
-            <option>Lithuania</option>
-            <option>Luxembourg</option>
-            <option>Malta</option>
-            <option>The Netherlands</option>
-            <option>Norway</option>
-            <option>Poland</option>
-            <option>Portugal</option>
-            <option>Republic of Belarus</option>
-            <option>Republic of Singapore</option>
-            <option>Romania</option>
-            <option>Slovakia</option>
-            <option>Slovenia</option>
-            <option>Spain</option>
-            <option>Sweden</option>
-            <option>Switzerland</option>
-            <option>UK</option>
-          </select>
-        </div>
-      </div>
-      <div class="large-3 columns">
-        <div class="row collapse prefix-radius">
-          <div class="medium-4 columns">
-            <label class="prefix">Date:</label>
-          </div>
-          <div class="medium-8 columns">
-            <input type="text" id="ordering_date" value="today">
-          </div>
-        </div>
-      </div>
-      <div class="large-3 columns">
-        <div id="releaseInfo">
-          <a href="#">Release date:&nbsp;<script>document.write(releaseDate)</script></a>
-          <script>
-            document.getElementById("releaseInfo").title=recentChanges;
-          </script>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="text-center">
-        <div class="button-bar">
-          <ul class="button-group round">
-            <li><a href="#" class="tiny button success" onclick="workspace.createNewTab()" id="new">Add Tab</a></li>
-            <li><a href="#" class="tiny button success" onclick="workspace.copyCurrentServerTab()" id="cp">Copy Tab</a></li>
-            <li><a href="#" class="tiny button success" onclick="workspace.deleteCurrentTab()" id="close">Close Tab</a></li>
-          </ul>
-        </div>
-      </div>
-      <ul class="tabs" data-tab>
-        <li class="tab-title active">
-          <a href="#panel-1" onclick="workspace.loadData(this)" id="panel-1">SB0</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="row">
-      <div class="large-4 columns">
-
-        <div class="row">
-          <div class="large-8 columns">
-            <div class="row collapse prefix-radius">
-              <div class="small-4 columns">
-                <label class="prefix">Server:</label>
-              </div>
-              <select id="select_servers" class="small-8 columns">
-                <option>SB</option>
-                <option disabled>-------------------</option>
-                <option>AX41</option>
-                <option>AX41NVMe</option>
-                <option>AX51</option>
-                <option>AX51NVMe</option>
-                <option>AX61NVMe</option>
-                <option>AX101</option>
-                <option>AX161</option>
-                <option disabled>-------------------</option>
-                <option>EX42</option>
-                <option>EX42NVMe</option>
-                <option>EX52</option>
-                <option>EX52NVMe</option>
-                <option>EX62</option>
-                <option>EX62NVMe</option>
-                <option disabled>-------------------</option>
-                <option>PX62</option>
-                <option>PX62NVMe</option>
-                <option>PX93</option>
-                <option disabled>-------------------</option>
-                <option>SX64</option>
-                <option>SX134</option>
-                <option>SX294</option>
-                <option disabled>-------------------</option>
-                <option>DX152</option>
-                <option>DX181</option>
-                <option>DX292</option>
-                <option disabled>-------------------</option>
-                <option>COLOCATION_1_3</option>
-                <option>COLOCATION_BASIC</option>
-                <option>COLOCATION_ADVANCED</option>
-                <option disabled>-------------------</option>
-                <option>CX11</option>
-                <option>CX21</option>
-                <option>CX31</option>
-                <option>CX41</option>
-                <option>CX51</option>
-                <option>CCX11</option>
-                <option>CCX21</option>
-                <option>CCX31</option>
-                <option>CCX41</option>
-                <option>CCX51</option>
-                <option>CCX12</option>
-                <option>CCX22</option>
-                <option>CCX32</option>
-                <option>CCX42</option>
-                <option>CCX52</option>
-                <option>CCX62</option>
-                <option>CPX11</option>
-                <option>CPX21</option>
-                <option>CPX31</option>
-                <option>CPX41</option>
-                <option>CPX51</option>
-                <option disabled>-------------------</option>
-                <option>BX10</option>
-                <option>BX20</option>
-                <option>BX30</option>
-                <option>BX40</option>
-                <option>BX50</option>
-                <option>BX60</option>
-              </select>
-            </div>
-          </div>
-          <div class="large-4 columns">
-            <div class="row collapse prefix-radius">
-              <div class="small-6 columns">
-                <label class="prefix">SB:</label>
-              </div>
-              <div class="small-6 columns">
-                <input type="number" min="0" placeholder="0" id="sb_number">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="row collapse prefix-radius">
-              <div class="small-10 columns">
-                <label class="prefix">Number of Servers:</label>
-              </div>
-              <div class="small-2 columns">
-                <input type="number" min="1" placeholder="1" id="number_of_servers">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="row collapse prefix-radius">
-              <div class="small-4 columns">
-                <label>
-                  <input type="radio" name="loc" disabled value="Germany">
-                  Germany
-                </label>
-              </div>
-              <div class="small-4 columns">
-                <label>
-                  <input type="radio" name="loc" disabled value="Finland">
-                  Finland
-                </label>
-              </div>
-              <div class="small-4 columns">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <fieldset>
-          <legend>Server Options</legend>
-          <input type="checkbox" id="no_setup_fee" onchange="updateNoSetupFee(document.getElementById('select_servers').value, this.checked)"><label for="no_setup_fee">No Setup Fee</label>
-        </fieldset>
-
-        <fieldset>
-          <legend>Addons</legend>
-          <input type="checkbox" id="win_std_8cores"><label for="win_std_8cores">win_std_8cores</label><br>
-          <input type="checkbox" id="win_dc_8cores"><label for="win_dc_8cores">win_dc_8cores</label><br>
-          <input type="checkbox" id="win_std_12cores"><label for="win_std_12cores">win_std_12cores</label><br>
-          <input type="checkbox" id="win_dc_12cores"><label for="win_dc_12cores">win_dc_12cores</label><br>
-          <input type="checkbox" id="win_std_10cores"><label for="win_std_10cores">win_std_10cores</label><br>
-          <input type="checkbox" id="win_dc_10cores"><label for="win_dc_10cores">win_dc_10cores</label><br>
-          <input type="checkbox" id="win_std_16cores"><label for="win_std_16cores">win_std_16cores</label><br>
-          <input type="checkbox" id="win_dc_16cores"><label for="win_dc_16cores">win_dc_16cores</label><br>
-          <input type="checkbox" id="win_std_18cores"><label for="win_std_18cores">win_std_18cores</label><br>
-          <input type="checkbox" id="win_dc_18cores"><label for="win_dc_18cores">win_dc_18cores</label><br>
-          <input type="checkbox" id="win_std_24cores"><label for="win_std_24cores">win_std_24cores</label><br>
-          <input type="checkbox" id="win_dc_24cores"><label for="win_dc_24cores">win_dc_24cores</label><br>
-          <input type="checkbox" id="win_std_32cores"><label for="win_std_32cores">win_std_32cores</label><br>
-          <input type="checkbox" id="win_dc_32cores"><label for="win_dc_32cores">win_dc_32cores</label><br>
-          <div class="row collapse postfix-radius">
-            <div class="small-2 columns">
-              <input type="number" min="0" placeholder="0" id="rdp_license" />
-            </div>
-            <div class="small-10 columns">
-              <label class="postfix" for="rdp_license">rdp_license</label>
-            </div>
-          </div>
-          <div class="row collapse postfix-radius">
-            <div class="small-4 columns">
-              <select id="select_plesk">
-                <option>no</option>
-                <option>web_admin</option>
-                <option>web_pro</option>
-                <option>web_host</option>
-              </select>
-            </div>
-            <div class="small-8 columns">
-              <label class="postfix">Plesk Panel</label>
-            </div>
-          </div>
-          <input type="checkbox" id="plesk_power_pack"><label for="plesk_power_pack">plesk_power_pack</label><br>
-          <div class="row collapse postfix-radius">
-            <div class="small-4 columns">
-              <select id="select_cpanel">
-                <option>no</option>
-                <option>100</option>
-                <option>150</option>
-                <option>200</option>
-                <option>250</option>
-                <option>300</option>
-                <option>350</option>
-                <option>400</option>
-                <option>450</option>
-                <option>500</option>
-                <option>600</option>
-                <option>700</option>
-                <option>800</option>
-                <option>900</option>
-                <option>1000</option>
-                <option>1500</option>
-                <option>2000</option>
-                <option>2500</option>
-              </select>
-            </div>
-            <div class="small-8 columns">
-              <label class="postfix">cPanel</label>
-            </div>
-          </div>
-          <input type="checkbox" id="raid4"><label for="raid4">raid4</label><br>
-          <input type="checkbox" id="raid16"><label for="raid16">raid16</label><br>
-          <input type="checkbox" id="bbu"><label for="bbu">bbu</label><br>
-          <input type="checkbox" id="uplink_10_gbit"><label for="uplink_10_gbit">uplink_10_gbit</label><br>
-          <input type="checkbox" id="hdmi_emulator"><label for="hdmi_emulator">hdmi_emulator</label><br>
-          <input type="checkbox" id="ecc_ram_upgrade"><label for="ecc_ram_upgrade">ecc_ram_upgrade</label><br>
-          <input type="checkbox" id="ram_upgrade_64_to_128"><label for="ram_upgrade_64_to_128">ram_upgrade_64_to_128</label><br>
-          <input type="checkbox" id="ram_upgrade_64_to_128_ecc"><label for="ram_upgrade_64_to_128_ecc">ram_upgrade_64_to_128_ecc</label><br>
-
-          <div class="row collapse postfix-radius">
-            <div class="small-2 columns">
-              <input type="number" min="0" placeholder="0" id="remote_hands" />
-            </div>
-            <div class="small-10 columns">
-              <label class="postfix" for="remote_hands">remote_hands</label>
-            </div>
-          </div>
-
-          <input type="checkbox" id="server_move"><label for="server_move">server_move</label><br>
-          <input type="checkbox" id="server_move_dell"><label for="server_move_dell">server_move_dell</label><br>
-          <input type="checkbox" id="server_rebuild_and_move"><label for="server_rebuild_and_move">server_rebuild_and_move</label><br>
-          <input type="checkbox" id="replace_ram"><label for="replace_ram">replace_ram</label><br>
-          <input type="checkbox" id="replace_hardware_part"><label for="replace_hardware_part">replace_hardware_part</label><br>
-          <input type="checkbox" id="replace_entire_server"><label for="replace_entire_server">replace_entire_server</label><br>
-          <input type="checkbox" id="gigabit_optic_sfp"><label for="gigabit_optic_sfp">gigabit_optic_sfp</label><br>
-          <input type="checkbox" id="ten_gigabit_optic_sfp_plus"><label for="ten_gigabit_optic_sfp_plus">ten_gigabit_optic_sfp_plus</label>
-        </fieldset>
-        <div class="row collapse postfix-radius">
-          <div class="small-6 columns">
-            <input type="text" id="custom_addon" placeholder="Custom addon name">
-          </div>
-          <div class="small-3 columns">
-            <input type="number" min="0" placeholder="Setup" id="custom_addon_setup_price">
-          </div>
-          <div class="small-3 columns">
-            <input type="number" min="0" placeholder="Monthly" id="custom_addon_monthly_price">
-          </div>
-        </div>
-      </div>
-      <div class="large-4 columns">
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="sata2000e">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="sata2000e">sata2000e</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="sata6000e">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="sata6000e">sata6000e</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="sata12000e">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="sata12000e">sata12000e</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="sata16000e">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="sata16000e">sata16000e</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ssd1000">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ssd1000">ssd1000</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ssd480de">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ssd480de">ssd480de</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ssd960de">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ssd960de">ssd960de</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ssd1920_de">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ssd1920_de">ssd1920_de</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ssd3840de">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ssd3840de">ssd3840de</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="nvme512">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="nvme512">nvme512</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="nvme1000">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="nvme1000">nvme1000</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="nvme2000">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="nvme2000">nvme2000</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="nvme960de">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="nvme960de">nvme960de</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="nvme1920de">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="nvme1920de">nvme1920de</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="nvme3840de">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="nvme3840de">nvme3840de</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="nvme480_3d_xpoint">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="nvme480_3d_xpoint">nvme480_3d_xpoint</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="sas600">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="sas600" data-addtext="old DX">sas600</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="usb16">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="usb16">usb16</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="usb64">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="usb64">usb64</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ddr4ecc32gb">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ddr4ecc32gb">ddr4ecc32gb</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ddr4ecc64gb">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ddr4ecc64gb">ddr4ecc64gb</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <select id="select_backup">
-              <option>no</option>
-              <option>100</option>
-              <option>500</option>
-              <option>1000</option>
-              <option>2000</option>
-              <option>5000</option>
-              <option>10000</option>
+    </noscript>
+    <form onchange="onChange()" autocomplete="off">
+      <div class="grid-x grid-margin-x">
+        <div class="large-3 cell">
+          <div class="input-group">
+            <label class="input-group-label">Language:</label>
+            <select
+              class="input-group-field"
+              id="select_languages"
+              onChange="workspace.setLanguage(this.value)"
+            >
+              <option>English</option>
+              <option>Deutsch</option>
+              <option>Русский</option>
             </select>
           </div>
-          <div class="small-10 columns">
-            <label class="postfix">Backup Space</label>
+        </div>
+        <div class="large-3 cell">
+          <div class="input-group">
+            <label class="input-group-label">VAT:</label>
+            <select
+              class="input-group-field"
+              id="select_country"
+              onChange="workspace.setVatPercentageByCountry(this.value)"
+            >
+              <option>All others (no VAT)</option>
+              <option>Russia</option>
+              <option>Germany</option>
+              <option disabled>-------------------</option>
+              <option>Austria</option>
+              <option>Belgium</option>
+              <option>Bulgaria</option>
+              <option>Cyprus</option>
+              <option>Croatia</option>
+              <option>Czech Republic</option>
+              <option>Denmark</option>
+              <option>Estonia</option>
+              <option>Finland</option>
+              <option>France</option>
+              <option>Greece</option>
+              <option>Hungary</option>
+              <option>Ireland</option>
+              <option>Italy</option>
+              <option>Latvia</option>
+              <option>Lithuania</option>
+              <option>Luxembourg</option>
+              <option>Malta</option>
+              <option>The Netherlands</option>
+              <option>Norway</option>
+              <option>Poland</option>
+              <option>Portugal</option>
+              <option>Republic of Belarus</option>
+              <option>Republic of Singapore</option>
+              <option>Romania</option>
+              <option>Slovakia</option>
+              <option>Slovenia</option>
+              <option>Spain</option>
+              <option>Sweden</option>
+              <option>Switzerland</option>
+              <option>UK</option>
+            </select>
           </div>
         </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="block_storage_volume">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="block_storage_volume">block_storage_volume</label>
-          </div>
-        </div>
-      </div>
-      <div class="large-4 columns">
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ip">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ip">ip</label>
+        <div class="large-3 cell">
+          <div class="input-group">
+            <label class="input-group-label">Date:</label>
+            <input
+              class="input-group-field"
+              type="text"
+              id="ordering_date"
+              value="today"
+            />
           </div>
         </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="subnet29">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="subnet29" data-addtext="6 IPs">subnet29</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="subnet28">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="subnet28" data-addtext="14 IPs">subnet28</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="subnet27">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="subnet27" data-addtext="30 IPs">subnet27</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="subnet26">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="subnet26" data-addtext="62 IPs">subnet26</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="subnet25">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="subnet25" data-addtext="126 IPs">subnet25</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="subnet24">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="subnet24" data-addtext="254 IPs">subnet24</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="failover_ip">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="failover_ip">failover_ip</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="failover_subnet29">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="failover_subnet29" data-addtext="6 IPs">failover_subnet29</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="failover_subnet28">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="failover_subnet28" data-addtext="14 IPs">failover_subnet28</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="failover_subnet27">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="failover_subnet27" data-addtext="30 IPs">failover_subnet27</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="failover_subnet26">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="failover_subnet26" data-addtext="62 IPs">failover_subnet26</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="failover_subnet25">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="failover_subnet25" data-addtext="126 IPs">failover_subnet25</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="failover_subnet24">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="failover_subnet24" data-addtext="254 IPs">failover_subnet24</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="vlan_subnet29">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="vlan_subnet29" data-addtext="5 IPs">vlan_subnet29</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="vlan_subnet28">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="vlan_subnet28" data-addtext="13 IPs">vlan_subnet28</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="vlan_subnet27">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="vlan_subnet27" data-addtext="29 IPs">vlan_subnet27</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="vlan_subnet26">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="vlan_subnet26" data-addtext="61 IP">vlan_subnet26</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="vlan_subnet25">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="vlan_subnet25" data-addtext="125 IPs">vlan_subnet25</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="vlan_subnet24">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="vlan_subnet24" data-addtext="253 IPs">vlan_subnet24</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="gbit_lan">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="gbit_lan">gbit_lan</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ten_gbit_lan">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ten_gbit_lan">ten_gbit_lan</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="gbit_nic">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="gbit_nic">gbit_nic</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="gbit_dual_nic">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="gbit_dual_nic">gbit_dual_nic</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ten_gbit_nic">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ten_gbit_nic">ten_gbit_nic</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ten_gbit_dual_nic_x520">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ten_gbit_dual_nic_x520">ten_gbit_dual_nic_x520</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ten_gbit_dual_nic_x710">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ten_gbit_dual_nic_x710">ten_gbit_dual_nic_x710</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="ten_gbit_dual_nic_dell">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="ten_gbit_dual_nic_dell">ten_gbit_dual_nic_dell</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="switch_5port">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="switch_5port">switch_5port</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="switch_8port">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="switch_8port">switch_8port</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="switch_24port">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="switch_24port">switch_24port</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="switch_48port">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="switch_48port">switch_48port</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="switch_12port_10gbit">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="switch_12port_10gbit">switch_12port_10gbit</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="switch_48port_10gbit">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="switch_48port_10gbit">switch_48port_10gbit</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="switch_96port_10gbit">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="switch_96port_10gbit">switch_96port_10gbit</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="place_reservation">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="place_reservation">place_reservation</label>
-          </div>
-        </div>
-        <div class="row collapse postfix-radius">
-          <div class="small-2 columns">
-            <input type="number" min="0" placeholder="0" id="traffic_overusage">
-          </div>
-          <div class="small-10 columns">
-            <label class="postfix" for="traffic_overusage">traffic_overusage</label>
+        <div class="large-3 cell">
+          <div id="releaseInfo">
+            <a href="#"
+              >Release date:&nbsp;
+              <script>
+                document.write(releaseDate);
+              </script></a
+            >
+            <script>
+              document.getElementById("releaseInfo").title = recentChanges;
+            </script>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="row tabs-content">
-      <div class="large-1 columns">
-        <div class="switch tiny radius">
-          <input id="new_format_output" type="checkbox" onchange="workspace.setNewOutputFormat(this.checked)">
-          <label for="new_format_output">Style</label>
+      <div class="grid-x">
+        <div class="button-group small align-center round">
+          <a href="#" class="button" onclick="workspace.createNewTab()" id="new"
+            >Add Tab</a
+          >
+          <a
+            href="#"
+            class="button"
+            onclick="workspace.copyCurrentServerTab()"
+            id="cp"
+            >Copy Tab</a
+          >
+          <a
+            href="#"
+            class="button"
+            onclick="workspace.deleteCurrentTab()"
+            id="close"
+            >Close Tab</a
+          >
         </div>
-        <label for="new_format_output">Style</label>
-      </div>
-      <div class="large-11 columns">
-        <textarea id="output" readonly>calculation output</textarea>
-      </div>
-    </div>
 
-  </form>
-  <script src="node_modules/jquery/dist/jquery.min.js" inline></script>
-  <script src="node_modules/what-input/dist/what-input.js" inline></script>
-  <script src="node_modules/foundation-sites/dist/js/foundation.min.js" inline></script>
-  <script>
-    $(document).foundation();
-  </script>
-  <script src="main.js" inline></script>
-</body>
+        <ul class="tabs" data-tab>
+          <li class="tab-title active">
+            <a href="#panel-1" onclick="workspace.loadData(this)" id="panel-1"
+              >SB0</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid-x grid-margin-x grid-margin-y">
+        <div class="large-4 cell">
+          <div class="grid-x">
+            <div class="large-8 cell">
+              <div class="grid-x collapse">
+                <div class="small-4 cell">
+                  <label class="prefix">Server:</label>
+                </div>
+                <select id="select_servers" class="small-8 cell">
+                  <option>SB</option>
+                  <option disabled>-------------------</option>
+                  <option>AX41</option>
+                  <option>AX41NVMe</option>
+                  <option>AX51</option>
+                  <option>AX51NVMe</option>
+                  <option>AX61NVMe</option>
+                  <option>AX101</option>
+                  <option>AX161</option>
+                  <option disabled>-------------------</option>
+                  <option>EX42</option>
+                  <option>EX42NVMe</option>
+                  <option>EX52</option>
+                  <option>EX52NVMe</option>
+                  <option>EX62</option>
+                  <option>EX62NVMe</option>
+                  <option disabled>-------------------</option>
+                  <option>PX62</option>
+                  <option>PX62NVMe</option>
+                  <option>PX93</option>
+                  <option disabled>-------------------</option>
+                  <option>SX64</option>
+                  <option>SX134</option>
+                  <option>SX294</option>
+                  <option disabled>-------------------</option>
+                  <option>DX152</option>
+                  <option>DX181</option>
+                  <option>DX292</option>
+                  <option disabled>-------------------</option>
+                  <option>COLOCATION_1_3</option>
+                  <option>COLOCATION_BASIC</option>
+                  <option>COLOCATION_ADVANCED</option>
+                  <option disabled>-------------------</option>
+                  <option>CX11</option>
+                  <option>CX21</option>
+                  <option>CX31</option>
+                  <option>CX41</option>
+                  <option>CX51</option>
+                  <option>CCX11</option>
+                  <option>CCX21</option>
+                  <option>CCX31</option>
+                  <option>CCX41</option>
+                  <option>CCX51</option>
+                  <option>CCX12</option>
+                  <option>CCX22</option>
+                  <option>CCX32</option>
+                  <option>CCX42</option>
+                  <option>CCX52</option>
+                  <option>CCX62</option>
+                  <option>CPX11</option>
+                  <option>CPX21</option>
+                  <option>CPX31</option>
+                  <option>CPX41</option>
+                  <option>CPX51</option>
+                  <option disabled>-------------------</option>
+                  <option>BX10</option>
+                  <option>BX20</option>
+                  <option>BX30</option>
+                  <option>BX40</option>
+                  <option>BX50</option>
+                  <option>BX60</option>
+                </select>
+              </div>
+            </div>
+            <div class="large-4 cell">
+              <div class="grid-x collapse">
+                <div class="small-6 cell">
+                  <label class="prefix">SB:</label>
+                </div>
+                <div class="small-6 cell">
+                  <input type="number" min="0" placeholder="0" id="sb_number" />
+                </div>
+              </div>
+            </div>
+            <div class="large-12 cell">
+              <div class="grid-x collapse">
+                <div class="small-10 cell">
+                  <label class="prefix">Number of Servers:</label>
+                </div>
+                <div class="small-2 cell">
+                  <input
+                    type="number"
+                    min="1"
+                    placeholder="1"
+                    id="number_of_servers"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-x">
+            <div class="large-12 cell">
+              <div class="grid-x collapse">
+                <div class="small-4 cell">
+                  <label>
+                    <input type="radio" name="loc" disabled value="Germany" />
+                    Germany
+                  </label>
+                </div>
+                <div class="small-4 cell">
+                  <label>
+                    <input type="radio" name="loc" disabled value="Finland" />
+                    Finland
+                  </label>
+                </div>
+                <div class="small-4 cell"></div>
+              </div>
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Server Options</legend>
+            <input
+              type="checkbox"
+              id="no_setup_fee"
+              onchange="updateNoSetupFee(document.getElementById('select_servers').value, this.checked)"
+            /><label for="no_setup_fee">No Setup Fee</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Addons</legend>
+            <input type="checkbox" id="win_std_8cores" /><label
+              for="win_std_8cores"
+              >win_std_8cores</label
+            ><br />
+            <input type="checkbox" id="win_dc_8cores" /><label
+              for="win_dc_8cores"
+              >win_dc_8cores</label
+            ><br />
+            <input type="checkbox" id="win_std_12cores" /><label
+              for="win_std_12cores"
+              >win_std_12cores</label
+            ><br />
+            <input type="checkbox" id="win_dc_12cores" /><label
+              for="win_dc_12cores"
+              >win_dc_12cores</label
+            ><br />
+            <input type="checkbox" id="win_std_10cores" /><label
+              for="win_std_10cores"
+              >win_std_10cores</label
+            ><br />
+            <input type="checkbox" id="win_dc_10cores" /><label
+              for="win_dc_10cores"
+              >win_dc_10cores</label
+            ><br />
+            <input type="checkbox" id="win_std_16cores" /><label
+              for="win_std_16cores"
+              >win_std_16cores</label
+            ><br />
+            <input type="checkbox" id="win_dc_16cores" /><label
+              for="win_dc_16cores"
+              >win_dc_16cores</label
+            ><br />
+            <input type="checkbox" id="win_std_18cores" /><label
+              for="win_std_18cores"
+              >win_std_18cores</label
+            ><br />
+            <input type="checkbox" id="win_dc_18cores" /><label
+              for="win_dc_18cores"
+              >win_dc_18cores</label
+            ><br />
+            <input type="checkbox" id="win_std_24cores" /><label
+              for="win_std_24cores"
+              >win_std_24cores</label
+            ><br />
+            <input type="checkbox" id="win_dc_24cores" /><label
+              for="win_dc_24cores"
+              >win_dc_24cores</label
+            ><br />
+            <input type="checkbox" id="win_std_32cores" /><label
+              for="win_std_32cores"
+              >win_std_32cores</label
+            ><br />
+            <input type="checkbox" id="win_dc_32cores" /><label
+              for="win_dc_32cores"
+              >win_dc_32cores</label
+            ><br />
+            <div class="grid-x collapse">
+              <div class="small-2 cell">
+                <input type="number" min="0" placeholder="0" id="rdp_license" />
+              </div>
+              <div class="small-10 cell">
+                <label class="postfix" for="rdp_license">rdp_license</label>
+              </div>
+            </div>
+            <div class="grid-x collapse">
+              <div class="small-4 cell">
+                <select id="select_plesk">
+                  <option>no</option>
+                  <option>web_admin</option>
+                  <option>web_pro</option>
+                  <option>web_host</option>
+                </select>
+              </div>
+              <div class="small-8 cell">
+                <label class="postfix">Plesk Panel</label>
+              </div>
+            </div>
+            <input type="checkbox" id="plesk_power_pack" /><label
+              for="plesk_power_pack"
+              >plesk_power_pack</label
+            ><br />
+            <div class="grid-x collapse">
+              <div class="small-4 cell">
+                <select id="select_cpanel">
+                  <option>no</option>
+                  <option>100</option>
+                  <option>150</option>
+                  <option>200</option>
+                  <option>250</option>
+                  <option>300</option>
+                  <option>350</option>
+                  <option>400</option>
+                  <option>450</option>
+                  <option>500</option>
+                  <option>600</option>
+                  <option>700</option>
+                  <option>800</option>
+                  <option>900</option>
+                  <option>1000</option>
+                  <option>1500</option>
+                  <option>2000</option>
+                  <option>2500</option>
+                </select>
+              </div>
+              <div class="small-8 cell">
+                <label class="postfix">cPanel</label>
+              </div>
+            </div>
+            <input type="checkbox" id="raid4" /><label for="raid4">raid4</label
+            ><br />
+            <input type="checkbox" id="raid16" /><label for="raid16"
+              >raid16</label
+            ><br />
+            <input type="checkbox" id="bbu" /><label for="bbu">bbu</label><br />
+            <input type="checkbox" id="uplink_10_gbit" /><label
+              for="uplink_10_gbit"
+              >uplink_10_gbit</label
+            ><br />
+            <input type="checkbox" id="hdmi_emulator" /><label
+              for="hdmi_emulator"
+              >hdmi_emulator</label
+            ><br />
+            <input type="checkbox" id="ecc_ram_upgrade" /><label
+              for="ecc_ram_upgrade"
+              >ecc_ram_upgrade</label
+            ><br />
+            <input type="checkbox" id="ram_upgrade_64_to_128" /><label
+              for="ram_upgrade_64_to_128"
+              >ram_upgrade_64_to_128</label
+            ><br />
+            <input type="checkbox" id="ram_upgrade_64_to_128_ecc" /><label
+              for="ram_upgrade_64_to_128_ecc"
+              >ram_upgrade_64_to_128_ecc</label
+            ><br />
+
+            <div class="grid-x collapse">
+              <div class="small-2 cell">
+                <input
+                  type="number"
+                  min="0"
+                  placeholder="0"
+                  id="remote_hands"
+                />
+              </div>
+              <div class="small-10 cell">
+                <label class="postfix" for="remote_hands">remote_hands</label>
+              </div>
+            </div>
+
+            <input type="checkbox" id="server_move" /><label for="server_move"
+              >server_move</label
+            ><br />
+            <input type="checkbox" id="server_move_dell" /><label
+              for="server_move_dell"
+              >server_move_dell</label
+            ><br />
+            <input type="checkbox" id="server_rebuild_and_move" /><label
+              for="server_rebuild_and_move"
+              >server_rebuild_and_move</label
+            ><br />
+            <input type="checkbox" id="replace_ram" /><label for="replace_ram"
+              >replace_ram</label
+            ><br />
+            <input type="checkbox" id="replace_hardware_part" /><label
+              for="replace_hardware_part"
+              >replace_hardware_part</label
+            ><br />
+            <input type="checkbox" id="replace_entire_server" /><label
+              for="replace_entire_server"
+              >replace_entire_server</label
+            ><br />
+            <input type="checkbox" id="gigabit_optic_sfp" /><label
+              for="gigabit_optic_sfp"
+              >gigabit_optic_sfp</label
+            ><br />
+            <input type="checkbox" id="ten_gigabit_optic_sfp_plus" /><label
+              for="ten_gigabit_optic_sfp_plus"
+              >ten_gigabit_optic_sfp_plus</label
+            >
+          </fieldset>
+          <div class="grid-x">
+            <div class="small-6 cell">
+              <input
+                type="text"
+                id="custom_addon"
+                placeholder="Custom addon name"
+              />
+            </div>
+            <div class="small-3 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="Setup"
+                id="custom_addon_setup_price"
+              />
+            </div>
+            <div class="small-3 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="Monthly"
+                id="custom_addon_monthly_price"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="large-4 cell">
+          <div class="grid-x grid-margin-y">
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="sata2000e"
+            />
+            <label class="small-10 cell input-group-label" for="sata2000e"
+              >sata2000e</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="sata6000e"
+            />
+            <label class="small-10 cell input-group-label" for="sata6000e"
+              >sata6000e</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="sata12000e"
+            />
+            <label class="small-10 cell input-group-label" for="sata12000e"
+              >sata12000e</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="sata16000e"
+            />
+            <label class="small-10 cell input-group-label" for="sata16000e"
+              >sata16000e</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ssd1000"
+            />
+            <label class="small-10 cell input-group-label" for="ssd1000"
+              >ssd1000</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ssd480de"
+            />
+            <label class="small-10 cell input-group-label" for="ssd480de"
+              >ssd480de</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ssd960de"
+            />
+            <label class="small-10 cell input-group-label" for="ssd960de"
+              >ssd960de</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ssd1920_de"
+            />
+            <label class="small-10 cell input-group-label" for="ssd1920_de"
+              >ssd1920_de</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ssd3840de"
+            />
+            <label class="small-10 cell input-group-label" for="ssd3840de"
+              >ssd3840de</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="nvme512"
+            />
+            <label class="small-10 cell input-group-label" for="nvme512"
+              >nvme512</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="nvme1000"
+            />
+            <label class="small-10 cell input-group-label" for="nvme1000"
+              >nvme1000</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="nvme2000"
+            />
+            <label class="small-10 cell input-group-label" for="nvme2000"
+              >nvme2000</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="nvme960de"
+            />
+            <label class="small-10 cell input-group-label" for="nvme960de"
+              >nvme960de</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="nvme1920de"
+            />
+            <label class="small-10 cell input-group-label" for="nvme1920de"
+              >nvme1920de</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="nvme3840de"
+            />
+            <label class="small-10 cell input-group-label" for="nvme3840de"
+              >nvme3840de</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="nvme480_3d_xpoint"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="nvme480_3d_xpoint"
+              >nvme480_3d_xpoint</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="sas600"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="sas600"
+              data-addtext="old DX"
+              >sas600</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="usb16"
+            />
+            <label class="small-10 cell input-group-label" for="usb16"
+              >usb16</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="usb64"
+            />
+            <label class="small-10 cell input-group-label" for="usb64"
+              >usb64</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ddr4ecc32gb"
+            />
+            <label class="small-10 cell input-group-label" for="ddr4ecc32gb"
+              >ddr4ecc32gb</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ddr4ecc64gb"
+            />
+            <label class="small-10 cell input-group-label" for="ddr4ecc64gb"
+              >ddr4ecc64gb</label
+            >
+            <div class="cell input-group">
+              <select class="input-group-field" id="select_backup">
+                <option>no</option>
+                <option>100</option>
+                <option>500</option>
+                <option>1000</option>
+                <option>2000</option>
+                <option>5000</option>
+                <option>10000</option>
+              </select>
+              <label class="input-group-label">Backup Space</label>
+            </div>
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="block_storage_volume"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="block_storage_volume"
+              >block_storage_volume</label
+            >
+          </div>
+        </div>
+        <div class="large-4 cell">
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="ip" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="ip">ip</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="subnet29" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="subnet29" data-addtext="6 IPs"
+                >subnet29</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="subnet28" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="subnet28" data-addtext="14 IPs"
+                >subnet28</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="subnet27" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="subnet27" data-addtext="30 IPs"
+                >subnet27</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="subnet26" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="subnet26" data-addtext="62 IPs"
+                >subnet26</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="subnet25" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="subnet25" data-addtext="126 IPs"
+                >subnet25</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="subnet24" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="subnet24" data-addtext="254 IPs"
+                >subnet24</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="failover_ip" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="failover_ip">failover_ip</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="failover_subnet29"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label
+                class="postfix"
+                for="failover_subnet29"
+                data-addtext="6 IPs"
+                >failover_subnet29</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="failover_subnet28"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label
+                class="postfix"
+                for="failover_subnet28"
+                data-addtext="14 IPs"
+                >failover_subnet28</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="failover_subnet27"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label
+                class="postfix"
+                for="failover_subnet27"
+                data-addtext="30 IPs"
+                >failover_subnet27</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="failover_subnet26"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label
+                class="postfix"
+                for="failover_subnet26"
+                data-addtext="62 IPs"
+                >failover_subnet26</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="failover_subnet25"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label
+                class="postfix"
+                for="failover_subnet25"
+                data-addtext="126 IPs"
+                >failover_subnet25</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="failover_subnet24"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label
+                class="postfix"
+                for="failover_subnet24"
+                data-addtext="254 IPs"
+                >failover_subnet24</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="vlan_subnet29" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="vlan_subnet29" data-addtext="5 IPs"
+                >vlan_subnet29</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="vlan_subnet28" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="vlan_subnet28" data-addtext="13 IPs"
+                >vlan_subnet28</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="vlan_subnet27" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="vlan_subnet27" data-addtext="29 IPs"
+                >vlan_subnet27</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="vlan_subnet26" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="vlan_subnet26" data-addtext="61 IP"
+                >vlan_subnet26</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="vlan_subnet25" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="vlan_subnet25" data-addtext="125 IPs"
+                >vlan_subnet25</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="vlan_subnet24" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="vlan_subnet24" data-addtext="253 IPs"
+                >vlan_subnet24</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="gbit_lan" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="gbit_lan">gbit_lan</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="ten_gbit_lan" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="ten_gbit_lan">ten_gbit_lan</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="gbit_nic" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="gbit_nic">gbit_nic</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="gbit_dual_nic" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="gbit_dual_nic">gbit_dual_nic</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="ten_gbit_nic" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="ten_gbit_nic">ten_gbit_nic</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="ten_gbit_dual_nic_x520"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="ten_gbit_dual_nic_x520"
+                >ten_gbit_dual_nic_x520</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="ten_gbit_dual_nic_x710"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="ten_gbit_dual_nic_x710"
+                >ten_gbit_dual_nic_x710</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="ten_gbit_dual_nic_dell"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="ten_gbit_dual_nic_dell"
+                >ten_gbit_dual_nic_dell</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="switch_5port" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="switch_5port">switch_5port</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="switch_8port" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="switch_8port">switch_8port</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="switch_24port" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="switch_24port">switch_24port</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input type="number" min="0" placeholder="0" id="switch_48port" />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="switch_48port">switch_48port</label>
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="switch_12port_10gbit"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="switch_12port_10gbit"
+                >switch_12port_10gbit</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="switch_48port_10gbit"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="switch_48port_10gbit"
+                >switch_48port_10gbit</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="switch_96port_10gbit"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="switch_96port_10gbit"
+                >switch_96port_10gbit</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="place_reservation"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="place_reservation"
+                >place_reservation</label
+              >
+            </div>
+          </div>
+          <div class="grid-x collapse">
+            <div class="small-2 cell">
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                id="traffic_overusage"
+              />
+            </div>
+            <div class="small-10 cell">
+              <label class="postfix" for="traffic_overusage"
+                >traffic_overusage</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-x tabs-content">
+        <div class="large-1 cell">
+          <div class="switch tiny radius">
+            <input
+              class="switch-input"
+              id="new_format_output"
+              type="checkbox"
+              onchange="workspace.setNewOutputFormat(this.checked)"
+            />
+            <label class="switch-paddle" for="new_format_output">
+              <span class="show-for-sr">Style</span>
+            </label>
+          </div>
+          <!-- <label for="new_format_output">Style</label> -->
+        </div>
+        <div class="large-11 cell">
+          <textarea id="output" readonly>calculation output</textarea>
+        </div>
+      </div>
+    </form>
+    <script src="node_modules/jquery/dist/jquery.min.js" inline></script>
+    <script
+      src="node_modules/what-input/dist/what-input.min.js"
+      inline
+    ></script>
+    <script
+      src="node_modules/foundation-sites/dist/js/foundation.min.js"
+      inline
+    ></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="main.js" inline></script>
+  </body>
 </html>
