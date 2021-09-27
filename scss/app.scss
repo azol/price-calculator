@@ -1,14 +1,14 @@
 @charset 'utf-8';
 
 @import "settings";
-@import 'foundation';
+@import "foundation";
 @include foundation-everything;
 
-// .no-js {
-//   form {
-//     display: none;
-//   }
-// }
+.no-js {
+  form {
+    display: none;
+  }
+}
 
 // body {
 //     margin: 1rem 0 0 0;
@@ -21,7 +21,6 @@
 // textarea {
 //     font-family: monospace;
 // }
-
 
 // .button-bar {
 //   display: inline-block;
