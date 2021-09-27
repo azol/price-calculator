@@ -1,7 +1,7 @@
 const { src, dest, watch, series } = require('gulp');
 const del = require('delete');
 const htmlmin = require('gulp-htmlmin');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const inlinesource = require('gulp-inline-source');
 const jshint = require('gulp-jshint');
 const browserSync = require('browser-sync').create();
