@@ -4,7 +4,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "delete": "^1.1.0",
-    "foundation-sites": "^5.5.3",
+    "foundation-sites": "^6.7.2",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1",
     "gulp-inline-source": "^4.0.0",
