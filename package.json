@@ -2,7 +2,7 @@
   "name": "price_calculator",
   "version": "0.1.0",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.5",
     "delete": "^1.1.0",
     "foundation-sites": "^5.5.3",
     "gulp": "^4.0.2",
