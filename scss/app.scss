@@ -18,9 +18,9 @@ body {
 //     font-size: 0.85rem;
 // }
 
-// textarea {
-//     font-family: monospace;
-// }
+textarea {
+    font-family: monospace;
+}
 
 // .button-bar {
 //   display: inline-block;
@@ -75,3 +75,7 @@ body {
 // form > .row:nth-child(4) {
 //   border-top: none;
 // }
+
+form input.input-group-field {
+  border-right: none !important;
+}
