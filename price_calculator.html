@@ -9,6 +9,10 @@
       href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAACAAAAAQAAAAIAAAACAAAAAQAAAAIAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAALAAAADwAAAAwAAAAOAAAADgAAAAwAAAAQAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAAABEAAAAVwAAAFYAAABWAAAAVgAAAFYAAABWAAAAUAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAuAAAALoAAADQAAAAvQAAAMcAAADHAAAAvQAAAMoAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALkAAACOAAAAvAAAAJcAAACsAAAArAAAAJcAAADAAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC5AAAAigAAALkAAACTAAAAqAAAAKgAAACSAAAAvgAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvAAAAKEAAADHAAAApwAAALkAAAC5AAAApwAAAMcAAAA0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAALoAAACQAAAAvQAAAJgAAACtAAAArQAAAJgAAADBAAAANAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAAC4AAAAhwAAALgAAACQAAAApgAAAKcAAACQAAAAvQAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAxgAAANoAAADoAAAA2wAAAN4AAADTAAAAzAAAANkAAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAM0AAAD/AAAA/wAAAP8AAADqAAAAsgAAALQAAADRAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAADKAAAA2gAAAM0AAADNAAAAzQAAAMsAAADPAAAA5QAAADIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARAAAAvgAAAEEAAAAMAAAADwAAAA8AAAAOAAAAHwAAAMAAAAA1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAMcAAAC1AAAAngAAAJ8AAACfAAAAngAAAKYAAADcAAAAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsAAACSAAAAugAAALkAAAC5AAAAuQAAALkAAAC5AAAAqgAAACMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAABAAAAAAAAAAAAAAAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAOAHAADgBwAA4AcAAA=="
     />
     <title>Price Calculator</title>
+    <!-- <link
+      rel="stylesheet"
+      href="node_modules/foundation-sites/dist/css/foundation.min.css"
+    /> -->
     <link rel="stylesheet" href=".tmp/css/app.css" inline />
     <script src="changes.js" inline></script>
   </head>
@@ -718,445 +722,448 @@
           </div>
         </div>
         <div class="large-4 cell">
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="ip" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="ip">ip</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="subnet29" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="subnet29" data-addtext="6 IPs"
-                >subnet29</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="subnet28" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="subnet28" data-addtext="14 IPs"
-                >subnet28</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="subnet27" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="subnet27" data-addtext="30 IPs"
-                >subnet27</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="subnet26" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="subnet26" data-addtext="62 IPs"
-                >subnet26</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="subnet25" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="subnet25" data-addtext="126 IPs"
-                >subnet25</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="subnet24" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="subnet24" data-addtext="254 IPs"
-                >subnet24</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="failover_ip" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="failover_ip">failover_ip</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="failover_subnet29"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label
-                class="postfix"
-                for="failover_subnet29"
-                data-addtext="6 IPs"
-                >failover_subnet29</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="failover_subnet28"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label
-                class="postfix"
-                for="failover_subnet28"
-                data-addtext="14 IPs"
-                >failover_subnet28</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="failover_subnet27"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label
-                class="postfix"
-                for="failover_subnet27"
-                data-addtext="30 IPs"
-                >failover_subnet27</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="failover_subnet26"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label
-                class="postfix"
-                for="failover_subnet26"
-                data-addtext="62 IPs"
-                >failover_subnet26</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="failover_subnet25"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label
-                class="postfix"
-                for="failover_subnet25"
-                data-addtext="126 IPs"
-                >failover_subnet25</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="failover_subnet24"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label
-                class="postfix"
-                for="failover_subnet24"
-                data-addtext="254 IPs"
-                >failover_subnet24</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="vlan_subnet29" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="vlan_subnet29" data-addtext="5 IPs"
-                >vlan_subnet29</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="vlan_subnet28" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="vlan_subnet28" data-addtext="13 IPs"
-                >vlan_subnet28</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="vlan_subnet27" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="vlan_subnet27" data-addtext="29 IPs"
-                >vlan_subnet27</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="vlan_subnet26" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="vlan_subnet26" data-addtext="61 IP"
-                >vlan_subnet26</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="vlan_subnet25" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="vlan_subnet25" data-addtext="125 IPs"
-                >vlan_subnet25</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="vlan_subnet24" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="vlan_subnet24" data-addtext="253 IPs"
-                >vlan_subnet24</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="gbit_lan" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="gbit_lan">gbit_lan</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="ten_gbit_lan" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="ten_gbit_lan">ten_gbit_lan</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="gbit_nic" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="gbit_nic">gbit_nic</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="gbit_dual_nic" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="gbit_dual_nic">gbit_dual_nic</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="ten_gbit_nic" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="ten_gbit_nic">ten_gbit_nic</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="ten_gbit_dual_nic_x520"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="ten_gbit_dual_nic_x520"
-                >ten_gbit_dual_nic_x520</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="ten_gbit_dual_nic_x710"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="ten_gbit_dual_nic_x710"
-                >ten_gbit_dual_nic_x710</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="ten_gbit_dual_nic_dell"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="ten_gbit_dual_nic_dell"
-                >ten_gbit_dual_nic_dell</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="switch_5port" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="switch_5port">switch_5port</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="switch_8port" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="switch_8port">switch_8port</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="switch_24port" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="switch_24port">switch_24port</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input type="number" min="0" placeholder="0" id="switch_48port" />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="switch_48port">switch_48port</label>
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="switch_12port_10gbit"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="switch_12port_10gbit"
-                >switch_12port_10gbit</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="switch_48port_10gbit"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="switch_48port_10gbit"
-                >switch_48port_10gbit</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="switch_96port_10gbit"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="switch_96port_10gbit"
-                >switch_96port_10gbit</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="place_reservation"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="place_reservation"
-                >place_reservation</label
-              >
-            </div>
-          </div>
-          <div class="grid-x collapse">
-            <div class="small-2 cell">
-              <input
-                type="number"
-                min="0"
-                placeholder="0"
-                id="traffic_overusage"
-              />
-            </div>
-            <div class="small-10 cell">
-              <label class="postfix" for="traffic_overusage"
-                >traffic_overusage</label
-              >
-            </div>
+          <div class="grid-x grid-margin-y">
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ip"
+            />
+            <label class="small-10 cell input-group-label" for="ip">ip</label>
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="subnet29"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="subnet29"
+              data-addtext="6 IPs"
+              >subnet29</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="subnet28"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="subnet28"
+              data-addtext="14 IPs"
+              >subnet28</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="subnet27"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="subnet27"
+              data-addtext="30 IPs"
+              >subnet27</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="subnet26"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="subnet26"
+              data-addtext="62 IPs"
+              >subnet26</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="subnet25"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="subnet25"
+              data-addtext="126 IPs"
+              >subnet25</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="subnet24"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="subnet24"
+              data-addtext="254 IPs"
+              >subnet24</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="failover_ip"
+            />
+            <label class="small-10 cell input-group-label" for="failover_ip"
+              >failover_ip</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="failover_subnet29"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="failover_subnet29"
+              data-addtext="6 IPs"
+              >failover_subnet29</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="failover_subnet28"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="failover_subnet28"
+              data-addtext="14 IPs"
+              >failover_subnet28</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="failover_subnet27"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="failover_subnet27"
+              data-addtext="30 IPs"
+              >failover_subnet27</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="failover_subnet26"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="failover_subnet26"
+              data-addtext="62 IPs"
+              >failover_subnet26</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="failover_subnet25"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="failover_subnet25"
+              data-addtext="126 IPs"
+              >failover_subnet25</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="failover_subnet24"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="failover_subnet24"
+              data-addtext="254 IPs"
+              >failover_subnet24</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="vlan_subnet29"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="vlan_subnet29"
+              data-addtext="5 IPs"
+              >vlan_subnet29</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="vlan_subnet28"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="vlan_subnet28"
+              data-addtext="13 IPs"
+              >vlan_subnet28</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="vlan_subnet27"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="vlan_subnet27"
+              data-addtext="29 IPs"
+              >vlan_subnet27</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="vlan_subnet26"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="vlan_subnet26"
+              data-addtext="61 IP"
+              >vlan_subnet26</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="vlan_subnet25"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="vlan_subnet25"
+              data-addtext="125 IPs"
+              >vlan_subnet25</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="vlan_subnet24"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="vlan_subnet24"
+              data-addtext="253 IPs"
+              >vlan_subnet24</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="gbit_lan"
+            />
+            <label class="small-10 cell input-group-label" for="gbit_lan"
+              >gbit_lan</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ten_gbit_lan"
+            />
+            <label class="small-10 cell input-group-label" for="ten_gbit_lan"
+              >ten_gbit_lan</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="gbit_nic"
+            />
+            <label class="small-10 cell input-group-label" for="gbit_nic"
+              >gbit_nic</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="gbit_dual_nic"
+            />
+            <label class="small-10 cell input-group-label" for="gbit_dual_nic"
+              >gbit_dual_nic</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ten_gbit_nic"
+            />
+            <label class="small-10 cell input-group-label" for="ten_gbit_nic"
+              >ten_gbit_nic</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ten_gbit_dual_nic_x520"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="ten_gbit_dual_nic_x520"
+              >ten_gbit_dual_nic_x520</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ten_gbit_dual_nic_x710"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="ten_gbit_dual_nic_x710"
+              >ten_gbit_dual_nic_x710</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="ten_gbit_dual_nic_dell"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="ten_gbit_dual_nic_dell"
+              >ten_gbit_dual_nic_dell</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="switch_5port"
+            />
+            <label class="small-10 cell input-group-label" for="switch_5port"
+              >switch_5port</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="switch_8port"
+            />
+            <label class="small-10 cell input-group-label" for="switch_8port"
+              >switch_8port</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="switch_24port"
+            />
+            <label class="small-10 cell input-group-label" for="switch_24port"
+              >switch_24port</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="switch_48port"
+            />
+            <label class="small-10 cell input-group-label" for="switch_48port"
+              >switch_48port</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="switch_12port_10gbit"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="switch_12port_10gbit"
+              >switch_12port_10gbit</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="switch_48port_10gbit"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="switch_48port_10gbit"
+              >switch_48port_10gbit</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="switch_96port_10gbit"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="switch_96port_10gbit"
+              >switch_96port_10gbit</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="place_reservation"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="place_reservation"
+              >place_reservation</label
+            >
+            <input
+              class="small-2 cell input-group-field"
+              type="number"
+              min="0"
+              placeholder="0"
+              id="traffic_overusage"
+            />
+            <label
+              class="small-10 cell input-group-label"
+              for="traffic_overusage"
+              >traffic_overusage</label
+            >
           </div>
         </div>
       </div>
-
       <div class="grid-x tabs-content">
         <div class="large-1 cell">
           <div class="switch tiny radius">
