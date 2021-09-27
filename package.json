@@ -10,7 +10,6 @@
     "gulp-inline-source": "^4.0.0",
     "gulp-jshint": "^2.1.0",
     "gulp-sass": "^4.0.2",
-    "htmlmin": "0.0.7",
-    "jshint": "^2.10.1"
+    "jshint": "^2.13.1"
   }
 }
