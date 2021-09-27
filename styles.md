@@ -34,15 +34,15 @@
 
 ## In 5
 
-button-bar
-round
+button-bar -> removed
+round -> no rounded buttons anylonger
 columns -> cell
-prefix
+prefix -> input-group-field
 postfix
 panel -> remove (no JS)
 radius
 row -> grid-x
 collapse
-postfix-radius
-prefix-radius
+postfix-radius -> removed, not used
+prefix-radius -> removed, not used
 tab-title
